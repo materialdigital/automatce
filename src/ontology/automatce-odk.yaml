@@ -83,6 +83,7 @@ use_context: true
 # PMD Core is the upper-level ontology for all PMD application ontologies
 # module_type: slme = Syntactic Locality Module Extractor (extracts only needed terms)
 import_group:
+  annotation_properties: ['rdfs:label', 'skos:definition', 'skos:example', 'skos:altLabel']
   products:
     - id: pmdco
       title: "PMD Core Ontology"
