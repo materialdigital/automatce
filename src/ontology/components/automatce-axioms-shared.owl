@@ -1,0 +1,19 @@
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: : <https://w3id.org/pmd/automatce/components/automatce-axioms-shared.owl>
+
+
+
+Ontology: <https://w3id.org/pmd/automatce/components/automatce-axioms-shared.owl>
+
+Import: <https://w3id.org/pmd/automatce/components/automatce-dismantling_information.owl>
+Import: <https://w3id.org/pmd/automatce/components/automatce-engineering_data.owl>
+Import: <https://w3id.org/pmd/automatce/components/automatce-material_data.owl>
+Import: <https://w3id.org/pmd/automatce/components/automatce-product_data.owl>
+Import: <https://w3id.org/pmd/automatce/components/automatce-sustainability_data.owl>
+Import: <https://w3id.org/pmd/automatce/components/automatce-transactional_data.owl>
+Import: <https://w3id.org/pmd/automatce/components/automatce-usage_data.owl>
+

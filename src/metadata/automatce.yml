@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/automatce
+
+idspace: AUTOMATCE
+base_url: /obo/automatce
+
+products:
+- automatce.owl: https://raw.githubusercontent.com/materialdigital/materialdigital/automatce/main/automatce.owl
+- automatce.obo: https://raw.githubusercontent.com/materialdigital/materialdigital/automatce/main/automatce.obo
+
+term_browser: ontobee
+example_terms:
+- AUTOMATCE_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/materialdigital/materialdigital/automatce/v
+
+- prefix: /tracker/
+  replacement: https://github.com/materialdigital/materialdigital/automatce/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/AUTOMATCE?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/materialdigital/materialdigital/automatce/main/

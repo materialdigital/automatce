@@ -1,0 +1,2 @@
+# Terms to import from logo ontology (SLME extraction)
+# Format: One IRI per line

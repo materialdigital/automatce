@@ -1,17 +1,57 @@
-# application-ontology-template
+# Automotive Circular Economy Ontology
 
-template repository for starting a PMDCo application ontology. iT comes preconfigured with github workflows using [ontology development kit](https://github.com/INCATools/ontology-development-kit).
+Description: PMD Core application ontology generated via ODK Template.
 
-## How to use
 
-1. Click use as Template Repository
-2. Documentation of the application ontology is created via widoco and GitHub Pages when the docs workflow runs.
+More information can be found at http://obofoundry.org/ontology/automatce
 
-   To enable the documentation, you have to activate GitHub Pages in the repository settings. Set it to GitHub Actions instead of branch; the doc action will upload      the artifacts needed after each push to the repository.
-3. You need to give GitHub Actions the permissions to read write and create pull requests (checkbox) in the repository settings at actions -> general
-4. Run the seed workflow under GitHub Actions, and set the id and uribase_suffix. It will override the default values in [seed-template.yaml](./seed-template.yaml)
-   
-    Id and uribase_suffix are usually set to the same lowercase acronym that will be used with this ontology; examples are pmdco, tto, hto ...
-    Github org and repo name will be set automatically by the seed workflow. To run the workflow, switch to GitHub Actions, select the seed workflow, and dispatch the  job manually.
-5. Check the pull request created! If everything is fine, merge into main.
-6. Put your ontology work into the \*-edit.owl file in the src folder; after pushing changes to the repository, the build will run and integrate your changes into the release types defined.
+## Versions
+
+### Stable release versions
+
+The latest version of the ontology can always be found at:
+
+https://w3id.org/pmd/automatce.owl
+
+(note this will not show up until the request has been approved by obofoundry.org)
+
+### Editors' version
+
+Editors of this ontology should use the edit version, [src/ontology/automatce-edit.owl](src/ontology/automatce-edit.owl)
+
+## Contact
+
+Please use this GitHub repository's [Issue tracker](https://github.com/materialdigital/materialdigital/automatce/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
+
+## Acknowledgements
+
+This ontology repository was created using the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit).
+## Development
+This ontology is developed using OWL and managed with the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit). To edit:
+- Open `automatce-edit.owl` in [Protégé](https://protege.stanford.edu/).
+- Create new entities within the namespace `https://w3id.org/pmd/automatce/`.
+- Use the `Makefile` for automation (`make test`, `make refresh-imports`, `make release`).
+
+### Top-level directories
+**.github/:** GitHub configuration files, including CI workflows and templates.
+**src/:** Main development folder generated and managed through ODK.
+**ontology/components/:** – Modular ontology components (classes, properties, axioms).
+**ontology/pmdco-edit.owl:** – Primary editable ontology file used during development (ontology editors' version).
+
+## Import Architecture
+```
+imports-edit.owl
+    └── imports all *_import.owl modules (pmdco_import.owl, etc.)
+
+automatce-shared.owl
+    └── imports imports-edit.owl
+
+automatce-{component}.owl (each component)
+    └── imports automatce-shared.owl
+
+automatce-axioms-shared.owl
+    └── imports ALL automatce-{component}.owl files
+```
+
+## Contribution
+We welcome contributions! Please use the [Issue tracker](https://github.com/materialdigital/automatce/issues).

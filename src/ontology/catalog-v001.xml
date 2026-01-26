@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+  <group id="odk-managed-catalog" prefer="public">
+    <uri name="https://w3id.org/pmd/automatce/imports/pmdco_import.owl" uri="imports/pmdco_import.owl" />
+    <uri name="https://w3id.org/pmd/automatce/imports/logo_import.owl" uri="imports/logo_import.owl" />
+    <uri name="https://w3id.org/pmd/automatce/imports/tto_import.owl" uri="imports/tto_import.owl" />
+    <uri name="https://w3id.org/pmd/automatce/components/imports-edit.owl" uri="components/imports-edit.owl" />
+    <uri name="https://w3id.org/pmd/automatce/components/automatce-shared.owl" uri="components/automatce-shared.owl" />
+    <uri name="https://w3id.org/pmd/automatce/components/automatce-axioms-shared.owl" uri="components/automatce-axioms-shared.owl" />
+    <uri name="https://w3id.org/pmd/automatce/components/automatce-material_data.owl" uri="components/automatce-material_data.owl" />
+    <uri name="https://w3id.org/pmd/automatce/components/automatce-product_data.owl" uri="components/automatce-product_data.owl" />
+    <uri name="https://w3id.org/pmd/automatce/components/automatce-engineering_data.owl" uri="components/automatce-engineering_data.owl" />
+    <uri name="https://w3id.org/pmd/automatce/components/automatce-usage_data.owl" uri="components/automatce-usage_data.owl" />
+    <uri name="https://w3id.org/pmd/automatce/components/automatce-dismantling_information.owl" uri="components/automatce-dismantling_information.owl" />
+    <uri name="https://w3id.org/pmd/automatce/components/automatce-sustainability_data.owl" uri="components/automatce-sustainability_data.owl" />
+    <uri name="https://w3id.org/pmd/automatce/components/automatce-transactional_data.owl" uri="components/automatce-transactional_data.owl" />
+  </group>
+  <rewriteURI uriStartString="https://w3id.org/pmd/automatce/imports/" rewritePrefix="imports/" />
+  <rewriteURI uriStartString="https://w3id.org/pmd/automatce/components/" rewritePrefix="components/" />
+</catalog>
