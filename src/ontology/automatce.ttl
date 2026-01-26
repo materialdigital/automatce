@@ -62,6 +62,18 @@ dcterms:title rdf:type owl:AnnotationProperty ;
 rdfs:comment rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
 #################################################################
 #    Datatypes
 #################################################################
@@ -95,14 +107,18 @@ obo:BFO_0000054 rdf:type owl:ObjectProperty ;
                 owl:inverseOf obo:BFO_0000055 ;
                 rdfs:domain obo:BFO_0000017 ;
                 rdfs:range obo:BFO_0000015 ;
-                rdfs:label "has realization"@en .
+                rdfs:label "has realization"@en ;
+                skos:definition "b has realization c =Def c realizes b"@en ;
+                skos:example "As for realizes"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000055
 obo:BFO_0000055 rdf:type owl:ObjectProperty ;
                 rdfs:domain obo:BFO_0000015 ;
                 rdfs:range obo:BFO_0000017 ;
-                rdfs:label "realizes"@en .
+                rdfs:label "realizes"@en ;
+                skos:definition "(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d & for all t, if b has participant d then c exists & the type instantiated by b is correlated with the type instantiated by c"@en ;
+                skos:example "A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000136
@@ -361,26 +377,30 @@ obo:STATO_0000102 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/pmd/co/PMD_0000004
 <https://w3id.org/pmd/co/PMD_0000004> rdf:type owl:ObjectProperty ;
-                                      rdfs:label "is subject of"@en .
+                                      rdfs:label "is subject of"@en ;
+                                      skos:definition "Inverse of 'is about'."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000077
 <https://w3id.org/pmd/co/PMD_0000077> rdf:type owl:ObjectProperty ;
                                       rdfs:subPropertyOf <https://w3id.org/pmd/co/PMD_0000004> ;
-                                      rdfs:label "specified by value"@en .
+                                      rdfs:label "specified by value"@en ;
+                                      skos:definition "A relation between an entity and a value specification which is about this entity."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0001028
 <https://w3id.org/pmd/co/PMD_0001028> rdf:type owl:ObjectProperty ;
                                       owl:inverseOf <https://w3id.org/pmd/co/PMD_0001029> ;
-                                      rdfs:label "in response to"@en .
+                                      rdfs:label "in response to"@en ;
+                                      skos:definition "inverse of responds with"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0001029
 <https://w3id.org/pmd/co/PMD_0001029> rdf:type owl:ObjectProperty ;
                                       rdfs:subPropertyOf owl:topObjectProperty ;
                                       rdfs:domain obo:BFO_0000017 ;
-                                      rdfs:label "responds with"@en .
+                                      rdfs:label "responds with"@en ;
+                                      skos:definition "The realizable entity must be \"stimulated\" by some Stimulus in order to respond with the Response. The bearer of the realizable entity must participate in Stimulation as well as in Response." .
 
 
 #################################################################
@@ -389,7 +409,9 @@ obo:STATO_0000102 rdf:type owl:ObjectProperty ;
 
 ###  http://purl.obolibrary.org/obo/BFO_0000001
 obo:BFO_0000001 rdf:type owl:Class ;
-                rdfs:label "entity"@en .
+                rdfs:label "entity"@en ;
+                skos:definition "(Elucidation) An entity is anything that exists or has existed or will exist"@en ;
+                skos:example "Julius Caesar; the Second World War; your body mass index; Verdi's Requiem"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000002
@@ -404,7 +426,9 @@ obo:BFO_0000002 rdf:type owl:Class ;
                                    owl:onProperty obo:BFO_0000050 ;
                                    owl:someValuesFrom obo:BFO_0000003
                                  ] ;
-                rdfs:label "continuant"@en .
+                rdfs:label "continuant"@en ;
+                skos:definition "(Elucidation) A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity"@en ;
+                skos:example "A human being; a tennis ball; a cave; a region of space; someone's temperature"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000003
@@ -418,7 +442,9 @@ obo:BFO_0000003 rdf:type owl:Class ;
                                    owl:onProperty obo:BFO_0000050 ;
                                    owl:someValuesFrom obo:BFO_0000002
                                  ] ;
-                rdfs:label "occurrent"@en .
+                rdfs:label "occurrent"@en ;
+                skos:definition "(Elucidation) An occurrent is an entity that unfolds itself in time or it is the start or end of such an entity or it is a temporal or spatiotemporal region"@en ;
+                skos:example "As for process, history, process boundary, spatiotemporal region, zero-dimensional temporal region, one-dimensional temporal region, temporal interval, temporal instant."@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000004
@@ -430,20 +456,26 @@ obo:BFO_0000004 rdf:type owl:Class ;
                                 ] ;
                 owl:disjointWith obo:BFO_0000020 ,
                                  obo:BFO_0000031 ;
-                rdfs:label "independent continuant"@en .
+                rdfs:label "independent continuant"@en ;
+                skos:definition "b is an independent continuant =Def b is a continuant & there is no c such that b specifically depends on c or b generically depends on c"@en ;
+                skos:example "An atom; a molecule; an organism; a heart; a chair; the bottom right portion of a human torso; a leg; the interior of your mouth; a spatial region; an orchestra"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000015
 obo:BFO_0000015 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000003 ;
-                rdfs:label "process"@en .
+                rdfs:label "process"@en ;
+                skos:definition "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant"@en ;
+                skos:example "An act of selling; the life of an organism; a process of sleeping; a process of cell-division; a beating of the heart; a process of meiosis; the taxiing of an aircraft; the programming of a computer"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000016
 obo:BFO_0000016 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000017 ;
                 owl:disjointWith obo:BFO_0000023 ;
-                rdfs:label "disposition"@en .
+                rdfs:label "disposition"@en ;
+                skos:definition "(Elucidation) A disposition b is a realizable entity such that if b ceases to exist then its bearer is physically changed & b's realization occurs when and because this bearer is in some special physical circumstances & this realization occurs in virtue of the bearer's physical make-up"@en ;
+                skos:example "An atom of element X has the disposition to decay to an atom of element Y; the cell wall is disposed to transport cellular material through endocytosis and exocytosis; certain people have a predisposition to colon cancer; children are innately disposed to categorize objects in certain ways"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000017
@@ -454,7 +486,9 @@ obo:BFO_0000017 rdf:type owl:Class ;
                                   owl:allValuesFrom obo:BFO_0000017
                                 ] ;
                 owl:disjointWith obo:BFO_0000019 ;
-                rdfs:label "realizable entity"@en .
+                rdfs:label "realizable entity"@en ;
+                skos:definition "(Elucidation) A realizable entity is a specifically dependent continuant that inheres in some independent continuant which is not a spatial region & which is of a type some instances of which are realized in processes of a correlated type"@en ;
+                skos:example "The role of being a doctor; the role of this boundary to delineate where Utah and Colorado meet; the function of your reproductive organs; the disposition of your blood to coagulate; the disposition of this piece of metal to conduct electricity"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000019
@@ -464,7 +498,9 @@ obo:BFO_0000019 rdf:type owl:Class ;
                                   owl:onProperty obo:BFO_0000050 ;
                                   owl:allValuesFrom obo:BFO_0000019
                                 ] ;
-                rdfs:label "quality"@en .
+                rdfs:label "quality"@en ;
+                skos:definition "(Elucidation) A quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized"@en ;
+                skos:example "The colour of a tomato; the ambient temperature of this portion of air; the length of the circumference of your waist; the shape of your nose; the shape of your nostril; the mass of this piece of gold"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000020
@@ -475,25 +511,34 @@ obo:BFO_0000020 rdf:type owl:Class ;
                                   owl:allValuesFrom obo:BFO_0000020
                                 ] ;
                 owl:disjointWith obo:BFO_0000031 ;
-                rdfs:label "specifically dependent continuant"@en .
+                rdfs:label "specifically dependent continuant"@en ;
+                skos:definition "b is a specifically dependent continuant =Def b is a continuant & there is some independent continuant c which is not a spatial region & which is such that b specifically depends on c"@en ;
+                skos:example "(with multiple bearers) John's love for Mary; the ownership relation between John and this statue; the relation of authority between John and his subordinates"@en ,
+                             "(with one bearer) The mass of this tomato; the pink colour of a medium rare piece of grilled filet mignon at its centre; the smell of this portion of mozzarella; the disposition of this fish to decay; the role of being a doctor; the function of this heart to pump blood; the shape of this hole"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000023
 obo:BFO_0000023 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000017 ;
-                rdfs:label "role"@en .
+                rdfs:label "role"@en ;
+                skos:definition "(Elucidation) A role b is a realizable entity such that b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be & b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed"@en ;
+                skos:example "The priest role; the student role; the role of subject in a clinical trial; the role of a stone in marking a property boundary; the role of a boundary to demarcate two neighbouring administrative territories; the role of a building in serving as a military target"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000027
 obo:BFO_0000027 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000040 ;
-                rdfs:label "object aggregate"@en .
+                rdfs:label "object aggregate"@en ;
+                skos:definition "(Elucidation) An object aggregate is a material entity consisting exactly of a plurality (≥1) of objects as member parts which together form a unit"@en ;
+                skos:example "The aggregate of the musicians in a symphony orchestra and their instruments; the aggregate of bearings in a constant velocity axle joint; the nitrogen atoms in the atmosphere; a collection of cells in a blood biobank"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000030
 obo:BFO_0000030 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000040 ;
-                rdfs:label "object"@en .
+                rdfs:label "object"@en ;
+                skos:definition "(Elucidation) An object is a material entity which manifests causal unity & is of a type instances of which are maximal relative to the sort of causal unity manifested"@en ;
+                skos:example "An organism; a fish tank; a planet; a laptop; a valve; a block of marble; an ice cube"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000031
@@ -503,25 +548,33 @@ obo:BFO_0000031 rdf:type owl:Class ;
                                   owl:onProperty obo:BFO_0000050 ;
                                   owl:allValuesFrom obo:BFO_0000031
                                 ] ;
-                rdfs:label "generically dependent continuant"@en .
+                rdfs:label "generically dependent continuant"@en ;
+                skos:definition "(Elucidation) A generically dependent continuant is an entity that exists in virtue of the fact that there is at least one of what may be multiple copies which is the content or the pattern that multiple copies would share"@en ;
+                skos:example "The pdf file on your laptop; the pdf file that is a copy thereof on my laptop; the sequence of this protein molecule; the sequence that is a copy thereof in that protein molecule; the content that is shared by a string of dots and dashes written on a page and the transmitted Morse code signal; the content of a sentence; an engineering blueprint"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000034
 obo:BFO_0000034 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000016 ;
-                rdfs:label "function"@en .
+                rdfs:label "function"@en ;
+                skos:definition "(Elucidation) A function is a disposition that exists in virtue of its bearer's physical make-up & this physical make-up is something the bearer possesses because it came into being either through evolution (in the case of natural biological entities) or through intentional design (in the case of artefacts) in order to realize processes of a certain sort"@en ;
+                skos:example "The function of a hammer to drive in nails; the function of a heart pacemaker to regulate the beating of a heart through electricity"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000040
 obo:BFO_0000040 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000004 ;
-                rdfs:label "material entity"@en .
+                rdfs:label "material entity"@en ;
+                skos:definition "(Elucidation) A material entity is an independent continuant has some portion of matter as continuant part"@en ;
+                skos:example "A human being; the undetached arm of a human being; an aggregate of human beings"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000145
 obo:BFO_0000145 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000019 ;
-                rdfs:label "relational quality"@en .
+                rdfs:label "relational quality"@en ;
+                skos:definition "b is a relational quality =Def b is a quality & there exists c and d such that c and d are not identical & b specifically depends on c & b specifically depends on d"@en ;
+                skos:example "A marriage bond; an instance of love; an obligation between one person and another"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000005
@@ -780,7 +833,9 @@ obo:OBI_0001933 rdf:type owl:Class ;
 When defining specific materials/material taxonomies, these three aspects shall be taken into account in the aristotelian (\"per genus et differentiam\") as differentiation."""@en ,
                                                    "The sum of portions of matter of the same type form a portion of matter of that type."@en ;
                                       rdfs:label "Material"@de ,
-                                                 "material"@en .
+                                                 "material"@en ;
+                                      skos:altLabel "Portion of Material"@en ;
+                                      skos:definition "A Material is a Portion Of Matter that may participate in some Manifacturing Process and whose shape is not relevant for its participation in the Manifacuring Process."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000001
@@ -791,14 +846,16 @@ When defining specific materials/material taxonomies, these three aspects shall 
 The open energy ontology OEO defines portion of matter as a subclass of object aggregate, which implies countability. Our portion is not (precisely) countable and thus bearer of intensive properties."""@en ,
                                                    """Lome explanation for portion of matter: \"What is a molecule cluster at the cellular level? Contrary to the molecular level, at the cellular level of granularity the boundary of each molecule is outside of the level of granular focus. What forms a discontinuous cluster of countable individual molecules and thus bona fide objects at the molecular level, is a continuous and non-countable molecular substance at coarser levels of
 granularity. At these coarser levels, the individual molecules cannot be differentiated and demarcated anymore and the cluster as a whole possesses only fiat inner boundaries.\""""@en ;
-                                      rdfs:label "portion of matter"@en .
+                                      rdfs:label "portion of matter"@en ;
+                                      skos:definition "A material entity that is not demarcated by any physical discontinuities. At some finer level of granularity it is an object aggregate, at some coarser level of granularity it is a fiat object part,but at this level of granularity it is neither."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000002
 <https://w3id.org/pmd/co/PMD_0000002> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000000> ;
                                       rdfs:comment "We recognize that some of the materials in the subclasses also occur naturally. However, these are not within the scope of our consideration for technical use."@en ;
-                                      rdfs:label "engineered material"@en .
+                                      rdfs:label "engineered material"@en ;
+                                      skos:definition "An Engineered Material is a Material that is output of a Manufacturing Process."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000005
@@ -822,13 +879,19 @@ granularity. At these coarser levels, the individual molecules cannot be differe
                                       rdfs:comment """Technical materials are complex object aggregates. The properties that are determined for those object aggregates are intrinsically associated with the methodologies employed in the measurement process. This is in contrast to typical 'physical' properties, which like e.g. mass that can be determined to high accuracy independently of the measurement process. 
 As a consequence, the behavoiral material properties in the ontology are differeciated according to their measurement method, e.g. Brinell hardness and Vickers hardness are different types of indentation hardness rather than different measures/quantification (GDC) of the materials property 'indentation hardness'.
  The 'unit idenifieres' of such properties (e.g. \"HV1\", \"HV10\", \"HBW\") are strictly speaking not units but rather references to the measurement methodology used to determine a numeric value that quantifies the property."""@en ;
-                                      rdfs:label "behavioral material property"@en .
+                                      rdfs:label "behavioral material property"@en ;
+                                      skos:definition """A property is a material trait in terms of the kind and magnitude of response to a specific imposed stimulus. Generally, definitions of properties are made independent of material shape and size.
+
+(Callister, W.D., Rethwisch, D.G., Materials Science and Engineering, Wiley, 2014)
+
+We only deal with intensive (system-size independent) materrial properties. Extensive properties that depend on the testpiece/specimen/probe size should be found in the respective testing method modules."""@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000503
 <https://w3id.org/pmd/co/PMD_0000503> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
-                                      rdfs:label "ASTM grainsize"@en .
+                                      rdfs:label "ASTM grainsize"@en ;
+                                      skos:definition "The ASTM grain size is a scalar specifically describing the size of grains in a crystalline material as defined by ASTM standards."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000512
@@ -843,43 +906,50 @@ As a consequence, the behavoiral material properties in the ontology are differe
                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0000077> ;
                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020116>
                                                       ] ;
-                                      rdfs:label "aggregate state"@en .
+                                      rdfs:label "aggregate state"@en ;
+                                      skos:definition "The aggregate state is a morphological quality representing the physical state of a material, such as solid, liquid, or gas."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000519
 <https://w3id.org/pmd/co/PMD_0000519> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000015 ;
-                                      rdfs:label "application of electric field"@en .
+                                      rdfs:label "application of electric field"@en ;
+                                      skos:definition "An application of (an) electric field is the process of subjecting a material to an electric field to observe its behavior or modify its properties."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000520
 <https://w3id.org/pmd/co/PMD_0000520> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000015 ;
-                                      rdfs:label "application of heat flux"@en .
+                                      rdfs:label "application of heat flux"@en ;
+                                      skos:definition "An application of heat flux describes the process of transferring thermal energy to or from a material, often used in thermal property measurements."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000521
 <https://w3id.org/pmd/co/PMD_0000521> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000015 ;
-                                      rdfs:label "application of magnetic field"@en .
+                                      rdfs:label "application of magnetic field"@en ;
+                                      skos:definition "An application of (a) magnetic field is the process of subjecting a material to a magnetic field to study its magnetic properties or induce magnetization."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000522
 <https://w3id.org/pmd/co/PMD_0000522> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000015 ;
-                                      rdfs:label "application of mechanical load"@en .
+                                      rdfs:label "application of mechanical load"@en ;
+                                      skos:definition "An application of mechanical load is the process of applying force or stress to a material to observe its response or measure its properties."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000523
 <https://w3id.org/pmd/co/PMD_0000523> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000015 ;
-                                      rdfs:label "application of substance"@en .
+                                      rdfs:label "application of substance"@en ;
+                                      skos:definition "The application of (a) substance is the process of applying a material or substance to a surface or within a system."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000549
 <https://w3id.org/pmd/co/PMD_0000549> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000015 ;
-                                      rdfs:label "change of temperature"@en .
+                                      rdfs:label "change of temperature"@en ;
+                                      skos:definition "A change of temperature is a process describing the variation in thermal energy within a material or system over time or due to external influences."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000583
@@ -898,7 +968,9 @@ As a consequence, the behavoiral material properties in the ontology are differe
                                                       ] ;
                                       rdfs:label "Datenverarbeitung"@de ,
                                                  "Rechenprozess"@de ,
-                                                 "computing process"@en .
+                                                 "computing process"@en ;
+                                      skos:definition "A process that involves the systematic use of computational methods and tools to perform simulations, analyses, or data transformations to achieve specific scientific or engineering goals."@en ,
+                                                      "Ein Prozess, der die systematische Verwendung von rechnerischen Methoden und Werkzeugen umfasst, um Simulationen, Analysen oder Datenumwandlungen durchzuführen, um spezifische wissenschaftliche oder technische Ziele zu erreichen."@de .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000591
@@ -913,64 +985,77 @@ As a consequence, the behavoiral material properties in the ontology are differe
                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0000077> ;
                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020099>
                                                       ] ;
-                                      rdfs:label "crystal structure"@en .
+                                      rdfs:label "crystal structure"@en ;
+                                      skos:definition "The crystal structure is a morphologic quality that describes the periodic geometric arrangement of entities in a crystalline material. The finite set of periodic geometric arrangements is described by the 14 possible Bravais Lattices in three-dimensional space."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000595
 <https://w3id.org/pmd/co/PMD_0000595> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
-                                      rdfs:label "defect density"@en .
+                                      rdfs:label "defect density"@en ;
+                                      skos:definition "The defect density is a morphological quality describing the number of defects per unit volume or area in a material, which can affect its mechanical and electronic properties."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000596
 <https://w3id.org/pmd/co/PMD_0000596> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000015 ;
-                                      rdfs:label "deformation"@en .
+                                      rdfs:label "deformation"@en ;
+                                      skos:definition "The deformation is a process describing a change in the shape, size, or structure of a material under the influence of stress or force."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000597
 <https://w3id.org/pmd/co/PMD_0000597> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
-                                      rdfs:label "density"@en .
+                                      rdfs:label "density"@en ;
+                                      skos:definition "The density is a universal intensive quality representing the unit mass of a portion of matter per unit volume."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000602
 <https://w3id.org/pmd/co/PMD_0000602> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000030 ;
                                       rdfs:label "Gerät"@de ,
-                                                 "device"@en .
+                                                 "device"@en ;
+                                      skos:definition "A physical or virtual entity used to perform a specific function or task, often involving measurement, manipulation, or analysis of materials."@en ,
+                                                      "Ein physisches oder virtuelles Objekt, das verwendet wird, um eine bestimmte Funktion oder Aufgabe auszuführen, häufig im Zusammenhang mit der Messung, Manipulation oder Analyse von Materialien."@de .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000629
 <https://w3id.org/pmd/co/PMD_0000629> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000015 ;
-                                      rdfs:label "emission of radiation"@en .
+                                      rdfs:label "emission of radiation"@en ;
+                                      skos:definition "The emission radiation is a process describing the release of energy in the form of electromagnetic waves or particles from a material."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000635
 <https://w3id.org/pmd/co/PMD_0000635> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000015 ;
-                                      rdfs:label "evolution of damage"@en .
+                                      rdfs:label "evolution of damage"@en ;
+                                      skos:definition "An evolution of damage is a process representing the progression of material degradation under mechanical, thermal, or chemical stresses."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000661
 <https://w3id.org/pmd/co/PMD_0000661> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000002> ;
                                       rdfs:comment "It is often composed of silica-based compounds."@en ;
-                                      rdfs:label "glass"@en .
+                                      rdfs:label "glass"@en ;
+                                      skos:definition "A glass is an engineered material present as an amorphous solid typically formed by rapid cooling of a melt."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000663
 <https://w3id.org/pmd/co/PMD_0000663> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020003> ;
                                       rdfs:label "crystallite"@en ,
-                                                 "kristallit"@de .
+                                                 "kristallit"@de ;
+                                      skos:altLabel "Korn"@de ,
+                                                    "grain"@en ;
+                                      skos:definition "A crystal grain is a crystal that is part of a polycrystal."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000773
 <https://w3id.org/pmd/co/PMD_0000773> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000848> ;
-                                      rdfs:label "hardness"@en .
+                                      rdfs:label "hardness"@en ;
+                                      skos:definition "The hardness is a mechanical property used as a measure of a material's resistance to localized plastic deformation, often tested by indentation or scratch methods."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000777
@@ -980,13 +1065,15 @@ As a consequence, the behavoiral material properties in the ontology are differe
                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0001029> ;
                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000549>
                                                       ] ;
-                                      rdfs:label "heat capacity"@en .
+                                      rdfs:label "heat capacity"@en ;
+                                      skos:definition "The heat capacity is a thermal property describing the amount of heat energy required to raise the temperature of a material by a given amount."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000802
 <https://w3id.org/pmd/co/PMD_0000802> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000015 ;
-                                      rdfs:label "irradiation process"@en .
+                                      rdfs:label "irradiation process"@en ;
+                                      skos:definition "An irradiation process is a process in which a radiation source (bearing a stimulus role) emits radiation towards a material entity (bearing the target role)"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000833
@@ -1032,7 +1119,10 @@ As a consequence, the behavoiral material properties in the ontology are differe
 
 Unfortunately is is not possible to write down such axiom based on OWL. Semi-working solution are the temporally qualified continuants + SPARQL constrains."""@en ;
                                       rdfs:label "Herstellungsprozess"@de ,
-                                                 "manufacturing process"@en .
+                                                 "manufacturing process"@en ;
+                                      skos:definition """A planned process that is driven by the primary intent to transform objects
+A manufacturing process is always a transformative process."""@en ,
+                                                      "Ein geplannter Prozess, der von der primären Absicht angetrieben wird, Objekte zu transformieren. Ein Herstellungsprozess ist immer ein Transformationsprozess."@de .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000848
@@ -1042,7 +1132,10 @@ Unfortunately is is not possible to write down such axiom based on OWL. Semi-wor
                                                         owl:onProperty obo:BFO_0000054 ;
                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000522>
                                                       ] ;
-                                      rdfs:label "mechanical property"@en .
+                                      rdfs:label "mechanical property"@en ;
+                                      skos:definition """A mechanical property is a material property that inheres in a material M when an object O_target that consists of M is stimulated in a process through an interaction with an object O_stimulus and M changes its stress/strain/..(mechanical?) SDCs.
+
+TODO: Check general class axiom and defintion altogether !!!"""@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000853
@@ -1052,31 +1145,36 @@ Unfortunately is is not possible to write down such axiom based on OWL. Semi-wor
                                                         owl:onProperty obo:RO_0000080 ;
                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020106>
                                                       ] ;
-                                      rdfs:label "crystallographic texture"@en .
+                                      rdfs:label "crystallographic texture"@en ;
+                                      skos:definition "The crystallographic texture is a morphological quality describing the arrangement and orientation of grains in a metallic material, observed through crystallographic analysis."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000868
 <https://w3id.org/pmd/co/PMD_0000868> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000000> ;
-                                      rdfs:label "natural organic material"@en .
+                                      rdfs:label "natural organic material"@en ;
+                                      skos:definition "Natural organic materials are materials derived from natural biological sources, primarily composed of carbon-based compounds."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000869
 <https://w3id.org/pmd/co/PMD_0000869> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000015 ;
-                                      rdfs:label "occurence of chemical reaction"@en .
+                                      rdfs:label "occurence of chemical reaction"@en ;
+                                      skos:definition "The occurrence of (a) chemical reaction is the process in which substances interact to form new chemical compounds or alter their molecular structure."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000870
 <https://w3id.org/pmd/co/PMD_0000870> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000015 ;
-                                      rdfs:label "occurence of electic field"@en .
+                                      rdfs:label "occurence of electic field"@en ;
+                                      skos:definition "The occurrence of (an) electric field is a process describing the presence or generation of an electric field in a material or system."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000871
 <https://w3id.org/pmd/co/PMD_0000871> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000015 ;
-                                      rdfs:label "occurence of magnetic field"@en .
+                                      rdfs:label "occurence of magnetic field"@en ;
+                                      skos:definition "The occurrence of (a) magenetic field is a process describing the presence or generation of a magnetic field in a material or system."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000877
@@ -1086,37 +1184,45 @@ Unfortunately is is not possible to write down such axiom based on OWL. Semi-wor
                                                         owl:onProperty obo:BFO_0000054 ;
                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0001008>
                                                       ] ;
-                                      rdfs:label "optical property"@en .
+                                      rdfs:label "optical property"@en ;
+                                      skos:definition "An optical property is a material property representing the characteristics that describe how a material interacts with light, including reflection, refraction, and absorption."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000880
 <https://w3id.org/pmd/co/PMD_0000880> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000015 ;
-                                      rdfs:label "passing of time"@en .
+                                      rdfs:label "passing of time"@en ;
+                                      skos:definition "Passing of time is a process that describes the progression of time, which can influence material aging and property changes."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000882
 <https://w3id.org/pmd/co/PMD_0000882> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000017 ;
-                                      rdfs:label "phase boundary (realization)"@en .
+                                      rdfs:label "phase boundary (realization)"@en ;
+                                      skos:definition "A phase boundary is a realizable entity that is realized by the transition between distinct phases."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000888
 <https://w3id.org/pmd/co/PMD_0000888> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000002> ;
-                                      rdfs:label "polymer"@en .
+                                      rdfs:label "polymer"@en ;
+                                      skos:definition "A polymer is an engineered material that consists of many repeated subunits (monomers) to form long chains. The atoms within a polymer chain are bonded together by covalent bonds. The intermolecular forces between polymer chains are typically represented by Van der Waals forces and hydrogen bonds."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000890
 <https://w3id.org/pmd/co/PMD_0000890> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000027 ;
-                                      rdfs:label "connected material entity aggregate"@en .
+                                      rdfs:label "connected material entity aggregate"@en ;
+                                      skos:definition "A material entity aggregate that is a mereological sum of separate material entities, which adhere to one another through chemical bonds or physical junctions that go beyond gravity."@en ;
+                                      skos:example "the atoms of a molecule, the molecules forming the membrane of a cell, the epidermis in a human body"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000891
 <https://w3id.org/pmd/co/PMD_0000891> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000027 ;
-                                      rdfs:label "disconnected material entity aggregate"@en .
+                                      rdfs:label "disconnected material entity aggregate"@en ;
+                                      skos:definition "A material entity aggregate that is a mereological sum of scattered (i.e. spatially separated) material entities, which do not adhere to one another through chemical bonds or physical junctions but, instead, relate to one another merely on grounds of metric proximity. The material entities are separated from one another through space or through other material entities that do not belong to the group."@en ;
+                                      skos:example "a heap of stones, a colony of honeybees, a group of synapses, the trees of a forest, the canopy of a forest, the fish of a shoal, a group of commuters on the subway, the patients in a hospital"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000896
@@ -1124,27 +1230,36 @@ Unfortunately is is not possible to write down such axiom based on OWL. Semi-wor
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
                                       owl:disjointWith <https://w3id.org/pmd/co/PMD_0000967> ;
                                       rdfs:comment "The pressure is commonly measured in Pascals."@en ;
-                                      rdfs:label "pressure"@en .
+                                      rdfs:label "pressure"@en ;
+                                      skos:definition "The pressure is a thermodynamic quality describing the force exerted per unit area on a material."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000899
 <https://w3id.org/pmd/co/PMD_0000899> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000833> ;
                                       rdfs:label "Urformen"@de ,
-                                                 "primary shaping"@en .
+                                                 "primary shaping"@en ;
+                                      skos:altLabel "Primary Forming"@en ;
+                                      skos:definition "A manufacturing process that creates a defined workpiece from shapeless material by producing cohesion, whereby the characteristic properties of the material become visible in the end product."@en ,
+                                                      "Ein Herstellungsprozess, der aus formlosem Stoff durch das Herstellen von Kohäsion ein definiertes Werkstück schafft, wobei die charakteristischen Eigenschaften des Materials im Endprodukt sichtbar werden."@de ;
+                                      skos:example "Casting, Sintering"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000907
 <https://w3id.org/pmd/co/PMD_0000907> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000899> ;
                                       rdfs:label "Urformen Aus Dem Plastischen Zustand"@de ,
-                                                 "primary shaping from the plastic state"@en .
+                                                 "primary shaping from the plastic state"@en ;
+                                      skos:definition "A Primary Shaping process that involves forming materials from a plastic state."@en ,
+                                                      "Ein Urformprozess, der das Formen von Materialien aus einem plastischen Zustand beinhaltet."@de ;
+                                      skos:example "Thermoforming of plastic sheets."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000942
 <https://w3id.org/pmd/co/PMD_0000942> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
-                                      rdfs:label "specific surface area"@en .
+                                      rdfs:label "specific surface area"@en ;
+                                      skos:definition "The specific surface area is a morphologic quality describing the total surface area of a material per unit of mass or volume."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000949
@@ -1155,7 +1270,8 @@ Unfortunately is is not possible to write down such axiom based on OWL. Semi-wor
                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000596>
                                                       ] ;
                                       owl:disjointWith <https://w3id.org/pmd/co/PMD_0000952> ;
-                                      rdfs:label "stiffness"@en .
+                                      rdfs:label "stiffness"@en ;
+                                      skos:definition "The stiffness is a mechanical property describing the resistance of a material to deformation under an applied force."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000950
@@ -1195,13 +1311,15 @@ Unfortunately is is not possible to write down such axiom based on OWL. Semi-wor
                                                                              rdf:type owl:Class
                                                                            ]
                                                       ] ;
-                                      rdfs:label "stimulating process"@en .
+                                      rdfs:label "stimulating process"@en ;
+                                      skos:definition "The stimulating process is a process describing the application of an external influence, such as force, heat, or radiation, to study material response."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000952
 <https://w3id.org/pmd/co/PMD_0000952> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000848> ;
-                                      rdfs:label "strength"@en .
+                                      rdfs:label "strength"@en ;
+                                      skos:definition "The strength is a mechanical property describing the maximum stress a material can withstand before failure."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000967
@@ -1209,7 +1327,8 @@ Unfortunately is is not possible to write down such axiom based on OWL. Semi-wor
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
                                       rdfs:comment "The concept refers to an absolute tempeature, not to be mistaken with temperature difference."@en ,
                                                    "To express that an object has a temperature, the property 'intensive bearer of' can be used. It implies a chain of: object consists of some portion of matter and portion of matter bearer of some temperature."@en ;
-                                      rdfs:label "temperature"@en .
+                                      rdfs:label "temperature"@en ;
+                                      skos:definition "The temperature is a fundamental intensive quality representing the average atomic or molcular movement or vibration of a portion of matter."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000981
@@ -1219,25 +1338,29 @@ Unfortunately is is not possible to write down such axiom based on OWL. Semi-wor
                                                         owl:onProperty obo:BFO_0000054 ;
                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000520>
                                                       ] ;
-                                      rdfs:label "thermal property"@en .
+                                      rdfs:label "thermal property"@en ;
+                                      skos:definition "A thermal property is a material property representing attributes of a material that describe its behavior under temperature changes, such as thermal conductivity and expansion."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0001008
 <https://w3id.org/pmd/co/PMD_0001008> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000802> ;
-                                      rdfs:label "waver irradiation"@en .
+                                      rdfs:label "waver irradiation"@en ;
+                                      skos:definition "A waver irradiation is an irradiation describing an exposure of a material or system to electromagnetic waves or radiation."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020003
 <https://w3id.org/pmd/co/PMD_0020003> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000030 ;
-                                      rdfs:label "crystal"@en .
+                                      rdfs:label "crystal"@en ;
+                                      skos:definition "A crystal is an object that has part some entities that concretize a Bravais lattice."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020005
 <https://w3id.org/pmd/co/PMD_0020005> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
-                                      rdfs:label "porosity"@en .
+                                      rdfs:label "porosity"@en ;
+                                      skos:definition "The porosity is a quality describing the fraction of the materials (enclosing) spatial region occupied by pores."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020023
@@ -1253,7 +1376,8 @@ Unfortunately is is not possible to write down such axiom based on OWL. Semi-wor
                                                                       )
                                                           ] ;
                                       rdfs:subClassOf obo:OBI_0001930 ;
-                                      rdfs:label "metallic grain structures"@en .
+                                      rdfs:label "metallic grain structures"@en ;
+                                      skos:definition "The metallic grain structures is a categorical value specification that specifies value of the  metallic grain structure quality. It describes the morphology of polycrystalline metallic materials. Polycrystalline metallic materials will typically form their grain structures as one of those categories or a transition or mixture state of those."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020099
@@ -1279,31 +1403,41 @@ Unfortunately is is not possible to write down such axiom based on OWL. Semi-wor
                                       rdfs:comment """TODO: possibly extend for 2D (Graphene etc)
 
 More elaborate crystal descriptions may be found in http://emmo.info/domain-crystallography/crystallography or https://purls.helmholtz-metadaten.de/disos/cso"""@en ;
-                                      rdfs:label "bravais lattice (3d)"@en .
+                                      rdfs:label "bravais lattice (3d)"@en ;
+                                      skos:definition "The Bravais lattice is a categorical value specification that specifies value of the crystal structure quality. It describes the possible geometric arrangement of lattice points in a crystal. The present descriptor is limited to the 14 possible three-dimensional arrangements."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020101
 <https://w3id.org/pmd/co/PMD_0020101> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000145 ;
-                                      rdfs:label "proportion"@en .
+                                      rdfs:label "proportion"@en ;
+                                      skos:altLabel "concentration"@en ,
+                                                    "fraction"@en ;
+                                      skos:definition "A Proportion is a relational quality between two entites (the whole and the part) which quantifies the relation between the whole and its part."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020102
 <https://w3id.org/pmd/co/PMD_0020102> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ;
-                                      rdfs:label "mass proportion"@en .
+                                      rdfs:label "mass proportion"@en ;
+                                      skos:definition "The Mass Proportion is a Proportion which quantifies the mass of the part relative to the mass of the whole."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020103
 <https://w3id.org/pmd/co/PMD_0020103> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ;
-                                      rdfs:label "molar proportion"@en .
+                                      rdfs:label "molar proportion"@en ;
+                                      skos:altLabel "Molar Ratio"@en ;
+                                      skos:definition "The Molar Proportion is the proportion which quantifies the entities count of the part in relation to the entites count of the whole."@en ;
+                                      skos:example """The molar ratio of hydrogen gas H2 molecules to water H2O molecules is 1/1 in the oxyhydrogen reaction. The molar ratio of oxigen molecules O2 to water molecules is 2/1.
+The molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 2022 AD."""@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020104
 <https://w3id.org/pmd/co/PMD_0020104> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ;
-                                      rdfs:label "volume proportion"@en .
+                                      rdfs:label "volume proportion"@en ;
+                                      skos:definition "The Mass Proportion is a Proportion which quantifies the volume of the part relative to the volume of the whole."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020106
@@ -1313,13 +1447,16 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
                                                         owl:onProperty obo:BFO_0000051 ;
                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000663>
                                                       ] ;
-                                      rdfs:label "polycrystal"@en .
+                                      rdfs:label "polycrystal"@en ;
+                                      skos:altLabel "Polycrystalline structure"@en ;
+                                      skos:definition "Polycrystal is a connected object aggregate that has continuant part some crystal grains"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020112
 <https://w3id.org/pmd/co/PMD_0020112> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
-                                      rdfs:label "grain size distribution"@en .
+                                      rdfs:label "grain size distribution"@en ;
+                                      skos:definition "An intensive quality describing the lower length scale object aggregate (grains) that is part of the material."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020116
@@ -1337,19 +1474,24 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
                                                                       )
                                                           ] ;
                                       rdfs:subClassOf obo:OBI_0001930 ;
-                                      rdfs:label "aggregate state value"@en .
+                                      rdfs:label "aggregate state value"@en ;
+                                      skos:definition "The aggregate state value is a categorical value specification that specifies value of the aggregatge state quality."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020131
 <https://w3id.org/pmd/co/PMD_0020131> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000019 ;
-                                      rdfs:label "intensive quality"@en .
+                                      rdfs:label "intensive quality"@en ;
+                                      skos:altLabel "Point property"@en ;
+                                      skos:definition "An intensive quality is a qualty that inheres in only portion of matter and thus is independent of the bearers (system-) size."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0025001
 <https://w3id.org/pmd/co/PMD_0025001> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
-                                      rdfs:label "composition"@en .
+                                      rdfs:label "composition"@en ;
+                                      skos:definition "Composition is a morphological quality describing the types and proportions of compounds (but not chemical elements) present in a portion of matter."@en ;
+                                      skos:example "4 vol.% nitric acid solution, Styrene-Butadiene-Styrene (SBS) Block Copolymer with 50 vol.% of both styrene and butadiene"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0025003
@@ -1364,13 +1506,15 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0000077> ;
                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020023>
                                                       ] ;
-                                      rdfs:label "metallic grain structure"@en .
+                                      rdfs:label "metallic grain structure"@en ;
+                                      skos:definition "metallic grain structure characterizes the distinct phases in the microscopic structure of a metallic material. It concretizes ferrite, austenite, martensite, etc."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0050004
 <https://w3id.org/pmd/co/PMD_0050004> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000888> ;
-                                      rdfs:label "thermoplastics"@en .
+                                      rdfs:label "thermoplastics"@en ;
+                                      skos:definition "A Thermoplastic is a Polymer that becomes moldable when heated and solidifies upon cooling."@en .
 
 
 #################################################################
@@ -1537,47 +1681,56 @@ obo:IAO_0000428 rdf:type owl:NamedIndividual ;
 
 ###  https://w3id.org/pmd/co/PMD_0020117
 <https://w3id.org/pmd/co/PMD_0020117> rdf:type owl:NamedIndividual ;
-                                      rdfs:label "aggregate state solid"@en .
+                                      rdfs:label "aggregate state solid"@en ;
+                                      skos:definition "A state where the bonds between entites trasmit shear forces."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020118
 <https://w3id.org/pmd/co/PMD_0020118> rdf:type owl:NamedIndividual ;
-                                      rdfs:label "aggregate state liquid"@en .
+                                      rdfs:label "aggregate state liquid"@en ;
+                                      skos:definition "A state where the bonds of the entites transmit no shear force."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020119
 <https://w3id.org/pmd/co/PMD_0020119> rdf:type owl:NamedIndividual ;
-                                      rdfs:label "aggregate state gasous"@en .
+                                      rdfs:label "aggregate state gasous"@en ;
+                                      skos:definition "A state where the entities have no bonding."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020120
 <https://w3id.org/pmd/co/PMD_0020120> rdf:type owl:NamedIndividual ;
-                                      rdfs:label "aggregate state plasma"@en .
+                                      rdfs:label "aggregate state plasma"@en ;
+                                      skos:definition "An aggregate state where the entites are atom nuclei and have no bonds."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020121
 <https://w3id.org/pmd/co/PMD_0020121> rdf:type owl:NamedIndividual ;
-                                      rdfs:label "aggregate state atom gas"@en .
+                                      rdfs:label "aggregate state atom gas"@en ;
+                                      skos:definition "A gaseous state where the gas entities are atoms."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020122
 <https://w3id.org/pmd/co/PMD_0020122> rdf:type owl:NamedIndividual ;
-                                      rdfs:label "aggregate state supercritical fluid"@en .
+                                      rdfs:label "aggregate state supercritical fluid"@en ;
+                                      skos:definition "A state with strong bindings between entites that do not transmit shear force."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020123
 <https://w3id.org/pmd/co/PMD_0020123> rdf:type owl:NamedIndividual ;
-                                      rdfs:label "aggregate state mesomorphic"@en .
+                                      rdfs:label "aggregate state mesomorphic"@en ;
+                                      skos:definition "A state where some bonds transmit shear stresses and some do not."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020124
 <https://w3id.org/pmd/co/PMD_0020124> rdf:type owl:NamedIndividual ;
-                                      rdfs:label "aggregate state suprafluid"@en .
+                                      rdfs:label "aggregate state suprafluid"@en ;
+                                      skos:definition "A state with frictionless binding that transmits no shear force between entites."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020125
 <https://w3id.org/pmd/co/PMD_0020125> rdf:type owl:NamedIndividual ;
-                                      rdfs:label "aggregate state suprasolid"@en .
+                                      rdfs:label "aggregate state suprasolid"@en ;
+                                      skos:definition "A state that exhibits suprafluid and solid properties."@en .
 
 
 #################################################################
