@@ -15,13 +15,85 @@ Import: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
 Annotations: 
     dcterms:title "AUTOMATCE - Transactional Data Module"@en,
     rdfs:comment "The transactional data module of the AUTOMATCE Ontology."@en
-
-AnnotationProperty: dcterms:title
-
-    
-AnnotationProperty: rdfs:comment
-
     
 Datatype: rdf:PlainLiteral
+
+# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000016> (identifier at manufacturer)
+
+Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000016>
+
+  Annotations:
+    rdfs:label "identifier at manufacturer"@en,
+    skos:definition "A unique string or code assigned by a manufacturer to identify a specific product grade."@en,
+    skos:example "BASF code 'A3WG6' for a specific Ultramid grade."@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000017> (identifier name at manufacturer)
+
+Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000017>
+
+  Annotations:
+    rdfs:label "identifier name at manufacturer"@en,
+    skos:definition "The brand or trade name used for marketing the material."@en,
+    skos:example "'Zytel' (DuPont) or 'Durethan' (Lanxess)."@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000018> (material designation)
+
+Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000018>
+
+  Annotations:
+    rdfs:label "material designation"@en,
+    skos:definition "A string following a standard nomenclature (e.g., ISO 1043) to describe the material composition."@en,
+    skos:example "PA66-GF25"@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000019> (material identifier)
+
+Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000019>
+
+  Annotations:
+    rdfs:label "material identifier"@en,
+    skos:definition "A globally unique identifier (GUID) or database key for the material entry."@en,
+    skos:example "Catena-X Material Twin ID."@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000020> (batch identifier)
+
+Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000020>
+
+  Annotations:
+    rdfs:label "batch identifier"@en,
+    skos:definition "Code assigned to a specific production run for traceability."@en,
+    skos:example "Batch 2023-10-A-X55."@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000021> (business partner number)
+
+Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000021>
+
+  Annotations:
+    rdfs:label "business partner number"@en,
+    skos:definition "Unique identifier for a legal entity in the automotive supply chain network (Catena-X standard)."@en,
+    skos:example "BPNL00000003AY2 (Example BPN)."@en,
+    pmd:PMD_0050117 "BPN"
+
+  SubClassOf:
+    obo:IAO_0020000
 
     

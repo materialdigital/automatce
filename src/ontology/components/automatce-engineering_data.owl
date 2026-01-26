@@ -16,12 +16,100 @@ Annotations:
     dcterms:title "AUTOMATCE - Engineering Data Module"@en,
     rdfs:comment "The engineering data module of the AUTOMATCE Ontology."@en
 
-AnnotationProperty: dcterms:title
-
-    
-AnnotationProperty: rdfs:comment
-
-    
 Datatype: rdf:PlainLiteral
 
+# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000001> (injection molding process)
+
+Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000001>
+
+  Annotations:
+    rdfs:comment "This process is the standard for mass-producing plastic automotive components. It involves specific phases: plasticization, injection, packing, cooling, and ejection."@en,
+    rdfs:label "injection molding process"@en,
+    skos:definition "A cyclic manufacturing process in which thermoplastic material is melted in a heated barrel, injected under high pressure into a closed mold cavity, held under pressure while cooling, and ejected as a solidified part."@en,
+    skos:example "The manufacturing of a polyamide intake manifold or a polypropylene bumper fascia."@en
+
+  SubClassOf:
+    pmd:PMD_0000907
     
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000007> (stress at break)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000007>
+
+  Annotations:
+    rdfs:comment
+      "For brittle materials, this is equal to tensile strength. For ductile materials, it may be lower than the yield point."@en,
+    rdfs:label
+      "stress at break"@en,
+    skos:definition
+      "The tensile stress recorded at the moment of rupture of the specimen."@en,
+    skos:example
+      "A value of 150 MPa for a GF-reinforced polymer."@en
+
+  SubClassOf:
+    pmd:PMD_0000952
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000024> (mold)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000024>
+  Annotations:
+    rdfs:comment "The tool that imparts the shape to the engineered material during the primary shaping process."@en,
+    rdfs:label "mold"@en,
+    skos:definition "A hollowed-out block that is filled with a liquid or pliable material like plastic, glass, metal, or ceramic raw material."@en,
+    skos:example "Injection mold for a dashboard panel."@en
+  SubClassOf:
+    obo:BFO_0000030
+
+# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000022> (strain at break)
+
+Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000022>
+
+  Annotations:
+    rdfs:comment "Indicates ductility. Low strain at break (less than 5%) suggests brittle behavior."@en,
+    rdfs:label "strain at break"@en,
+    skos:definition "The elongation of a specimen at the moment of rupture, expressed as a percentage of the original gauge length."@en,
+    skos:example "3% strain at break for a glass-filled polyamide."@en
+
+  SubClassOf:
+    pmd:PMD_0000848
+
+
+# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000029> (impact strength)
+
+Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000029>
+
+  Annotations:
+    rdfs:comment "Often measured via Charpy or Izod notched impact tests."@en,
+    rdfs:label "impact strength"@en,
+    skos:definition "The ability of a material to absorb energy and resist fracture under high speed loading."@en,
+    skos:example "High impact strength is required for bumper beams."@en
+
+  SubClassOf:
+    pmd:PMD_0000952
+
+
+# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000030> (flexural modulus)
+
+Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000030>
+
+  Annotations:
+    rdfs:comment "Standard metric for stiffness in plastics (ISO 178)."@en,
+    rdfs:label "flexural modulus"@en,
+    skos:definition "The ratio of stress to strain in flexural deformation, or the tendency for a material to resist bending."@en,
+    skos:example "Flexural modulus of 8500 MPa for PA66-GF30."@en
+
+  SubClassOf:
+    pmd:PMD_0000949
+
+
+# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000031> (flexural strength)
+
+Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000031>
+
+  Annotations:
+    rdfs:comment "Relevant for snap-fit joints in automotive interiors."@en,
+    rdfs:label "flexural strength"@en,
+    skos:definition "The maximum stress a material can withstand in bending before yielding or breaking."@en,
+    skos:example "250 MPa for a high-performance composite."@en
+
+  SubClassOf:
+    pmd:PMD_0000952

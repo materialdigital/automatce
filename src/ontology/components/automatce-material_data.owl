@@ -16,12 +16,1172 @@ Annotations:
     dcterms:title "AUTOMATCE - Material Data Module"@en,
     rdfs:comment "The material data module of the AUTOMATCE Ontology."@en
 
-AnnotationProperty: dcterms:title
-
-    
-AnnotationProperty: rdfs:comment
+AnnotationProperty: skos:notation
+AnnotationProperty: skos:inScheme
+AnnotationProperty: skos:topConceptOf
+AnnotationProperty: skos:broader
+AnnotationProperty: pmd:PMD_0050117
 
     
 Datatype: rdf:PlainLiteral
 
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000002> (raw material role)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000002>
+
+  Annotations:
+    rdfs:comment 
+      "This role is realized when the material enters the supply chain or the hopper of a processing machine."@en,
+    rdfs:label 
+      "raw material role"@en,
+    skos:definition 
+      "A role borne by a material entity when it functions as an input to a manufacturing process prior to transformation or processing."@en,
+    skos:example 
+      "Plastic granules sitting in a silo waiting to be fed into an extruder bear this role."@en
+
+  SubClassOf:
+    obo:BFO_0000023
+
     
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000003> (additive role)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000003>
+
+  Annotations:
+    rdfs:comment
+      "Additives are distinct from fillers (which bulk up volume) and the matrix. They perform specific chemical or physical modifications."@en,
+    rdfs:label
+      "additive role"@en,
+    skos:definition
+      "A role borne by a substance intentionally added in relatively small amounts to modify the processing characteristics, performance properties, or cost of a base material."@en,
+    skos:example
+      "UV stabilizers added to dashboard polymers to prevent sun damage; Plasticizers added to PVC."@en
+
+  SubClassOf:
+    obo:BFO_0000023
+
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000004> (organic colorant)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000004>
+
+  Annotations:
+    rdfs:comment
+      "Organic colorants (dyes) offer high color strength and brightness but may have lower thermal stability than pigments."@en,
+    rdfs:label
+      "organic colorant"@en,
+    skos:definition
+      "A complex organic chemical compound used to impart color, typically soluble in the medium."@en,
+    skos:example
+      "Azo dyes used in interior textile coloring."@en
+
+  SubClassOf:
+    pmd:PMD_0000868
+
+  DisjointWith:
+    <https://w3id.org/pmd/AUTOMATCE_0000005>
+
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000005> (inorganic colorant)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000005>
+
+  Annotations:
+    rdfs:comment
+      "Inorganic colorants (pigments) are generally insoluble and provide opacity and high heat stability."@en,
+    rdfs:label
+      "inorganic colorant"@en,
+    skos:definition
+      "A mineral-based chemical compound, usually an oxide or sulfide, used to impart color."@en,
+    skos:example
+      "Titanium dioxide (white) used in car paints."@en
+
+  SubClassOf:
+    pmd:PMD_0000002
+
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000006> (colorant role)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000006>
+
+  Annotations:
+    rdfs:comment
+      "This role can be borne by organic dyes or inorganic pigments."@en,
+    rdfs:label
+      "colorant role"@en,
+    skos:definition
+      "A role borne by an additive substance when its primary function is to impart color to a material."@en,
+    skos:example
+      "Carbon black acting as a pigment to turn a tire black."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/AUTOMATCE_0000003>
+
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000008> (color)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000008>
+
+  Annotations:
+    rdfs:comment
+      "Can be defined descriptively (Red) or metrologically (L*a*b* coordinates)."@en,
+    rdfs:label
+      "color"@en,
+    skos:definition
+      "The quality of an object or substance with respect to light reflected by the object, usually determined visually by measurement of hue, saturation, and brightness."@en,
+    skos:example
+      "The 'Piano Black' finish on a B-pillar trim."@en
+
+  SubClassOf:
+    pmd:PMD_0020131
+
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000009> (polyamide)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000009>
+
+  Annotations:
+    rdfs:comment
+      "Polyamides are semi-crystalline polymers known for good thermal and chemical resistance."@en,
+    rdfs:label
+      "polyamide"@en,
+    skos:definition
+      "A polymer containing repeating amide (-CONH-) linkages in the polymer backbone."@en,
+    skos:example
+      "Nylon 6, Nylon 12, Nylon 66."@en,
+    pmd:PMD_0050117
+      "PA"
+
+  SubClassOf:
+    pmd:PMD_0050004
+
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000010> (PA66)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000010>
+
+  Annotations:
+    rdfs:comment
+      "PA66 has a higher melting point (~260°C) than PA6 but absorbs moisture which affects dimensional stability."@en,
+    rdfs:label
+      "PA66"@en,
+    skos:definition
+      "A semicrystalline thermoplastic polyamide synthesized from hexamethylenediamine and adipic acid."@en,
+    skos:example
+      "Material used for cylinder head covers and radiator end tanks."@en,
+    pmd:PMD_0050117
+      "PA66"
+
+  SubClassOf:
+    <https://w3id.org/pmd/AUTOMATCE_0000009>
+
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000011> (PA66-GF25)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000011>
+
+  Annotations:
+    rdfs:comment
+      "The addition of 25% glass fiber significantly increases stiffness and tensile strength compared to neat PA66."@en,
+    rdfs:label
+      "PA66-GF25"@en,
+    skos:definition
+      "A composite material consisting of a Polyamide 66 matrix reinforced with 25% glass fiber by mass."@en,
+    skos:example
+      "Structural components in the engine bay requiring high stiffness at elevated temperatures."@en
+
+  SubClassOf:
+    pmd:PMD_0000577
+
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000012> (fiber)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000012>
+
+  Annotations:
+    rdfs:comment
+      "In PMD logic, this is a disconnected aggregate because the individual filaments in a bundle are distinct objects."@en,
+    rdfs:label
+      "fiber"@en,
+    skos:definition
+      "A class of materials that are continuous filaments or are in discrete elongated pieces, similar to lengths of thread."@en,
+    skos:example
+      "Carbon fiber tow, Aramid fibers."@en
+
+  SubClassOf:
+    pmd:PMD_0000891
+
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000013> (glass fiber)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000013>
+
+  Annotations:
+    rdfs:comment
+      "Used extensively as a reinforcement agent in polymer matrix composites."@en,
+    rdfs:label
+      "glass fiber"@en,
+    skos:definition
+      "A material consisting of numerous extremely fine fibers of glass."@en,
+    skos:example
+      "E-Glass used to reinforce PA66 for automotive pedals."@en,
+    pmd:PMD_0050117
+      "GF"
+
+  SubClassOf:
+    <https://w3id.org/pmd/AUTOMATCE_0000012>
+
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000014> (fiber material content mass fraction)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000014>
+
+  Annotations:
+    rdfs:comment
+      "Commonly denoted as wt%. PA66-GF25 implies a value of 0.25 or 25%."@en,
+    rdfs:label
+      "fiber material content mass fraction"@en,
+    skos:definition
+      "The ratio of the mass of the fiber reinforcement to the total mass of the composite material."@en,
+    skos:example
+      "25% mass fraction in PA66-GF25."@en
+
+  SubClassOf:
+    pmd:PMD_0020102
+
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000015> (fiber material content volume fraction)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000015>
+
+  Annotations:
+    rdfs:comment
+      "Volume fraction is more critical for micromechanical modeling (e.g., Rule of Mixtures) than mass fraction."@en,
+    rdfs:label
+      "fiber material content volume fraction"@en,
+    skos:definition
+      "The ratio of the volume of the fiber reinforcement to the total volume of the composite material."@en,
+    skos:example
+      "Approximately 14-15% volume fraction corresponds to 25% mass fraction for Glass/PA66."@en
+
+  SubClassOf:
+    pmd:PMD_0020104
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000023> (viscosity)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000023>
+  Annotations:
+    rdfs:comment "Critical for injection molding simulations to predict mold filling."@en,
+    rdfs:label "viscosity"@en,
+    skos:definition "A measure of a fluid's resistance to flow."@en,
+    skos:example "The melt viscosity of polypropylene at 230°C."@en
+  SubClassOf:
+    pmd:PMD_0020131
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000025> (shear viscosity)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000025>
+  Annotations:
+    rdfs:comment "Polymers are non-Newtonian; their shear viscosity decreases as shear rate increases (shear thinning)."@en,
+    rdfs:label "shear viscosity"@en,
+    skos:definition "The viscosity of a fluid when subjected to shear stress; defined as the ratio of shear stress to shear rate."@en,
+    skos:example "Viscosity curve data required for Moldflow simulation."@en
+  SubClassOf:
+    pmd:PMD_0020131
+
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000026> (glass transition temperature)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000026>
+  Annotations:
+    rdfs:comment "Below Tg, the amorphous phase is frozen; above Tg, polymer chains have mobility."@en,
+    rdfs:label "glass transition temperature"@en,
+    skos:definition "The temperature range where a polymer material transitions from a hard, glassy material to a soft, rubbery material."@en,
+    skos:example "Tg of approx. 50°C for dry PA66."@en,
+    pmd:PMD_0050117 "Tg"
+  SubClassOf:
+    pmd:PMD_0000882
+
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000027> (coefficient of linear thermal expansion)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000027>
+  Annotations:
+    rdfs:comment "Crucial for calculating gap and flush in automotive assembly where different materials (steel vs plastic) meet."@en,
+    rdfs:label "coefficient of linear thermal expansion"@en,
+    skos:definition "The fractional change in length per degree of temperature change."@en,
+    skos:example "CLTE is distinct in flow-direction vs cross-flow direction for fiber reinforced parts."@en,
+    pmd:PMD_0050117 "CLTE"
+  SubClassOf:
+    pmd:PMD_0000981
+
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000028> (specific heat capacity)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000028>
+  Annotations:
+    rdfs:comment "Used to calculate cooling times in injection molding."@en,
+    rdfs:label "specific heat capacity"@en,
+    skos:definition "The amount of heat energy required to raise the temperature of a substance per unit of mass."@en,
+    skos:example "1700 J/(kg·K) for Polypropylene."@en,
+    pmd:PMD_0050117 "Cp"
+  SubClassOf:
+    pmd:PMD_0000981
+
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000032> (humidity)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000032>
+  Annotations:
+    rdfs:comment "Crucial for PA66 as it absorbs moisture, changing its mechanical properties (conditioning)."@en,
+    rdfs:label "humidity"@en,
+    skos:definition "The concentration of water vapor present in the air or environment surrounding a material."@en,
+    skos:example "50% Relative Humidity (standard conditioning atmosphere)."@en
+  SubClassOf:
+    pmd:PMD_0020131
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060001> (<https://w3id.org/pmd/AUTOMATCE_1060001>)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060001>
+  Annotations:
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "1",
+    skos:prefLabel "1. Stahl- und Eisenwerkstoffe"@de,
+    skos:prefLabel "1. steel and iron materials"@en,
+    skos:topConceptOf <https://w3id.org/pmd/VDA_231_106_Scheme>
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060002> (<https://w3id.org/pmd/AUTOMATCE_1060002>)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060002>
+  Annotations:
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "2",
+    skos:prefLabel "2. Leichtmetalle, Guss- und Knetlegierungen"@de,
+    skos:prefLabel "2. light alloys, cast and wrought alloys"@en,
+    skos:topConceptOf <https://w3id.org/pmd/VDA_231_106_Scheme>
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060003> (<https://w3id.org/pmd/AUTOMATCE_1060003>)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060003>
+  Annotations:
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "3",
+    skos:prefLabel "3. Buntmetalle, Guss- und Knetlegierungen"@de,
+    skos:prefLabel "3. nonferrous heavy metals, cast and wrought alloys"@en,
+    skos:topConceptOf <https://w3id.org/pmd/VDA_231_106_Scheme>
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060004> (4. Sondermetalle)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060004>
+  Annotations:
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "4",
+    skos:prefLabel "4. Sondermetalle"@de,
+    skos:prefLabel "4. special metals"@en,
+    skos:topConceptOf <https://w3id.org/pmd/VDA_231_106_Scheme>
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060005> (5. Polymere Werkstoffe)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060005>
+  Annotations:
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "5",
+    skos:prefLabel "5. Polymere Werkstoffe"@de,
+    skos:prefLabel "5. polymer materials"@en,
+    skos:topConceptOf <https://w3id.org/pmd/VDA_231_106_Scheme>
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060006> (6. Prozesspolymere)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060006>
+  Annotations:
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "6",
+    skos:prefLabel "6. Prozesspolymere"@de,
+    skos:prefLabel "6. process polymers"@en,
+    skos:topConceptOf <https://w3id.org/pmd/VDA_231_106_Scheme>
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060007> (7. sonstige Werkstoffe und Werkstoffverbunde)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060007>
+  Annotations:
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "7",
+    skos:prefLabel "7. other materials and material compounds"@en,
+    skos:prefLabel "7. sonstige Werkstoffe und Werkstoffverbunde"@de,
+    skos:topConceptOf <https://w3id.org/pmd/VDA_231_106_Scheme>
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060008> (8. Elektronik / Elektrik)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060008>
+  Annotations:
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "8",
+    skos:prefLabel "8. Elektronik / Elektrik"@de,
+    skos:prefLabel "8. electronics / electrics"@en,
+    skos:topConceptOf <https://w3id.org/pmd/VDA_231_106_Scheme>
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060009> (9. Kraftstoffe und Hilfsstoffe)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060009>
+  Annotations:
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "9",
+    skos:prefLabel "9. Kraftstoffe und Hilfsstoffe"@de,
+    skos:prefLabel "9. fuels and auxiliary means"@en,
+    skos:topConceptOf <https://w3id.org/pmd/VDA_231_106_Scheme>
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060011> (1.1 Stähle / Stahlguss / Sinterstahl)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060011>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060001>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "1.1",
+    skos:prefLabel "1.1 Stähle / Stahlguss / Sinterstahl"@de,
+    skos:prefLabel "1.1 steels / cast steel / sintered steel"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060012> (1.2 Gusseisen)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060012>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060001>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "1.2",
+    skos:prefLabel "1.2 Gusseisen"@de,
+    skos:prefLabel "1.2 cast iron"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060021> (2.1 Aluminium und Aluminiumlegierungen)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060021>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060002>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "2.1",
+    skos:prefLabel "2.1 Aluminium und Aluminiumlegierungen"@de,
+    skos:prefLabel "2.1 aluminium and aluminium alloys"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060022> (2.2 Magnesium und Magnesiumlegierungen)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060022>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060002>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "2.2",
+    skos:prefLabel "2.2 Magnesium und Magnesiumlegierungen"@de,
+    skos:prefLabel "2.2 magnesium and magnesium alloys"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060023> (2.3 Titan und Titanlegierungen)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060023>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060002>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "2.3",
+    skos:prefLabel "2.3 Titan und Titanlegierungen"@de,
+    skos:prefLabel "2.3 titanium and titanium alloys"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060031> (3.1 Kupfer)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060031>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060003>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "3.1",
+    skos:prefLabel "3.1 Kupfer"@de,
+    skos:prefLabel "3.1 copper"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060032> (3.2 Kupferlegierungen)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060032>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060003>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "3.2",
+    skos:prefLabel "3.2 Kupferlegierungen"@de,
+    skos:prefLabel "3.2 copper alloys"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060033> (3.3 Zinklegierungen)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060033>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060003>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "3.3",
+    skos:prefLabel "3.3 Zinklegierungen"@de,
+    skos:prefLabel "3.3 zinc alloys"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060034> (3.4 Nickellegierungen)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060034>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060003>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "3.4",
+    skos:prefLabel "3.4 Nickellegierungen"@de,
+    skos:prefLabel "3.4 nickel alloys"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060035> (3.5 Blei)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060035>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060003>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "3.5",
+    skos:prefLabel "3.5 Blei"@de,
+    skos:prefLabel "3.5 lead"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060041> (4.1 Platin / Rhodium)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060041>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060004>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "4.1",
+    skos:prefLabel "4.1 Platin / Rhodium"@de,
+    skos:prefLabel "4.1 platinum / rhodium"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060042> (4.2 andere Sondermetalle)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060042>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060004>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "4.2",
+    skos:prefLabel "4.2 andere Sondermetalle"@de,
+    skos:prefLabel "4.2 other special metals"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060051> (5.1 Thermoplaste (gefüllt / ungefüllt))
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060051>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060005>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "5.1",
+    skos:prefLabel "5.1 Thermoplaste (gefüllt / ungefüllt)"@de,
+    skos:prefLabel "5.1 thermoplastics (filled / unfilled)"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060052> (5.2 thermoplastische Elastomere)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060052>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060005>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "5.2",
+    skos:prefLabel "5.2 thermoplastische Elastomere"@de,
+    skos:prefLabel "5.2 thermoplastic elastomers"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060053> (5.3 Elastomere / Elastomer-Verbunde)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060053>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060005>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "5.3",
+    skos:prefLabel "5.3 Elastomere / Elastomer-Verbunde"@de,
+    skos:prefLabel "5.3 elastomers / elastomeric compounds"@en
+  Types:
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060054> (5.4 Duroplaste)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060054>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060005>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "5.4",
+    skos:prefLabel "5.4 Duroplaste"@de,
+    skos:prefLabel "5.4 duromers"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060055> (5.5 Polymerverbunde)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060055>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060005>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "5.5",
+    skos:prefLabel "5.5 Polymerverbunde"@de,
+    skos:prefLabel "5.5 polymeric compounds"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060061> (6.1 Lacke)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060061>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060006>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "6.1",
+    skos:prefLabel "6.1 Lacke"@de,
+    skos:prefLabel "6.1 lacquers"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060062> (6.2 Klebstoffe, Dichtmassen)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060062>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060006>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "6.2",
+    skos:prefLabel "6.2 Klebstoffe, Dichtmassen"@de,
+    skos:prefLabel "6.2 adhesives, sealants"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060063> (6.3 Unterbodenschutz)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060063>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060006>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "6.3",
+    skos:prefLabel "6.3 Unterbodenschutz"@de,
+    skos:prefLabel "6.3 underseal"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060071> (7.1 modifizierte organische Naturwerkstoffe)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060071>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060007>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "7.1",
+    skos:prefLabel "7.1 modified organic natural materials"@en,
+    skos:prefLabel "7.1 modifizierte organische Naturwerkstoffe"@de
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060072> (7.2 Keramik / Glas)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060072>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060007>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "7.2",
+    skos:prefLabel "7.2 Keramik / Glas"@de,
+    skos:prefLabel "7.2 ceramics / glass"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060073> (7.3 andere Verbunde)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060073>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060007>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "7.3",
+    skos:prefLabel "7.3 andere Verbunde"@de,
+    skos:prefLabel "7.3 other compounds"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060081> (8.1 Elektronik)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060081>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060008>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "8.1",
+    skos:prefLabel "8.1 Elektronik"@de,
+    skos:prefLabel "8.1 electronics"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060082> (8.2 Elektrik)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060082>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060008>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "8.2",
+    skos:prefLabel "8.2 Elektrik"@de,
+    skos:prefLabel "8.2 electrics"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060091> (9.1 Kraftstoffe)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060091>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060009>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "9.1",
+    skos:prefLabel "9.1 Kraftstoffe"@de,
+    skos:prefLabel "9.1 fuels"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060092> (9.2 Schmierstoffe)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060092>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060009>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "9.2",
+    skos:prefLabel "9.2 Schmierstoffe"@de,
+    skos:prefLabel "9.2 lubricants"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060093> (9.3 Bremsflüssigkeit)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060093>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060009>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "9.3",
+    skos:prefLabel "9.3 Bremsflüssigkeit"@de,
+    skos:prefLabel "9.3 brake fluid"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060094> (9.4 Kühlmittel / andere Glykole)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060094>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060009>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "9.4",
+    skos:prefLabel "9.4 Kühlmittel / andere Glykole"@de,
+    skos:prefLabel "9.4 coolant / other glycols"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060095> (9.5 Kältemittel)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060095>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060009>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "9.5",
+    skos:prefLabel "9.5 Kältemittel"@de,
+    skos:prefLabel "9.5 refrigerant"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060096> (9.6 Waschwasser, Batteriesäuren)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060096>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060009>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "9.6",
+    skos:prefLabel "9.6 Waschwasser, Batteriesäuren"@de,
+    skos:prefLabel "9.6 washing water, battery acids"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060097> (9.7 Konservierungsmittel)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060097>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060009>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "9.7",
+    skos:prefLabel "9.7 Konservierungsmittel"@de,
+    skos:prefLabel "9.7 preservative"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060098> (9.8 andere Kraftstoffe und Hilfsstoffe)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060098>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060009>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "9.8",
+    skos:prefLabel "9.8 andere Kraftstoffe und Hilfsstoffe"@de,
+    skos:prefLabel "9.8 other fuels and auxiliary means"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060111> (1.1.1 unlegiert, niedriglegiert)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060111>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060011>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "1.1.1",
+    skos:prefLabel "1.1.1 unalloyed, low alloyed"@en,
+    skos:prefLabel "1.1.1 unlegiert, niedriglegiert"@de
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060112> (1.1.2 hochlegiert)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060112>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060011>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "1.1.2",
+    skos:prefLabel "1.1.2 highly alloyed"@en,
+    skos:prefLabel "1.1.2 hochlegiert"@de
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060121> (1.2.1 Gusseisen mit Lamellengraphit / Temperguss)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060121>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060012>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "1.2.1",
+    skos:prefLabel "1.2.1 Gusseisen mit Lamellengraphit / Temperguss"@de,
+    skos:prefLabel "1.2.1 cast iron with lamellar graphite / tempered cast iron"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060122> (1.2.2 Gusseisen mit Kugelgraphit / Vermiculargusseisen)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060122>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060012>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "1.2.2",
+    skos:prefLabel "1.2.2 Gusseisen mit Kugelgraphit / Vermiculargusseisen"@de,
+    skos:prefLabel "1.2.2 cast iron with nodular graphite / vermicular cast iron"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060123> (1.2.3 hochlegiertes Gusseisen)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060123>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060012>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "1.2.3",
+    skos:prefLabel "1.2.3 highly alloyed cast iron"@en,
+    skos:prefLabel "1.2.3 hochlegiertes Gusseisen"@de
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060211> (2.1.1 Gussaluminiumlegierungen)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060211>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060021>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "2.1.1",
+    skos:prefLabel "2.1.1 Gussaluminiumlegierungen"@de,
+    skos:prefLabel "2.1.1 cast aluminium alloys"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060212> (2.1.2 Knetaluminiumlegierungen)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060212>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060021>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "2.1.2",
+    skos:prefLabel "2.1.2 Knetaluminiumlegierungen"@de,
+    skos:prefLabel "2.1.2 wrought aluminium alloys"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060221> (2.2.1 Gussmagnesiumlegierungen)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060221>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060022>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "2.2.1",
+    skos:prefLabel "2.2.1 Gussmagnesiumlegierungen"@de,
+    skos:prefLabel "2.2.1 cast magnesium alloys"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060222> (2.2.2 Knetmagnesiumlegierungen)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060222>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060022>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "2.2.2",
+    skos:prefLabel "2.2.2 Knetmagnesiumlegierungen"@de,
+    skos:prefLabel "2.2.2 wrought magnesium alloys"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060541> (5.4.1 Polyurethan)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060541>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060054>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "5.4.1",
+    skos:prefLabel "5.4.1 Polyurethan"@de,
+    skos:prefLabel "5.4.1 polyurethane"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060542> (5.4.2 ungesättigter Polyester)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060542>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060054>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "5.4.2",
+    skos:prefLabel "5.4.2 ungesättigter Polyester"@de,
+    skos:prefLabel "5.4.2 unsaturated polyester"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060543> (5.4.3 andere Duroplaste)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060543>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060054>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "5.4.3",
+    skos:prefLabel "5.4.3 andere Duroplaste"@de,
+    skos:prefLabel "5.4.3 other duromers"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060551> (5.5.1 Kunststoffe)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060551>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060055>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "5.5.1",
+    skos:prefLabel "5.5.1 Kunststoffe"@de,
+    skos:prefLabel "5.5.1 plastics"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/AUTOMATCE_1060552> (5.5.2 Textilien)
+
+Individual: <https://w3id.org/pmd/AUTOMATCE_1060552>
+  Annotations:
+    skos:broader <https://w3id.org/pmd/AUTOMATCE_1060055>,
+    skos:inScheme <https://w3id.org/pmd/VDA_231_106_Scheme>,
+    skos:notation "5.5.2",
+    skos:prefLabel "5.5.2 Textilien"@de,
+    skos:prefLabel "5.5.2 textiles"@en
+  Types:
+    obo:BFO_0000031,
+    obo:IAO_0000030,
+    skos:Concept
+
+
+# Individual: <https://w3id.org/pmd/VDA_231_106_Scheme> (VDA 231-106 material classification)
+
+Individual: <https://w3id.org/pmd/VDA_231_106_Scheme>
+  Annotations:
+    dcterms:description "Standardized material classification system used in the German automotive industry."@en,
+    dcterms:title "VDA 231-106 material classification"@en
+  Types:
+    obo:IAO_0000030,
+    skos:ConceptScheme
