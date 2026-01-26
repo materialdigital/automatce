@@ -14,8 +14,10 @@
 # (*-edit.owl) into production-ready ontology releases in multiple formats.
 #
 # Execution Chain Position:
-# setup-repo → refresh-imports → [BUILD/QC] → docs
-#
+# setup-repo → [BUILD/QC] → docs
+# update-repo → [BUILD/QC] → docs
+# [BUILD/QC] → docs
+
 # Read more about ODK builds:
 # https://github.com/INCATools/ontology-development-kit#building-the-ontology
 # ==============================================================================
@@ -26,7 +28,7 @@ name: Build Ontology
 # WORKFLOW TRIGGERS
 # ==============================================================================
 # This workflow can be triggered in three ways:
-# 1. Via repository_dispatch from refresh-imports workflow (after imports refresh)
+# 1. Via repository_dispatch from update-repo or setup-repo workflow
 # 2. Automatically on pushes that modify ontology source files
 # 3. Manually via workflow_dispatch for forced builds
 #
@@ -38,10 +40,10 @@ name: Build Ontology
 # ==============================================================================
 on:
   # ============================================================================
-  # TRIGGER 1: Repository Dispatch (from refresh-imports workflow)
+  # TRIGGER 1: Repository Dispatch (from update-repo or setup-repo workflow)
   # ============================================================================
-  # Listens for 'trigger-qc' event dispatched by refresh-imports.yml
-  # This ensures build runs immediately after imports are refreshed
+  # Listens for 'trigger-qc' event dispatched by update-repo.yml or setup-repo.yml
+  # This ensures build runs immediately after the Makefile is updated
   # ============================================================================
   repository_dispatch:
     types: [trigger-qc]
@@ -65,10 +67,14 @@ on:
   # Note: This trigger is skipped for commits made by github-actions[bot]
   # to prevent duplicate runs when triggered via repository_dispatch
   # ============================================================================
-  # push:
-  #   branches: ["*"]  # Triggers on any branch
-  #   paths:
-  #     - 'src/ontology/**'
+  push:
+    branches: ["main"]  # Triggers only on main branch
+    paths:
+      - 'src/ontology/*-edit.owl'        # Main edit file
+      - 'src/ontology/components/**'   # Component modules
+      - 'src/ontology/imports/**'      # Import modules
+      - 'src/ontology/Makefile'        # Makefile changes
+      - 'src/ontology/*-Makefile'  # User-generated Makefile changes
 
   # ============================================================================
   # TRIGGER 3: Pull Request Events (for PR validation)
@@ -77,10 +83,14 @@ on:
   # Runs QC checks on PR branches to validate changes before merge
   # Note: Commits are skipped for PRs (see commit step conditions)
   # ============================================================================
-  # pull_request:
-  #   branches: ["*"]
-  #   paths:
-  #     - 'src/ontology/**'
+  pull_request:
+    branches: ["main"]
+    paths:
+      - 'src/ontology/*-edit.owl'        # Main edit file
+      - 'src/ontology/components/**'   # Component modules
+      - 'src/ontology/imports/**'      # Import modules
+      - 'src/ontology/Makefile'        # Makefile changes
+      - 'src/ontology/*-Makefile'  # User-generated Makefile changes
 
   # ============================================================================
   # TRIGGER 4: Manual Trigger (for forced builds)

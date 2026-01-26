@@ -41,7 +41,6 @@ on:
   #
   # Monitored files:
   # - src/ontology/*-odk.yaml : Ontology-specific ODK configuration
-  # - project-odk.yaml : Root project configuration
   #
   # Why these files?
   # - Changes to ODK config require repository structure updates
@@ -58,7 +57,6 @@ on:
     branches: ["main"]  # Triggers on any branch
     paths:
       - 'src/ontology/*-odk.yaml'
-      - 'project-odk.yaml'
 
   # ============================================================================
   # TRIGGER 2: Pull Request Events (for PR validation)
@@ -71,7 +69,6 @@ on:
     branches: ["main"]
     paths:
       - 'src/ontology/*-odk.yaml'
-      - 'project-odk.yaml'
 
   # ============================================================================
   # TRIGGER 3: Manual Trigger (for forced updates)
@@ -222,14 +219,7 @@ jobs:
       # Updates repository structure using ODK make targets
       #
       # Process:
-      # 1. Detect ontology ID from project-odk.yaml
-      # 2. Copy project-odk.yaml to expected ODK location
-      # 3. Run make update_repo to synchronize repository
-      #
-      # Why copy config file?
-      # - ODK expects config at src/ontology/${ONT_ID}-odk.yaml
-      # - Root project-odk.yaml is our source of truth
-      # - Copy ensures ODK can find and use the configuration
+      # Run make update_repo to synchronize repository
       #
       # What update_repo does:
       # - Regenerates owlnet configuration files
@@ -242,41 +232,17 @@ jobs:
       # - -B: Force rebuild (treats all targets as needing update)
       #
       # Error handling:
-      # - Exits with error if ontology ID cannot be detected
       # - Provides clear error message for troubleshooting
       #
       # Read more: https://github.com/INCATools/ontology-development-kit#update_repo
       # ========================================================================
       - name: Run ODK Update Repo
         working-directory: src/ontology
-        run: |
-          # ===== Detect Ontology ID =====
-          # Extract ontology ID from root project-odk.yaml
-          # grep: Find line starting with "id:"
-          # head -n1: Take first match (handles multiple lines)
-          # awk: Extract second field (the actual ID value)
-          ONT_ID=$(grep "^id:" ../../project-odk.yaml | head -n1 | awk '{print $2}')
-          
-          # Validate that ID was found
-          if [ -z "$ONT_ID" ]; then
-             echo "Error: Could not detect Ontology ID from project-odk.yaml"
-             echo "Expected format: 'id: <ontology-id>' in project-odk.yaml"
-             exit 1
-          fi
-
-          echo "Detected Ontology ID: $ONT_ID"
-
-          # ===== Copy Configuration to Expected Location =====
-          # ODK expects config at src/ontology/${ONT_ID}-odk.yaml
-          # Copy root config to this location for ODK processing
-          echo "Copying project-odk.yaml to ${ONT_ID}-odk.yaml..."
-          cp ../../project-odk.yaml "${ONT_ID}-odk.yaml"
-          
+        run: |          
           # ===== Run Update Command =====
           # Synchronize repository structure with configuration
-          # -B flag forces rebuild of all targets
           echo "Running make update_repo..."
-          make update_repo -B
+          odk.py update
           
           echo "Repository configuration update complete."
 
@@ -327,24 +293,31 @@ jobs:
           # Push to current branch
           push: true
 
-# ==============================================================================
-# WORKFLOW NOTES
-# ==============================================================================
-# This workflow is independent and does NOT trigger other workflows in the chain.
-# It runs whenever ODK configuration files are modified and ensures the
-# repository structure stays synchronized with the configuration.
-#
-# Typical use cases:
-# 1. Adding new component products → update_repo generates component structure
-# 2. Changing import settings → update_repo updates import processing
-# 3. Modifying release settings → update_repo updates release configurations
-# 4. Updating metadata → update_repo regenerates documentation templates
-#
-# To integrate with workflow chain (if needed in future):
-# Add a final step to trigger another workflow:
-#   - name: Trigger Next Workflow
-#     uses: peter-evans/repository-dispatch@v3
-#     with:
-#       token: ${{ secrets.GITHUB_TOKEN }}
-#       event-type: trigger-<next-workflow>
-# ==============================================================================
+      # ========================================================================
+      # STEP 2.4: Trigger Next Workflow (QC)
+      # ========================================================================
+      # Dispatches repository event to start the QC workflow
+      #
+      # Workflow Chain:
+      # update-repo → [QC] → docs
+      #
+      # Why repository_dispatch?
+      # - Allows explicit workflow chaining
+      # - Maintains clear separation between workflow stages
+      # - Prevents race conditions with concurrent triggers
+      #
+      # Condition: Only trigger for non-PR events (PRs don't auto-deploy)
+      #
+      # Event type: trigger-qc
+      # Listened for by: qc.yml
+      # ========================================================================
+      - name: Trigger QC Workflow
+        # Skip for pull requests (QC will run via push trigger after PR merge)
+        if: github.event_name != 'pull_request'
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          # Use default GitHub token (automatically available)
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+          # Event name that qc.yml listens for
+          event-type: trigger-qc
