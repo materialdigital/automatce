@@ -1,0 +1,1807 @@
+{
+  "graphs" : [ {
+    "id" : "https://w3id.org/pmd/automatce/automatce-full.json",
+    "meta" : {
+      "basicPropertyValues" : [ {
+        "pred" : "http://purl.org/dc/terms/description",
+        "val" : "PMD Core application ontology generated via ODK Template.\n"
+      }, {
+        "pred" : "http://purl.org/dc/terms/license",
+        "val" : "https://w3id.org/pmd/automatce.owl#CC-BY-4.0"
+      }, {
+        "pred" : "http://purl.org/dc/terms/title",
+        "val" : "Automotive Circular Economy Ontology"
+      }, {
+        "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
+        "val" : "2026-01-26"
+      } ],
+      "version" : "https://w3id.org/pmd/automatce/releases/2026-01-26/automatce-full.json"
+    },
+    "nodes" : [ {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000001",
+      "lbl" : "entity",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000002",
+      "lbl" : "continuant",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000003",
+      "lbl" : "occurrent",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000004",
+      "lbl" : "independent continuant",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000015",
+      "lbl" : "process",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000016",
+      "lbl" : "disposition",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000017",
+      "lbl" : "realizable entity",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000019",
+      "lbl" : "quality",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000020",
+      "lbl" : "specifically dependent continuant",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000023",
+      "lbl" : "role",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000027",
+      "lbl" : "object aggregate",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000030",
+      "lbl" : "object",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000031",
+      "lbl" : "generically dependent continuant",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000034",
+      "lbl" : "function",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000040",
+      "lbl" : "material entity",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000145",
+      "lbl" : "relational quality",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000005",
+      "lbl" : "objective specification",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A directive information entity that describes an intended process endpoint. When part of a plan specification the concretization is realized in a planned process in which the bearer tries to effect the world so that the process endpoint is achieved."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000007",
+      "lbl" : "action specification",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A directive information entity that describes an action the bearer will take."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000027",
+      "lbl" : "data item",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000030",
+      "lbl" : "information content entity",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A generically dependent continuant that is about some thing."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000033",
+      "lbl" : "directive information entity",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An information content entity whose concretizations indicate to their bearer how to realize them in a process."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000078",
+      "lbl" : "curation status specification",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000102",
+      "lbl" : "data about an ontology part",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Data about an ontology part is a data item about a part of an ontology, for example a term"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000104",
+      "lbl" : "plan specification",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A directive information entity with action specifications and objective specifications as parts, and that may be concretized as a realizable entity that, if realized, is realized in a process in which the bearer tries to achieve the objectives by taking the actions specified."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0020000",
+      "lbl" : "identifier",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0020010",
+      "lbl" : "identifier creating process",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000011",
+      "lbl" : "planned process",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A process that realizes a plan which is the concretization of a plan specification."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000067",
+      "lbl" : "evaluant role",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "a role that inheres in a material entity that is realized in an assay in which data is generated about the bearer of the evaluant role"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000070",
+      "lbl" : "assay",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A planned process that has the objective to produce information about a material entity (the evaluant) by examining it."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0001930",
+      "lbl" : "categorical value specification",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A value specification that is specifies one category out of a fixed number of nominal categories"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0001933",
+      "lbl" : "value specification",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An information content entity that specifies a value within a classification scheme or on a quantitative scale."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000000",
+      "lbl" : "material",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Instances of Portions Of Matter whose shape is relevant for their dispostion to participate in a manufacturing process may be (subclasses of) objects that bear a 'blank role' in the context of the manufacturing process.", "Material is defined in terms of the three main perspectives that material specifications rely on: the structure of the material (\"intensive quality\"), the performance of the material (\"behavoiral material property\") and the processing the material must have undergone (\"output of some process\").\n\nWhen defining specific materials/material taxonomies, these three aspects shall be taken into account in the aristotelian (\"per genus et differentiam\") as differentiation.", "The sum of portions of matter of the same type form a portion of matter of that type." ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000001",
+      "lbl" : "portion of matter",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "It is also representing a distinct physical or conceptual part of a material or substance.\n\nThe open energy ontology OEO defines portion of matter as a subclass of object aggregate, which implies countability. Our portion is not (precisely) countable and thus bearer of intensive properties.", "Lome explanation for portion of matter: \"What is a molecule cluster at the cellular level? Contrary to the molecular level, at the cellular level of granularity the boundary of each molecule is outside of the level of granular focus. What forms a discontinuous cluster of countable individual molecules and thus bona fide objects at the molecular level, is a continuous and non-countable molecular substance at coarser levels of\ngranularity. At these coarser levels, the individual molecules cannot be differentiated and demarcated anymore and the cluster as a whole possesses only fiat inner boundaries.\"" ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000002",
+      "lbl" : "engineered material",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "We recognize that some of the materials in the subclasses also occur naturally. However, these are not within the scope of our consideration for technical use." ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000005",
+      "lbl" : "behavioral material property",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Technical materials are complex object aggregates. The properties that are determined for those object aggregates are intrinsically associated with the methodologies employed in the measurement process. This is in contrast to typical 'physical' properties, which like e.g. mass that can be determined to high accuracy independently of the measurement process. \nAs a consequence, the behavoiral material properties in the ontology are differeciated according to their measurement method, e.g. Brinell hardness and Vickers hardness are different types of indentation hardness rather than different measures/quantification (GDC) of the materials property 'indentation hardness'.\n The 'unit idenifieres' of such properties (e.g. \"HV1\", \"HV10\", \"HBW\") are strictly speaking not units but rather references to the measurement methodology used to determine a numeric value that quantifies the property." ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000503",
+      "lbl" : "ASTM grainsize",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000512",
+      "lbl" : "aggregate state",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000519",
+      "lbl" : "application of electric field",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000520",
+      "lbl" : "application of heat flux",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000521",
+      "lbl" : "application of magnetic field",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000522",
+      "lbl" : "application of mechanical load",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000523",
+      "lbl" : "application of substance",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000549",
+      "lbl" : "change of temperature",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000583",
+      "lbl" : "computing process",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000591",
+      "lbl" : "crystal structure",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000595",
+      "lbl" : "defect density",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000596",
+      "lbl" : "deformation",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000597",
+      "lbl" : "density",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000602",
+      "lbl" : "device",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000629",
+      "lbl" : "emission of radiation",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000635",
+      "lbl" : "evolution of damage",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000661",
+      "lbl" : "glass",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "It is often composed of silica-based compounds." ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000663",
+      "lbl" : "kristallit",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000773",
+      "lbl" : "hardness",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000777",
+      "lbl" : "heat capacity",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000802",
+      "lbl" : "irradiation process",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000833",
+      "lbl" : "manufacturing process",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Manufacturing processes alternate qualities of materials, i.e., a value specification of some quality of a material entity, which is a specified input to the process, cannot be the same as a value specification of the same quality of another material entity, which is a specified output of the process. \n\nUnfortunately is is not possible to write down such axiom based on OWL. Semi-working solution are the temporally qualified continuants + SPARQL constrains." ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000848",
+      "lbl" : "mechanical property",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000853",
+      "lbl" : "crystallographic texture",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000868",
+      "lbl" : "natural organic material",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000869",
+      "lbl" : "occurence of chemical reaction",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000870",
+      "lbl" : "occurence of electic field",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000871",
+      "lbl" : "occurence of magnetic field",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000877",
+      "lbl" : "optical property",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000880",
+      "lbl" : "passing of time",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000882",
+      "lbl" : "phase boundary (realization)",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000888",
+      "lbl" : "polymer",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000890",
+      "lbl" : "connected material entity aggregate",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000891",
+      "lbl" : "disconnected material entity aggregate",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000896",
+      "lbl" : "pressure",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "The pressure is commonly measured in Pascals." ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000899",
+      "lbl" : "primary shaping",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000907",
+      "lbl" : "primary shaping from the plastic state",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000942",
+      "lbl" : "specific surface area",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000949",
+      "lbl" : "stiffness",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000950",
+      "lbl" : "stimulating process",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000952",
+      "lbl" : "strength",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000967",
+      "lbl" : "temperature",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "The concept refers to an absolute tempeature, not to be mistaken with temperature difference.", "To express that an object has a temperature, the property 'intensive bearer of' can be used. It implies a chain of: object consists of some portion of matter and portion of matter bearer of some temperature." ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000981",
+      "lbl" : "thermal property",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0001008",
+      "lbl" : "waver irradiation",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020003",
+      "lbl" : "crystal",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020005",
+      "lbl" : "porosity",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020023",
+      "lbl" : "metallic grain structures",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020099",
+      "lbl" : "bravais lattice (3d)",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "TODO: possibly extend for 2D (Graphene etc)\n\nMore elaborate crystal descriptions may be found in http://emmo.info/domain-crystallography/crystallography or https://purls.helmholtz-metadaten.de/disos/cso" ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020101",
+      "lbl" : "proportion",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020102",
+      "lbl" : "mass proportion",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020103",
+      "lbl" : "molar proportion",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020104",
+      "lbl" : "volume proportion",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020106",
+      "lbl" : "polycrystal",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020112",
+      "lbl" : "grain size distribution",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020116",
+      "lbl" : "aggregate state value",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020131",
+      "lbl" : "intensive quality",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0025001",
+      "lbl" : "composition",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0025003",
+      "lbl" : "metallic grain structure",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0050004",
+      "lbl" : "thermoplastics",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "lbl" : "part of",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "a core relation that holds between a part and its whole"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000051",
+      "lbl" : "has part",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "a core relation that holds between a whole and its part"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000054",
+      "lbl" : "has realization",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000055",
+      "lbl" : "realizes",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000136",
+      "lbl" : "is about",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "A (currently) primitive relation that relates an information artifact to an entity."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000219",
+      "lbl" : "denotes",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "A primitive, instance-level, relation obtaining between an information content entity and some portion of reality. Denotation is what happens when someone creates an information content entity E in order to specifically refer to something. The only relation between E and the thing is that E can be used to 'pick out' the thing. This relation connects those two together. Freedictionary.com sense 3: To signify directly; refer to specifically"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000235",
+      "lbl" : "denoted by",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "inverse of the relation 'denotes'"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000293",
+      "lbl" : "has specified input",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "The inverse property of is specified input of"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000295",
+      "lbl" : "is specified input of",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "A relation between a planned process and a continuant participating in that process that is not created during  the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000299",
+      "lbl" : "has specified output",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "The inverse property of is specified output of"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000312",
+      "lbl" : "is specified output of",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "A relation between a planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000417",
+      "lbl" : "achieves_planned_objective",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "This relation obtains between a planned process and a objective specification when the criteria specified in the objective specification are met at the end of the planned process."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0001927",
+      "lbl" : "specifies value of",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "A relation between a value specification and an entity which the specification is about."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000052",
+      "lbl" : "characteristic of",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000053",
+      "lbl" : "has characteristic",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Inverse of characteristic_of"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000056",
+      "lbl" : "participates in",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "a relation between a continuant and a process, in which the continuant is somehow involved in the process"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000057",
+      "lbl" : "has participant",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "a relation between a process and a continuant, in which the continuant is somehow involved in the process"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000058",
+      "lbl" : "is concretized as",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "A relationship between a generically dependent continuant and a specifically dependent continuant or process, in which the generically dependent continuant depends on some independent continuant or process in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants or processes."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000059",
+      "lbl" : "concretizes",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "A relationship between a specifically dependent continuant or process and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. Multiple specifically dependent continuants or processes can concretize the same generically dependent continuant."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000079",
+      "lbl" : "function of",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000080",
+      "lbl" : "quality of",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000081",
+      "lbl" : "role of",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000085",
+      "lbl" : "has function",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000086",
+      "lbl" : "has quality",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000087",
+      "lbl" : "has role",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000091",
+      "lbl" : "has disposition",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000092",
+      "lbl" : "disposition of",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "inverse of has disposition"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002234",
+      "lbl" : "has output",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "p has output c iff c is a participant in p, c is present at the end of p, and c is not present in the same state at the beginning of p."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002353",
+      "lbl" : "output of",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "inverse of has output"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0009006",
+      "lbl" : "assay measures characteristic",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "A relation between an assay and a characteristic, in which the assay generates a data item which is a measure of a characteristic."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0009007",
+      "lbl" : "characteristic measured by assay",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Inverse of 'assay measures characteristic'"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/STATO_0000102",
+      "lbl" : "executes",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "relationship between a planned process and the plan specification that it carries out; it is defined as equivalent to the composed relationship (realizes o concretizes)"
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000004",
+      "lbl" : "is subject of",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000077",
+      "lbl" : "specified by value",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0001028",
+      "lbl" : "in response to",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0001029",
+      "lbl" : "responds with",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000002",
+      "lbl" : "example to be eventually removed",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000120",
+      "lbl" : "metadata complete",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Class has all its metadata, but is either not guaranteed to be in its final location in the asserted IS_A hierarchy or refers to another class that is not complete."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000121",
+      "lbl" : "organizational term",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Term created to ease viewing/sort terms for development purpose, and will not be included in a release"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000122",
+      "lbl" : "ready for release",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Class has undergone final review, is ready for use, and will be included in the next release. Any class lacking \"ready_for_release\" should be considered likely to change place in hierarchy, have its definition refined, or be obsoleted in the next release.  Those classes deemed \"ready_for_release\" will also derived from a chain of ancestor classes that are also \"ready_for_release.\""
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000123",
+      "lbl" : "metadata incomplete",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Class is being worked on; however, the metadata (including definition) are not complete or sufficiently clear to the branch editors."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000124",
+      "lbl" : "uncurated",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Nothing done yet beyond assigning a unique class ID and proposing a preferred term."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000125",
+      "lbl" : "pending final vetting",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "All definitions, placement in the asserted IS_A hierarchy and required minimal metadata are complete. The class is awaiting a final review by someone other than the term editor."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000423",
+      "lbl" : "to be replaced with external ontology term",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Terms with this status should eventually replaced with a term from another ontology."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000428",
+      "lbl" : "requires discussion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020006",
+      "lbl" : "bravais lattice triclinic primitve",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020007",
+      "lbl" : "bravais lattice monoclinic primitive",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020008",
+      "lbl" : "bravais lattice monoclinic base-centered",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020009",
+      "lbl" : "bravais lattice orthorombic primitive",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020010",
+      "lbl" : "bravais lattice orthorhombic base-centered",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020011",
+      "lbl" : "bravais lattice orthorhombic body-centered",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020012",
+      "lbl" : "bravais lattice orthorhombic face-centered",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020013",
+      "lbl" : "bravais lattice tetragonal primitive",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020014",
+      "lbl" : "bravais lattice tetragonal body-centered",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020015",
+      "lbl" : "bravais lattice hexagonal rhombohedral primitive",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020016",
+      "lbl" : "bravais lattice hexagonal hexagonal primitive",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020017",
+      "lbl" : "bravais lattice cubic primitive",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020018",
+      "lbl" : "bravais lattice cubic body-centered",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020019",
+      "lbl" : "bravais lattice cubic face-centered",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020027",
+      "lbl" : "bainite",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020097",
+      "lbl" : "austenite",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020100",
+      "lbl" : "ferrite",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020107",
+      "lbl" : "ledeburite",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020109",
+      "lbl" : "pearlite",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020110",
+      "lbl" : "widmanstatten structure",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020111",
+      "lbl" : "martensite",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020117",
+      "lbl" : "aggregate state solid",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020118",
+      "lbl" : "aggregate state liquid",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020119",
+      "lbl" : "aggregate state gasous",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020120",
+      "lbl" : "aggregate state plasma",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020121",
+      "lbl" : "aggregate state atom gas",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020122",
+      "lbl" : "aggregate state supercritical fluid",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020123",
+      "lbl" : "aggregate state mesomorphic",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020124",
+      "lbl" : "aggregate state suprafluid",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020125",
+      "lbl" : "aggregate state suprasolid",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
+      "lbl" : "definition",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."
+        }
+      }
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/source",
+      "lbl" : "Source",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/description",
+      "lbl" : "description",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/license",
+      "lbl" : "license",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/title",
+      "lbl" : "title",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.w3.org/2000/01/rdf-schema#comment",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    } ],
+    "edges" : [ {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000002",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000003",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000004",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000015",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000003"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000016",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000017",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000019",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000020",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000023",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000027",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000030",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000031",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000034",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000016"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000040",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000145",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000005",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000033"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000007",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000033"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000027",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000030",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000030",
+      "pred" : "http://purl.obolibrary.org/obo/IAO_0000136",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000033",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000033",
+      "pred" : "http://purl.obolibrary.org/obo/IAO_0000136",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000078",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000102"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000102",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000027"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000104",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000033"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000104",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000005"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000104",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000007"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0020000",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0020000",
+      "pred" : "http://purl.obolibrary.org/obo/IAO_0000219",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0020000",
+      "pred" : "http://purl.obolibrary.org/obo/OBI_0000312",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020010"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0020010",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0020010",
+      "pred" : "http://purl.obolibrary.org/obo/OBI_0000299",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000011",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000067",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000023"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000067",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0000052",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000070",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000070",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000055",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000067"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000070",
+      "pred" : "http://purl.obolibrary.org/obo/OBI_0000417",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000005"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0001930",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0001933"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0001933",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000001",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000002",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000000"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000005",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000005",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000054",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000950"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000503",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000512",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000512",
+      "pred" : "https://w3id.org/pmd/co/PMD_0000077",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020116"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000519",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000520",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000521",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000522",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000523",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000549",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000583",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000591",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000591",
+      "pred" : "https://w3id.org/pmd/co/PMD_0000077",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020099"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000595",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000596",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000597",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000602",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000629",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000635",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000661",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000002"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000663",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020003"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000773",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000848"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000777",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000981"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000777",
+      "pred" : "https://w3id.org/pmd/co/PMD_0001029",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000549"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000802",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000833",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000848",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000005"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000848",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000054",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000522"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000853",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000853",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0000080",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020106"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000868",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000000"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000869",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000870",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000871",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000877",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000005"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000877",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000054",
+      "obj" : "https://w3id.org/pmd/co/PMD_0001008"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000880",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000882",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000888",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000002"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000890",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000027"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000891",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000027"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000896",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000899",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000833"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000907",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000899"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000942",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000949",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000005"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000949",
+      "pred" : "https://w3id.org/pmd/co/PMD_0001029",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000596"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000950",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000952",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000848"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000967",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000981",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000005"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000981",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000054",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000520"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0001008",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000802"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020003",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020005",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020023",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0001930"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020099",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0001930"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020101",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000145"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020102",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020101"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020103",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020101"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020104",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020101"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020106",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000890"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020106",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000663"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020112",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020116",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0001930"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020131",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0025001",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0025003",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0025003",
+      "pred" : "https://w3id.org/pmd/co/PMD_0000077",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020023"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0050004",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000888"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000051",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000051"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000219",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000136"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000293",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000057"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000295",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000056"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000299",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000057"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000312",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000056"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0001927",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000136"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000079",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000052"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000080",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000052"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000081",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000052"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000085",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000053"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000086",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000053"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000087",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000053"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000091",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000053"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000092",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000052"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002234",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000057"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002353",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000056"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000077",
+      "pred" : "subPropertyOf",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000004"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0001029",
+      "pred" : "subPropertyOf",
+      "obj" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000051"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000054",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000055"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000136",
+      "pred" : "inverseOf",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000004"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000219",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000235"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000293",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000295"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000299",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000312"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0001927",
+      "pred" : "inverseOf",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000077"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000052",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000053"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000056",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000057"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000058",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000059"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000079",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000085"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000080",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000086"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000081",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000087"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000091",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000092"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002234",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002353"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0009006",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0009007"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0001028",
+      "pred" : "inverseOf",
+      "obj" : "https://w3id.org/pmd/co/PMD_0001029"
+    } ],
+    "logicalDefinitionAxioms" : [ {
+      "definedClassId" : "http://purl.obolibrary.org/obo/IAO_0020000",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/IAO_0000030" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/IAO_0000219",
+        "fillerId" : "http://purl.obolibrary.org/obo/BFO_0000001"
+      }, {
+        "propertyId" : "http://purl.obolibrary.org/obo/OBI_0000312",
+        "fillerId" : "http://purl.obolibrary.org/obo/IAO_0020010"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/IAO_0020010",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/OBI_0000299",
+        "fillerId" : "http://purl.obolibrary.org/obo/IAO_0020000"
+      } ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/co/PMD_0000833",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/co/PMD_0000950",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/BFO_0000015" ]
+    } ],
+    "domainRangeAxioms" : [ {
+      "predicateId" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "allValuesFromEdges" : [ {
+        "sub" : "http://purl.obolibrary.org/obo/BFO_0000002",
+        "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+        "obj" : "http://purl.obolibrary.org/obo/BFO_0000002"
+      }, {
+        "sub" : "http://purl.obolibrary.org/obo/BFO_0000003",
+        "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+        "obj" : "http://purl.obolibrary.org/obo/BFO_0000003"
+      }, {
+        "sub" : "http://purl.obolibrary.org/obo/BFO_0000004",
+        "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+        "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
+      }, {
+        "sub" : "http://purl.obolibrary.org/obo/BFO_0000017",
+        "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+        "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+      }, {
+        "sub" : "http://purl.obolibrary.org/obo/BFO_0000019",
+        "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+        "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+      }, {
+        "sub" : "http://purl.obolibrary.org/obo/BFO_0000020",
+        "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+        "obj" : "http://purl.obolibrary.org/obo/BFO_0000020"
+      }, {
+        "sub" : "http://purl.obolibrary.org/obo/BFO_0000031",
+        "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+        "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+      } ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/BFO_0000054",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000017" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000015" ],
+      "allValuesFromEdges" : [ {
+        "sub" : "http://purl.obolibrary.org/obo/OBI_0000067",
+        "pred" : "http://purl.obolibrary.org/obo/BFO_0000054",
+        "obj" : "http://purl.obolibrary.org/obo/OBI_0000070"
+      } ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/BFO_0000055",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000015" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000017" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/IAO_0000136",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/IAO_0000030" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/IAO_0000219",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/IAO_0000030" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000001" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/IAO_0000235",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000001" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/IAO_0000030" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/OBI_0000293",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/OBI_0000299",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/OBI_0000417",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/IAO_0000005" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/OBI_0001927",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/OBI_0001933" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0000056",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000002" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000003" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0000057",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000003" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000002" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0000058",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000031" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0000079",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000034" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0000085",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000004" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000034" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0000087",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000004" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000023" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0000091",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000004" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000016" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0009007",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000020" ]
+    }, {
+      "predicateId" : "https://w3id.org/pmd/co/PMD_0001029",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000017" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/OBI_0000295",
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/OBI_0000312",
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0000053",
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000020" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0000059",
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000031" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0000086",
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000019" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0009006",
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000020" ]
+    } ],
+    "propertyChainAxioms" : [ {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0000057",
+      "chainPredicateIds" : [ "http://purl.obolibrary.org/obo/BFO_0000051", "http://purl.obolibrary.org/obo/RO_0000057" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/STATO_0000102",
+      "chainPredicateIds" : [ "http://purl.obolibrary.org/obo/BFO_0000055", "http://purl.obolibrary.org/obo/RO_0000059" ]
+    } ]
+  } ]
+}

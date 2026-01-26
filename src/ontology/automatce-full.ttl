@@ -1,0 +1,1804 @@
+@prefix : <https://w3id.org/pmd/automatce/automatce-full.ttl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfa: <http://www.w3.org/ns/rdfa#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@base <https://w3id.org/pmd/automatce/automatce-full.ttl> .
+
+<https://w3id.org/pmd/automatce/automatce-full.ttl> rdf:type owl:Ontology ;
+                                                     owl:versionIRI <https://w3id.org/pmd/automatce/releases/2026-01-26/automatce-full.ttl> ;
+                                                     dcterms:description """PMD Core application ontology generated via ODK Template.
+""" ;
+                                                     dcterms:license <https://w3id.org/pmd/automatce.owl#CC-BY-4.0> ;
+                                                     dcterms:title "Automotive Circular Economy Ontology" ;
+                                                     owl:versionInfo "2026-01-26" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000115 "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."@en ;
+                rdfs:label "definition" ,
+                           "definition"@en .
+
+
+###  http://purl.org/dc/elements/1.1/source
+dce:source rdf:type owl:AnnotationProperty ;
+           rdfs:label "Source" .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty ;
+                    rdfs:label "description" .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty ;
+                rdfs:label "dcterms:license" ,
+                           "license" .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty ;
+              rdfs:label "title" .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral
+rdf:PlainLiteral rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000050
+obo:BFO_0000050 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:BFO_0000051 ;
+                rdf:type owl:TransitiveProperty ;
+                obo:IAO_0000115 "a core relation that holds between a part and its whole"@en ;
+                rdfs:label "part of"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000051
+obo:BFO_0000051 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:BFO_0000051 ;
+                rdf:type owl:TransitiveProperty ;
+                obo:IAO_0000115 "a core relation that holds between a whole and its part"@en ;
+                rdfs:label "has part"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000054
+obo:BFO_0000054 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:BFO_0000055 ;
+                rdfs:domain obo:BFO_0000017 ;
+                rdfs:range obo:BFO_0000015 ;
+                rdfs:label "has realization"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000055
+obo:BFO_0000055 rdf:type owl:ObjectProperty ;
+                rdfs:domain obo:BFO_0000015 ;
+                rdfs:range obo:BFO_0000017 ;
+                rdfs:label "realizes"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000136
+obo:IAO_0000136 rdf:type owl:ObjectProperty ;
+                owl:inverseOf <https://w3id.org/pmd/co/PMD_0000004> ;
+                rdfs:domain obo:IAO_0000030 ;
+                obo:IAO_0000115 "A (currently) primitive relation that relates an information artifact to an entity."@en ;
+                rdfs:label "is about"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000219
+obo:IAO_0000219 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:IAO_0000136 ;
+                owl:inverseOf obo:IAO_0000235 ;
+                rdfs:domain obo:IAO_0000030 ;
+                rdfs:range obo:BFO_0000001 ;
+                obo:IAO_0000115 "A primitive, instance-level, relation obtaining between an information content entity and some portion of reality. Denotation is what happens when someone creates an information content entity E in order to specifically refer to something. The only relation between E and the thing is that E can be used to 'pick out' the thing. This relation connects those two together. Freedictionary.com sense 3: To signify directly; refer to specifically"@en ;
+                rdfs:label "denotes"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000235
+obo:IAO_0000235 rdf:type owl:ObjectProperty ;
+                rdfs:domain obo:BFO_0000001 ;
+                rdfs:range obo:IAO_0000030 ;
+                obo:IAO_0000115 "inverse of the relation 'denotes'"@en ;
+                rdfs:label "denoted by"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000293
+obo:OBI_0000293 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0000057 ;
+                owl:inverseOf obo:OBI_0000295 ;
+                rdfs:domain obo:OBI_0000011 ;
+                obo:IAO_0000115 "The inverse property of is specified input of"@en ;
+                rdfs:label "has specified input"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000295
+obo:OBI_0000295 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0000056 ;
+                rdfs:range obo:OBI_0000011 ;
+                obo:IAO_0000115 "A relation between a planned process and a continuant participating in that process that is not created during  the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of."@en ;
+                rdfs:label "is specified input of"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000299
+obo:OBI_0000299 rdf:type owl:ObjectProperty ;
+                owl:equivalentProperty [ owl:inverseOf obo:OBI_0000312
+                                       ] ;
+                rdfs:subPropertyOf obo:RO_0000057 ;
+                owl:inverseOf obo:OBI_0000312 ;
+                rdfs:domain obo:OBI_0000011 ;
+                obo:IAO_0000115 "The inverse property of is specified output of"@en ;
+                rdfs:label "has specified output"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000312
+obo:OBI_0000312 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0000056 ;
+                rdfs:range obo:OBI_0000011 ;
+                obo:IAO_0000115 "A relation between a planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."@en ;
+                rdfs:label "is specified output of"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000417
+obo:OBI_0000417 rdf:type owl:ObjectProperty ;
+                rdfs:domain obo:OBI_0000011 ;
+                rdfs:range obo:IAO_0000005 ;
+                obo:IAO_0000115 "This relation obtains between a planned process and a objective specification when the criteria specified in the objective specification are met at the end of the planned process."@en ;
+                rdfs:label "achieves_planned_objective" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0001927
+obo:OBI_0001927 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:IAO_0000136 ;
+                owl:inverseOf <https://w3id.org/pmd/co/PMD_0000077> ;
+                rdfs:domain obo:OBI_0001933 ;
+                obo:IAO_0000115 "A relation between a value specification and an entity which the specification is about."@en ;
+                rdfs:label "specifies value of" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000052
+obo:RO_0000052 rdf:type owl:ObjectProperty ;
+               owl:inverseOf obo:RO_0000053 ;
+               rdf:type owl:FunctionalProperty ;
+               obo:IAO_0000115 "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."@en ;
+               rdfs:label "characteristic of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000053
+obo:RO_0000053 rdf:type owl:ObjectProperty ,
+                        owl:InverseFunctionalProperty ;
+               rdfs:range obo:BFO_0000020 ;
+               obo:IAO_0000115 "Inverse of characteristic_of"@en ;
+               rdfs:label "has characteristic"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000056
+obo:RO_0000056 rdf:type owl:ObjectProperty ;
+               owl:inverseOf obo:RO_0000057 ;
+               rdfs:domain obo:BFO_0000002 ;
+               rdfs:range obo:BFO_0000003 ;
+               obo:IAO_0000115 "a relation between a continuant and a process, in which the continuant is somehow involved in the process"@en ;
+               rdfs:label "participates in"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000057
+obo:RO_0000057 rdf:type owl:ObjectProperty ;
+               rdfs:domain obo:BFO_0000003 ;
+               rdfs:range obo:BFO_0000002 ;
+               owl:propertyChainAxiom ( obo:BFO_0000051
+                                        obo:RO_0000057
+                                      ) ;
+               obo:IAO_0000115 "a relation between a process and a continuant, in which the continuant is somehow involved in the process"@en ;
+               rdfs:label "has participant"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000058
+obo:RO_0000058 rdf:type owl:ObjectProperty ;
+               owl:inverseOf obo:RO_0000059 ;
+               rdfs:domain obo:BFO_0000031 ;
+               rdfs:range [ rdf:type owl:Class ;
+                            owl:unionOf ( obo:BFO_0000015
+                                          obo:BFO_0000020
+                                        )
+                          ] ;
+               obo:IAO_0000115 "A relationship between a generically dependent continuant and a specifically dependent continuant or process, in which the generically dependent continuant depends on some independent continuant or process in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants or processes."@en ;
+               rdfs:label "is concretized as"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000059
+obo:RO_0000059 rdf:type owl:ObjectProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( obo:BFO_0000015
+                                           obo:BFO_0000020
+                                         )
+                           ] ;
+               rdfs:range obo:BFO_0000031 ;
+               obo:IAO_0000115 "A relationship between a specifically dependent continuant or process and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. Multiple specifically dependent continuants or processes can concretize the same generically dependent continuant."@en ;
+               rdfs:label "concretizes"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000079
+obo:RO_0000079 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000052 ;
+               owl:inverseOf obo:RO_0000085 ;
+               rdfs:domain obo:BFO_0000034 ;
+               obo:IAO_0000115 "a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence"@en ;
+               rdfs:label "function of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000080
+obo:RO_0000080 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000052 ;
+               owl:inverseOf obo:RO_0000086 ;
+               rdfs:domain [ owl:intersectionOf ( obo:BFO_0000019
+                                                  [ rdf:type owl:Class ;
+                                                    owl:complementOf obo:BFO_0000145
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+               obo:IAO_0000115 "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence"@en ;
+               rdfs:label "quality of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000081
+obo:RO_0000081 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000052 ;
+               owl:inverseOf obo:RO_0000087 ;
+               obo:IAO_0000115 "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence"@en ;
+               rdfs:label "role of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000085
+obo:RO_0000085 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               rdfs:domain obo:BFO_0000004 ;
+               rdfs:range obo:BFO_0000034 ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence"@en ;
+               rdfs:label "has function"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000086
+obo:RO_0000086 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               rdfs:range obo:BFO_0000019 ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence"@en ;
+               rdfs:label "has quality"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000087
+obo:RO_0000087 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               rdfs:domain obo:BFO_0000004 ;
+               rdfs:range obo:BFO_0000023 ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence"@en ;
+               rdfs:label "has role"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000091
+obo:RO_0000091 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               owl:inverseOf obo:RO_0000092 ;
+               rdfs:domain obo:BFO_0000004 ;
+               rdfs:range obo:BFO_0000016 ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence"@en ;
+               rdfs:label "has disposition"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000092
+obo:RO_0000092 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000052 ;
+               obo:IAO_0000115 "inverse of has disposition" ;
+               rdfs:label "disposition of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002234
+obo:RO_0002234 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000057 ;
+               owl:inverseOf obo:RO_0002353 ;
+               obo:IAO_0000115 "p has output c iff c is a participant in p, c is present at the end of p, and c is not present in the same state at the beginning of p." ;
+               rdfs:label "has output"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002353
+obo:RO_0002353 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000056 ;
+               obo:IAO_0000115 "inverse of has output" ;
+               rdfs:label "output of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0009006
+obo:RO_0009006 rdf:type owl:ObjectProperty ;
+               owl:inverseOf obo:RO_0009007 ;
+               rdfs:range obo:BFO_0000020 ;
+               obo:IAO_0000115 "A relation between an assay and a characteristic, in which the assay generates a data item which is a measure of a characteristic."@en ;
+               rdfs:label "assay measures characteristic"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0009007
+obo:RO_0009007 rdf:type owl:ObjectProperty ;
+               rdfs:domain obo:BFO_0000020 ;
+               obo:IAO_0000115 "Inverse of 'assay measures characteristic'"@en ;
+               rdfs:label "characteristic measured by assay"@en .
+
+
+###  http://purl.obolibrary.org/obo/STATO_0000102
+obo:STATO_0000102 rdf:type owl:ObjectProperty ;
+                  owl:propertyChainAxiom ( obo:BFO_0000055
+                                           obo:RO_0000059
+                                         ) ;
+                  obo:IAO_0000115 "relationship between a planned process and the plan specification that it carries out; it is defined as equivalent to the composed relationship (realizes o concretizes)"@en ;
+                  rdfs:label "executes" .
+
+
+###  https://w3id.org/pmd/co/PMD_0000004
+<https://w3id.org/pmd/co/PMD_0000004> rdf:type owl:ObjectProperty ;
+                                      rdfs:label "is subject of"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000077
+<https://w3id.org/pmd/co/PMD_0000077> rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf <https://w3id.org/pmd/co/PMD_0000004> ;
+                                      rdfs:label "specified by value"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0001028
+<https://w3id.org/pmd/co/PMD_0001028> rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf <https://w3id.org/pmd/co/PMD_0001029> ;
+                                      rdfs:label "in response to"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0001029
+<https://w3id.org/pmd/co/PMD_0001029> rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                      rdfs:domain obo:BFO_0000017 ;
+                                      rdfs:label "responds with"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000001
+obo:BFO_0000001 rdf:type owl:Class ;
+                rdfs:label "entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000002
+obo:BFO_0000002 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000001 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000050 ;
+                                  owl:allValuesFrom obo:BFO_0000002
+                                ] ;
+                owl:disjointWith obo:BFO_0000003 ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty obo:BFO_0000050 ;
+                                   owl:someValuesFrom obo:BFO_0000003
+                                 ] ;
+                rdfs:label "continuant"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000003
+obo:BFO_0000003 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000001 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000050 ;
+                                  owl:allValuesFrom obo:BFO_0000003
+                                ] ;
+                owl:disjointWith [ rdf:type owl:Restriction ;
+                                   owl:onProperty obo:BFO_0000050 ;
+                                   owl:someValuesFrom obo:BFO_0000002
+                                 ] ;
+                rdfs:label "occurrent"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000004
+obo:BFO_0000004 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000002 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000050 ;
+                                  owl:allValuesFrom obo:BFO_0000004
+                                ] ;
+                owl:disjointWith obo:BFO_0000020 ,
+                                 obo:BFO_0000031 ;
+                rdfs:label "independent continuant"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000015
+obo:BFO_0000015 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000003 ;
+                rdfs:label "process"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000016
+obo:BFO_0000016 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000017 ;
+                owl:disjointWith obo:BFO_0000023 ;
+                rdfs:label "disposition"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000017
+obo:BFO_0000017 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000020 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000050 ;
+                                  owl:allValuesFrom obo:BFO_0000017
+                                ] ;
+                owl:disjointWith obo:BFO_0000019 ;
+                rdfs:label "realizable entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000019
+obo:BFO_0000019 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000020 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000050 ;
+                                  owl:allValuesFrom obo:BFO_0000019
+                                ] ;
+                rdfs:label "quality"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000020
+obo:BFO_0000020 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000002 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000050 ;
+                                  owl:allValuesFrom obo:BFO_0000020
+                                ] ;
+                owl:disjointWith obo:BFO_0000031 ;
+                rdfs:label "specifically dependent continuant"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000023
+obo:BFO_0000023 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000017 ;
+                rdfs:label "role"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000027
+obo:BFO_0000027 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000040 ;
+                rdfs:label "object aggregate"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000030
+obo:BFO_0000030 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000040 ;
+                rdfs:label "object"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000031
+obo:BFO_0000031 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000002 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000050 ;
+                                  owl:allValuesFrom obo:BFO_0000031
+                                ] ;
+                rdfs:label "generically dependent continuant"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000034
+obo:BFO_0000034 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000016 ;
+                rdfs:label "function"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000040
+obo:BFO_0000040 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000004 ;
+                rdfs:label "material entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000145
+obo:BFO_0000145 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000019 ;
+                rdfs:label "relational quality"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000005
+obo:IAO_0000005 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000033 ;
+                obo:IAO_0000115 "A directive information entity that describes an intended process endpoint. When part of a plan specification the concretization is realized in a planned process in which the bearer tries to effect the world so that the process endpoint is achieved."@en ;
+                rdfs:label "objective specification"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000007
+obo:IAO_0000007 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000033 ;
+                obo:IAO_0000115 "A directive information entity that describes an action the bearer will take."@en ;
+                rdfs:label "action specification"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000027
+obo:IAO_0000027 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000030 ;
+                obo:IAO_0000115 "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en ;
+                rdfs:label "data item"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000030
+obo:IAO_0000030 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000031 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:IAO_0000136 ;
+                                  owl:someValuesFrom obo:BFO_0000001
+                                ] ;
+                obo:IAO_0000115 "A generically dependent continuant that is about some thing."@en ;
+                rdfs:label "information content entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000033
+obo:IAO_0000033 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000030 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:IAO_0000136 ;
+                                  owl:someValuesFrom obo:BFO_0000017
+                                ] ;
+                obo:IAO_0000115 "An information content entity whose concretizations indicate to their bearer how to realize them in a process."@en ;
+                rdfs:label "directive information entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000078
+obo:IAO_0000078 rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:oneOf ( obo:IAO_0000002
+                                                  obo:IAO_0000120
+                                                  obo:IAO_0000121
+                                                  obo:IAO_0000122
+                                                  obo:IAO_0000123
+                                                  obo:IAO_0000124
+                                                  obo:IAO_0000125
+                                                  obo:IAO_0000423
+                                                  obo:IAO_0000428
+                                                )
+                                    ] ;
+                rdfs:subClassOf obo:IAO_0000102 ;
+                obo:IAO_0000115 "The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value."@en ;
+                rdfs:label "curation status specification"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000102
+obo:IAO_0000102 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000027 ;
+                obo:IAO_0000115 "Data about an ontology part is a data item about a part of an ontology, for example a term"@en ;
+                rdfs:label "data about an ontology part"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000104
+obo:IAO_0000104 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000033 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:IAO_0000005
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom obo:IAO_0000007
+                                ] ;
+                obo:IAO_0000115 "A directive information entity with action specifications and objective specifications as parts, and that may be concretized as a realizable entity that, if realized, is realized in a process in which the bearer tries to achieve the objectives by taking the actions specified."@en ;
+                rdfs:label "plan specification"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0020000
+obo:IAO_0020000 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( obo:IAO_0000030
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:IAO_0000219 ;
+                                                             owl:someValuesFrom obo:BFO_0000001
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:OBI_0000312 ;
+                                                             owl:someValuesFrom obo:IAO_0020010
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf obo:IAO_0000030 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:IAO_0000219 ;
+                                  owl:someValuesFrom obo:BFO_0000001
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000312 ;
+                                  owl:someValuesFrom obo:IAO_0020010
+                                ] ;
+                obo:IAO_0000115 "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en ;
+                rdfs:label "identifier"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0020010
+obo:IAO_0020010 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( obo:OBI_0000011
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:OBI_0000299 ;
+                                                             owl:someValuesFrom obo:IAO_0020000
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf obo:OBI_0000011 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000299 ;
+                                  owl:someValuesFrom obo:IAO_0020000
+                                ] ;
+                obo:IAO_0000115 "A planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity."@en ;
+                rdfs:label "identifier creating process"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000011
+obo:OBI_0000011 rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty obo:BFO_0000055 ;
+                                      owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                           owl:onProperty obo:RO_0000059 ;
+                                                           owl:someValuesFrom obo:IAO_0000104
+                                                         ]
+                                    ] ;
+                rdfs:subClassOf obo:BFO_0000015 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000055 ;
+                                  owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                       owl:onProperty obo:RO_0000059 ;
+                                                       owl:someValuesFrom obo:IAO_0000104
+                                                     ]
+                                ] ;
+                obo:IAO_0000115 "A process that realizes a plan which is the concretization of a plan specification."@en ;
+                rdfs:label "planned process"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000067
+obo:OBI_0000067 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000023 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0000052 ;
+                                  owl:someValuesFrom obo:BFO_0000040
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000054 ;
+                                  owl:allValuesFrom obo:OBI_0000070
+                                ] ;
+                obo:IAO_0000115 "a role that inheres in a material entity that is realized in an assay in which data is generated about the bearer of the evaluant role"@en ;
+                rdfs:label "evaluant role"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000070
+obo:OBI_0000070 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBI_0000011 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000055 ;
+                                  owl:someValuesFrom obo:OBI_0000067
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000293 ;
+                                  owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000040
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty obo:RO_0000087 ;
+                                                                              owl:someValuesFrom obo:OBI_0000067
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000299 ;
+                                  owl:someValuesFrom [ owl:intersectionOf ( obo:IAO_0000027
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty obo:IAO_0000136 ;
+                                                                              owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000040
+                                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                                          owl:onProperty obo:RO_0000087 ;
+                                                                                                                          owl:someValuesFrom obo:OBI_0000067
+                                                                                                                        ]
+                                                                                                                      ) ;
+                                                                                                   rdf:type owl:Class
+                                                                                                 ]
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0000417 ;
+                                  owl:someValuesFrom obo:IAO_0000005
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0009006 ;
+                                  owl:someValuesFrom [ rdf:type owl:Class ;
+                                                       owl:unionOf ( obo:BFO_0000019
+                                                                     <https://w3id.org/pmd/co/PMD_0000005>
+                                                                   )
+                                                     ]
+                                ] ;
+                obo:IAO_0000115 "A planned process that has the objective to produce information about a material entity (the evaluant) by examining it."@en ;
+                rdfs:label "assay"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0001930
+obo:OBI_0001930 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBI_0001933 ;
+                obo:IAO_0000115 "A value specification that is specifies one category out of a fixed number of nominal categories"@en ;
+                rdfs:label "categorical value specification" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0001933
+obo:OBI_0001933 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000030 ;
+                obo:IAO_0000115 "An information content entity that specifies a value within a classification scheme or on a quantitative scale."@en ;
+                rdfs:label "value specification" .
+
+
+###  https://w3id.org/pmd/co/PMD_0000000
+<https://w3id.org/pmd/co/PMD_0000000> rdf:type owl:Class ;
+                                      rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0000001>
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty obo:RO_0000053 ;
+                                                                               owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000005>
+                                                                             ]
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty obo:RO_0000086 ;
+                                                                               owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020131>
+                                                                             ]
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty obo:RO_0002353 ;
+                                                                               owl:someValuesFrom obo:BFO_0000015
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                      rdfs:comment "Instances of Portions Of Matter whose shape is relevant for their dispostion to participate in a manufacturing process may be (subclasses of) objects that bear a 'blank role' in the context of the manufacturing process."@en ,
+                                                   """Material is defined in terms of the three main perspectives that material specifications rely on: the structure of the material (\"intensive quality\"), the performance of the material (\"behavoiral material property\") and the processing the material must have undergone (\"output of some process\").
+
+When defining specific materials/material taxonomies, these three aspects shall be taken into account in the aristotelian (\"per genus et differentiam\") as differentiation."""@en ,
+                                                   "The sum of portions of matter of the same type form a portion of matter of that type."@en ;
+                                      rdfs:label "Material"@de ,
+                                                 "material"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000001
+<https://w3id.org/pmd/co/PMD_0000001> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000040 ;
+                                      rdfs:comment """It is also representing a distinct physical or conceptual part of a material or substance.
+
+The open energy ontology OEO defines portion of matter as a subclass of object aggregate, which implies countability. Our portion is not (precisely) countable and thus bearer of intensive properties."""@en ,
+                                                   """Lome explanation for portion of matter: \"What is a molecule cluster at the cellular level? Contrary to the molecular level, at the cellular level of granularity the boundary of each molecule is outside of the level of granular focus. What forms a discontinuous cluster of countable individual molecules and thus bona fide objects at the molecular level, is a continuous and non-countable molecular substance at coarser levels of
+granularity. At these coarser levels, the individual molecules cannot be differentiated and demarcated anymore and the cluster as a whole possesses only fiat inner boundaries.\""""@en ;
+                                      rdfs:label "portion of matter"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000002
+<https://w3id.org/pmd/co/PMD_0000002> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000000> ;
+                                      rdfs:comment "We recognize that some of the materials in the subclasses also occur naturally. However, these are not within the scope of our consideration for technical use."@en ;
+                                      rdfs:label "engineered material"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000005
+<https://w3id.org/pmd/co/PMD_0000005> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000017 ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:BFO_0000054 ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000950>
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:RO_0000052 ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000040
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:RO_0000056 ;
+                                                                                                    owl:someValuesFrom obo:BFO_0000015
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ;
+                                      rdfs:comment """Technical materials are complex object aggregates. The properties that are determined for those object aggregates are intrinsically associated with the methodologies employed in the measurement process. This is in contrast to typical 'physical' properties, which like e.g. mass that can be determined to high accuracy independently of the measurement process. 
+As a consequence, the behavoiral material properties in the ontology are differeciated according to their measurement method, e.g. Brinell hardness and Vickers hardness are different types of indentation hardness rather than different measures/quantification (GDC) of the materials property 'indentation hardness'.
+ The 'unit idenifieres' of such properties (e.g. \"HV1\", \"HV10\", \"HBW\") are strictly speaking not units but rather references to the measurement methodology used to determine a numeric value that quantifies the property."""@en ;
+                                      rdfs:label "behavioral material property"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000503
+<https://w3id.org/pmd/co/PMD_0000503> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
+                                      rdfs:label "ASTM grainsize"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000512
+<https://w3id.org/pmd/co/PMD_0000512> rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/pmd/co/PMD_0000077> ;
+                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass <https://w3id.org/pmd/co/PMD_0020116>
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0000077> ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020116>
+                                                      ] ;
+                                      rdfs:label "aggregate state"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000519
+<https://w3id.org/pmd/co/PMD_0000519> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000015 ;
+                                      rdfs:label "application of electric field"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000520
+<https://w3id.org/pmd/co/PMD_0000520> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000015 ;
+                                      rdfs:label "application of heat flux"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000521
+<https://w3id.org/pmd/co/PMD_0000521> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000015 ;
+                                      rdfs:label "application of magnetic field"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000522
+<https://w3id.org/pmd/co/PMD_0000522> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000015 ;
+                                      rdfs:label "application of mechanical load"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000523
+<https://w3id.org/pmd/co/PMD_0000523> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000015 ;
+                                      rdfs:label "application of substance"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000549
+<https://w3id.org/pmd/co/PMD_0000549> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000015 ;
+                                      rdfs:label "change of temperature"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000583
+<https://w3id.org/pmd/co/PMD_0000583> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:OBI_0000011 ,
+                                                      [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty obo:OBI_0000293 ;
+                                                                               owl:someValuesFrom obo:IAO_0000030
+                                                                             ]
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty obo:OBI_0000299 ;
+                                                                               owl:someValuesFrom obo:IAO_0000030
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                      rdfs:label "Datenverarbeitung"@de ,
+                                                 "Rechenprozess"@de ,
+                                                 "computing process"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000591
+<https://w3id.org/pmd/co/PMD_0000591> rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/pmd/co/PMD_0000077> ;
+                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass <https://w3id.org/pmd/co/PMD_0020099>
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0000077> ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020099>
+                                                      ] ;
+                                      rdfs:label "crystal structure"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000595
+<https://w3id.org/pmd/co/PMD_0000595> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
+                                      rdfs:label "defect density"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000596
+<https://w3id.org/pmd/co/PMD_0000596> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000015 ;
+                                      rdfs:label "deformation"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000597
+<https://w3id.org/pmd/co/PMD_0000597> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
+                                      rdfs:label "density"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000602
+<https://w3id.org/pmd/co/PMD_0000602> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000030 ;
+                                      rdfs:label "Gerät"@de ,
+                                                 "device"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000629
+<https://w3id.org/pmd/co/PMD_0000629> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000015 ;
+                                      rdfs:label "emission of radiation"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000635
+<https://w3id.org/pmd/co/PMD_0000635> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000015 ;
+                                      rdfs:label "evolution of damage"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000661
+<https://w3id.org/pmd/co/PMD_0000661> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000002> ;
+                                      rdfs:comment "It is often composed of silica-based compounds."@en ;
+                                      rdfs:label "glass"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000663
+<https://w3id.org/pmd/co/PMD_0000663> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020003> ;
+                                      rdfs:label "crystallite"@en ,
+                                                 "kristallit"@de .
+
+
+###  https://w3id.org/pmd/co/PMD_0000773
+<https://w3id.org/pmd/co/PMD_0000773> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000848> ;
+                                      rdfs:label "hardness"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000777
+<https://w3id.org/pmd/co/PMD_0000777> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000981> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0001029> ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000549>
+                                                      ] ;
+                                      rdfs:label "heat capacity"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000802
+<https://w3id.org/pmd/co/PMD_0000802> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000015 ;
+                                      rdfs:label "irradiation process"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000833
+<https://w3id.org/pmd/co/PMD_0000833> rdf:type owl:Class ;
+                                      owl:equivalentClass [ owl:intersectionOf ( obo:OBI_0000011
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty obo:OBI_0000293 ;
+                                                                                   owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                        owl:unionOf ( obo:BFO_0000027
+                                                                                                                      obo:BFO_0000030
+                                                                                                                    )
+                                                                                                      ]
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty obo:OBI_0000299 ;
+                                                                                   owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                        owl:unionOf ( obo:BFO_0000027
+                                                                                                                      obo:BFO_0000030
+                                                                                                                    )
+                                                                                                      ]
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ;
+                                      rdfs:subClassOf obo:OBI_0000011 ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:OBI_0000293 ;
+                                                        owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                             owl:unionOf ( obo:BFO_0000027
+                                                                                           obo:BFO_0000030
+                                                                                         )
+                                                                           ]
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:OBI_0000299 ;
+                                                        owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                             owl:unionOf ( obo:BFO_0000027
+                                                                                           obo:BFO_0000030
+                                                                                         )
+                                                                           ]
+                                                      ] ;
+                                      rdfs:comment """Manufacturing processes alternate qualities of materials, i.e., a value specification of some quality of a material entity, which is a specified input to the process, cannot be the same as a value specification of the same quality of another material entity, which is a specified output of the process. 
+
+Unfortunately is is not possible to write down such axiom based on OWL. Semi-working solution are the temporally qualified continuants + SPARQL constrains."""@en ;
+                                      rdfs:label "Herstellungsprozess"@de ,
+                                                 "manufacturing process"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000848
+<https://w3id.org/pmd/co/PMD_0000848> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000005> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:BFO_0000054 ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000522>
+                                                      ] ;
+                                      rdfs:label "mechanical property"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000853
+<https://w3id.org/pmd/co/PMD_0000853> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:RO_0000080 ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020106>
+                                                      ] ;
+                                      rdfs:label "crystallographic texture"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000868
+<https://w3id.org/pmd/co/PMD_0000868> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000000> ;
+                                      rdfs:label "natural organic material"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000869
+<https://w3id.org/pmd/co/PMD_0000869> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000015 ;
+                                      rdfs:label "occurence of chemical reaction"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000870
+<https://w3id.org/pmd/co/PMD_0000870> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000015 ;
+                                      rdfs:label "occurence of electic field"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000871
+<https://w3id.org/pmd/co/PMD_0000871> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000015 ;
+                                      rdfs:label "occurence of magnetic field"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000877
+<https://w3id.org/pmd/co/PMD_0000877> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000005> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:BFO_0000054 ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0001008>
+                                                      ] ;
+                                      rdfs:label "optical property"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000880
+<https://w3id.org/pmd/co/PMD_0000880> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000015 ;
+                                      rdfs:label "passing of time"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000882
+<https://w3id.org/pmd/co/PMD_0000882> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000017 ;
+                                      rdfs:label "phase boundary (realization)"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000888
+<https://w3id.org/pmd/co/PMD_0000888> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000002> ;
+                                      rdfs:label "polymer"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000890
+<https://w3id.org/pmd/co/PMD_0000890> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000027 ;
+                                      rdfs:label "connected material entity aggregate"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000891
+<https://w3id.org/pmd/co/PMD_0000891> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000027 ;
+                                      rdfs:label "disconnected material entity aggregate"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000896
+<https://w3id.org/pmd/co/PMD_0000896> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
+                                      owl:disjointWith <https://w3id.org/pmd/co/PMD_0000967> ;
+                                      rdfs:comment "The pressure is commonly measured in Pascals."@en ;
+                                      rdfs:label "pressure"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000899
+<https://w3id.org/pmd/co/PMD_0000899> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000833> ;
+                                      rdfs:label "Urformen"@de ,
+                                                 "primary shaping"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000907
+<https://w3id.org/pmd/co/PMD_0000907> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000899> ;
+                                      rdfs:label "Urformen Aus Dem Plastischen Zustand"@de ,
+                                                 "primary shaping from the plastic state"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000942
+<https://w3id.org/pmd/co/PMD_0000942> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
+                                      rdfs:label "specific surface area"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000949
+<https://w3id.org/pmd/co/PMD_0000949> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000005> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0001029> ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000596>
+                                                      ] ;
+                                      owl:disjointWith <https://w3id.org/pmd/co/PMD_0000952> ;
+                                      rdfs:label "stiffness"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000950
+<https://w3id.org/pmd/co/PMD_0000950> rdf:type owl:Class ;
+                                      owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000015
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty obo:BFO_0000055 ;
+                                                                                   owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                                                                                               owl:unionOf ( obo:BFO_0000016
+                                                                                                                                             <https://w3id.org/pmd/co/PMD_0000005>
+                                                                                                                                           )
+                                                                                                                             ]
+                                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                                               owl:onProperty obo:RO_0000052 ;
+                                                                                                                               owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000001>
+                                                                                                                             ]
+                                                                                                                           ) ;
+                                                                                                        rdf:type owl:Class
+                                                                                                      ]
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ;
+                                      rdfs:subClassOf obo:BFO_0000015 ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:BFO_0000055 ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                                                                    owl:unionOf ( obo:BFO_0000016
+                                                                                                                  <https://w3id.org/pmd/co/PMD_0000005>
+                                                                                                                )
+                                                                                                  ]
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:RO_0000052 ;
+                                                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000001>
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ;
+                                      rdfs:label "stimulating process"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000952
+<https://w3id.org/pmd/co/PMD_0000952> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000848> ;
+                                      rdfs:label "strength"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000967
+<https://w3id.org/pmd/co/PMD_0000967> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
+                                      rdfs:comment "The concept refers to an absolute tempeature, not to be mistaken with temperature difference."@en ,
+                                                   "To express that an object has a temperature, the property 'intensive bearer of' can be used. It implies a chain of: object consists of some portion of matter and portion of matter bearer of some temperature."@en ;
+                                      rdfs:label "temperature"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000981
+<https://w3id.org/pmd/co/PMD_0000981> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000005> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:BFO_0000054 ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000520>
+                                                      ] ;
+                                      rdfs:label "thermal property"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0001008
+<https://w3id.org/pmd/co/PMD_0001008> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000802> ;
+                                      rdfs:label "waver irradiation"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020003
+<https://w3id.org/pmd/co/PMD_0020003> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000030 ;
+                                      rdfs:label "crystal"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020005
+<https://w3id.org/pmd/co/PMD_0020005> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
+                                      rdfs:label "porosity"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020023
+<https://w3id.org/pmd/co/PMD_0020023> rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Class ;
+                                                            owl:oneOf ( <https://w3id.org/pmd/co/PMD_0020027>
+                                                                        <https://w3id.org/pmd/co/PMD_0020097>
+                                                                        <https://w3id.org/pmd/co/PMD_0020100>
+                                                                        <https://w3id.org/pmd/co/PMD_0020107>
+                                                                        <https://w3id.org/pmd/co/PMD_0020109>
+                                                                        <https://w3id.org/pmd/co/PMD_0020110>
+                                                                        <https://w3id.org/pmd/co/PMD_0020111>
+                                                                      )
+                                                          ] ;
+                                      rdfs:subClassOf obo:OBI_0001930 ;
+                                      rdfs:label "metallic grain structures"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020099
+<https://w3id.org/pmd/co/PMD_0020099> rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Class ;
+                                                            owl:oneOf ( <https://w3id.org/pmd/co/PMD_0020006>
+                                                                        <https://w3id.org/pmd/co/PMD_0020007>
+                                                                        <https://w3id.org/pmd/co/PMD_0020008>
+                                                                        <https://w3id.org/pmd/co/PMD_0020009>
+                                                                        <https://w3id.org/pmd/co/PMD_0020010>
+                                                                        <https://w3id.org/pmd/co/PMD_0020011>
+                                                                        <https://w3id.org/pmd/co/PMD_0020012>
+                                                                        <https://w3id.org/pmd/co/PMD_0020013>
+                                                                        <https://w3id.org/pmd/co/PMD_0020014>
+                                                                        <https://w3id.org/pmd/co/PMD_0020015>
+                                                                        <https://w3id.org/pmd/co/PMD_0020016>
+                                                                        <https://w3id.org/pmd/co/PMD_0020017>
+                                                                        <https://w3id.org/pmd/co/PMD_0020018>
+                                                                        <https://w3id.org/pmd/co/PMD_0020019>
+                                                                      )
+                                                          ] ;
+                                      rdfs:subClassOf obo:OBI_0001930 ;
+                                      rdfs:comment """TODO: possibly extend for 2D (Graphene etc)
+
+More elaborate crystal descriptions may be found in http://emmo.info/domain-crystallography/crystallography or https://purls.helmholtz-metadaten.de/disos/cso"""@en ;
+                                      rdfs:label "bravais lattice (3d)"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020101
+<https://w3id.org/pmd/co/PMD_0020101> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000145 ;
+                                      rdfs:label "proportion"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020102
+<https://w3id.org/pmd/co/PMD_0020102> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ;
+                                      rdfs:label "mass proportion"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020103
+<https://w3id.org/pmd/co/PMD_0020103> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ;
+                                      rdfs:label "molar proportion"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020104
+<https://w3id.org/pmd/co/PMD_0020104> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ;
+                                      rdfs:label "volume proportion"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020106
+<https://w3id.org/pmd/co/PMD_0020106> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000890> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:BFO_0000051 ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000663>
+                                                      ] ;
+                                      rdfs:label "polycrystal"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020112
+<https://w3id.org/pmd/co/PMD_0020112> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
+                                      rdfs:label "grain size distribution"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020116
+<https://w3id.org/pmd/co/PMD_0020116> rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Class ;
+                                                            owl:oneOf ( <https://w3id.org/pmd/co/PMD_0020117>
+                                                                        <https://w3id.org/pmd/co/PMD_0020118>
+                                                                        <https://w3id.org/pmd/co/PMD_0020119>
+                                                                        <https://w3id.org/pmd/co/PMD_0020120>
+                                                                        <https://w3id.org/pmd/co/PMD_0020121>
+                                                                        <https://w3id.org/pmd/co/PMD_0020122>
+                                                                        <https://w3id.org/pmd/co/PMD_0020123>
+                                                                        <https://w3id.org/pmd/co/PMD_0020124>
+                                                                        <https://w3id.org/pmd/co/PMD_0020125>
+                                                                      )
+                                                          ] ;
+                                      rdfs:subClassOf obo:OBI_0001930 ;
+                                      rdfs:label "aggregate state value"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020131
+<https://w3id.org/pmd/co/PMD_0020131> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000019 ;
+                                      rdfs:label "intensive quality"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0025001
+<https://w3id.org/pmd/co/PMD_0025001> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ;
+                                      rdfs:label "composition"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0025003
+<https://w3id.org/pmd/co/PMD_0025003> rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/pmd/co/PMD_0000077> ;
+                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass <https://w3id.org/pmd/co/PMD_0020023>
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020131> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0000077> ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020023>
+                                                      ] ;
+                                      rdfs:label "metallic grain structure"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0050004
+<https://w3id.org/pmd/co/PMD_0050004> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000888> ;
+                                      rdfs:label "thermoplastics"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000002
+obo:IAO_0000002 rdf:type owl:NamedIndividual ;
+                rdfs:label "example to be eventually removed"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000120
+obo:IAO_0000120 rdf:type owl:NamedIndividual ;
+                obo:IAO_0000115 "Class has all its metadata, but is either not guaranteed to be in its final location in the asserted IS_A hierarchy or refers to another class that is not complete."@en ;
+                rdfs:label "metadata complete"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000121
+obo:IAO_0000121 rdf:type owl:NamedIndividual ;
+                obo:IAO_0000115 "Term created to ease viewing/sort terms for development purpose, and will not be included in a release"@en ;
+                rdfs:label "organizational term"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000122
+obo:IAO_0000122 rdf:type owl:NamedIndividual ;
+                obo:IAO_0000115 "Class has undergone final review, is ready for use, and will be included in the next release. Any class lacking \"ready_for_release\" should be considered likely to change place in hierarchy, have its definition refined, or be obsoleted in the next release.  Those classes deemed \"ready_for_release\" will also derived from a chain of ancestor classes that are also \"ready_for_release.\""@en ;
+                rdfs:label "ready for release"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000123
+obo:IAO_0000123 rdf:type owl:NamedIndividual ;
+                obo:IAO_0000115 "Class is being worked on; however, the metadata (including definition) are not complete or sufficiently clear to the branch editors."@en ;
+                rdfs:label "metadata incomplete"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000124
+obo:IAO_0000124 rdf:type owl:NamedIndividual ;
+                obo:IAO_0000115 "Nothing done yet beyond assigning a unique class ID and proposing a preferred term."@en ;
+                rdfs:label "uncurated"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000125
+obo:IAO_0000125 rdf:type owl:NamedIndividual ;
+                obo:IAO_0000115 "All definitions, placement in the asserted IS_A hierarchy and required minimal metadata are complete. The class is awaiting a final review by someone other than the term editor."@en ;
+                rdfs:label "pending final vetting"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000423
+obo:IAO_0000423 rdf:type owl:NamedIndividual ;
+                obo:IAO_0000115 "Terms with this status should eventually replaced with a term from another ontology."@en ;
+                rdfs:label "to be replaced with external ontology term"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000428
+obo:IAO_0000428 rdf:type owl:NamedIndividual ;
+                obo:IAO_0000115 "A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues."@en ;
+                rdfs:label "requires discussion"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020006
+<https://w3id.org/pmd/co/PMD_0020006> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice triclinic primitve"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020007
+<https://w3id.org/pmd/co/PMD_0020007> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice monoclinic primitive"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020008
+<https://w3id.org/pmd/co/PMD_0020008> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice monoclinic base-centered"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020009
+<https://w3id.org/pmd/co/PMD_0020009> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice orthorombic primitive"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020010
+<https://w3id.org/pmd/co/PMD_0020010> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice orthorhombic base-centered"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020011
+<https://w3id.org/pmd/co/PMD_0020011> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice orthorhombic body-centered"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020012
+<https://w3id.org/pmd/co/PMD_0020012> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice orthorhombic face-centered"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020013
+<https://w3id.org/pmd/co/PMD_0020013> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice tetragonal primitive"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020014
+<https://w3id.org/pmd/co/PMD_0020014> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice tetragonal body-centered"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020015
+<https://w3id.org/pmd/co/PMD_0020015> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice hexagonal rhombohedral primitive"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020016
+<https://w3id.org/pmd/co/PMD_0020016> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice hexagonal hexagonal primitive"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020017
+<https://w3id.org/pmd/co/PMD_0020017> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice cubic primitive"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020018
+<https://w3id.org/pmd/co/PMD_0020018> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice cubic body-centered"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020019
+<https://w3id.org/pmd/co/PMD_0020019> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice cubic face-centered"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020027
+<https://w3id.org/pmd/co/PMD_0020027> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bainite"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020097
+<https://w3id.org/pmd/co/PMD_0020097> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "austenite"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020100
+<https://w3id.org/pmd/co/PMD_0020100> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "ferrite"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020107
+<https://w3id.org/pmd/co/PMD_0020107> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "ledeburite"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020109
+<https://w3id.org/pmd/co/PMD_0020109> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "pearlite"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020110
+<https://w3id.org/pmd/co/PMD_0020110> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "widmanstatten structure"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020111
+<https://w3id.org/pmd/co/PMD_0020111> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "martensite"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020117
+<https://w3id.org/pmd/co/PMD_0020117> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state solid"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020118
+<https://w3id.org/pmd/co/PMD_0020118> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state liquid"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020119
+<https://w3id.org/pmd/co/PMD_0020119> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state gasous"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020120
+<https://w3id.org/pmd/co/PMD_0020120> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state plasma"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020121
+<https://w3id.org/pmd/co/PMD_0020121> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state atom gas"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020122
+<https://w3id.org/pmd/co/PMD_0020122> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state supercritical fluid"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020123
+<https://w3id.org/pmd/co/PMD_0020123> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state mesomorphic"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020124
+<https://w3id.org/pmd/co/PMD_0020124> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state suprafluid"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020125
+<https://w3id.org/pmd/co/PMD_0020125> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state suprasolid"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:Class ;
+  owl:unionOf ( <https://w3id.org/pmd/co/PMD_0000773>
+                <https://w3id.org/pmd/co/PMD_0000952>
+              ) ;
+  rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000848>
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( obo:BFO_0000004
+                obo:BFO_0000020
+                obo:BFO_0000031
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/pmd/co/PMD_0000503>
+                <https://w3id.org/pmd/co/PMD_0000512>
+                <https://w3id.org/pmd/co/PMD_0000591>
+                <https://w3id.org/pmd/co/PMD_0000595>
+                <https://w3id.org/pmd/co/PMD_0000597>
+                <https://w3id.org/pmd/co/PMD_0000853>
+                <https://w3id.org/pmd/co/PMD_0000896>
+                <https://w3id.org/pmd/co/PMD_0000942>
+                <https://w3id.org/pmd/co/PMD_0000967>
+                <https://w3id.org/pmd/co/PMD_0020005>
+                <https://w3id.org/pmd/co/PMD_0020112>
+                <https://w3id.org/pmd/co/PMD_0025001>
+                <https://w3id.org/pmd/co/PMD_0025003>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/pmd/co/PMD_0000519>
+                <https://w3id.org/pmd/co/PMD_0000520>
+                <https://w3id.org/pmd/co/PMD_0000521>
+                <https://w3id.org/pmd/co/PMD_0000522>
+                <https://w3id.org/pmd/co/PMD_0000523>
+                <https://w3id.org/pmd/co/PMD_0000802>
+                <https://w3id.org/pmd/co/PMD_0000880>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/pmd/co/PMD_0000519>
+                <https://w3id.org/pmd/co/PMD_0000520>
+                <https://w3id.org/pmd/co/PMD_0000521>
+                <https://w3id.org/pmd/co/PMD_0000522>
+                <https://w3id.org/pmd/co/PMD_0000802>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/pmd/co/PMD_0000549>
+                <https://w3id.org/pmd/co/PMD_0000596>
+                <https://w3id.org/pmd/co/PMD_0000629>
+                <https://w3id.org/pmd/co/PMD_0000635>
+                <https://w3id.org/pmd/co/PMD_0000869>
+                <https://w3id.org/pmd/co/PMD_0000870>
+                <https://w3id.org/pmd/co/PMD_0000871>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/pmd/co/PMD_0020102>
+                <https://w3id.org/pmd/co/PMD_0020103>
+                <https://w3id.org/pmd/co/PMD_0020104>
+              )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <https://w3id.org/pmd/co/PMD_0020006>
+                        <https://w3id.org/pmd/co/PMD_0020007>
+                        <https://w3id.org/pmd/co/PMD_0020008>
+                        <https://w3id.org/pmd/co/PMD_0020009>
+                        <https://w3id.org/pmd/co/PMD_0020010>
+                        <https://w3id.org/pmd/co/PMD_0020011>
+                        <https://w3id.org/pmd/co/PMD_0020012>
+                        <https://w3id.org/pmd/co/PMD_0020013>
+                        <https://w3id.org/pmd/co/PMD_0020014>
+                        <https://w3id.org/pmd/co/PMD_0020015>
+                        <https://w3id.org/pmd/co/PMD_0020016>
+                        <https://w3id.org/pmd/co/PMD_0020017>
+                        <https://w3id.org/pmd/co/PMD_0020018>
+                        <https://w3id.org/pmd/co/PMD_0020019>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <https://w3id.org/pmd/co/PMD_0020117>
+                        <https://w3id.org/pmd/co/PMD_0020118>
+                        <https://w3id.org/pmd/co/PMD_0020119>
+                        <https://w3id.org/pmd/co/PMD_0020120>
+                        <https://w3id.org/pmd/co/PMD_0020121>
+                        <https://w3id.org/pmd/co/PMD_0020122>
+                        <https://w3id.org/pmd/co/PMD_0020123>
+                        <https://w3id.org/pmd/co/PMD_0020124>
+                        <https://w3id.org/pmd/co/PMD_0020125>
+                      )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#e> rdf:type swrl:Variable .
+
+<urn:swrl:var#d> rdf:type swrl:Variable .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000053 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate obo:BFO_0000016 ;
+                                      swrl:argument1 <urn:swrl:var#d>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000091 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000053 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate obo:BFO_0000019 ;
+                                      swrl:argument1 <urn:swrl:var#d>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000086 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000053 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate obo:BFO_0000023 ;
+                                      swrl:argument1 <urn:swrl:var#d>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000087 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000053 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate obo:BFO_0000034 ;
+                                      swrl:argument1 <urn:swrl:var#d>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000085 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi
