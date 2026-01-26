@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                ed0babe1cbe12dc1af07d0eed7ec8c6dd3432807fefd716ed16bed7be14ad27e
+CONFIG_HASH=                28d1d2f64b333276ddda6d04300929236c90678b81b191f53b58ae4dffa4725d
 
 
 # ----------------------------------------
@@ -380,7 +380,7 @@ $(IMPORTSEED): $(PRESEED) | $(TMPDIR)
 
 T_IMPORTSEED = --term-file $(IMPORTSEED)
 
-ANNOTATION_PROPERTIES=rdfs:label IAO:0000115 OMO:0002000 
+ANNOTATION_PROPERTIES=rdfs:label skos:definition skos:example skos:altLabel 
 
 # ----------------------------------------
 # Import modules
