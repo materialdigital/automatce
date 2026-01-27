@@ -10,15 +10,13 @@ Prefix: : <https://w3id.org/pmd/automatce/components/automatce-dismantling_infor
 
 Ontology: <https://w3id.org/pmd/automatce/components/automatce-dismantling_information.owl>
 
-Import: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
+    Import: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
 
-Annotations: 
-    dcterms:title "AUTOMATCE - Dismantling Information Module"@en,
-    rdfs:comment "The dismantling information module of the AUTOMATCE Ontology."@en
+    Annotations: 
+        dcterms:title "AUTOMATCE - Dismantling Information Module"@en,
+        rdfs:comment "The dismantling information module of the AUTOMATCE Ontology."@en
 
 AnnotationProperty: dcterms:title
-
-    
 AnnotationProperty: rdfs:comment
 
     

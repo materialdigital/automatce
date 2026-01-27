@@ -4,27 +4,53 @@ Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+Prefix: obo:  <http://purl.obolibrary.org/obo/>
+Prefix: pmd:  <https://w3id.org/pmd/co/>
 Prefix: : <https://w3id.org/pmd/automatce/components/automatce-material_data.owl>
 
 
 
 Ontology: <https://w3id.org/pmd/automatce/components/automatce-material_data.owl>
 
-Import: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
+    Import: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
 
-Annotations: 
-    dcterms:title "AUTOMATCE - Material Data Module"@en,
-    rdfs:comment "The material data module of the AUTOMATCE Ontology."@en
+    Annotations: 
+        dcterms:title "AUTOMATCE - Material Data Module"@en,
+        rdfs:comment "The material data module of the AUTOMATCE Ontology."@en
 
+AnnotationProperty: dcterms:title
+AnnotationProperty: rdfs:comment
+AnnotationProperty: rdfs:label
+AnnotationProperty: skos:definition
+AnnotationProperty: skos:example
+AnnotationProperty: pmd:PMD_0050117
 AnnotationProperty: skos:notation
 AnnotationProperty: skos:inScheme
 AnnotationProperty: skos:topConceptOf
 AnnotationProperty: skos:broader
-AnnotationProperty: pmd:PMD_0050117
+AnnotationProperty: skos:prefLabel
+AnnotationProperty: dcterms:description
 
     
 Datatype: rdf:PlainLiteral
 
+
+Class: obo:BFO_0000023
+Class: pmd:PMD_0000868
+Class: pmd:PMD_0000002
+Class: obo:BFO_0000031
+Class: obo:IAO_0000030
+Class: pmd:PMD_0020131
+Class: pmd:PMD_0050004
+Class: pmd:PMD_0000577
+Class: pmd:PMD_0000891
+Class: pmd:PMD_0020102
+Class: pmd:PMD_0020104
+Class: pmd:PMD_0000882
+Class: pmd:PMD_0000981
+Class: skos:Concept
+Class: skos:ConceptScheme
 
 # Class: <https://w3id.org/pmd/AUTOMATCE_0000002> (raw material role)
 

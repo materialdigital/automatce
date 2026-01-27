@@ -21,3 +21,4 @@ https://w3id.org/pmd/co/PMD_0000967 #temperature
 https://w3id.org/pmd/co/PMD_0000882 #phase boundary
 https://w3id.org/pmd/co/PMD_0000777 #heat capacity
 https://w3id.org/pmd/co/PMD_0000949 #stiffness
+https://w3id.org/pmd/co/PMD_0000577 #composite material

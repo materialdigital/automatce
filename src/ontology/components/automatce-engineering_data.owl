@@ -4,32 +4,34 @@ Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+Prefix: obo:  <http://purl.obolibrary.org/obo/>
+Prefix: pmd:  <https://w3id.org/pmd/co/>
 Prefix: : <https://w3id.org/pmd/automatce/components/automatce-engineering_data.owl>
 
 
 
 Ontology: <https://w3id.org/pmd/automatce/components/automatce-engineering_data.owl>
 
-Import: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
+    Import: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
+    Annotations: 
+        dcterms:title "AUTOMATCE - Engineering Data Module"@en,
+        rdfs:comment "The engineering data module of the AUTOMATCE Ontology."@en
 
-Annotations: 
-    dcterms:title "AUTOMATCE - Engineering Data Module"@en,
-    rdfs:comment "The engineering data module of the AUTOMATCE Ontology."@en
+
+AnnotationProperty: dcterms:title
+AnnotationProperty: rdfs:comment
+AnnotationProperty: rdfs:label
+AnnotationProperty: skos:definition
+AnnotationProperty: skos:example
+AnnotationProperty: pmd:PMD_0050117
 
 Datatype: rdf:PlainLiteral
 
-# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000001> (injection molding process)
-
-Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000001>
-
-  Annotations:
-    rdfs:comment "This process is the standard for mass-producing plastic automotive components. It involves specific phases: plasticization, injection, packing, cooling, and ejection."@en,
-    rdfs:label "injection molding process"@en,
-    skos:definition "A cyclic manufacturing process in which thermoplastic material is melted in a heated barrel, injected under high pressure into a closed mold cavity, held under pressure while cooling, and ejected as a solidified part."@en,
-    skos:example "The manufacturing of a polyamide intake manifold or a polypropylene bumper fascia."@en
-
-  SubClassOf:
-    pmd:PMD_0000907
+Class: pmd:PMD_0000952
+Class: obo:BFO_0000030
+Class: pmd:PMD_0000848
+Class: pmd:PMD_0000949
     
 # Class: <https://w3id.org/pmd/AUTOMATCE_0000007> (stress at break)
 
@@ -59,9 +61,9 @@ Class: <https://w3id.org/pmd/AUTOMATCE_0000024>
   SubClassOf:
     obo:BFO_0000030
 
-# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000022> (strain at break)
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000022> (strain at break)
 
-Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000022>
+Class: <https://w3id.org/pmd/AUTOMATCE_0000022>
 
   Annotations:
     rdfs:comment "Indicates ductility. Low strain at break (less than 5%) suggests brittle behavior."@en,
@@ -73,9 +75,9 @@ Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000022>
     pmd:PMD_0000848
 
 
-# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000029> (impact strength)
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000029> (impact strength)
 
-Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000029>
+Class: <https://w3id.org/pmd/AUTOMATCE_0000029>
 
   Annotations:
     rdfs:comment "Often measured via Charpy or Izod notched impact tests."@en,
@@ -87,9 +89,9 @@ Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000029>
     pmd:PMD_0000952
 
 
-# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000030> (flexural modulus)
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000030> (flexural modulus)
 
-Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000030>
+Class: <https://w3id.org/pmd/AUTOMATCE_0000030>
 
   Annotations:
     rdfs:comment "Standard metric for stiffness in plastics (ISO 178)."@en,
@@ -101,9 +103,9 @@ Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000030>
     pmd:PMD_0000949
 
 
-# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000031> (flexural strength)
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000031> (flexural strength)
 
-Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000031>
+Class: <https://w3id.org/pmd/AUTOMATCE_0000031>
 
   Annotations:
     rdfs:comment "Relevant for snap-fit joints in automotive interiors."@en,

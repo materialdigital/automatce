@@ -4,23 +4,36 @@ Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+Prefix: obo:  <http://purl.obolibrary.org/obo/>
+Prefix: pmd:  <https://w3id.org/pmd/co/>
 Prefix: : <https://w3id.org/pmd/automatce/components/automatce-transactional_data.owl>
-
 
 
 Ontology: <https://w3id.org/pmd/automatce/components/automatce-transactional_data.owl>
 
-Import: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
+    Import: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
+    Annotations: 
+        dcterms:title "AUTOMATCE - Transactional Data Module"@en,
+        rdfs:comment "The transactional data module of the AUTOMATCE Ontology."@en
 
-Annotations: 
-    dcterms:title "AUTOMATCE - Transactional Data Module"@en,
-    rdfs:comment "The transactional data module of the AUTOMATCE Ontology."@en
+
+AnnotationProperty: dcterms:title
+AnnotationProperty: rdfs:comment
+AnnotationProperty: rdfs:label
+AnnotationProperty: skos:definition
+AnnotationProperty: skos:example
+AnnotationProperty: pmd:PMD_0050117
+
     
 Datatype: rdf:PlainLiteral
 
-# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000016> (identifier at manufacturer)
 
-Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000016>
+Class: <http://purl.obolibrary.org/obo/IAO_0020000>
+
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000016> (identifier at manufacturer)
+
+Class: <https://w3id.org/pmd/AUTOMATCE_0000016>
 
   Annotations:
     rdfs:label "identifier at manufacturer"@en,
@@ -28,12 +41,12 @@ Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000016>
     skos:example "BASF code 'A3WG6' for a specific Ultramid grade."@en
 
   SubClassOf:
-    obo:IAO_0020000
+    <http://purl.obolibrary.org/obo/IAO_0020000>
 
 
-# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000017> (identifier name at manufacturer)
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000017> (identifier name at manufacturer)
 
-Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000017>
+Class: <https://w3id.org/pmd/AUTOMATCE_0000017>
 
   Annotations:
     rdfs:label "identifier name at manufacturer"@en,
@@ -41,12 +54,12 @@ Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000017>
     skos:example "'Zytel' (DuPont) or 'Durethan' (Lanxess)."@en
 
   SubClassOf:
-    obo:IAO_0020000
+    <http://purl.obolibrary.org/obo/IAO_0020000>
 
 
-# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000018> (material designation)
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000018> (material designation)
 
-Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000018>
+Class: <https://w3id.org/pmd/AUTOMATCE_0000018>
 
   Annotations:
     rdfs:label "material designation"@en,
@@ -54,12 +67,12 @@ Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000018>
     skos:example "PA66-GF25"@en
 
   SubClassOf:
-    obo:IAO_0020000
+    <http://purl.obolibrary.org/obo/IAO_0020000>
 
 
-# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000019> (material identifier)
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000019> (material identifier)
 
-Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000019>
+Class: <https://w3id.org/pmd/AUTOMATCE_0000019>
 
   Annotations:
     rdfs:label "material identifier"@en,
@@ -67,12 +80,12 @@ Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000019>
     skos:example "Catena-X Material Twin ID."@en
 
   SubClassOf:
-    obo:IAO_0020000
+    <http://purl.obolibrary.org/obo/IAO_0020000>
 
 
-# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000020> (batch identifier)
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000020> (batch identifier)
 
-Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000020>
+Class: <https://w3id.org/pmd/AUTOMATCE_0000020>
 
   Annotations:
     rdfs:label "batch identifier"@en,
@@ -80,12 +93,12 @@ Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000020>
     skos:example "Batch 2023-10-A-X55."@en
 
   SubClassOf:
-    obo:IAO_0020000
+    <http://purl.obolibrary.org/obo/IAO_0020000>
 
 
-# Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000021> (business partner number)
+# Class: <https://w3id.org/pmd/AUTOMATCE_0000021> (business partner number)
 
-Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000021>
+Class: <https://w3id.org/pmd/AUTOMATCE_0000021>
 
   Annotations:
     rdfs:label "business partner number"@en,
@@ -94,6 +107,6 @@ Class: <https://w3id.org/pmd/ao/AUTOMATCE_0000021>
     pmd:PMD_0050117 "BPN"
 
   SubClassOf:
-    obo:IAO_0020000
+    <http://purl.obolibrary.org/obo/IAO_0020000>
 
     
