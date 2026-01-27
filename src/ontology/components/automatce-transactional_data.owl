@@ -31,9 +31,9 @@ Datatype: rdf:PlainLiteral
 
 Class: <http://purl.obolibrary.org/obo/IAO_0020000>
 
-# Class: <https://w3id.org/pmd/AUTOMATCE_0000016> (identifier at manufacturer)
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000016> (identifier at manufacturer)
 
-Class: <https://w3id.org/pmd/AUTOMATCE_0000016>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000016>
 
   Annotations:
     rdfs:label "identifier at manufacturer"@en,
@@ -44,9 +44,9 @@ Class: <https://w3id.org/pmd/AUTOMATCE_0000016>
     <http://purl.obolibrary.org/obo/IAO_0020000>
 
 
-# Class: <https://w3id.org/pmd/AUTOMATCE_0000017> (identifier name at manufacturer)
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000017> (identifier name at manufacturer)
 
-Class: <https://w3id.org/pmd/AUTOMATCE_0000017>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000017>
 
   Annotations:
     rdfs:label "identifier name at manufacturer"@en,
@@ -57,9 +57,9 @@ Class: <https://w3id.org/pmd/AUTOMATCE_0000017>
     <http://purl.obolibrary.org/obo/IAO_0020000>
 
 
-# Class: <https://w3id.org/pmd/AUTOMATCE_0000018> (material designation)
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000018> (material designation)
 
-Class: <https://w3id.org/pmd/AUTOMATCE_0000018>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000018>
 
   Annotations:
     rdfs:label "material designation"@en,
@@ -70,9 +70,9 @@ Class: <https://w3id.org/pmd/AUTOMATCE_0000018>
     <http://purl.obolibrary.org/obo/IAO_0020000>
 
 
-# Class: <https://w3id.org/pmd/AUTOMATCE_0000019> (material identifier)
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000019> (material identifier)
 
-Class: <https://w3id.org/pmd/AUTOMATCE_0000019>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000019>
 
   Annotations:
     rdfs:label "material identifier"@en,
@@ -83,9 +83,9 @@ Class: <https://w3id.org/pmd/AUTOMATCE_0000019>
     <http://purl.obolibrary.org/obo/IAO_0020000>
 
 
-# Class: <https://w3id.org/pmd/AUTOMATCE_0000020> (batch identifier)
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000020> (batch identifier)
 
-Class: <https://w3id.org/pmd/AUTOMATCE_0000020>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000020>
 
   Annotations:
     rdfs:label "batch identifier"@en,
@@ -96,9 +96,9 @@ Class: <https://w3id.org/pmd/AUTOMATCE_0000020>
     <http://purl.obolibrary.org/obo/IAO_0020000>
 
 
-# Class: <https://w3id.org/pmd/AUTOMATCE_0000021> (business partner number)
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000021> (business partner number)
 
-Class: <https://w3id.org/pmd/AUTOMATCE_0000021>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000021>
 
   Annotations:
     rdfs:label "business partner number"@en,

@@ -33,9 +33,9 @@ Class: obo:BFO_0000030
 Class: pmd:PMD_0000848
 Class: pmd:PMD_0000949
     
-# Class: <https://w3id.org/pmd/AUTOMATCE_0000007> (stress at break)
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000007> (stress at break)
 
-Class: <https://w3id.org/pmd/AUTOMATCE_0000007>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000007>
 
   Annotations:
     rdfs:comment
@@ -50,9 +50,9 @@ Class: <https://w3id.org/pmd/AUTOMATCE_0000007>
   SubClassOf:
     pmd:PMD_0000952
 
-# Class: <https://w3id.org/pmd/AUTOMATCE_0000024> (mold)
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000024> (mold)
 
-Class: <https://w3id.org/pmd/AUTOMATCE_0000024>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000024>
   Annotations:
     rdfs:comment "The tool that imparts the shape to the engineered material during the primary shaping process."@en,
     rdfs:label "mold"@en,
@@ -61,9 +61,9 @@ Class: <https://w3id.org/pmd/AUTOMATCE_0000024>
   SubClassOf:
     obo:BFO_0000030
 
-# Class: <https://w3id.org/pmd/AUTOMATCE_0000022> (strain at break)
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000022> (strain at break)
 
-Class: <https://w3id.org/pmd/AUTOMATCE_0000022>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000022>
 
   Annotations:
     rdfs:comment "Indicates ductility. Low strain at break (less than 5%) suggests brittle behavior."@en,
@@ -75,9 +75,9 @@ Class: <https://w3id.org/pmd/AUTOMATCE_0000022>
     pmd:PMD_0000848
 
 
-# Class: <https://w3id.org/pmd/AUTOMATCE_0000029> (impact strength)
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000029> (impact strength)
 
-Class: <https://w3id.org/pmd/AUTOMATCE_0000029>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000029>
 
   Annotations:
     rdfs:comment "Often measured via Charpy or Izod notched impact tests."@en,
@@ -89,9 +89,9 @@ Class: <https://w3id.org/pmd/AUTOMATCE_0000029>
     pmd:PMD_0000952
 
 
-# Class: <https://w3id.org/pmd/AUTOMATCE_0000030> (flexural modulus)
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000030> (flexural modulus)
 
-Class: <https://w3id.org/pmd/AUTOMATCE_0000030>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000030>
 
   Annotations:
     rdfs:comment "Standard metric for stiffness in plastics (ISO 178)."@en,
@@ -103,9 +103,9 @@ Class: <https://w3id.org/pmd/AUTOMATCE_0000030>
     pmd:PMD_0000949
 
 
-# Class: <https://w3id.org/pmd/AUTOMATCE_0000031> (flexural strength)
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000031> (flexural strength)
 
-Class: <https://w3id.org/pmd/AUTOMATCE_0000031>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000031>
 
   Annotations:
     rdfs:comment "Relevant for snap-fit joints in automotive interiors."@en,
