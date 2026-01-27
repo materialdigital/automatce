@@ -1584,6 +1584,68 @@
     
 
 
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0030000 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0030000">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000967"/>
+        <rdfs:label xml:lang="en">melt temperature</rdfs:label>
+        <skos:definition xml:lang="en">Temperature of the input melt in a manufacturing process</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0030001 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0030001">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0030000"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0030002"/>
+        <rdfs:label xml:lang="en">max melt temperature</rdfs:label>
+        <skos:definition xml:lang="en">Maximum temperature of the input melt in a manufacturing process</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0030002 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0030002">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0030000"/>
+        <rdfs:label xml:lang="en">min melt temperature</rdfs:label>
+        <skos:definition xml:lang="en">Minimum temperature of the input melt in a manufacturing process</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0030003 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0030003">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000967"/>
+        <rdfs:label xml:lang="en">mold temperature</rdfs:label>
+        <skos:definition xml:lang="en">Temperature of the mold used in a manufacturing process</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0030004 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0030004">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0030003"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0030005"/>
+        <rdfs:label xml:lang="en">max mold temperature</rdfs:label>
+        <skos:definition xml:lang="en">Maximum temperature of the mold used in a manufacturing process</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0030005 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0030005">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0030003"/>
+        <rdfs:label xml:lang="en">min mold temperature</rdfs:label>
+        <skos:definition xml:lang="en">Minimum temperature of the mold used in a manufacturing process</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/co/PMD_0000000 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000000">

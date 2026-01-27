@@ -819,6 +819,66 @@
         } ]
       }
     }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030000",
+      "lbl" : "melt temperature",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "Temperature of the input melt in a manufacturing process"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030001",
+      "lbl" : "max melt temperature",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "Maximum temperature of the input melt in a manufacturing process"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030002",
+      "lbl" : "min melt temperature",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "Minimum temperature of the input melt in a manufacturing process"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030003",
+      "lbl" : "mold temperature",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "Temperature of the mold used in a manufacturing process"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030004",
+      "lbl" : "max mold temperature",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "Maximum temperature of the mold used in a manufacturing process"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030005",
+      "lbl" : "min mold temperature",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "Minimum temperature of the mold used in a manufacturing process"
+        } ]
+      }
+    }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000000",
       "lbl" : "material",
       "type" : "CLASS",
@@ -3443,6 +3503,30 @@
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000032",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030000",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000967"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030001",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030000"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030002",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030000"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030003",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000967"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030004",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030003"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030005",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030003"
     }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000001",
       "pred" : "is_a",

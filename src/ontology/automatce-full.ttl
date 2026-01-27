@@ -1128,6 +1128,50 @@ skos:ConceptScheme rdf:type owl:Class .
                                                    skos:example "50% Relative Humidity (standard conditioning atmosphere)."@en .
 
 
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0030000
+<https://w3id.org/pmd/automatce/AUTOMATCE_0030000> rdf:type owl:Class ;
+                                                   rdfs:subClassOf co:PMD_0000967 ;
+                                                   rdfs:label "melt temperature"@en ;
+                                                   skos:definition "Temperature of the input melt in a manufacturing process"@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0030001
+<https://w3id.org/pmd/automatce/AUTOMATCE_0030001> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0030000> ;
+                                                   owl:disjointWith <https://w3id.org/pmd/automatce/AUTOMATCE_0030002> ;
+                                                   rdfs:label "max melt temperature"@en ;
+                                                   skos:definition "Maximum temperature of the input melt in a manufacturing process"@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0030002
+<https://w3id.org/pmd/automatce/AUTOMATCE_0030002> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0030000> ;
+                                                   rdfs:label "min melt temperature"@en ;
+                                                   skos:definition "Minimum temperature of the input melt in a manufacturing process"@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0030003
+<https://w3id.org/pmd/automatce/AUTOMATCE_0030003> rdf:type owl:Class ;
+                                                   rdfs:subClassOf co:PMD_0000967 ;
+                                                   rdfs:label "mold temperature"@en ;
+                                                   skos:definition "Temperature of the mold used in a manufacturing process"@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0030004
+<https://w3id.org/pmd/automatce/AUTOMATCE_0030004> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0030003> ;
+                                                   owl:disjointWith <https://w3id.org/pmd/automatce/AUTOMATCE_0030005> ;
+                                                   rdfs:label "max mold temperature"@en ;
+                                                   skos:definition "Maximum temperature of the mold used in a manufacturing process"@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0030005
+<https://w3id.org/pmd/automatce/AUTOMATCE_0030005> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0030003> ;
+                                                   rdfs:label "min mold temperature"@en ;
+                                                   skos:definition "Minimum temperature of the mold used in a manufacturing process"@en .
+
+
 ###  https://w3id.org/pmd/co/PMD_0000000
 co:PMD_0000000 rdf:type owl:Class ;
                rdfs:subClassOf [ owl:intersectionOf ( co:PMD_0000001
