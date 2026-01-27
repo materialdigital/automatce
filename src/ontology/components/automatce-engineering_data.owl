@@ -1,117 +1,201 @@
+Prefix: : <https://w3id.org/pmd/automatce/components/automatce-engineering_data.owl>
 Prefix: dcterms: <http://purl.org/dc/terms/>
+Prefix: obo: <http://purl.obolibrary.org/obo/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: pmd: <https://w3id.org/pmd/co/>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
-Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
-Prefix: obo:  <http://purl.obolibrary.org/obo/>
-Prefix: pmd:  <https://w3id.org/pmd/co/>
-Prefix: : <https://w3id.org/pmd/automatce/components/automatce-engineering_data.owl>
 
 
 
 Ontology: <https://w3id.org/pmd/automatce/components/automatce-engineering_data.owl>
 
-    Import: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
-    Annotations: 
-        dcterms:title "AUTOMATCE - Engineering Data Module"@en,
-        rdfs:comment "The engineering data module of the AUTOMATCE Ontology."@en
+Import: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
 
+Annotations: 
+    dcterms:title "AUTOMATCE - Engineering Data Module"@en,
+    rdfs:comment "The engineering data module of the AUTOMATCE Ontology."@en
 
 AnnotationProperty: dcterms:title
-AnnotationProperty: rdfs:comment
-AnnotationProperty: rdfs:label
-AnnotationProperty: skos:definition
-AnnotationProperty: skos:example
+
+    
 AnnotationProperty: pmd:PMD_0050117
 
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: skos:definition
+
+    
+AnnotationProperty: skos:example
+
+    
 Datatype: rdf:PlainLiteral
 
-Class: pmd:PMD_0000952
-Class: obo:BFO_0000030
-Class: pmd:PMD_0000848
-Class: pmd:PMD_0000949
     
-# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000007> (stress at break)
-
 Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000007>
 
-  Annotations:
-    rdfs:comment
-      "For brittle materials, this is equal to tensile strength. For ductile materials, it may be lower than the yield point."@en,
-    rdfs:label
-      "stress at break"@en,
-    skos:definition
-      "The tensile stress recorded at the moment of rupture of the specimen."@en,
-    skos:example
-      "A value of 150 MPa for a GF-reinforced polymer."@en
-
-  SubClassOf:
-    pmd:PMD_0000952
-
-# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000024> (mold)
-
-Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000024>
-  Annotations:
-    rdfs:comment "The tool that imparts the shape to the engineered material during the primary shaping process."@en,
-    rdfs:label "mold"@en,
-    skos:definition "A hollowed-out block that is filled with a liquid or pliable material like plastic, glass, metal, or ceramic raw material."@en,
-    skos:example "Injection mold for a dashboard panel."@en
-  SubClassOf:
-    obo:BFO_0000030
-
-# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000022> (strain at break)
-
+    Annotations: 
+        rdfs:comment "For brittle materials, this is equal to tensile strength. For ductile materials, it may be lower than the yield point."@en,
+        rdfs:label "stress at break"@en,
+        skos:definition "The tensile stress recorded at the moment of rupture of the specimen."@en,
+        skos:example "A value of 150 MPa for a GF-reinforced polymer."@en
+    
+    SubClassOf: 
+        pmd:PMD_0000952
+    
+    
 Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000022>
 
-  Annotations:
-    rdfs:comment "Indicates ductility. Low strain at break (less than 5%) suggests brittle behavior."@en,
-    rdfs:label "strain at break"@en,
-    skos:definition "The elongation of a specimen at the moment of rupture, expressed as a percentage of the original gauge length."@en,
-    skos:example "3% strain at break for a glass-filled polyamide."@en
+    Annotations: 
+        rdfs:comment "Indicates ductility. Low strain at break (less than 5%) suggests brittle behavior."@en,
+        rdfs:label "strain at break"@en,
+        skos:definition "The elongation of a specimen at the moment of rupture, expressed as a percentage of the original gauge length."@en,
+        skos:example "3% strain at break for a glass-filled polyamide."@en
+    
+    SubClassOf: 
+        pmd:PMD_0000848
+    
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000024>
 
-  SubClassOf:
-    pmd:PMD_0000848
-
-
-# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000029> (impact strength)
-
+    Annotations: 
+        rdfs:comment "The tool that imparts the shape to the engineered material during the primary shaping process."@en,
+        rdfs:label "mold"@en,
+        skos:definition "A hollowed-out block that is filled with a liquid or pliable material like plastic, glass, metal, or ceramic raw material."@en,
+        skos:example "Injection mold for a dashboard panel."@en
+    
+    SubClassOf: 
+        obo:BFO_0000030
+    
+    
 Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000029>
 
-  Annotations:
-    rdfs:comment "Often measured via Charpy or Izod notched impact tests."@en,
-    rdfs:label "impact strength"@en,
-    skos:definition "The ability of a material to absorb energy and resist fracture under high speed loading."@en,
-    skos:example "High impact strength is required for bumper beams."@en
-
-  SubClassOf:
-    pmd:PMD_0000952
-
-
-# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000030> (flexural modulus)
-
+    Annotations: 
+        rdfs:comment "Often measured via Charpy or Izod notched impact tests."@en,
+        rdfs:label "impact strength"@en,
+        skos:definition "The ability of a material to absorb energy and resist fracture under high speed loading."@en,
+        skos:example "High impact strength is required for bumper beams."@en
+    
+    SubClassOf: 
+        pmd:PMD_0000952
+    
+    
 Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000030>
 
-  Annotations:
-    rdfs:comment "Standard metric for stiffness in plastics (ISO 178)."@en,
-    rdfs:label "flexural modulus"@en,
-    skos:definition "The ratio of stress to strain in flexural deformation, or the tendency for a material to resist bending."@en,
-    skos:example "Flexural modulus of 8500 MPa for PA66-GF30."@en
-
-  SubClassOf:
-    pmd:PMD_0000949
-
-
-# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000031> (flexural strength)
-
+    Annotations: 
+        rdfs:comment "Standard metric for stiffness in plastics (ISO 178)."@en,
+        rdfs:label "flexural modulus"@en,
+        skos:definition "The ratio of stress to strain in flexural deformation, or the tendency for a material to resist bending."@en,
+        skos:example "Flexural modulus of 8500 MPa for PA66-GF30."@en
+    
+    SubClassOf: 
+        pmd:PMD_0000949
+    
+    
 Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000031>
 
-  Annotations:
-    rdfs:comment "Relevant for snap-fit joints in automotive interiors."@en,
-    rdfs:label "flexural strength"@en,
-    skos:definition "The maximum stress a material can withstand in bending before yielding or breaking."@en,
-    skos:example "250 MPa for a high-performance composite."@en
+    Annotations: 
+        rdfs:comment "Relevant for snap-fit joints in automotive interiors."@en,
+        rdfs:label "flexural strength"@en,
+        skos:definition "The maximum stress a material can withstand in bending before yielding or breaking."@en,
+        skos:example "250 MPa for a high-performance composite."@en
+    
+    SubClassOf: 
+        pmd:PMD_0000952
+    
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0030000>
 
-  SubClassOf:
-    pmd:PMD_0000952
+    Annotations: 
+        rdfs:label "melt temperature"@en,
+        skos:definition "Temperature of the input melt in a manufacturing process"@en
+    
+    SubClassOf: 
+        pmd:PMD_0000967
+    
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0030001>
+
+    Annotations: 
+        rdfs:label "max melt temperature"@en,
+        skos:definition "Maximum temperature of the input melt in a manufacturing process"@en
+    
+    SubClassOf: 
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0030000>
+    
+    DisjointWith: 
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0030002>
+    
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0030002>
+
+    Annotations: 
+        rdfs:label "min melt temperature"@en,
+        skos:definition "Minimum temperature of the input melt in a manufacturing process"@en
+    
+    SubClassOf: 
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0030000>
+    
+    DisjointWith: 
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0030001>
+    
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0030003>
+
+    Annotations: 
+        rdfs:label "mold temperature"@en,
+        skos:definition "Temperature of the mold used in a manufacturing process"@en
+    
+    SubClassOf: 
+        pmd:PMD_0000967
+    
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0030004>
+
+    Annotations: 
+        rdfs:label "max mold temperature"@en,
+        skos:definition "Maximum temperature of the mold used in a manufacturing process"@en
+    
+    SubClassOf: 
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0030003>
+    
+    DisjointWith: 
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0030005>
+    
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0030005>
+
+    Annotations: 
+        rdfs:label "min mold temperature"@en,
+        skos:definition "Minimum temperature of the mold used in a manufacturing process"@en
+    
+    SubClassOf: 
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0030003>
+    
+    DisjointWith: 
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0030004>
+    
+    
+Class: obo:BFO_0000030
+
+    
+Class: pmd:PMD_0000848
+
+    
+Class: pmd:PMD_0000949
+
+    
+Class: pmd:PMD_0000952
+
+    
+Class: pmd:PMD_0000967
+
+    
