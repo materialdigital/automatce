@@ -17,13 +17,13 @@
 @base <https://w3id.org/pmd/automatce/automatce-base.ttl> .
 
 <https://w3id.org/pmd/automatce/automatce-base.ttl> rdf:type owl:Ontology ;
-                                                     owl:versionIRI <https://w3id.org/pmd/automatce/releases/2026-01-26/automatce-base.ttl> ;
+                                                     owl:versionIRI <https://w3id.org/pmd/automatce/releases/2026-01-27/automatce-base.ttl> ;
                                                      dce:type obo:IAO_8000001 ;
                                                      dcterms:description """PMD Core application ontology generated via ODK Template.
 """ ;
                                                      dcterms:license <https://w3id.org/pmd/automatce.owl#CC-BY-4.0> ;
                                                      dcterms:title "Automotive Circular Economy Ontology" ;
-                                                     owl:versionInfo "2026-01-26" .
+                                                     owl:versionInfo "2026-01-27" .
 
 #################################################################
 #    Annotation properties

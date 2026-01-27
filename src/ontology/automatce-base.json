@@ -16,9 +16,9 @@
         "val" : "Automotive Circular Economy Ontology"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-01-26"
+        "val" : "2026-01-27"
       } ],
-      "version" : "https://w3id.org/pmd/automatce/releases/2026-01-26/automatce-base.json"
+      "version" : "https://w3id.org/pmd/automatce/releases/2026-01-27/automatce-base.json"
     },
     "nodes" : [ {
       "id" : "http://purl.org/dc/elements/1.1/type",

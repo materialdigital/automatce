@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/pmd/automatce.owl#"
      xml:base="https://w3id.org/pmd/automatce.owl"
+     xmlns:co="https://w3id.org/pmd/co/"
      xmlns:dce="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -18,12 +19,12 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/automatce.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/automatce/releases/2026-01-26/automatce.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/automatce/releases/2026-01-27/automatce.owl"/>
         <dcterms:description>PMD Core application ontology generated via ODK Template.
 </dcterms:description>
         <dcterms:license rdf:resource="https://w3id.org/pmd/automatce.owl#CC-BY-4.0"/>
         <dcterms:title>Automotive Circular Economy Ontology</dcterms:title>
-        <owl:versionInfo>2026-01-26</owl:versionInfo>
+        <owl:versionInfo>2026-01-27</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -88,9 +89,24 @@
     
 
 
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+        <rdfs:label>label</rdfs:label>
+        <rdfs:label xml:lang="en">label</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
     
 
 
@@ -103,6 +119,40 @@
     <!-- http://www.w3.org/2004/02/skos/core#example -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#topConceptOf -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0050117 -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/pmd/co/PMD_0050117">
+        <rdfs:label xml:lang="en">abbreviation</rdfs:label>
+        <skos:definition xml:lang="en">A textual annotation used to specify a commonly accepted abbreviation, acronym, or shortened form of a class label. This property is intended to support concise referencing of ontology classes, especially when standard abbreviations are widely used in practice.</skos:definition>
+        <skos:example xml:lang="en">&quot;DNA&quot; for &quot;Deoxyribonucleic Acid&quot;</skos:example>
+    </owl:AnnotationProperty>
     
 
 
@@ -1154,6 +1204,392 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000002 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:comment xml:lang="en">This role is realized when the material enters the supply chain or the hopper of a processing machine.</rdfs:comment>
+        <rdfs:label xml:lang="en">raw material role</rdfs:label>
+        <skos:definition xml:lang="en">A role borne by a material entity when it functions as an input to a manufacturing process prior to transformation or processing.</skos:definition>
+        <skos:example xml:lang="en">Plastic granules sitting in a silo waiting to be fed into an extruder bear this role.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000003 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:comment xml:lang="en">Additives are distinct from fillers (which bulk up volume) and the matrix. They perform specific chemical or physical modifications.</rdfs:comment>
+        <rdfs:label xml:lang="en">additive role</rdfs:label>
+        <skos:definition xml:lang="en">A role borne by a substance intentionally added in relatively small amounts to modify the processing characteristics, performance properties, or cost of a base material.</skos:definition>
+        <skos:example xml:lang="en">UV stabilizers added to dashboard polymers to prevent sun damage; Plasticizers added to PVC.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000004 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000004">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000868"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/pmd/AUTOMATCE_0000005"/>
+        <rdfs:comment xml:lang="en">Organic colorants (dyes) offer high color strength and brightness but may have lower thermal stability than pigments.</rdfs:comment>
+        <rdfs:label xml:lang="en">organic colorant</rdfs:label>
+        <skos:definition xml:lang="en">A complex organic chemical compound used to impart color, typically soluble in the medium.</skos:definition>
+        <skos:example xml:lang="en">Azo dyes used in interior textile coloring.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000005 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000005">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000002"/>
+        <rdfs:comment xml:lang="en">Inorganic colorants (pigments) are generally insoluble and provide opacity and high heat stability.</rdfs:comment>
+        <rdfs:label xml:lang="en">inorganic colorant</rdfs:label>
+        <skos:definition xml:lang="en">A mineral-based chemical compound, usually an oxide or sulfide, used to impart color.</skos:definition>
+        <skos:example xml:lang="en">Titanium dioxide (white) used in car paints.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000006 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000006">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/AUTOMATCE_0000003"/>
+        <rdfs:comment xml:lang="en">This role can be borne by organic dyes or inorganic pigments.</rdfs:comment>
+        <rdfs:label xml:lang="en">colorant role</rdfs:label>
+        <skos:definition xml:lang="en">A role borne by an additive substance when its primary function is to impart color to a material.</skos:definition>
+        <skos:example xml:lang="en">Carbon black acting as a pigment to turn a tire black.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000007 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000007">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000952"/>
+        <rdfs:comment xml:lang="en">For brittle materials, this is equal to tensile strength. For ductile materials, it may be lower than the yield point.</rdfs:comment>
+        <rdfs:label xml:lang="en">stress at break</rdfs:label>
+        <skos:definition xml:lang="en">The tensile stress recorded at the moment of rupture of the specimen.</skos:definition>
+        <skos:example xml:lang="en">A value of 150 MPa for a GF-reinforced polymer.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000008 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000008">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020131"/>
+        <rdfs:comment xml:lang="en">Can be defined descriptively (Red) or metrologically (L*a*b* coordinates).</rdfs:comment>
+        <rdfs:label xml:lang="en">color</rdfs:label>
+        <skos:definition xml:lang="en">The quality of an object or substance with respect to light reflected by the object, usually determined visually by measurement of hue, saturation, and brightness.</skos:definition>
+        <skos:example xml:lang="en">The &apos;Piano Black&apos; finish on a B-pillar trim.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000009 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000009">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050004"/>
+        <rdfs:comment xml:lang="en">Polyamides are semi-crystalline polymers known for good thermal and chemical resistance.</rdfs:comment>
+        <rdfs:label xml:lang="en">polyamide</rdfs:label>
+        <skos:definition xml:lang="en">A polymer containing repeating amide (-CONH-) linkages in the polymer backbone.</skos:definition>
+        <skos:example xml:lang="en">Nylon 6, Nylon 12, Nylon 66.</skos:example>
+        <co:PMD_0050117>PA</co:PMD_0050117>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000010 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000010">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/AUTOMATCE_0000009"/>
+        <rdfs:comment xml:lang="en">PA66 has a higher melting point (~260°C) than PA6 but absorbs moisture which affects dimensional stability.</rdfs:comment>
+        <rdfs:label xml:lang="en">PA66</rdfs:label>
+        <skos:definition xml:lang="en">A semicrystalline thermoplastic polyamide synthesized from hexamethylenediamine and adipic acid.</skos:definition>
+        <skos:example xml:lang="en">Material used for cylinder head covers and radiator end tanks.</skos:example>
+        <co:PMD_0050117>PA66</co:PMD_0050117>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000011 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000011">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000577"/>
+        <rdfs:comment xml:lang="en">The addition of 25% glass fiber significantly increases stiffness and tensile strength compared to neat PA66.</rdfs:comment>
+        <rdfs:label xml:lang="en">PA66-GF25</rdfs:label>
+        <skos:definition xml:lang="en">A composite material consisting of a Polyamide 66 matrix reinforced with 25% glass fiber by mass.</skos:definition>
+        <skos:example xml:lang="en">Structural components in the engine bay requiring high stiffness at elevated temperatures.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000012 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000012">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000891"/>
+        <rdfs:comment xml:lang="en">In PMD logic, this is a disconnected aggregate because the individual filaments in a bundle are distinct objects.</rdfs:comment>
+        <rdfs:label xml:lang="en">fiber</rdfs:label>
+        <skos:definition xml:lang="en">A class of materials that are continuous filaments or are in discrete elongated pieces, similar to lengths of thread.</skos:definition>
+        <skos:example xml:lang="en">Carbon fiber tow, Aramid fibers.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000013 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000013">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/AUTOMATCE_0000012"/>
+        <rdfs:comment xml:lang="en">Used extensively as a reinforcement agent in polymer matrix composites.</rdfs:comment>
+        <rdfs:label xml:lang="en">glass fiber</rdfs:label>
+        <skos:definition xml:lang="en">A material consisting of numerous extremely fine fibers of glass.</skos:definition>
+        <skos:example xml:lang="en">E-Glass used to reinforce PA66 for automotive pedals.</skos:example>
+        <co:PMD_0050117>GF</co:PMD_0050117>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000014 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000014">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020102"/>
+        <rdfs:comment xml:lang="en">Commonly denoted as wt%. PA66-GF25 implies a value of 0.25 or 25%.</rdfs:comment>
+        <rdfs:label xml:lang="en">fiber material content mass fraction</rdfs:label>
+        <skos:definition xml:lang="en">The ratio of the mass of the fiber reinforcement to the total mass of the composite material.</skos:definition>
+        <skos:example xml:lang="en">25% mass fraction in PA66-GF25.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000015 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000015">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020104"/>
+        <rdfs:comment xml:lang="en">Volume fraction is more critical for micromechanical modeling (e.g., Rule of Mixtures) than mass fraction.</rdfs:comment>
+        <rdfs:label xml:lang="en">fiber material content volume fraction</rdfs:label>
+        <skos:definition xml:lang="en">The ratio of the volume of the fiber reinforcement to the total volume of the composite material.</skos:definition>
+        <skos:example xml:lang="en">Approximately 14-15% volume fraction corresponds to 25% mass fraction for Glass/PA66.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000016 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">identifier at manufacturer</rdfs:label>
+        <skos:definition xml:lang="en">A unique string or code assigned by a manufacturer to identify a specific product grade.</skos:definition>
+        <skos:example xml:lang="en">BASF code &apos;A3WG6&apos; for a specific Ultramid grade.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000017 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">identifier name at manufacturer</rdfs:label>
+        <skos:definition xml:lang="en">The brand or trade name used for marketing the material.</skos:definition>
+        <skos:example xml:lang="en">&apos;Zytel&apos; (DuPont) or &apos;Durethan&apos; (Lanxess).</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000018 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000018">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">material designation</rdfs:label>
+        <skos:definition xml:lang="en">A string following a standard nomenclature (e.g., ISO 1043) to describe the material composition.</skos:definition>
+        <skos:example xml:lang="en">PA66-GF25</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000019 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">material identifier</rdfs:label>
+        <skos:definition xml:lang="en">A globally unique identifier (GUID) or database key for the material entry.</skos:definition>
+        <skos:example xml:lang="en">Catena-X Material Twin ID.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000020 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">batch identifier</rdfs:label>
+        <skos:definition xml:lang="en">Code assigned to a specific production run for traceability.</skos:definition>
+        <skos:example xml:lang="en">Batch 2023-10-A-X55.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000021 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">business partner number</rdfs:label>
+        <skos:definition xml:lang="en">Unique identifier for a legal entity in the automotive supply chain network (Catena-X standard).</skos:definition>
+        <skos:example xml:lang="en">BPNL00000003AY2 (Example BPN).</skos:example>
+        <co:PMD_0050117>BPN</co:PMD_0050117>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000022 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000022">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000848"/>
+        <rdfs:comment xml:lang="en">Indicates ductility. Low strain at break (less than 5%) suggests brittle behavior.</rdfs:comment>
+        <rdfs:label xml:lang="en">strain at break</rdfs:label>
+        <skos:definition xml:lang="en">The elongation of a specimen at the moment of rupture, expressed as a percentage of the original gauge length.</skos:definition>
+        <skos:example xml:lang="en">3% strain at break for a glass-filled polyamide.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000023 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000023">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020131"/>
+        <rdfs:comment xml:lang="en">Critical for injection molding simulations to predict mold filling.</rdfs:comment>
+        <rdfs:label xml:lang="en">viscosity</rdfs:label>
+        <skos:definition xml:lang="en">A measure of a fluid&apos;s resistance to flow.</skos:definition>
+        <skos:example xml:lang="en">The melt viscosity of polypropylene at 230°C.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000024 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <rdfs:comment xml:lang="en">The tool that imparts the shape to the engineered material during the primary shaping process.</rdfs:comment>
+        <rdfs:label xml:lang="en">mold</rdfs:label>
+        <skos:definition xml:lang="en">A hollowed-out block that is filled with a liquid or pliable material like plastic, glass, metal, or ceramic raw material.</skos:definition>
+        <skos:example xml:lang="en">Injection mold for a dashboard panel.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000025 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000025">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020131"/>
+        <rdfs:comment xml:lang="en">Polymers are non-Newtonian; their shear viscosity decreases as shear rate increases (shear thinning).</rdfs:comment>
+        <rdfs:label xml:lang="en">shear viscosity</rdfs:label>
+        <skos:definition xml:lang="en">The viscosity of a fluid when subjected to shear stress; defined as the ratio of shear stress to shear rate.</skos:definition>
+        <skos:example xml:lang="en">Viscosity curve data required for Moldflow simulation.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000026 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000026">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000882"/>
+        <rdfs:comment xml:lang="en">Below Tg, the amorphous phase is frozen; above Tg, polymer chains have mobility.</rdfs:comment>
+        <rdfs:label xml:lang="en">glass transition temperature</rdfs:label>
+        <skos:definition xml:lang="en">The temperature range where a polymer material transitions from a hard, glassy material to a soft, rubbery material.</skos:definition>
+        <skos:example xml:lang="en">Tg of approx. 50°C for dry PA66.</skos:example>
+        <co:PMD_0050117>Tg</co:PMD_0050117>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000027 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000027">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000981"/>
+        <rdfs:comment xml:lang="en">Crucial for calculating gap and flush in automotive assembly where different materials (steel vs plastic) meet.</rdfs:comment>
+        <rdfs:label xml:lang="en">coefficient of linear thermal expansion</rdfs:label>
+        <skos:definition xml:lang="en">The fractional change in length per degree of temperature change.</skos:definition>
+        <skos:example xml:lang="en">CLTE is distinct in flow-direction vs cross-flow direction for fiber reinforced parts.</skos:example>
+        <co:PMD_0050117>CLTE</co:PMD_0050117>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000028 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000028">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000981"/>
+        <rdfs:comment xml:lang="en">Used to calculate cooling times in injection molding.</rdfs:comment>
+        <rdfs:label xml:lang="en">specific heat capacity</rdfs:label>
+        <skos:definition xml:lang="en">The amount of heat energy required to raise the temperature of a substance per unit of mass.</skos:definition>
+        <skos:example xml:lang="en">1700 J/(kg·K) for Polypropylene.</skos:example>
+        <co:PMD_0050117>Cp</co:PMD_0050117>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000029 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000029">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000952"/>
+        <rdfs:comment xml:lang="en">Often measured via Charpy or Izod notched impact tests.</rdfs:comment>
+        <rdfs:label xml:lang="en">impact strength</rdfs:label>
+        <skos:definition xml:lang="en">The ability of a material to absorb energy and resist fracture under high speed loading.</skos:definition>
+        <skos:example xml:lang="en">High impact strength is required for bumper beams.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000030 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000030">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000949"/>
+        <rdfs:comment xml:lang="en">Standard metric for stiffness in plastics (ISO 178).</rdfs:comment>
+        <rdfs:label xml:lang="en">flexural modulus</rdfs:label>
+        <skos:definition xml:lang="en">The ratio of stress to strain in flexural deformation, or the tendency for a material to resist bending.</skos:definition>
+        <skos:example xml:lang="en">Flexural modulus of 8500 MPa for PA66-GF30.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000031 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000031">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000952"/>
+        <rdfs:comment xml:lang="en">Relevant for snap-fit joints in automotive interiors.</rdfs:comment>
+        <rdfs:label xml:lang="en">flexural strength</rdfs:label>
+        <skos:definition xml:lang="en">The maximum stress a material can withstand in bending before yielding or breaking.</skos:definition>
+        <skos:example xml:lang="en">250 MPa for a high-performance composite.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_0000032 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/AUTOMATCE_0000032">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020131"/>
+        <rdfs:comment xml:lang="en">Crucial for PA66 as it absorbs moisture, changing its mechanical properties (conditioning).</rdfs:comment>
+        <rdfs:label xml:lang="en">humidity</rdfs:label>
+        <skos:definition xml:lang="en">The concentration of water vapor present in the air or environment surrounding a material.</skos:definition>
+        <skos:example xml:lang="en">50% Relative Humidity (standard conditioning atmosphere).</skos:example>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/co/PMD_0000000 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000000">
@@ -1343,6 +1779,54 @@ We only deal with intensive (system-size independent) materrial properties. Exte
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <rdfs:label xml:lang="en">change of temperature</rdfs:label>
         <skos:definition xml:lang="en">A change of temperature is a process describing the variation in thermal energy within a material or system over time or due to external influences.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000577 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000577">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000002"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000002"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000845"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000002"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020001"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">composite material</rdfs:label>
+        <skos:definition xml:lang="en">A Composite Material is an Engineered Material that &apos;consists of&apos; some Material that has a Matrix role and of some Material that has a Filler role.</skos:definition>
     </owl:Class>
     
 
@@ -1586,6 +2070,17 @@ Unfortunately is is not possible to write down such axiom based on OWL. Semi-wor
         <skos:definition xml:lang="en">A planned process that is driven by the primary intent to transform objects
 A manufacturing process is always a transformative process.</skos:definition>
         <skos:definition xml:lang="de">Ein geplannter Prozess, der von der primären Absicht angetrieben wird, Objekte zu transformieren. Ein Herstellungsprozess ist immer ein Transformationsprozess.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000845 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000845">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/pmd/co/PMD_0020001"/>
+        <rdfs:label xml:lang="en">matrix role</rdfs:label>
+        <skos:definition xml:lang="en">Matrix is the role of a PortionOfConnectedMatter that implies to host the Filler.</skos:definition>
     </owl:Class>
     
 
@@ -1899,6 +2394,16 @@ TODO: Check general class axiom and defintion altogether !!!</skos:definition>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000802"/>
         <rdfs:label xml:lang="en">waver irradiation</rdfs:label>
         <skos:definition xml:lang="en">A waver irradiation is an irradiation describing an exposure of a material or system to electromagnetic waves or radiation.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0020001 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:label xml:lang="en">filler role</rdfs:label>
+        <skos:definition xml:lang="en">Filler is the role of a PortionOfDisconnectedMatter that implies being hosted in a Matrix.</skos:definition>
     </owl:Class>
     
 
@@ -2218,6 +2723,856 @@ The molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 202
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000428">
         <obo:IAO_0000115 xml:lang="en">A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">requires discussion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060001 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060001">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>1</skos:notation>
+        <skos:prefLabel xml:lang="de">1. Stahl- und Eisenwerkstoffe</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">1. steel and iron materials</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060002 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060002">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>2</skos:notation>
+        <skos:prefLabel xml:lang="de">2. Leichtmetalle, Guss- und Knetlegierungen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">2. light alloys, cast and wrought alloys</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060003 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060003">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>3</skos:notation>
+        <skos:prefLabel xml:lang="de">3. Buntmetalle, Guss- und Knetlegierungen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">3. nonferrous heavy metals, cast and wrought alloys</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060004 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060004">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>4</skos:notation>
+        <skos:prefLabel xml:lang="de">4. Sondermetalle</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">4. special metals</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060005 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060005">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>5</skos:notation>
+        <skos:prefLabel xml:lang="de">5. Polymere Werkstoffe</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">5. polymer materials</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060006 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060006">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>6</skos:notation>
+        <skos:prefLabel xml:lang="de">6. Prozesspolymere</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">6. process polymers</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060007 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060007">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>7</skos:notation>
+        <skos:prefLabel xml:lang="en">7. other materials and material compounds</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">7. sonstige Werkstoffe und Werkstoffverbunde</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060008 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060008">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>8</skos:notation>
+        <skos:prefLabel xml:lang="de">8. Elektronik / Elektrik</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">8. electronics / electrics</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060009 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060009">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>9</skos:notation>
+        <skos:prefLabel xml:lang="de">9. Kraftstoffe und Hilfsstoffe</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">9. fuels and auxiliary means</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060011 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060011">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060001"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>1.1</skos:notation>
+        <skos:prefLabel xml:lang="de">1.1 Stähle / Stahlguss / Sinterstahl</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">1.1 steels / cast steel / sintered steel</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060012 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060012">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060001"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>1.2</skos:notation>
+        <skos:prefLabel xml:lang="de">1.2 Gusseisen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">1.2 cast iron</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060021 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060021">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060002"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>2.1</skos:notation>
+        <skos:prefLabel xml:lang="de">2.1 Aluminium und Aluminiumlegierungen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">2.1 aluminium and aluminium alloys</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060022 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060022">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060002"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>2.2</skos:notation>
+        <skos:prefLabel xml:lang="de">2.2 Magnesium und Magnesiumlegierungen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">2.2 magnesium and magnesium alloys</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060023 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060023">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060002"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>2.3</skos:notation>
+        <skos:prefLabel xml:lang="de">2.3 Titan und Titanlegierungen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">2.3 titanium and titanium alloys</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060031 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060031">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060003"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>3.1</skos:notation>
+        <skos:prefLabel xml:lang="de">3.1 Kupfer</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">3.1 copper</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060032 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060032">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060003"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>3.2</skos:notation>
+        <skos:prefLabel xml:lang="de">3.2 Kupferlegierungen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">3.2 copper alloys</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060033 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060033">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060003"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>3.3</skos:notation>
+        <skos:prefLabel xml:lang="de">3.3 Zinklegierungen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">3.3 zinc alloys</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060034 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060034">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060003"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>3.4</skos:notation>
+        <skos:prefLabel xml:lang="de">3.4 Nickellegierungen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">3.4 nickel alloys</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060035 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060035">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060003"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>3.5</skos:notation>
+        <skos:prefLabel xml:lang="de">3.5 Blei</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">3.5 lead</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060041 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060041">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060004"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>4.1</skos:notation>
+        <skos:prefLabel xml:lang="de">4.1 Platin / Rhodium</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">4.1 platinum / rhodium</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060042 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060042">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060004"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>4.2</skos:notation>
+        <skos:prefLabel xml:lang="de">4.2 andere Sondermetalle</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">4.2 other special metals</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060051 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060051">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060005"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>5.1</skos:notation>
+        <skos:prefLabel xml:lang="de">5.1 Thermoplaste (gefüllt / ungefüllt)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">5.1 thermoplastics (filled / unfilled)</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060052 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060052">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060005"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>5.2</skos:notation>
+        <skos:prefLabel xml:lang="en">5.2 thermoplastic elastomers</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">5.2 thermoplastische Elastomere</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060053 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060053">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060005"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>5.3</skos:notation>
+        <skos:prefLabel xml:lang="de">5.3 Elastomere / Elastomer-Verbunde</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">5.3 elastomers / elastomeric compounds</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060054 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060054">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060005"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>5.4</skos:notation>
+        <skos:prefLabel xml:lang="de">5.4 Duroplaste</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">5.4 duromers</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060055 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060055">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060005"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>5.5</skos:notation>
+        <skos:prefLabel xml:lang="de">5.5 Polymerverbunde</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">5.5 polymeric compounds</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060061 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060061">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060006"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>6.1</skos:notation>
+        <skos:prefLabel xml:lang="de">6.1 Lacke</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">6.1 lacquers</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060062 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060062">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060006"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>6.2</skos:notation>
+        <skos:prefLabel xml:lang="de">6.2 Klebstoffe, Dichtmassen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">6.2 adhesives, sealants</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060063 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060063">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060006"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>6.3</skos:notation>
+        <skos:prefLabel xml:lang="de">6.3 Unterbodenschutz</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">6.3 underseal</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060071 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060071">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060007"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>7.1</skos:notation>
+        <skos:prefLabel xml:lang="en">7.1 modified organic natural materials</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">7.1 modifizierte organische Naturwerkstoffe</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060072 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060072">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060007"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>7.2</skos:notation>
+        <skos:prefLabel xml:lang="de">7.2 Keramik / Glas</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">7.2 ceramics / glass</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060073 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060073">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060007"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>7.3</skos:notation>
+        <skos:prefLabel xml:lang="de">7.3 andere Verbunde</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">7.3 other compounds</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060081 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060081">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060008"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>8.1</skos:notation>
+        <skos:prefLabel xml:lang="de">8.1 Elektronik</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">8.1 electronics</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060082 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060082">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060008"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>8.2</skos:notation>
+        <skos:prefLabel xml:lang="de">8.2 Elektrik</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">8.2 electrics</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060091 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060091">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060009"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>9.1</skos:notation>
+        <skos:prefLabel xml:lang="de">9.1 Kraftstoffe</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">9.1 fuels</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060092 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060092">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060009"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>9.2</skos:notation>
+        <skos:prefLabel xml:lang="de">9.2 Schmierstoffe</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">9.2 lubricants</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060093 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060093">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060009"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>9.3</skos:notation>
+        <skos:prefLabel xml:lang="de">9.3 Bremsflüssigkeit</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">9.3 brake fluid</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060094 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060094">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060009"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>9.4</skos:notation>
+        <skos:prefLabel xml:lang="de">9.4 Kühlmittel / andere Glykole</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">9.4 coolant / other glycols</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060095 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060095">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060009"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>9.5</skos:notation>
+        <skos:prefLabel xml:lang="de">9.5 Kältemittel</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">9.5 refrigerant</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060096 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060096">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060009"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>9.6</skos:notation>
+        <skos:prefLabel xml:lang="de">9.6 Waschwasser, Batteriesäuren</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">9.6 washing water, battery acids</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060097 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060097">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060009"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>9.7</skos:notation>
+        <skos:prefLabel xml:lang="de">9.7 Konservierungsmittel</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">9.7 preservative</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060098 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060098">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060009"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>9.8</skos:notation>
+        <skos:prefLabel xml:lang="de">9.8 andere Kraftstoffe und Hilfsstoffe</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">9.8 other fuels and auxiliary means</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060111 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060111">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060011"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>1.1.1</skos:notation>
+        <skos:prefLabel xml:lang="en">1.1.1 unalloyed, low alloyed</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">1.1.1 unlegiert, niedriglegiert</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060112 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060112">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060011"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>1.1.2</skos:notation>
+        <skos:prefLabel xml:lang="en">1.1.2 highly alloyed</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">1.1.2 hochlegiert</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060121 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060121">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060012"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>1.2.1</skos:notation>
+        <skos:prefLabel xml:lang="de">1.2.1 Gusseisen mit Lamellengraphit / Temperguss</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">1.2.1 cast iron with lamellar graphite / tempered cast iron</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060122 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060122">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060012"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>1.2.2</skos:notation>
+        <skos:prefLabel xml:lang="de">1.2.2 Gusseisen mit Kugelgraphit / Vermiculargusseisen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">1.2.2 cast iron with nodular graphite / vermicular cast iron</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060123 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060123">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060012"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>1.2.3</skos:notation>
+        <skos:prefLabel xml:lang="en">1.2.3 highly alloyed cast iron</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">1.2.3 hochlegiertes Gusseisen</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060211 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060211">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060021"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>2.1.1</skos:notation>
+        <skos:prefLabel xml:lang="de">2.1.1 Gussaluminiumlegierungen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">2.1.1 cast aluminium alloys</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060212 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060212">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060021"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>2.1.2</skos:notation>
+        <skos:prefLabel xml:lang="de">2.1.2 Knetaluminiumlegierungen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">2.1.2 wrought aluminium alloys</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060221 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060221">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060022"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>2.2.1</skos:notation>
+        <skos:prefLabel xml:lang="de">2.2.1 Gussmagnesiumlegierungen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">2.2.1 cast magnesium alloys</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060222 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060222">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060022"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>2.2.2</skos:notation>
+        <skos:prefLabel xml:lang="de">2.2.2 Knetmagnesiumlegierungen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">2.2.2 wrought magnesium alloys</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060541 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060541">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060054"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>5.4.1</skos:notation>
+        <skos:prefLabel xml:lang="de">5.4.1 Polyurethan</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">5.4.1 polyurethane</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060542 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060542">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060054"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>5.4.2</skos:notation>
+        <skos:prefLabel xml:lang="de">5.4.2 ungesättigter Polyester</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">5.4.2 unsaturated polyester</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060543 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060543">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060054"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>5.4.3</skos:notation>
+        <skos:prefLabel xml:lang="de">5.4.3 andere Duroplaste</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">5.4.3 other duromers</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060551 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060551">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060055"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>5.5.1</skos:notation>
+        <skos:prefLabel xml:lang="de">5.5.1 Kunststoffe</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">5.5.1 plastics</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/AUTOMATCE_1060552 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/AUTOMATCE_1060552">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/pmd/AUTOMATCE_1060055"/>
+        <skos:inScheme rdf:resource="https://w3id.org/pmd/VDA_231_106_Scheme"/>
+        <skos:notation>5.5.2</skos:notation>
+        <skos:prefLabel xml:lang="de">5.5.2 Textilien</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">5.5.2 textiles</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/VDA_231_106_Scheme -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/VDA_231_106_Scheme">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <dcterms:description xml:lang="en">Standardized material classification system used in the German automotive industry.</dcterms:description>
+        <dcterms:title xml:lang="en">VDA 231-106 material classification</dcterms:title>
     </owl:NamedIndividual>
     
 
