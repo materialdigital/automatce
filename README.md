@@ -3,7 +3,7 @@
 Description: PMD Core application ontology generated via ODK Template.
 
 
-More information can be found at http://obofoundry.org/ontology/automatce
+More information can be found at https://w3id.org/pmd/automatce
 
 ## Versions
 
@@ -66,6 +66,5 @@ This repository provides the modular implementation of automatce, developed and 
 We welcome contributions! 
 - Please use the [Issue tracker](https://github.com/materialdigital/automatce/issues).
 - For creation of application ontologies using PMD core ontologies, we advise using the **[application-ontology-template](https://github.com/materialdigital/application-ontology-template/)**. It applies the same framework used here and mirrors the pmdco with all its modules.
-- Write about your specific modeling concerns or any other discussable topics in the **[discussion forum](https://github.com/POTUSAITEJA/Automce/discussions)**.
 - Participate in our **PMD Playground Meetings**: Our Ontology Playground, organized online every second Friday from 1-2 pm (CET), is a great opportunity to connect with developers and our proactive community to shape the PMDco. Please register via our [mailing list](https://www.lists.kit.edu/sympa/subscribe/ontology-playground?previous_action=info).
 - If you need further information, please feel free to contact us via **[info@material-digital.de](mailto:info@material-digital.de)**
