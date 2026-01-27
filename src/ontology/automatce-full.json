@@ -370,7 +370,7 @@
       "id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
       "type" : "CLASS"
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000002",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000002",
       "lbl" : "raw material role",
       "type" : "CLASS",
       "meta" : {
@@ -384,7 +384,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000003",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000003",
       "lbl" : "additive role",
       "type" : "CLASS",
       "meta" : {
@@ -398,7 +398,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000004",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000004",
       "lbl" : "organic colorant",
       "type" : "CLASS",
       "meta" : {
@@ -412,7 +412,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000005",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000005",
       "lbl" : "inorganic colorant",
       "type" : "CLASS",
       "meta" : {
@@ -426,7 +426,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000006",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000006",
       "lbl" : "colorant role",
       "type" : "CLASS",
       "meta" : {
@@ -440,7 +440,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000007",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000007",
       "lbl" : "stress at break",
       "type" : "CLASS",
       "meta" : {
@@ -454,7 +454,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000008",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000008",
       "lbl" : "color",
       "type" : "CLASS",
       "meta" : {
@@ -468,7 +468,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000009",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000009",
       "lbl" : "polyamide",
       "type" : "CLASS",
       "meta" : {
@@ -485,7 +485,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000010",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000010",
       "lbl" : "PA66",
       "type" : "CLASS",
       "meta" : {
@@ -502,7 +502,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000011",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000011",
       "lbl" : "PA66-GF25",
       "type" : "CLASS",
       "meta" : {
@@ -516,7 +516,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000012",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000012",
       "lbl" : "fiber",
       "type" : "CLASS",
       "meta" : {
@@ -530,7 +530,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000013",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000013",
       "lbl" : "glass fiber",
       "type" : "CLASS",
       "meta" : {
@@ -547,7 +547,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000014",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000014",
       "lbl" : "fiber material content mass fraction",
       "type" : "CLASS",
       "meta" : {
@@ -561,7 +561,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000015",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000015",
       "lbl" : "fiber material content volume fraction",
       "type" : "CLASS",
       "meta" : {
@@ -575,7 +575,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000016",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000016",
       "lbl" : "identifier at manufacturer",
       "type" : "CLASS",
       "meta" : {
@@ -588,7 +588,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000017",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000017",
       "lbl" : "identifier name at manufacturer",
       "type" : "CLASS",
       "meta" : {
@@ -601,7 +601,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000018",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000018",
       "lbl" : "material designation",
       "type" : "CLASS",
       "meta" : {
@@ -614,7 +614,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000019",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000019",
       "lbl" : "material identifier",
       "type" : "CLASS",
       "meta" : {
@@ -627,7 +627,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000020",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000020",
       "lbl" : "batch identifier",
       "type" : "CLASS",
       "meta" : {
@@ -640,7 +640,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000021",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000021",
       "lbl" : "business partner number",
       "type" : "CLASS",
       "meta" : {
@@ -656,7 +656,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000022",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000022",
       "lbl" : "strain at break",
       "type" : "CLASS",
       "meta" : {
@@ -670,7 +670,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000023",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000023",
       "lbl" : "viscosity",
       "type" : "CLASS",
       "meta" : {
@@ -684,7 +684,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000024",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000024",
       "lbl" : "mold",
       "type" : "CLASS",
       "meta" : {
@@ -698,7 +698,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000025",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000025",
       "lbl" : "shear viscosity",
       "type" : "CLASS",
       "meta" : {
@@ -712,7 +712,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000026",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000026",
       "lbl" : "glass transition temperature",
       "type" : "CLASS",
       "meta" : {
@@ -729,7 +729,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000027",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000027",
       "lbl" : "coefficient of linear thermal expansion",
       "type" : "CLASS",
       "meta" : {
@@ -746,7 +746,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000028",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000028",
       "lbl" : "specific heat capacity",
       "type" : "CLASS",
       "meta" : {
@@ -763,7 +763,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000029",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000029",
       "lbl" : "impact strength",
       "type" : "CLASS",
       "meta" : {
@@ -777,7 +777,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000030",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000030",
       "lbl" : "flexural modulus",
       "type" : "CLASS",
       "meta" : {
@@ -791,7 +791,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000031",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000031",
       "lbl" : "flexural strength",
       "type" : "CLASS",
       "meta" : {
@@ -805,7 +805,7 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_0000032",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000032",
       "lbl" : "humidity",
       "type" : "CLASS",
       "meta" : {
@@ -1996,1183 +1996,423 @@
         }
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060001",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060001",
+      "lbl" : "1. steel and iron materials",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "1"
         }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "1. Stahl- und Eisenwerkstoffe"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "1. steel and iron materials"
-        }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060002",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060002",
+      "lbl" : "2. light alloys, cast and wrought alloys",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "2"
         }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "2. Leichtmetalle, Guss- und Knetlegierungen"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "2. light alloys, cast and wrought alloys"
-        }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060003",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060003",
+      "lbl" : "3. nonferrous heavy metals, cast and wrought alloys",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "3"
         }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "3. Buntmetalle, Guss- und Knetlegierungen"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "3. nonferrous heavy metals, cast and wrought alloys"
-        }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060004",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060004",
+      "lbl" : "4. special metals",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "4"
         }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "4. Sondermetalle"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "4. special metals"
-        }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060005",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060005",
+      "lbl" : "5. polymer materials",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "5"
         }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5. Polymere Werkstoffe"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5. polymer materials"
-        }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060006",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060006",
+      "lbl" : "6. process polymers",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "6"
         }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "6. Prozesspolymere"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "6. process polymers"
-        }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060007",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060007",
+      "lbl" : "7. sonstige Werkstoffe und Werkstoffverbunde",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "7"
         }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "7. other materials and material compounds"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "7. sonstige Werkstoffe und Werkstoffverbunde"
-        }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060008",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060008",
+      "lbl" : "8. electronics / electrics",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "8"
         }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "8. Elektronik / Elektrik"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "8. electronics / electrics"
-        }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060009",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060009",
+      "lbl" : "9. fuels and auxiliary means",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "9"
         }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9. Kraftstoffe und Hilfsstoffe"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9. fuels and auxiliary means"
-        }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060011",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060011",
+      "lbl" : "1.1 steels / cast steel / sintered steel",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060001"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060001"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "1.1"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "1.1 Stähle / Stahlguss / Sinterstahl"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "1.1 steels / cast steel / sintered steel"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060012",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060012",
+      "lbl" : "1.2 cast iron",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060001"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060001"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "1.2"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "1.2 Gusseisen"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "1.2 cast iron"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060021",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060021",
+      "lbl" : "2.1 aluminium and aluminium alloys",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060002"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060002"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "2.1"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "2.1 Aluminium und Aluminiumlegierungen"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "2.1 aluminium and aluminium alloys"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060022",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060022",
+      "lbl" : "2.2 magnesium and magnesium alloys",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060002"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060002"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "2.2"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "2.2 Magnesium und Magnesiumlegierungen"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "2.2 magnesium and magnesium alloys"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060023",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060023",
+      "lbl" : "2.3 titanium and titanium alloys",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060002"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060002"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "2.3"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "2.3 Titan und Titanlegierungen"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "2.3 titanium and titanium alloys"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060031",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060031",
+      "lbl" : "3.1 copper",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060003"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060003"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "3.1"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "3.1 Kupfer"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "3.1 copper"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060032",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060032",
+      "lbl" : "3.2 copper alloys",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060003"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060003"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "3.2"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "3.2 Kupferlegierungen"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "3.2 copper alloys"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060033",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060033",
+      "lbl" : "3.3 zinc alloys",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060003"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060003"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "3.3"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "3.3 Zinklegierungen"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "3.3 zinc alloys"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060034",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060034",
+      "lbl" : "3.4 nickel alloys",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060003"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060003"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "3.4"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "3.4 Nickellegierungen"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "3.4 nickel alloys"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060035",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060035",
+      "lbl" : "3.5 lead",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060003"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060003"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "3.5"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "3.5 Blei"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "3.5 lead"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060041",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060041",
+      "lbl" : "4.1 platinum / rhodium",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060004"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060004"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "4.1"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "4.1 Platin / Rhodium"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "4.1 platinum / rhodium"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060042",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060042",
+      "lbl" : "4.2 other special metals",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060004"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060004"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "4.2"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "4.2 andere Sondermetalle"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "4.2 other special metals"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060051",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060051",
+      "lbl" : "5.1 thermoplastics (filled / unfilled)",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060005"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060005"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "5.1"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.1 Thermoplaste (gefüllt / ungefüllt)"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.1 thermoplastics (filled / unfilled)"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060052",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060052",
+      "lbl" : "5.2 thermoplastische Elastomere",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060005"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060005"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "5.2"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.2 thermoplastic elastomers"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.2 thermoplastische Elastomere"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060053",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060053",
+      "lbl" : "5.3 elastomers / elastomeric compounds",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060005"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060005"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "5.3"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.3 Elastomere / Elastomer-Verbunde"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.3 elastomers / elastomeric compounds"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060054",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060054",
+      "lbl" : "5.4 duromers",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060005"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060005"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "5.4"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.4 Duroplaste"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.4 duromers"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060055",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060055",
+      "lbl" : "5.5 polymeric compounds",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060005"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060005"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#notation",
           "val" : "5.5"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.5 Polymerverbunde"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.5 polymeric compounds"
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060061",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060006"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "6.1"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "6.1 Lacke"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "6.1 lacquers"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060062",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060006"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "6.2"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "6.2 Klebstoffe, Dichtmassen"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "6.2 adhesives, sealants"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060063",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060006"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "6.3"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "6.3 Unterbodenschutz"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "6.3 underseal"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060071",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060007"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "7.1"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "7.1 modified organic natural materials"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "7.1 modifizierte organische Naturwerkstoffe"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060072",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060007"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "7.2"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "7.2 Keramik / Glas"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "7.2 ceramics / glass"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060073",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060007"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "7.3"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "7.3 andere Verbunde"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "7.3 other compounds"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060081",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060008"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "8.1"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "8.1 Elektronik"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "8.1 electronics"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060082",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060008"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "8.2"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "8.2 Elektrik"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "8.2 electrics"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060091",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060009"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "9.1"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9.1 Kraftstoffe"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9.1 fuels"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060092",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060009"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "9.2"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9.2 Schmierstoffe"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9.2 lubricants"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060093",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060009"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "9.3"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9.3 Bremsflüssigkeit"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9.3 brake fluid"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060094",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060009"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "9.4"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9.4 Kühlmittel / andere Glykole"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9.4 coolant / other glycols"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060095",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060009"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "9.5"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9.5 Kältemittel"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9.5 refrigerant"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060096",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060009"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "9.6"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9.6 Waschwasser, Batteriesäuren"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9.6 washing water, battery acids"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060097",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060009"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "9.7"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9.7 Konservierungsmittel"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9.7 preservative"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060098",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060009"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "9.8"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9.8 andere Kraftstoffe und Hilfsstoffe"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "9.8 other fuels and auxiliary means"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060111",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060011"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "1.1.1"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "1.1.1 unalloyed, low alloyed"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "1.1.1 unlegiert, niedriglegiert"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060112",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060011"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "1.1.2"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "1.1.2 highly alloyed"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "1.1.2 hochlegiert"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060121",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060012"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "1.2.1"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "1.2.1 Gusseisen mit Lamellengraphit / Temperguss"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "1.2.1 cast iron with lamellar graphite / tempered cast iron"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060122",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060012"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "1.2.2"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "1.2.2 Gusseisen mit Kugelgraphit / Vermiculargusseisen"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "1.2.2 cast iron with nodular graphite / vermicular cast iron"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060123",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060012"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "1.2.3"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "1.2.3 highly alloyed cast iron"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "1.2.3 hochlegiertes Gusseisen"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060211",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060021"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "2.1.1"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "2.1.1 Gussaluminiumlegierungen"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "2.1.1 cast aluminium alloys"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060212",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060021"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "2.1.2"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "2.1.2 Knetaluminiumlegierungen"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "2.1.2 wrought aluminium alloys"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060221",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060022"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "2.2.1"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "2.2.1 Gussmagnesiumlegierungen"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "2.2.1 cast magnesium alloys"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060222",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060022"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "2.2.2"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "2.2.2 Knetmagnesiumlegierungen"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "2.2.2 wrought magnesium alloys"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060541",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060054"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "5.4.1"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.4.1 Polyurethan"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.4.1 polyurethane"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060542",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060054"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "5.4.2"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.4.2 ungesättigter Polyester"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.4.2 unsaturated polyester"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060543",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060054"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "5.4.3"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.4.3 andere Duroplaste"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.4.3 other duromers"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060551",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060055"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "5.5.1"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.5.1 Kunststoffe"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.5.1 plastics"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/AUTOMATCE_1060552",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
-          "val" : "https://w3id.org/pmd/AUTOMATCE_1060055"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
-          "val" : "https://w3id.org/pmd/VDA_231_106_Scheme"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
-          "val" : "5.5.2"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.5.2 Textilien"
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "val" : "5.5.2 textiles"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/VDA_231_106_Scheme",
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -3181,6 +2421,486 @@
         }, {
           "pred" : "http://purl.org/dc/terms/title",
           "val" : "VDA 231-106 material classification"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060061",
+      "lbl" : "6.1 lacquers",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060006"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "6.1"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060062",
+      "lbl" : "6.2 adhesives, sealants",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060006"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "6.2"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060063",
+      "lbl" : "6.3 underseal",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060006"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "6.3"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060071",
+      "lbl" : "7.1 modifizierte organische Naturwerkstoffe",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060007"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "7.1"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060072",
+      "lbl" : "7.2 ceramics / glass",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060007"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "7.2"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060073",
+      "lbl" : "7.3 other compounds",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060007"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "7.3"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060081",
+      "lbl" : "8.1 electronics",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060008"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "8.1"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060082",
+      "lbl" : "8.2 electrics",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060008"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "8.2"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060091",
+      "lbl" : "9.1 fuels",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060009"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "9.1"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060092",
+      "lbl" : "9.2 lubricants",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060009"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "9.2"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060093",
+      "lbl" : "9.3 brake fluid",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060009"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "9.3"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060094",
+      "lbl" : "9.4 coolant / other glycols",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060009"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "9.4"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060095",
+      "lbl" : "9.5 refrigerant",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060009"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "9.5"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060096",
+      "lbl" : "9.6 washing water, battery acids",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060009"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "9.6"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060097",
+      "lbl" : "9.7 preservative",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060009"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "9.7"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060098",
+      "lbl" : "9.8 other fuels and auxiliary means",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060009"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "9.8"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060111",
+      "lbl" : "1.1.1 unlegiert, niedriglegiert",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060011"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "1.1.1"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060112",
+      "lbl" : "1.1.2 hochlegiert",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060011"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "1.1.2"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060121",
+      "lbl" : "1.2.1 cast iron with lamellar graphite / tempered cast iron",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060012"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "1.2.1"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060122",
+      "lbl" : "1.2.2 cast iron with nodular graphite / vermicular cast iron",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060012"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "1.2.2"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060123",
+      "lbl" : "1.2.3 hochlegiertes Gusseisen",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060012"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "1.2.3"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060211",
+      "lbl" : "2.1.1 cast aluminium alloys",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060021"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "2.1.1"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060212",
+      "lbl" : "2.1.2 wrought aluminium alloys",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060021"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "2.1.2"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060221",
+      "lbl" : "2.2.1 cast magnesium alloys",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060022"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "2.2.1"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060222",
+      "lbl" : "2.2.2 wrought magnesium alloys",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060022"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "2.2.2"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060541",
+      "lbl" : "5.4.1 polyurethane",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060054"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "5.4.1"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060542",
+      "lbl" : "5.4.2 unsaturated polyester",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060054"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "5.4.2"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060543",
+      "lbl" : "5.4.3 other duromers",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060054"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "5.4.3"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060551",
+      "lbl" : "5.5.1 plastics",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060055"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "5.5.1"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060552",
+      "lbl" : "5.5.2 textiles",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#broader",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060055"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#inScheme",
+          "val" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#notation",
+          "val" : "5.5.2"
         } ]
       }
     }, {
@@ -3421,10 +3141,6 @@
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
-      "id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
       "id" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
@@ -3604,127 +3320,127 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000002",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000002",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000023"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000003",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000003",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000023"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000004",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000004",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000868"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000005",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000005",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000002"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000006",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000006",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/AUTOMATCE_0000003"
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000003"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000007",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000007",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000952"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000008",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000008",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0020131"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000009",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000009",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0050004"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000010",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000010",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/AUTOMATCE_0000009"
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000009"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000011",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000011",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000577"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000012",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000012",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000891"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000013",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000013",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/AUTOMATCE_0000012"
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000012"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000014",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000014",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0020102"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000015",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000015",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0020104"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000016",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000016",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000017",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000017",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000018",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000018",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000019",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000019",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000020",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000020",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000021",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000021",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000022",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000022",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000848"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000023",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000023",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0020131"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000024",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000024",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000025",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000025",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0020131"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000026",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000026",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000882"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000027",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000027",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000981"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000028",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000028",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000981"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000029",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000029",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000952"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000030",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000030",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000949"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000031",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000031",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000952"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_0000032",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000032",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0020131"
     }, {
@@ -4028,681 +3744,681 @@
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000888"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060001",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060001",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060001",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060001",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060001",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060001",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060002",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060002",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060002",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060002",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060002",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060002",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060003",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060003",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060003",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060003",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060003",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060003",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060004",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060004",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060004",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060004",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060004",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060004",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060005",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060005",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060005",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060005",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060005",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060005",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060006",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060006",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060006",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060006",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060006",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060006",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060007",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060007",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060007",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060007",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060007",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060007",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060008",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060008",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060008",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060008",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060008",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060008",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060009",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060009",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060009",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060009",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060009",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060009",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060011",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060011",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060011",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060011",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060011",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060011",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060012",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060012",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060012",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060012",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060012",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060012",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060021",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060021",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060021",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060021",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060021",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060021",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060022",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060022",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060022",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060022",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060022",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060022",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060023",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060023",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060023",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060023",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060023",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060023",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060031",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060031",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060031",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060031",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060031",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060031",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060032",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060032",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060032",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060032",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060032",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060032",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060033",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060033",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060033",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060033",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060033",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060033",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060034",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060034",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060034",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060034",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060034",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060034",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060035",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060035",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060035",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060035",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060035",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060035",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060041",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060041",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060041",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060041",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060041",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060041",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060042",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060042",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060042",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060042",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060042",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060042",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060051",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060051",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060051",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060051",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060051",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060051",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060052",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060052",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060052",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060052",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060052",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060052",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060053",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060053",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060053",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060053",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060054",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060054",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060054",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060054",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060054",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060054",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060055",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060055",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060055",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060055",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060055",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060055",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060061",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060061",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060061",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060062",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060062",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060062",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060063",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060063",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060063",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060071",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060071",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060071",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060072",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060072",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060072",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060073",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060073",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060073",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060081",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060081",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060081",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060082",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060082",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060082",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060091",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060091",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060091",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060092",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060092",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060092",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060093",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060093",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060093",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060094",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060094",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060094",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060095",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060095",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060095",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060096",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060096",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060096",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060097",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060097",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060097",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060098",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060098",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060098",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060111",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060111",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060111",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060112",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060112",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060112",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060121",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060121",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060121",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060122",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060122",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060122",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060123",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060123",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060123",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060211",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060211",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060211",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060212",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060212",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060212",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060221",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060221",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060221",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060222",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060222",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060222",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060541",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060541",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060541",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060542",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060542",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060542",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060543",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060543",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060543",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060551",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060551",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060551",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060552",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060552",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/AUTOMATCE_1060552",
-      "pred" : "type",
-      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "sub" : "https://w3id.org/pmd/VDA_231_106_Scheme",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "https://w3id.org/pmd/VDA_231_106_Scheme",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060056",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060061",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060061",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060061",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060062",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060062",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060062",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060063",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060063",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060063",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060071",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060071",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060071",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060072",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060072",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060072",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060073",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060073",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060073",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060081",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060081",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060081",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060082",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060082",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060082",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060091",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060091",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060091",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060092",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060092",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060092",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060093",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060093",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060093",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060094",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060094",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060094",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060095",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060095",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060095",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060096",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060096",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060096",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060097",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060097",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060097",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060098",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060098",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060098",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060111",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060111",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060111",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060112",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060112",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060112",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060121",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060121",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060121",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060122",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060122",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060122",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060123",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060123",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060123",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060211",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060211",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060211",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060212",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060212",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060212",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060221",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060221",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060221",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060222",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060222",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060222",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060541",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060541",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060541",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060542",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060542",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060542",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060543",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060543",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060543",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060551",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060551",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060551",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060552",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060552",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060552",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000051",
       "pred" : "subPropertyOf",
