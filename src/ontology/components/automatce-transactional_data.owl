@@ -30,6 +30,207 @@ Datatype: rdf:PlainLiteral
 
 
 Class: <http://purl.obolibrary.org/obo/IAO_0020000>
+Class: obo:BFO_0000019
+Class: obo:BFO_0000029
+Class: obo:IAO_0000030
+Class: obo:OBI_0000571
+Class: obo:OBI_0001933
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010090> (manufacturer name)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010090>
+
+  Annotations:
+    rdfs:label "manufacturer name"@en,
+    skos:definition "An identifier that records the name by which a manufacturer is referred to in a data exchange, contract, product record, or manufacturer system."@en,
+    skos:example "The manufacturer name 'Schaeffler' in a supplier record."@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010165> (name at manufacturer)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010165>
+
+  Annotations:
+    rdfs:label "name at manufacturer"@en,
+    skos:definition "An identifier or designation by which a manufacturer names a material grade, product line, component, or product in its own records or commercial communication."@en,
+    skos:example "A manufacturer trade name such as Ultradur, Zytel, or Grilamid."@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010091> (manufacturer plant site)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010091>
+
+  Annotations:
+    rdfs:label "manufacturer plant site"@en,
+    skos:definition "A site at which a manufacturer carries out production, assembly, treatment, storage, or related industrial operations."@en,
+    skos:example "A specific plant where a material batch or component was produced."@en
+
+  SubClassOf:
+    obo:BFO_0000029
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010092> (CX business partner number)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010092>
+
+  Annotations:
+    rdfs:comment "This is modeled as a Catena-X-specific subtype of the existing business partner number class."@en,
+    rdfs:label "CX business partner number"@en,
+    skos:definition "A business partner number used in Catena-X to identify a legal entity, site, or address participating in automotive data exchange."@en,
+    skos:example "A Catena-X BPNL identifier for a supplier legal entity."@en,
+    pmd:PMD_0050117 "BPN"
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0000021>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010093> (VIN)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010093>
+
+  Annotations:
+    rdfs:label "VIN"@en,
+    skos:definition "An identifier assigned to an individual vehicle according to a vehicle identification number scheme."@en,
+    skos:example "A 17-character vehicle identification number used in a dismantling record."@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010094> (vehicle model)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010094>
+
+  Annotations:
+    rdfs:label "vehicle model"@en,
+    skos:definition "An identifier that records the model designation of a vehicle type as defined by a manufacturer."@en,
+    skos:example "A manufacturer-specific vehicle model name used in a product data record."@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010095> (component information)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010095>
+
+  Annotations:
+    rdfs:label "component information"@en,
+    skos:definition "An information content entity that aggregates identifiers, specifications, usage data, condition data, or circular economy information about a component."@en,
+    skos:example "A component record containing part number, material designation, mileage, and reuse assessment."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010096> (mileage of the component)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010096>
+
+  Annotations:
+    rdfs:label "mileage of the component"@en,
+    skos:definition "A quality that quantifies the travel distance accumulated by a component during use in a vehicle."@en,
+    skos:example "A used alternator recorded with 125000 km of component mileage."@en
+
+  SubClassOf:
+    obo:BFO_0000019
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010097> (component age)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010097>
+
+  Annotations:
+    rdfs:label "component age"@en,
+    skos:definition "A temporal quality that quantifies elapsed time since a component was produced, commissioned, installed, or first used, according to a stated reference event."@en,
+    skos:example "A component age of six years measured from vehicle production date to dismantling date."@en
+
+  SubClassOf:
+    obo:BFO_0000019
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010098> (year of construction)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010098>
+
+  Annotations:
+    rdfs:label "year of construction"@en,
+    skos:definition "A date value specification that records the calendar year in which a product, component, vehicle, or facility was constructed or manufactured."@en,
+    skos:example "The year 2019 recorded as the construction year of a vehicle."@en
+
+  SubClassOf:
+    obo:OBI_0001933
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010160> (model identifier)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010160>
+
+  Annotations:
+    rdfs:label "model identifier"@en,
+    skos:definition "An identifier assigned by an original equipment manufacturer to a vehicle model, vehicle project, or model variant."@en,
+    skos:example "An OEM project code used to identify a vehicle model in product data."@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010161> (vehicle series)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010161>
+
+  Annotations:
+    rdfs:label "vehicle series"@en,
+    skos:definition "An identifier that records the vehicle series or platform series associated with a vehicle model or component."@en,
+    skos:example "A vehicle series code used in dismantling or parts identification data."@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010162> (OEM)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010162>
+
+  Annotations:
+    rdfs:label "OEM"@en,
+    skos:definition "A manufacturer role borne by an organization that designs or produces the original vehicle, component, or system for which circular economy data is recorded."@en,
+    skos:example "A vehicle manufacturer acting as original equipment manufacturer for a vehicle series."@en
+
+  SubClassOf:
+    obo:OBI_0000571
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010163> (production date)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010163>
+
+  Annotations:
+    rdfs:label "production date"@en,
+    skos:definition "A date value specification that records when a vehicle, component, product, or material batch was produced."@en,
+    skos:example "The production date of a vehicle read from manufacturer records."@en
+
+  SubClassOf:
+    obo:OBI_0001933
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010164> (anonymized VIN)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010164>
+
+  Annotations:
+    rdfs:label "anonymized VIN"@en,
+    skos:definition "An identifier derived from a vehicle identification number by anonymization or hashing so that the vehicle can be linked across records without exposing the original VIN."@en,
+    skos:example "A hashed VIN used in circular economy data exchange."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010093>
 
 # Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000016> (identifier at manufacturer)
 

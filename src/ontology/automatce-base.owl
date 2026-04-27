@@ -17,13 +17,20 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/automatce/automatce-base.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/automatce/releases/2026-01-27/automatce-base.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/automatce/releases/2026-04-24/automatce-base.owl"/>
         <dce:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
-        <dcterms:description>PMD Core application ontology generated via ODK Template.
-</dcterms:description>
+        <dcterms:contributor rdf:resource="https://orcid.org/0000-0003-0473-0070"/>
+        <dcterms:contributor rdf:resource="https://orcid.org/0000-0003-0744-8855"/>
+        <dcterms:contributor rdf:resource="https://orcid.org/0009-0003-1503-4422"/>
+        <dcterms:contributor rdf:resource="https://orcid.org/0009-0007-7468-3544"/>
+        <dcterms:creator rdf:resource="https://orcid.org/0000-0003-0473-0070"/>
+        <dcterms:creator rdf:resource="https://orcid.org/0000-0003-0744-8855"/>
+        <dcterms:creator rdf:resource="https://orcid.org/0009-0003-1503-4422"/>
+        <dcterms:creator rdf:resource="https://orcid.org/0009-0007-7468-3544"/>
+        <dcterms:description>Application ontology for automotive circular-economy product, material, sustainability, usage, dismantling, engineering and transactional data aligned to PMDCore and BFO 2020.</dcterms:description>
         <dcterms:license rdf:resource="https://w3id.org/pmd/automatce.owl#CC-BY-4.0"/>
         <dcterms:title>Automotive Circular Economy Ontology</dcterms:title>
-        <owl:versionInfo>2026-01-27</owl:versionInfo>
+        <owl:versionInfo>2026-04-24</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -42,6 +49,18 @@
     <!-- http://purl.org/dc/elements/1.1/type -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
     
 
 
@@ -116,15 +135,39 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000017"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000030 -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000029 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000029"/>
     
 
 
@@ -134,15 +177,69 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000145 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000010"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030"/>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000033"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000104 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000104"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000310 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000310"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0020000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0020000"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000571 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000571"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001933 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001933"/>
     
 
 
@@ -421,18 +518,6 @@
     
 
 
-    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0000024 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0000024">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
-        <rdfs:comment xml:lang="en">The tool that imparts the shape to the engineered material during the primary shaping process.</rdfs:comment>
-        <rdfs:label xml:lang="en">mold</rdfs:label>
-        <skos:definition xml:lang="en">A hollowed-out block that is filled with a liquid or pliable material like plastic, glass, metal, or ceramic raw material.</skos:definition>
-        <skos:example xml:lang="en">Injection mold for a dashboard panel.</skos:example>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0000025 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0000025">
@@ -532,6 +617,1374 @@
     
 
 
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010000 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:comment xml:lang="en">Whether a material is raw material depends on its participation in a particular production or recycling workflow.</rdfs:comment>
+        <rdfs:label xml:lang="en">raw material</rdfs:label>
+        <skos:definition xml:lang="en">A material entity that is intended to be consumed, transformed, or incorporated as input in a manufacturing, recycling, or material processing process.</skos:definition>
+        <skos:example xml:lang="en">PA66 pellets supplied to an injection molding process as input material.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010001 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010001">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000002"/>
+        <rdfs:comment xml:lang="en">This class represents the additive material itself; the context-dependent function is represented by additive role.</rdfs:comment>
+        <rdfs:label xml:lang="en">additive</rdfs:label>
+        <skos:definition xml:lang="en">An engineered material intentionally incorporated in a base material in a comparatively small amount to modify processing behavior, performance properties, appearance, or cost.</skos:definition>
+        <skos:example xml:lang="en">A UV stabilizer added to an exterior polymer trim material.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010002 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010002">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000002"/>
+        <rdfs:comment xml:lang="en">The corresponding realizable entity is PMD Core matrix role; this class is used for material entities considered as the continuous phase of a composite.</rdfs:comment>
+        <rdfs:label xml:lang="en">matrix</rdfs:label>
+        <skos:definition xml:lang="en">An engineered material that forms the continuous phase of a composite material and binds or embeds reinforcement, filler, or dispersed material constituents.</skos:definition>
+        <skos:example xml:lang="en">The PA66 phase in a PA66-GF25 composite.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010003 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:comment xml:lang="en">Values are normally reported for specified test conditions, such as ISO 62 or a specified conditioning atmosphere.</rdfs:comment>
+        <rdfs:label xml:lang="en">water absorption</rdfs:label>
+        <skos:definition xml:lang="en">A disposition of a material to take up water from a liquid water or humid environment under specified exposure conditions.</skos:definition>
+        <skos:example xml:lang="en">The percentage mass increase of a polyamide specimen after immersion in water.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010004 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label xml:lang="en">materials information</rdfs:label>
+        <skos:definition xml:lang="en">An information content entity that specifies material-related characteristics of a product, component, material batch, or material grade.</skos:definition>
+        <skos:example xml:lang="en">A data record listing material designation, density, fiber content, and recycled content for an automotive component.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010005 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010005">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0025001"/>
+        <rdfs:label xml:lang="en">material composition</rdfs:label>
+        <skos:definition xml:lang="en">A composition that describes the material constituents and constituent amounts of a product, component, material batch, or material grade.</skos:definition>
+        <skos:example xml:lang="en">A composition stating that PA66-GF25 contains a PA66 matrix and nominally 25 percent glass fiber by mass.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010006 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:comment xml:lang="en">This class covers material entities whose origin is a recycling process; the amount or share of recycled content should be represented separately.</rdfs:comment>
+        <rdfs:label xml:lang="en">recycled material</rdfs:label>
+        <skos:definition xml:lang="en">A material entity that has been recovered from waste, discarded products, by-products, or production residues through a recycling process for subsequent use.</skos:definition>
+        <skos:example xml:lang="en">Regranulated polypropylene produced from end-of-life vehicle parts.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010007 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:comment xml:lang="en">Use for the origin state of a material; use recycled material share for quantities or proportions.</rdfs:comment>
+        <rdfs:label xml:lang="en">recycled</rdfs:label>
+        <skos:definition xml:lang="en">A quality of a material entity indicating that the material has an origin in a recycling process rather than only in primary material production.</skos:definition>
+        <skos:example xml:lang="en">A recycled quality borne by a polymer regrind used in a new injection molding batch.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010020 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:label xml:lang="en">product footprint</rdfs:label>
+        <skos:definition xml:lang="en">A realizable entity representing the environmental, carbon, material, or resource footprint associated with a product over a stated scope.</skos:definition>
+        <skos:example xml:lang="en">A product footprint report for an alternator covering cradle-to-gate carbon emissions and recycled material content.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010021 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+        <rdfs:comment xml:lang="en">The glossary spelling &apos;recylced material share&apos; was normalized to &apos;recycled material share&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="en">recycled material share</rdfs:label>
+        <skos:definition xml:lang="en">A relational quality that relates a material, component, or product to the proportion of its material content that originates from recycled sources.</skos:definition>
+        <skos:example xml:lang="en">A bumper fascia with 30 percent recycled polypropylene content.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010022 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010022">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010020"/>
+        <rdfs:label xml:lang="en">product carbon footprint</rdfs:label>
+        <skos:definition xml:lang="en">A product footprint that reports greenhouse gas emissions associated with a product over a stated lifecycle scope.</skos:definition>
+        <skos:example xml:lang="en">A product carbon footprint in kg CO2 equivalent for one steering system.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010023 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010023">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
+        <rdfs:label xml:lang="en">process footprint</rdfs:label>
+        <skos:definition xml:lang="en">A process attribute that quantifies environmental burden associated with executing a process under specified boundary conditions.</skos:definition>
+        <skos:example xml:lang="en">Electricity consumption and associated emissions for one injection molding cycle.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010024 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010024">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010023"/>
+        <rdfs:label xml:lang="en">process carbon footprint</rdfs:label>
+        <skos:definition xml:lang="en">A process footprint that quantifies greenhouse gas emissions associated with executing a process.</skos:definition>
+        <skos:example xml:lang="en">The carbon footprint of recycling one kilogram of PA66-GF25 scrap.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010025 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010025">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020143"/>
+        <rdfs:label xml:lang="en">lifecycle</rdfs:label>
+        <skos:definition xml:lang="en">A process chain that comprises the stages through which a product or material passes from raw material acquisition through production, use, and end-of-life treatment.</skos:definition>
+        <skos:example xml:lang="en">The lifecycle of an automotive control unit from material extraction to recycling.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010026 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010026">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label xml:lang="en">lifecycle stage</rdfs:label>
+        <skos:definition xml:lang="en">A process that is a distinguishable part of a product or material lifecycle.</skos:definition>
+        <skos:example xml:lang="en">Main product production as a lifecycle stage for an automotive component.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010027 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010027">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010026"/>
+        <rdfs:comment xml:lang="en">The glossary spelling &apos;raw material acquistion&apos; was normalized to &apos;raw material acquisition&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="en">raw material acquisition</rdfs:label>
+        <skos:definition xml:lang="en">A lifecycle stage in which natural resources, secondary materials, or basic feedstocks are obtained and prepared for production.</skos:definition>
+        <skos:example xml:lang="en">Obtaining recycled polymer regranulate for later component production.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010028 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010028">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010026"/>
+        <rdfs:label xml:lang="en">main product production</rdfs:label>
+        <skos:definition xml:lang="en">A lifecycle stage in which raw materials, intermediate products, or components are transformed into the main product.</skos:definition>
+        <skos:example xml:lang="en">Injection molding and assembly steps used to produce an automotive housing.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010029 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010029">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010026"/>
+        <rdfs:label xml:lang="en">distribution</rdfs:label>
+        <skos:definition xml:lang="en">A lifecycle stage in which products, components, or materials are transported, stored, or transferred between supply chain actors.</skos:definition>
+        <skos:example xml:lang="en">Shipment of remanufactured components from a supplier to a vehicle manufacturer.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010030 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010030">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010026"/>
+        <rdfs:label xml:lang="en">end of life</rdfs:label>
+        <skos:definition xml:lang="en">A lifecycle stage in which a product or component has reached the end of its intended use and is directed to reuse, remanufacturing, recycling, recovery, or disposal.</skos:definition>
+        <skos:example xml:lang="en">Removal of a component from an end-of-life vehicle for circular value assessment.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010031 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010031">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010026"/>
+        <rdfs:label xml:lang="en">recycling lifecycle stage</rdfs:label>
+        <skos:definition xml:lang="en">A lifecycle stage in which used materials or products are processed to recover material for further use.</skos:definition>
+        <skos:example xml:lang="en">Grinding, sorting, and regranulating a polymer component after dismantling.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010032 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010032">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010022"/>
+        <rdfs:label xml:lang="en">carbon footprint amount</rdfs:label>
+        <skos:definition xml:lang="en">A product carbon footprint that quantifies a greenhouse gas emission burden as a carbon dioxide equivalent amount for a stated product, process, or scenario.</skos:definition>
+        <skos:example xml:lang="en">12.4 kg CO2 equivalent for a selected reuse scenario.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010033 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010033">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010032"/>
+        <rdfs:label xml:lang="en">carbon footprint amount in recycling</rdfs:label>
+        <skos:definition xml:lang="en">A carbon footprint amount calculated for a recycling scenario.</skos:definition>
+        <skos:example xml:lang="en">The kg CO2 equivalent attributed to recycling a dismantled component.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010034 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010034">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010032"/>
+        <rdfs:label xml:lang="en">carbon footprint amount in remanufacturing</rdfs:label>
+        <skos:definition xml:lang="en">A carbon footprint amount calculated for a remanufacturing scenario.</skos:definition>
+        <skos:example xml:lang="en">The kg CO2 equivalent attributed to inspecting, repairing, and remanufacturing a component.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010035 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010035">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010032"/>
+        <rdfs:label xml:lang="en">carbon footprint amount in reuse</rdfs:label>
+        <skos:definition xml:lang="en">A carbon footprint amount calculated for a reuse scenario.</skos:definition>
+        <skos:example xml:lang="en">The kg CO2 equivalent attributed to checking and reusing a component without remanufacturing.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010036 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010036">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010032"/>
+        <rdfs:label xml:lang="en">carbon footprint amount in new production</rdfs:label>
+        <skos:definition xml:lang="en">A carbon footprint amount calculated for a new production scenario.</skos:definition>
+        <skos:example xml:lang="en">The kg CO2 equivalent attributed to manufacturing a replacement component from primary material.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010040 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:label xml:lang="en">humidity absorption</rdfs:label>
+        <skos:definition xml:lang="en">A disposition of a material or component to absorb water vapor from a humid environment under specified exposure conditions.</skos:definition>
+        <skos:example xml:lang="en">Moisture uptake by a PA66 component during use at 50 percent relative humidity.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010050 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010050">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:label xml:lang="en">remaining lifetime</rdfs:label>
+        <skos:definition xml:lang="en">A realizable entity representing the usable lifetime expected to remain for a product or component before it no longer satisfies its intended function or circular value criteria.</skos:definition>
+        <skos:example xml:lang="en">An alternator estimated to have 24 months of usable service life remaining after inspection.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010051 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010051">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:label xml:lang="en">actual lifetime</rdfs:label>
+        <skos:definition xml:lang="en">A realizable entity representing the observed elapsed lifetime of a product or component up to a stated lifecycle event.</skos:definition>
+        <skos:example xml:lang="en">The time between first vehicle registration and dismantling of a component.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010052 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010052">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:comment xml:lang="en">The glossary spelling &apos;Non-destructive Distmantlability&apos; was normalized to &apos;non-destructive dismantlability&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="en">non-destructive dismantlability</rdfs:label>
+        <skos:definition xml:lang="en">A disposition of a product or component to be dismantled without destroying the product, component, or material portions that are intended for later use.</skos:definition>
+        <skos:example xml:lang="en">A clipped interior trim part that can be removed intact for reuse.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010053 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010053">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <rdfs:label xml:lang="en">safety information</rdfs:label>
+        <skos:definition xml:lang="en">A directive information entity that specifies safety-relevant instructions, warnings, or constraints for handling, dismantling, treating, transporting, or reusing a product or component.</skos:definition>
+        <skos:example xml:lang="en">A warning to disconnect a high-voltage battery before dismantling a component.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010054 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010054">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label xml:lang="en">recycling</rdfs:label>
+        <skos:definition xml:lang="en">A process in which used materials, components, or products are collected and processed to recover material for further use.</skos:definition>
+        <skos:example xml:lang="en">Sorting and regranulating polymer parts from an end-of-life vehicle.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010055 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010055">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label xml:lang="en">dismantling</rdfs:label>
+        <skos:definition xml:lang="en">A process in which a product or component is taken apart so that parts, materials, or information can be recovered, assessed, reused, repaired, remanufactured, recycled, or disposed.</skos:definition>
+        <skos:example xml:lang="en">Removing a vehicle door module from an end-of-life vehicle before quality assessment.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010056 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010056">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
+        <rdfs:label xml:lang="en">dismantling guideline for recycling</rdfs:label>
+        <skos:definition xml:lang="en">A plan specification that provides instructions for dismantling a product or component so that materials can be routed to appropriate recycling treatment.</skos:definition>
+        <skos:example xml:lang="en">A guideline specifying how to separate a polymer housing from attached metal inserts before recycling.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010057 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010057">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:label xml:lang="en">recycling material quality</rdfs:label>
+        <skos:definition xml:lang="en">A disposition of a product or material to be recycled while preserving a specified level of material quality.</skos:definition>
+        <skos:example xml:lang="en">A polymer component designed so that the recovered polymer remains suitable for automotive applications.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010058 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010058">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:label xml:lang="en">recycling availability</rdfs:label>
+        <skos:definition xml:lang="en">A disposition of a product, component, or material to be practically available for recycling in a technical cycle.</skos:definition>
+        <skos:example xml:lang="en">A component whose material can be separated and accepted by an established recycling route.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010059 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
+        <rdfs:label xml:lang="en">dismantling instructions</rdfs:label>
+        <skos:definition xml:lang="en">A plan specification that describes the actions, order, tools, and constraints for safely and correctly dismantling a product or component.</skos:definition>
+        <skos:example xml:lang="en">Stepwise instructions for removing a battery module from a vehicle.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010060 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010060">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:label xml:lang="en">dismantlability</rdfs:label>
+        <skos:definition xml:lang="en">A disposition of a product or component to be dismantled under stated technical, safety, time, and damage constraints.</skos:definition>
+        <skos:example xml:lang="en">A bolted assembly has higher dismantlability than an inseparably bonded assembly when reuse is intended.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010061 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010061">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:label xml:lang="en">average dismantling time</rdfs:label>
+        <skos:definition xml:lang="en">A realizable entity representing the estimated average time required to dismantle a product or component under specified conditions.</skos:definition>
+        <skos:example xml:lang="en">An average dismantling time of 12 minutes for removal of a door module.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010062 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010062">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label xml:lang="en">treatment technique</rdfs:label>
+        <skos:definition xml:lang="en">A process used to treat a dismantled component, product, or material after removal from its original assembly.</skos:definition>
+        <skos:example xml:lang="en">Mechanical shredding, cleaning, or material separation applied after dismantling.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010063 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010063">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label xml:lang="en">best treatment techniques</rdfs:label>
+        <skos:definition xml:lang="en">An information content entity that recommends preferred treatment techniques for a dismantled product, component, or material in a given circular economy scenario.</skos:definition>
+        <skos:example xml:lang="en">A recommendation to remove electronics before shredding a polymer-rich component.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010064 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010064">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
+        <rdfs:label xml:lang="en">disassembly software</rdfs:label>
+        <skos:definition xml:lang="en">Software used to support, guide, document, or validate the disassembly or dismantling of a product or component.</skos:definition>
+        <skos:example xml:lang="en">A workshop application that displays product-specific disassembly instructions.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010065 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010065">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000602"/>
+        <rdfs:label xml:lang="en">disassembly tool</rdfs:label>
+        <skos:definition xml:lang="en">A device used to carry out a disassembly or dismantling operation on a product or component.</skos:definition>
+        <skos:example xml:lang="en">A puller tool used to remove a clipped trim component without damage.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010066 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010066">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
+        <rdfs:label xml:lang="en">fastening technique</rdfs:label>
+        <skos:definition xml:lang="en">A plan specification that describes how parts are joined, fixed, or released in an assembly.</skos:definition>
+        <skos:example xml:lang="en">A specification that a housing is fastened with Torx screws and snap-fit clips.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010067 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010067">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
+        <rdfs:label xml:lang="en">dismantling sequence</rdfs:label>
+        <skos:definition xml:lang="en">A plan specification that orders the steps required to dismantle a product or component.</skos:definition>
+        <skos:example xml:lang="en">Remove cover, disconnect cable, release clips, and lift out module.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010068 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010068">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
+        <rdfs:label xml:lang="en">exploding diagram</rdfs:label>
+        <skos:definition xml:lang="en">A document or figure that depicts a product or assembly with parts spatially separated to show their relative positions and dismantling relationships.</skos:definition>
+        <skos:example xml:lang="en">An exploded-view diagram showing screws, clips, housing shells, and subcomponents of a control unit.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010069 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010069">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">sub-group name</rdfs:label>
+        <skos:definition xml:lang="en">An identifier that records the name of a material sub-group in a material classification scheme.</skos:definition>
+        <skos:example xml:lang="en">The VDA 231-106 sub-group name &apos;cast aluminium alloys&apos;.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010070 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010070">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">sub-group identifier</rdfs:label>
+        <skos:definition xml:lang="en">An identifier that records the code or number of a material sub-group in a material classification scheme.</skos:definition>
+        <skos:example xml:lang="en">The VDA 231-106 sub-group code &apos;2.1.1&apos;.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010071 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010071">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">main group name</rdfs:label>
+        <skos:definition xml:lang="en">An identifier that records the name of a material main group in a material classification scheme.</skos:definition>
+        <skos:example xml:lang="en">The VDA 231-106 main group name &apos;polymer materials&apos;.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010072 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010072">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">main group identifier</rdfs:label>
+        <skos:definition xml:lang="en">An identifier that records the code or number of a material main group in a material classification scheme.</skos:definition>
+        <skos:example xml:lang="en">The VDA 231-106 main group code &apos;5&apos;.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010073 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010073">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label xml:lang="en">reuse</rdfs:label>
+        <skos:definition xml:lang="en">A process in which a discarded or removed product or component is used again while retaining its original function.</skos:definition>
+        <skos:example xml:lang="en">A dismantled and inspected body control module installed in another vehicle.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010074 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010074">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:label xml:lang="en">product quality</rdfs:label>
+        <skos:definition xml:lang="en">A disposition of a product or component to satisfy requirements for an intended circular economy route, based on relevant condition, completeness, functional, and standard-based criteria.</skos:definition>
+        <skos:example xml:lang="en">A reused body part assigned a quality class after inspection for dents, corrosion, paint damage, and completeness.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010075 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010075">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:label xml:lang="en">necessary test protocols equipment</rdfs:label>
+        <skos:definition xml:lang="en">A disposition of a product or component to require specific test protocols or uncommon equipment before it can be accepted for reuse, repair, remanufacturing, or recycling.</skos:definition>
+        <skos:example xml:lang="en">A high-voltage component requiring insulation resistance testing before reuse.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010076 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010076">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:label xml:lang="en">reusability</rdfs:label>
+        <skos:definition xml:lang="en">A disposition of a product or component to be reused in its original function under stated technical, legal, safety, and quality constraints.</skos:definition>
+        <skos:example xml:lang="en">A complete undamaged headlamp assembly that can be installed as a replacement part.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010077 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010077">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">quality body parts</rdfs:label>
+        <skos:definition xml:lang="en">A quality of a body part component that characterizes its externally relevant condition, such as paint damage, dents, corrosion, and component-specific defects.</skos:definition>
+        <skos:example xml:lang="en">A door panel quality assessment based on dents and paint scratches.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010078 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010078">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">quality grade</rdfs:label>
+        <skos:definition xml:lang="en">A quality that records the grade assigned to a product or component according to a stated quality standard or assessment scheme.</skos:definition>
+        <skos:example xml:lang="en">A, B, or C quality grade assigned to a used car part.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010079 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010079">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">completeness</rdfs:label>
+        <skos:definition xml:lang="en">A quality of a product or component indicating whether required subcomponents, fasteners, interfaces, or accessories are present.</skos:definition>
+        <skos:example xml:lang="en">A mirror assembly assessed as complete because housing, glass, wiring, and mounting clips are present.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010080 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010080">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
+        <rdfs:label xml:lang="en">used quality standard</rdfs:label>
+        <skos:definition xml:lang="en">A plan specification that defines the quality assessment criteria applied to a reused, repaired, remanufactured, or recycled product or component.</skos:definition>
+        <skos:example xml:lang="en">VDI 4080 used as the assessment standard for reuse quality.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010081 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010081">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">mounting point integrity</rdfs:label>
+        <skos:definition xml:lang="en">A quality of a product or component indicating whether its mounting points, clips, tabs, or attachment features are intact and functional.</skos:definition>
+        <skos:example xml:lang="en">A bumper bracket with all mounting tabs undamaged.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010082 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010082">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">surface cleanliness</rdfs:label>
+        <skos:definition xml:lang="en">A quality of a product, component, or material surface indicating the degree to which it is free from oil, dust, residues, and other contaminants.</skos:definition>
+        <skos:example xml:lang="en">A cleaned polymer surface acceptable for adhesive bonding during reuse preparation.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010083 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010083">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">repair time</rdfs:label>
+        <skos:definition xml:lang="en">A temporal quality that estimates or records the time required to repair a specified damage or defect on a product or component.</skos:definition>
+        <skos:example xml:lang="en">The time needed to repair a paint scratch and small dent on a door panel.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010084 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010084">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">crack count</rdfs:label>
+        <skos:definition xml:lang="en">A quality that records the number of cracks observed on a product, component, coating, or material surface.</skos:definition>
+        <skos:example xml:lang="en">Two cracks recorded in the paint layer during dismantling inspection.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010085 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010085">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">dent damage</rdfs:label>
+        <skos:definition xml:lang="en">A quality of a sheet metal or body component indicating the presence or extent of dents or deformations that impair the component shape.</skos:definition>
+        <skos:example xml:lang="en">A quarter panel with two visible dents after vehicle use.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010086 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010086">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">damage area</rdfs:label>
+        <skos:definition xml:lang="en">A quality that quantifies the surface area of visible damage on a product, component, coating, or material surface.</skos:definition>
+        <skos:example xml:lang="en">A paint damage area of 50 square centimeters on a door panel.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010087 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010087">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">paint damage</rdfs:label>
+        <skos:definition xml:lang="en">A quality of a painted product or component indicating damage to the paintwork, such as scratches, chips, cracks, or coating loss.</skos:definition>
+        <skos:example xml:lang="en">Stone-chip damage on a painted bumper cover.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010088 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010088">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">vehicle identification number</rdfs:label>
+        <skos:definition xml:lang="en">An identifier assigned to a vehicle according to a vehicle identification number scheme and used to identify the individual vehicle.</skos:definition>
+        <skos:example xml:lang="en">A 17-character VIN read from a vehicle during dismantling intake.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010090 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010090">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">manufacturer name</rdfs:label>
+        <skos:definition xml:lang="en">An identifier that records the name by which a manufacturer is referred to in a data exchange, contract, product record, or manufacturer system.</skos:definition>
+        <skos:example xml:lang="en">The manufacturer name &apos;Schaeffler&apos; in a supplier record.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010091 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010091">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000029"/>
+        <rdfs:label xml:lang="en">manufacturer plant site</rdfs:label>
+        <skos:definition xml:lang="en">A site at which a manufacturer carries out production, assembly, treatment, storage, or related industrial operations.</skos:definition>
+        <skos:example xml:lang="en">A specific plant where a material batch or component was produced.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010092 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010092">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0000021"/>
+        <rdfs:comment xml:lang="en">This is modeled as a Catena-X-specific subtype of the existing business partner number class.</rdfs:comment>
+        <rdfs:label xml:lang="en">CX business partner number</rdfs:label>
+        <skos:definition xml:lang="en">A business partner number used in Catena-X to identify a legal entity, site, or address participating in automotive data exchange.</skos:definition>
+        <skos:example xml:lang="en">A Catena-X BPNL identifier for a supplier legal entity.</skos:example>
+        <co:PMD_0050117>BPN</co:PMD_0050117>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010093 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010093">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">VIN</rdfs:label>
+        <skos:definition xml:lang="en">An identifier assigned to an individual vehicle according to a vehicle identification number scheme.</skos:definition>
+        <skos:example xml:lang="en">A 17-character vehicle identification number used in a dismantling record.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010094 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010094">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">vehicle model</rdfs:label>
+        <skos:definition xml:lang="en">An identifier that records the model designation of a vehicle type as defined by a manufacturer.</skos:definition>
+        <skos:example xml:lang="en">A manufacturer-specific vehicle model name used in a product data record.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010095 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010095">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label xml:lang="en">component information</rdfs:label>
+        <skos:definition xml:lang="en">An information content entity that aggregates identifiers, specifications, usage data, condition data, or circular economy information about a component.</skos:definition>
+        <skos:example xml:lang="en">A component record containing part number, material designation, mileage, and reuse assessment.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010096 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010096">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">mileage of the component</rdfs:label>
+        <skos:definition xml:lang="en">A quality that quantifies the travel distance accumulated by a component during use in a vehicle.</skos:definition>
+        <skos:example xml:lang="en">A used alternator recorded with 125000 km of component mileage.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010097 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010097">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">component age</rdfs:label>
+        <skos:definition xml:lang="en">A temporal quality that quantifies elapsed time since a component was produced, commissioned, installed, or first used, according to a stated reference event.</skos:definition>
+        <skos:example xml:lang="en">A component age of six years measured from vehicle production date to dismantling date.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010098 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010098">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001933"/>
+        <rdfs:label xml:lang="en">year of construction</rdfs:label>
+        <skos:definition xml:lang="en">A date value specification that records the calendar year in which a product, component, vehicle, or facility was constructed or manufactured.</skos:definition>
+        <skos:example xml:lang="en">The year 2019 recorded as the construction year of a vehicle.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010100 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010100">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">environmental condition</rdfs:label>
+        <skos:definition xml:lang="en">A quality of an environment that is relevant to material behavior, processing, testing, storage, use, or degradation.</skos:definition>
+        <skos:example xml:lang="en">A conditioning atmosphere with specified temperature and relative humidity.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010101 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010101">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000002"/>
+        <rdfs:comment xml:lang="en">The role borne by such a material in a composite is PMD Core filler role.</rdfs:comment>
+        <rdfs:label xml:lang="en">filler</rdfs:label>
+        <skos:definition xml:lang="en">An engineered material incorporated in another material to occupy volume, modify properties, reduce cost, or contribute reinforcement in a composite or compound.</skos:definition>
+        <skos:example xml:lang="en">Glass fibers or mineral particles added to a polymer compound.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010102 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010102">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010101"/>
+        <rdfs:comment xml:lang="en">The Excel hint to PMD Core filler role was modeled as a material class here because the glossary term names the reinforcing material, not only the role.</rdfs:comment>
+        <rdfs:label xml:lang="en">reinforcement</rdfs:label>
+        <skos:definition xml:lang="en">A filler material that is incorporated into a matrix material to improve load-bearing, stiffness, strength, impact, or dimensional performance.</skos:definition>
+        <skos:example xml:lang="en">Chopped glass fiber used as reinforcement in PA66-GF25.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010103 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010103">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:label xml:lang="en">further content</rdfs:label>
+        <skos:definition xml:lang="en">A composition data item that records additional material constituents or content fractions not captured by the primary material composition fields.</skos:definition>
+        <skos:example xml:lang="en">A data item recording minor additive content in a polymer compound.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010104 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010104">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020102"/>
+        <rdfs:comment xml:lang="en">The Excel source references ISO 15512 for plastics water content measurement.</rdfs:comment>
+        <rdfs:label xml:lang="en">water content</rdfs:label>
+        <skos:definition xml:lang="en">A mass proportion that quantifies the amount of water contained in a material under specified measurement or conditioning conditions.</skos:definition>
+        <skos:example xml:lang="en">Water content of a polyamide granulate measured before injection molding.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010105 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010105">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020102"/>
+        <rdfs:comment xml:lang="en">The Excel source references ISO 3451 for ash content, often used to estimate inorganic filler content.</rdfs:comment>
+        <rdfs:label xml:lang="en">ash content</rdfs:label>
+        <skos:definition xml:lang="en">A mass proportion that quantifies the inorganic residue remaining after controlled combustion or calcination of a material sample.</skos:definition>
+        <skos:example xml:lang="en">Ash content used to estimate glass fiber or mineral filler content in a polymer compound.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010106 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010106">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label xml:lang="en">material class</rdfs:label>
+        <skos:definition xml:lang="en">An information content entity that assigns a material, component, or product to a material category in a stated classification scheme.</skos:definition>
+        <skos:example xml:lang="en">A VDA 231-106 material class assignment for polymer materials.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010107 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010107">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">material abbreviation</rdfs:label>
+        <skos:definition xml:lang="en">An identifier that records a short material designation or abbreviation used for a material or material family.</skos:definition>
+        <skos:example xml:lang="en">PA66-GF25 as an abbreviated designation for a glass-fiber-reinforced polyamide 66 compound.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010108 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010108">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000933"/>
+        <rdfs:label xml:lang="en">manufacturing simulation</rdfs:label>
+        <skos:definition xml:lang="en">A simulation process that represents a manufacturing process and its material, process, geometry, or performance consequences.</skos:definition>
+        <skos:example xml:lang="en">A simulation of an injection molding process used to predict filling and cooling behavior.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010109 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010109">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010108"/>
+        <rdfs:label xml:lang="en">injection molding simulation</rdfs:label>
+        <skos:definition xml:lang="en">A manufacturing simulation that represents an injection molding process, including relevant material, mold, filling, packing, cooling, or warpage behavior.</skos:definition>
+        <skos:example xml:lang="en">A mold-filling simulation for a PA66-GF25 housing.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010110 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010110">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000933"/>
+        <rdfs:label xml:lang="en">quasistatic simulation</rdfs:label>
+        <skos:definition xml:lang="en">A simulation process that represents material or component response under loading conditions where inertial effects are negligible.</skos:definition>
+        <skos:example xml:lang="en">A quasistatic finite element simulation of a bracket under service load.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010111 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010111">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000933"/>
+        <rdfs:label xml:lang="en">thermal simulation</rdfs:label>
+        <skos:definition xml:lang="en">A simulation process that represents heat transfer, temperature distribution, or thermally induced material behavior.</skos:definition>
+        <skos:example xml:lang="en">A cooling simulation for an injection molded component.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010112 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010112">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000952"/>
+        <rdfs:label xml:lang="en">quasistatic stress normal</rdfs:label>
+        <skos:definition xml:lang="en">A strength-related material or simulation output quality that represents stress normal to a reference direction under quasistatic loading.</skos:definition>
+        <skos:example xml:lang="en">Normal stress predicted by a quasistatic simulation perpendicular to fiber orientation.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010113 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010113">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000952"/>
+        <rdfs:label xml:lang="en">quasistatic stress parallel</rdfs:label>
+        <skos:definition xml:lang="en">A strength-related material or simulation output quality that represents stress parallel to a reference direction under quasistatic loading.</skos:definition>
+        <skos:example xml:lang="en">Stress predicted parallel to fiber orientation in a quasistatic simulation.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010114 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010114">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000848"/>
+        <rdfs:label xml:lang="en">quasistatic strain normal</rdfs:label>
+        <skos:definition xml:lang="en">A mechanical property or simulation output quality that represents strain normal to a reference direction under quasistatic loading.</skos:definition>
+        <skos:example xml:lang="en">Normal strain predicted perpendicular to fiber orientation in a quasistatic simulation.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010115 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010115">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000848"/>
+        <rdfs:label xml:lang="en">quasistatic strain parallel</rdfs:label>
+        <skos:definition xml:lang="en">A mechanical property or simulation output quality that represents strain parallel to a reference direction under quasistatic loading.</skos:definition>
+        <skos:example xml:lang="en">Strain predicted parallel to fiber orientation in a quasistatic simulation.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010116 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010116">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0040001"/>
+        <rdfs:label xml:lang="en">elongation expansion normal</rdfs:label>
+        <skos:definition xml:lang="en">A length-related quality or simulation output that represents elongation or expansion normal to a reference direction.</skos:definition>
+        <skos:example xml:lang="en">Thermal expansion normal to fiber orientation in a molded composite.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010117 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010117">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0040001"/>
+        <rdfs:label xml:lang="en">elongation expansion parallel</rdfs:label>
+        <skos:definition xml:lang="en">A length-related quality or simulation output that represents elongation or expansion parallel to a reference direction.</skos:definition>
+        <skos:example xml:lang="en">Thermal expansion parallel to fiber orientation in a molded composite.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010118 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010118">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0040001"/>
+        <rdfs:label xml:lang="en">length of fibers</rdfs:label>
+        <skos:definition xml:lang="en">A length quality that quantifies the characteristic or measured length of fibers in a fiber-containing material.</skos:definition>
+        <skos:example xml:lang="en">Mean glass fiber length after injection molding of PA66-GF25.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010119 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010119">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020102"/>
+        <rdfs:label xml:lang="en">reutilization material share</rdfs:label>
+        <skos:definition xml:lang="en">A mass proportion that quantifies the share of material from rework, regrind, or scrap that is reused within the process or production system that generated it.</skos:definition>
+        <skos:example xml:lang="en">The percentage of in-process regrind returned to an injection molding feedstock.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010120 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010120">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label xml:lang="en">origin</rdfs:label>
+        <skos:definition xml:lang="en">An information content entity that records the source category, provenance, or supply-chain origin of a material.</skos:definition>
+        <skos:example xml:lang="en">An origin statement that a polymer fraction is post-consumer automotive recycled material.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010121 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010121">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020102"/>
+        <rdfs:label xml:lang="en">pre-consumer material share</rdfs:label>
+        <skos:definition xml:lang="en">A mass proportion that quantifies material content originating from pre-consumer production residues, by-products, rework, or scrap.</skos:definition>
+        <skos:example xml:lang="en">The share of molding scrap reused before the product reached a consumer.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010122 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010122">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020102"/>
+        <rdfs:label xml:lang="en">post-consumer material share</rdfs:label>
+        <skos:definition xml:lang="en">A mass proportion that quantifies material content originating from products or materials recovered after consumer or user service.</skos:definition>
+        <skos:example xml:lang="en">The share of polypropylene recovered from end-of-life vehicle parts.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010123 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010123">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020102"/>
+        <rdfs:label xml:lang="en">material source share</rdfs:label>
+        <skos:definition xml:lang="en">A mass proportion that quantifies the share of material from a stated source category, such as primary, secondary, pre-consumer, post-consumer, automotive, or non-automotive sources.</skos:definition>
+        <skos:example xml:lang="en">A material source share for secondary automotive recycled content.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010124 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010124">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
+        <rdfs:label xml:lang="en">other recycling information</rdfs:label>
+        <skos:definition xml:lang="en">A document or information content entity that provides additional evidence, provenance, compliance, or quality information about material origin or recycling.</skos:definition>
+        <skos:example xml:lang="en">A supplier declaration documenting recycled material origin and quality.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010125 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010125">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020102"/>
+        <rdfs:label xml:lang="en">automotive material share</rdfs:label>
+        <skos:definition xml:lang="en">A mass proportion that quantifies the share of material content originating from automotive sources.</skos:definition>
+        <skos:example xml:lang="en">The fraction of recycled polymer sourced from end-of-life vehicle components.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010126 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010126">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020102"/>
+        <rdfs:label xml:lang="en">non-automotive material share</rdfs:label>
+        <skos:definition xml:lang="en">A mass proportion that quantifies the share of material content originating from non-automotive sources.</skos:definition>
+        <skos:example xml:lang="en">The fraction of recycled polymer sourced from consumer packaging rather than vehicle components.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010127 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010127">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:label xml:lang="en">secondary material</rdfs:label>
+        <skos:definition xml:lang="en">A material entity obtained from waste, by-products, production residues, or recovered products and intended to substitute for primary material in a production process.</skos:definition>
+        <skos:example xml:lang="en">A recycled polymer regranulate used as feedstock for a new automotive component.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010128 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010128">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:label xml:lang="en">primary material</rdfs:label>
+        <skos:definition xml:lang="en">A material entity produced from virgin raw resources and used for the first time in a production process.</skos:definition>
+        <skos:example xml:lang="en">Virgin PA66 resin produced from primary chemical feedstocks.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010129 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010129">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">physical dimension</rdfs:label>
+        <skos:definition xml:lang="en">A quality that characterizes a physical extent or dimensional feature of a material entity, product, component, or geometric feature.</skos:definition>
+        <skos:example xml:lang="en">Length, width, thickness, or diameter used to characterize an automotive component.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010130 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010130">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0200002"/>
+        <rdfs:label xml:lang="en">injection molding process</rdfs:label>
+        <skos:definition xml:lang="en">An injection molding process in which plasticized material is injected into a mold cavity, held under pressure, cooled or solidified, and ejected as a shaped part.</skos:definition>
+        <skos:example xml:lang="en">Injection molding of a PA66-GF25 connector housing.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010131 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010131">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000618"/>
+        <rdfs:label xml:lang="en">Young&apos;s modulus</rdfs:label>
+        <skos:definition xml:lang="en">An elastic modulus that quantifies the ratio of uniaxial stress to uniaxial strain in the linear elastic region of a material response.</skos:definition>
+        <skos:example xml:lang="en">Young&apos;s modulus measured from a tensile test of a glass-fiber-reinforced polyamide specimen.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010140 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010140">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:label xml:lang="en">unusual properties</rdfs:label>
+        <skos:definition xml:lang="en">A data item that records noteworthy, unexpected, or abnormal properties observed for a component during use, inspection, dismantling, or circular economy assessment.</skos:definition>
+        <skos:example xml:lang="en">A note that a component shows unusual discoloration or deformation compared with its expected state.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010141 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010141">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:label xml:lang="en">actual dismantling time</rdfs:label>
+        <skos:definition xml:lang="en">A realizable entity representing the observed time required to dismantle a product, vehicle, or component in a specific dismantling event.</skos:definition>
+        <skos:example xml:lang="en">The measured time in minutes to remove a component from an end-of-life vehicle.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010142 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010142">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label xml:lang="en">reason for selected R-strategy</rdfs:label>
+        <skos:definition xml:lang="en">An information content entity that states the rationale for selecting a reuse, repair, remanufacturing, recycling, recovery, or disposal strategy for a product or component.</skos:definition>
+        <skos:example xml:lang="en">A reason stating that reuse was rejected because mounting points were broken.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010143 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010143">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <rdfs:label xml:lang="en">selected R-strategy</rdfs:label>
+        <skos:definition xml:lang="en">A directive information entity that specifies the circular economy strategy selected for a product or component.</skos:definition>
+        <skos:example xml:lang="en">A selected strategy of reuse, recycling, or remanufacturing for a dismantled component.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010144 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010144">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010060"/>
+        <rdfs:label xml:lang="en">actual dismantlability</rdfs:label>
+        <skos:definition xml:lang="en">A disposition assessment that records how dismantlable a product or component was in an observed dismantling event.</skos:definition>
+        <skos:example xml:lang="en">An actual dismantlability assessment from a dismantler after removing a door module.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010145 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010145">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010032"/>
+        <rdfs:label xml:lang="en">actual footprint of chosen R-strategy</rdfs:label>
+        <skos:definition xml:lang="en">A carbon footprint amount that records the observed or calculated carbon dioxide equivalent burden of the selected circular economy strategy for a component.</skos:definition>
+        <skos:example xml:lang="en">The kg CO2 equivalent resulting from choosing reuse for a dismantled component.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010146 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010146">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:label xml:lang="en">vehicle condition</rdfs:label>
+        <skos:definition xml:lang="en">A quality of a vehicle that characterizes its observed state relevant to use, dismantling, reuse, repair, recycling, or valuation.</skos:definition>
+        <skos:example xml:lang="en">A vehicle condition assessment recorded at dismantling intake.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010147 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010147">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:label xml:lang="en">drive type</rdfs:label>
+        <skos:definition xml:lang="en">A quality of a vehicle that classifies its propulsion architecture or drive configuration.</skos:definition>
+        <skos:example xml:lang="en">Battery electric drive, hybrid drive, or combustion engine drive.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010148 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010148">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:label xml:lang="en">empty weight</rdfs:label>
+        <skos:definition xml:lang="en">A mass quality that quantifies the weight of a vehicle without load under the stated specification conditions.</skos:definition>
+        <skos:example xml:lang="en">The empty weight in kilograms from vehicle documentation.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010149 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010149">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">vehicle type</rdfs:label>
+        <skos:definition xml:lang="en">A quality of a vehicle that classifies the vehicle according to its design, construction, or intended purpose.</skos:definition>
+        <skos:example xml:lang="en">Passenger car, light commercial vehicle, or heavy truck.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010150 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010150">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">corrosion</rdfs:label>
+        <skos:definition xml:lang="en">A quality of a material, component, or surface indicating degradation by chemical or electrochemical reaction with its environment.</skos:definition>
+        <skos:example xml:lang="en">Rust on a steel mounting bracket observed during dismantling.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010160 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010160">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">model identifier</rdfs:label>
+        <skos:definition xml:lang="en">An identifier assigned by an original equipment manufacturer to a vehicle model, vehicle project, or model variant.</skos:definition>
+        <skos:example xml:lang="en">An OEM project code used to identify a vehicle model in product data.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010161 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010161">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">vehicle series</rdfs:label>
+        <skos:definition xml:lang="en">An identifier that records the vehicle series or platform series associated with a vehicle model or component.</skos:definition>
+        <skos:example xml:lang="en">A vehicle series code used in dismantling or parts identification data.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010162 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010162">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000571"/>
+        <rdfs:label xml:lang="en">OEM</rdfs:label>
+        <skos:definition xml:lang="en">A manufacturer role borne by an organization that designs or produces the original vehicle, component, or system for which circular economy data is recorded.</skos:definition>
+        <skos:example xml:lang="en">A vehicle manufacturer acting as original equipment manufacturer for a vehicle series.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010163 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010163">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001933"/>
+        <rdfs:label xml:lang="en">production date</rdfs:label>
+        <skos:definition xml:lang="en">A date value specification that records when a vehicle, component, product, or material batch was produced.</skos:definition>
+        <skos:example xml:lang="en">The production date of a vehicle read from manufacturer records.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010164 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010164">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010093"/>
+        <rdfs:label xml:lang="en">anonymized VIN</rdfs:label>
+        <skos:definition xml:lang="en">An identifier derived from a vehicle identification number by anonymization or hashing so that the vehicle can be linked across records without exposing the original VIN.</skos:definition>
+        <skos:example xml:lang="en">A hashed VIN used in circular economy data exchange.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010165 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010165">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">name at manufacturer</rdfs:label>
+        <skos:definition xml:lang="en">An identifier or designation by which a manufacturer names a material grade, product line, component, or product in its own records or commercial communication.</skos:definition>
+        <skos:example xml:lang="en">A manufacturer trade name such as Ultradur, Zytel, or Grilamid.</skos:example>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0030000 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0030000">
@@ -600,9 +2053,27 @@
     
 
 
+    <!-- https://w3id.org/pmd/co/PMD_0000008 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000008"/>
+    
+
+
     <!-- https://w3id.org/pmd/co/PMD_0000577 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000577"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000602 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000602"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000618 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000618"/>
     
 
 
@@ -627,6 +2098,12 @@
     <!-- https://w3id.org/pmd/co/PMD_0000891 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000891"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000933 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000933"/>
     
 
 
@@ -672,9 +2149,33 @@
     
 
 
+    <!-- https://w3id.org/pmd/co/PMD_0020143 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020143"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0025001 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0025001"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0040001 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0040001"/>
+    
+
+
     <!-- https://w3id.org/pmd/co/PMD_0050004 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0050004"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0200002 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0200002"/>
     
 
 

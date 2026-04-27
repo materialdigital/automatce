@@ -36,10 +36,16 @@ Datatype: rdf:PlainLiteral
 
 
 Class: obo:BFO_0000023
+Class: obo:BFO_0000016
+Class: obo:BFO_0000019
+Class: obo:BFO_0000040
 Class: pmd:PMD_0000868
 Class: pmd:PMD_0000002
 Class: obo:BFO_0000031
 Class: obo:IAO_0000030
+Class: obo:IAO_0000027
+Class: obo:IAO_0000310
+Class: obo:IAO_0020000
 Class: pmd:PMD_0020131
 Class: pmd:PMD_0050004
 Class: pmd:PMD_0000577
@@ -48,8 +54,549 @@ Class: pmd:PMD_0020102
 Class: pmd:PMD_0020104
 Class: pmd:PMD_0000882
 Class: pmd:PMD_0000981
+Class: pmd:PMD_0000848
+Class: pmd:PMD_0000952
+Class: pmd:PMD_0000618
+Class: pmd:PMD_0000933
+Class: pmd:PMD_0020001
+Class: pmd:PMD_0025001
+Class: pmd:PMD_0040001
+Class: pmd:PMD_0200002
 Class: skos:Concept
 Class: skos:ConceptScheme
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010000> (raw material)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010000>
+
+  Annotations:
+    rdfs:comment
+      "Whether a material is raw material depends on its participation in a particular production or recycling workflow."@en,
+    rdfs:label
+      "raw material"@en,
+    skos:definition
+      "A material entity that is intended to be consumed, transformed, or incorporated as input in a manufacturing, recycling, or material processing process."@en,
+    skos:example
+      "PA66 pellets supplied to an injection molding process as input material."@en
+
+  SubClassOf:
+    obo:BFO_0000040
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010001> (additive)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010001>
+
+  Annotations:
+    rdfs:comment
+      "This class represents the additive material itself; the context-dependent function is represented by additive role."@en,
+    rdfs:label
+      "additive"@en,
+    skos:definition
+      "An engineered material intentionally incorporated in a base material in a comparatively small amount to modify processing behavior, performance properties, appearance, or cost."@en,
+    skos:example
+      "A UV stabilizer added to an exterior polymer trim material."@en
+
+  SubClassOf:
+    pmd:PMD_0000002
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010002> (matrix)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010002>
+
+  Annotations:
+    rdfs:comment
+      "The corresponding realizable entity is PMD Core matrix role; this class is used for material entities considered as the continuous phase of a composite."@en,
+    rdfs:label
+      "matrix"@en,
+    skos:definition
+      "An engineered material that forms the continuous phase of a composite material and binds or embeds reinforcement, filler, or dispersed material constituents."@en,
+    skos:example
+      "The PA66 phase in a PA66-GF25 composite."@en
+
+  SubClassOf:
+    pmd:PMD_0000002
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010003> (water absorption)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010003>
+
+  Annotations:
+    rdfs:comment
+      "Values are normally reported for specified test conditions, such as ISO 62 or a specified conditioning atmosphere."@en,
+    rdfs:label
+      "water absorption"@en,
+    skos:definition
+      "A disposition of a material to take up water from a liquid water or humid environment under specified exposure conditions."@en,
+    skos:example
+      "The percentage mass increase of a polyamide specimen after immersion in water."@en
+
+  SubClassOf:
+    obo:BFO_0000016
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010004> (materials information)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010004>
+
+  Annotations:
+    rdfs:label
+      "materials information"@en,
+    skos:definition
+      "An information content entity that specifies material-related characteristics of a product, component, material batch, or material grade."@en,
+    skos:example
+      "A data record listing material designation, density, fiber content, and recycled content for an automotive component."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010005> (material composition)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010005>
+
+  Annotations:
+    rdfs:label
+      "material composition"@en,
+    skos:definition
+      "A composition that describes the material constituents and constituent amounts of a product, component, material batch, or material grade."@en,
+    skos:example
+      "A composition stating that PA66-GF25 contains a PA66 matrix and nominally 25 percent glass fiber by mass."@en
+
+  SubClassOf:
+    pmd:PMD_0025001
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010006> (recycled material)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010006>
+
+  Annotations:
+    rdfs:comment
+      "This class covers material entities whose origin is a recycling process; the amount or share of recycled content should be represented separately."@en,
+    rdfs:label
+      "recycled material"@en,
+    skos:definition
+      "A material entity that has been recovered from waste, discarded products, by-products, or production residues through a recycling process for subsequent use."@en,
+    skos:example
+      "Regranulated polypropylene produced from end-of-life vehicle parts."@en
+
+  SubClassOf:
+    obo:BFO_0000040
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010007> (recycled)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010007>
+
+  Annotations:
+    rdfs:comment
+      "Use for the origin state of a material; use recycled material share for quantities or proportions."@en,
+    rdfs:label
+      "recycled"@en,
+    skos:definition
+      "A quality of a material entity indicating that the material has an origin in a recycling process rather than only in primary material production."@en,
+    skos:example
+      "A recycled quality borne by a polymer regrind used in a new injection molding batch."@en
+
+  SubClassOf:
+    obo:BFO_0000019
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010100> (environmental condition)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010100>
+
+  Annotations:
+    rdfs:label "environmental condition"@en,
+    skos:definition "A quality of an environment that is relevant to material behavior, processing, testing, storage, use, or degradation."@en,
+    skos:example "A conditioning atmosphere with specified temperature and relative humidity."@en
+
+  SubClassOf:
+    obo:BFO_0000019
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010101> (filler)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010101>
+
+  Annotations:
+    rdfs:comment "The role borne by such a material in a composite is PMD Core filler role."@en,
+    rdfs:label "filler"@en,
+    skos:definition "An engineered material incorporated in another material to occupy volume, modify properties, reduce cost, or contribute reinforcement in a composite or compound."@en,
+    skos:example "Glass fibers or mineral particles added to a polymer compound."@en
+
+  SubClassOf:
+    pmd:PMD_0000002
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010102> (reinforcement)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010102>
+
+  Annotations:
+    rdfs:comment "The Excel hint to PMD Core filler role was modeled as a material class here because the glossary term names the reinforcing material, not only the role."@en,
+    rdfs:label "reinforcement"@en,
+    skos:definition "A filler material that is incorporated into a matrix material to improve load-bearing, stiffness, strength, impact, or dimensional performance."@en,
+    skos:example "Chopped glass fiber used as reinforcement in PA66-GF25."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010101>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010103> (further content)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010103>
+
+  Annotations:
+    rdfs:label "further content"@en,
+    skos:definition "A composition data item that records additional material constituents or content fractions not captured by the primary material composition fields."@en,
+    skos:example "A data item recording minor additive content in a polymer compound."@en
+
+  SubClassOf:
+    obo:IAO_0000027
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010104> (water content)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010104>
+
+  Annotations:
+    rdfs:comment "The Excel source references ISO 15512 for plastics water content measurement."@en,
+    rdfs:label "water content"@en,
+    skos:definition "A mass proportion that quantifies the amount of water contained in a material under specified measurement or conditioning conditions."@en,
+    skos:example "Water content of a polyamide granulate measured before injection molding."@en
+
+  SubClassOf:
+    pmd:PMD_0020102
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010105> (ash content)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010105>
+
+  Annotations:
+    rdfs:comment "The Excel source references ISO 3451 for ash content, often used to estimate inorganic filler content."@en,
+    rdfs:label "ash content"@en,
+    skos:definition "A mass proportion that quantifies the inorganic residue remaining after controlled combustion or calcination of a material sample."@en,
+    skos:example "Ash content used to estimate glass fiber or mineral filler content in a polymer compound."@en
+
+  SubClassOf:
+    pmd:PMD_0020102
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010106> (material class)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010106>
+
+  Annotations:
+    rdfs:label "material class"@en,
+    skos:definition "An information content entity that assigns a material, component, or product to a material category in a stated classification scheme."@en,
+    skos:example "A VDA 231-106 material class assignment for polymer materials."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010107> (material abbreviation)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010107>
+
+  Annotations:
+    rdfs:label "material abbreviation"@en,
+    skos:definition "An identifier that records a short material designation or abbreviation used for a material or material family."@en,
+    skos:example "PA66-GF25 as an abbreviated designation for a glass-fiber-reinforced polyamide 66 compound."@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010108> (manufacturing simulation)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010108>
+
+  Annotations:
+    rdfs:label "manufacturing simulation"@en,
+    skos:definition "A simulation process that represents a manufacturing process and its material, process, geometry, or performance consequences."@en,
+    skos:example "A simulation of an injection molding process used to predict filling and cooling behavior."@en
+
+  SubClassOf:
+    pmd:PMD_0000933
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010109> (injection molding simulation)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010109>
+
+  Annotations:
+    rdfs:label "injection molding simulation"@en,
+    skos:definition "A manufacturing simulation that represents an injection molding process, including relevant material, mold, filling, packing, cooling, or warpage behavior."@en,
+    skos:example "A mold-filling simulation for a PA66-GF25 housing."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010108>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010110> (quasistatic simulation)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010110>
+
+  Annotations:
+    rdfs:label "quasistatic simulation"@en,
+    skos:definition "A simulation process that represents material or component response under loading conditions where inertial effects are negligible."@en,
+    skos:example "A quasistatic finite element simulation of a bracket under service load."@en
+
+  SubClassOf:
+    pmd:PMD_0000933
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010111> (thermal simulation)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010111>
+
+  Annotations:
+    rdfs:label "thermal simulation"@en,
+    skos:definition "A simulation process that represents heat transfer, temperature distribution, or thermally induced material behavior."@en,
+    skos:example "A cooling simulation for an injection molded component."@en
+
+  SubClassOf:
+    pmd:PMD_0000933
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010112> (quasistatic stress normal)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010112>
+
+  Annotations:
+    rdfs:label "quasistatic stress normal"@en,
+    skos:definition "A strength-related material or simulation output quality that represents stress normal to a reference direction under quasistatic loading."@en,
+    skos:example "Normal stress predicted by a quasistatic simulation perpendicular to fiber orientation."@en
+
+  SubClassOf:
+    pmd:PMD_0000952
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010113> (quasistatic stress parallel)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010113>
+
+  Annotations:
+    rdfs:label "quasistatic stress parallel"@en,
+    skos:definition "A strength-related material or simulation output quality that represents stress parallel to a reference direction under quasistatic loading."@en,
+    skos:example "Stress predicted parallel to fiber orientation in a quasistatic simulation."@en
+
+  SubClassOf:
+    pmd:PMD_0000952
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010114> (quasistatic strain normal)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010114>
+
+  Annotations:
+    rdfs:label "quasistatic strain normal"@en,
+    skos:definition "A mechanical property or simulation output quality that represents strain normal to a reference direction under quasistatic loading."@en,
+    skos:example "Normal strain predicted perpendicular to fiber orientation in a quasistatic simulation."@en
+
+  SubClassOf:
+    pmd:PMD_0000848
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010115> (quasistatic strain parallel)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010115>
+
+  Annotations:
+    rdfs:label "quasistatic strain parallel"@en,
+    skos:definition "A mechanical property or simulation output quality that represents strain parallel to a reference direction under quasistatic loading."@en,
+    skos:example "Strain predicted parallel to fiber orientation in a quasistatic simulation."@en
+
+  SubClassOf:
+    pmd:PMD_0000848
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010116> (elongation expansion normal)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010116>
+
+  Annotations:
+    rdfs:label "elongation expansion normal"@en,
+    skos:definition "A length-related quality or simulation output that represents elongation or expansion normal to a reference direction."@en,
+    skos:example "Thermal expansion normal to fiber orientation in a molded composite."@en
+
+  SubClassOf:
+    pmd:PMD_0040001
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010117> (elongation expansion parallel)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010117>
+
+  Annotations:
+    rdfs:label "elongation expansion parallel"@en,
+    skos:definition "A length-related quality or simulation output that represents elongation or expansion parallel to a reference direction."@en,
+    skos:example "Thermal expansion parallel to fiber orientation in a molded composite."@en
+
+  SubClassOf:
+    pmd:PMD_0040001
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010118> (length of fibers)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010118>
+
+  Annotations:
+    rdfs:label "length of fibers"@en,
+    skos:definition "A length quality that quantifies the characteristic or measured length of fibers in a fiber-containing material."@en,
+    skos:example "Mean glass fiber length after injection molding of PA66-GF25."@en
+
+  SubClassOf:
+    pmd:PMD_0040001
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010119> (reutilization material share)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010119>
+
+  Annotations:
+    rdfs:label "reutilization material share"@en,
+    skos:definition "A mass proportion that quantifies the share of material from rework, regrind, or scrap that is reused within the process or production system that generated it."@en,
+    skos:example "The percentage of in-process regrind returned to an injection molding feedstock."@en
+
+  SubClassOf:
+    pmd:PMD_0020102
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010120> (origin)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010120>
+
+  Annotations:
+    rdfs:label "origin"@en,
+    skos:definition "An information content entity that records the source category, provenance, or supply-chain origin of a material."@en,
+    skos:example "An origin statement that a polymer fraction is post-consumer automotive recycled material."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010121> (pre-consumer material share)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010121>
+
+  Annotations:
+    rdfs:label "pre-consumer material share"@en,
+    skos:definition "A mass proportion that quantifies material content originating from pre-consumer production residues, by-products, rework, or scrap."@en,
+    skos:example "The share of molding scrap reused before the product reached a consumer."@en
+
+  SubClassOf:
+    pmd:PMD_0020102
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010122> (post-consumer material share)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010122>
+
+  Annotations:
+    rdfs:label "post-consumer material share"@en,
+    skos:definition "A mass proportion that quantifies material content originating from products or materials recovered after consumer or user service."@en,
+    skos:example "The share of polypropylene recovered from end-of-life vehicle parts."@en
+
+  SubClassOf:
+    pmd:PMD_0020102
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010123> (material source share)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010123>
+
+  Annotations:
+    rdfs:label "material source share"@en,
+    skos:definition "A mass proportion that quantifies the share of material from a stated source category, such as primary, secondary, pre-consumer, post-consumer, automotive, or non-automotive sources."@en,
+    skos:example "A material source share for secondary automotive recycled content."@en
+
+  SubClassOf:
+    pmd:PMD_0020102
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010124> (other recycling information)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010124>
+
+  Annotations:
+    rdfs:label "other recycling information"@en,
+    skos:definition "A document or information content entity that provides additional evidence, provenance, compliance, or quality information about material origin or recycling."@en,
+    skos:example "A supplier declaration documenting recycled material origin and quality."@en
+
+  SubClassOf:
+    obo:IAO_0000310
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010125> (automotive material share)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010125>
+
+  Annotations:
+    rdfs:label "automotive material share"@en,
+    skos:definition "A mass proportion that quantifies the share of material content originating from automotive sources."@en,
+    skos:example "The fraction of recycled polymer sourced from end-of-life vehicle components."@en
+
+  SubClassOf:
+    pmd:PMD_0020102
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010126> (non-automotive material share)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010126>
+
+  Annotations:
+    rdfs:label "non-automotive material share"@en,
+    skos:definition "A mass proportion that quantifies the share of material content originating from non-automotive sources."@en,
+    skos:example "The fraction of recycled polymer sourced from consumer packaging rather than vehicle components."@en
+
+  SubClassOf:
+    pmd:PMD_0020102
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010127> (secondary material)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010127>
+
+  Annotations:
+    rdfs:label "secondary material"@en,
+    skos:definition "A material entity obtained from waste, by-products, production residues, or recovered products and intended to substitute for primary material in a production process."@en,
+    skos:example "A recycled polymer regranulate used as feedstock for a new automotive component."@en
+
+  SubClassOf:
+    obo:BFO_0000040
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010128> (primary material)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010128>
+
+  Annotations:
+    rdfs:label "primary material"@en,
+    skos:definition "A material entity produced from virgin raw resources and used for the first time in a production process."@en,
+    skos:example "Virgin PA66 resin produced from primary chemical feedstocks."@en
+
+  SubClassOf:
+    obo:BFO_0000040
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010129> (physical dimension)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010129>
+
+  Annotations:
+    rdfs:label "physical dimension"@en,
+    skos:definition "A quality that characterizes a physical extent or dimensional feature of a material entity, product, component, or geometric feature."@en,
+    skos:example "Length, width, thickness, or diameter used to characterize an automotive component."@en
+
+  SubClassOf:
+    obo:BFO_0000019
 
 # Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000002> (raw material role)
 

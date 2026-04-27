@@ -22,3 +22,29 @@ https://w3id.org/pmd/co/PMD_0000882 #phase boundary
 https://w3id.org/pmd/co/PMD_0000777 #heat capacity
 https://w3id.org/pmd/co/PMD_0000949 #stiffness
 https://w3id.org/pmd/co/PMD_0000577 #composite material
+https://w3id.org/pmd/co/PMD_0000008 #process attribute
+https://w3id.org/pmd/co/PMD_0000075 #mold
+https://w3id.org/pmd/co/PMD_0000618 #elastic modulus
+https://w3id.org/pmd/co/PMD_0000794 #injection molding machine
+https://w3id.org/pmd/co/PMD_0000888 #polymer
+https://w3id.org/pmd/co/PMD_0000933 #simulation process
+https://w3id.org/pmd/co/PMD_0000981 #thermal property
+https://w3id.org/pmd/co/PMD_0020001 #filler role
+https://w3id.org/pmd/co/PMD_0020143 #process chain
+https://w3id.org/pmd/co/PMD_0025001 #composition
+https://w3id.org/pmd/co/PMD_0040001 #length
+https://w3id.org/pmd/co/PMD_0200002 #injection molding
+http://purl.obolibrary.org/obo/BFO_0000015 #process
+http://purl.obolibrary.org/obo/BFO_0000016 #disposition
+http://purl.obolibrary.org/obo/BFO_0000017 #realizable entity
+http://purl.obolibrary.org/obo/BFO_0000019 #quality
+http://purl.obolibrary.org/obo/BFO_0000029 #site
+http://purl.obolibrary.org/obo/BFO_0000030 #object
+http://purl.obolibrary.org/obo/IAO_0000010 #software
+http://purl.obolibrary.org/obo/IAO_0000027 #data item
+http://purl.obolibrary.org/obo/IAO_0000030 #information content entity
+http://purl.obolibrary.org/obo/IAO_0000033 #directive information entity
+http://purl.obolibrary.org/obo/IAO_0000104 #plan specification
+http://purl.obolibrary.org/obo/IAO_0000310 #document
+http://purl.obolibrary.org/obo/OBI_0000571 #manufacturer role
+http://purl.obolibrary.org/obo/OBI_0001933 #value specification

@@ -30,17 +30,34 @@ Import(<https://w3id.org/pmd/automatce/components/imports-edit.owl>)
 Import(<https://w3id.org/pmd/automatce/imports/logo_import.owl>)
 Import(<https://w3id.org/pmd/automatce/imports/pmdco_import.owl>)
 Import(<https://w3id.org/pmd/automatce/imports/tto_import.owl>)
-Annotation(dcterms:description "PMD Core application ontology generated via ODK Template.
-")
+Annotation(dcterms:contributor <https://orcid.org/0000-0003-0473-0070>)
+Annotation(dcterms:contributor <https://orcid.org/0000-0003-0744-8855>)
+Annotation(dcterms:contributor <https://orcid.org/0009-0003-1503-4422>)
+Annotation(dcterms:contributor <https://orcid.org/0009-0007-7468-3544>)
+Annotation(dcterms:creator <https://orcid.org/0000-0003-0473-0070>)
+Annotation(dcterms:creator <https://orcid.org/0000-0003-0744-8855>)
+Annotation(dcterms:creator <https://orcid.org/0009-0003-1503-4422>)
+Annotation(dcterms:creator <https://orcid.org/0009-0007-7468-3544>)
+Annotation(dcterms:description "Application ontology for automotive circular-economy product, material, sustainability, usage, dismantling, engineering and transactional data aligned to PMDCore and BFO 2020.")
 Annotation(dcterms:license <https://w3id.org/pmd/automatce.owl#CC-BY-4.0>)
 Annotation(dcterms:title "Automotive Circular Economy Ontology")
 
+Declaration(AnnotationProperty(dcterms:contributor))
+Declaration(AnnotationProperty(dcterms:creator))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
 ############################
 #   Annotation Properties
 ############################
+
+# Annotation Property: dcterms:contributor (contributor)
+
+AnnotationAssertion(rdfs:label dcterms:contributor "contributor")
+
+# Annotation Property: dcterms:creator (creator)
+
+AnnotationAssertion(rdfs:label dcterms:creator "creator")
 
 # Annotation Property: dcterms:description (description)
 

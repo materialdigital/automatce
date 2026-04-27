@@ -3,8 +3,32 @@
     "id" : "https://w3id.org/pmd/automatce.json",
     "meta" : {
       "basicPropertyValues" : [ {
+        "pred" : "http://purl.org/dc/terms/contributor",
+        "val" : "https://orcid.org/0000-0003-0473-0070"
+      }, {
+        "pred" : "http://purl.org/dc/terms/contributor",
+        "val" : "https://orcid.org/0000-0003-0744-8855"
+      }, {
+        "pred" : "http://purl.org/dc/terms/contributor",
+        "val" : "https://orcid.org/0009-0003-1503-4422"
+      }, {
+        "pred" : "http://purl.org/dc/terms/contributor",
+        "val" : "https://orcid.org/0009-0007-7468-3544"
+      }, {
+        "pred" : "http://purl.org/dc/terms/creator",
+        "val" : "https://orcid.org/0000-0003-0473-0070"
+      }, {
+        "pred" : "http://purl.org/dc/terms/creator",
+        "val" : "https://orcid.org/0000-0003-0744-8855"
+      }, {
+        "pred" : "http://purl.org/dc/terms/creator",
+        "val" : "https://orcid.org/0009-0003-1503-4422"
+      }, {
+        "pred" : "http://purl.org/dc/terms/creator",
+        "val" : "https://orcid.org/0009-0007-7468-3544"
+      }, {
         "pred" : "http://purl.org/dc/terms/description",
-        "val" : "PMD Core application ontology generated via ODK Template.\n"
+        "val" : "Application ontology for automotive circular-economy product, material, sustainability, usage, dismantling, engineering and transactional data aligned to PMDCore and BFO 2020."
       }, {
         "pred" : "http://purl.org/dc/terms/license",
         "val" : "https://w3id.org/pmd/automatce.owl#CC-BY-4.0"
@@ -13,9 +37,9 @@
         "val" : "Automotive Circular Economy Ontology"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-01-27"
+        "val" : "2026-04-24"
       } ],
-      "version" : "https://w3id.org/pmd/automatce/releases/2026-01-27/automatce.json"
+      "version" : "https://w3id.org/pmd/automatce/releases/2026-04-24/automatce.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000001",
@@ -151,6 +175,19 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000024",
+      "lbl" : "fiat object part",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "(Elucidation) A fiat object part b is a material entity & such that if b exists then it is continuant part of some object c & demarcated from the remainder of c by one or more fiat surfaces"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The upper and lower lobes of the left lung; the dorsal and ventral surfaces of the body; the Western hemisphere of the Earth; the FMA:regional parts of an intact human body"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000027",
       "lbl" : "object aggregate",
       "type" : "CLASS",
@@ -161,6 +198,19 @@
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#example",
           "val" : "The aggregate of the musicians in a symphony orchestra and their instruments; the aggregate of bearings in a constant velocity axle joint; the nitrogen atoms in the atmosphere; a collection of cells in a blood biobank"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000029",
+      "lbl" : "site",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "(Elucidation) A site is a three-dimensional immaterial entity whose boundaries either (partially or wholly) coincide with the boundaries of one or more material entities or have locations determined in relation to some material entity"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A hole in a portion of cheese; a rabbit hole; the Grand Canyon; the Piazza San Marco; the kangaroo-joey-containing hole of a kangaroo pouch; your left nostril (a fiat part - the opening - of your left nasal cavity); the lumen of your gut; the hold of a ship; the interior of the trunk of your car; hole in an engineered floor joist"
         } ]
       }
     }, {
@@ -216,6 +266,19 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000141",
+      "lbl" : "immaterial entity",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "b is an immaterial entity =Def b is an independent continuant which is such that there is no time t when it has a material entity as continuant part"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "As for fiat point, fiat line, fiat surface, site"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000145",
       "lbl" : "relational quality",
       "type" : "CLASS",
@@ -244,6 +307,15 @@
       "meta" : {
         "definition" : {
           "val" : "A directive information entity that describes an action the bearer will take."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000010",
+      "lbl" : "software",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Software is a plan specification composed of a series of instructions that can be \ninterpreted by or directly executed by a processing unit."
         }
       }
     }, {
@@ -301,6 +373,33 @@
         }
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000310",
+      "lbl" : "document",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A collection of information content entities intended to be understood together as a whole"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000311",
+      "lbl" : "publication",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A document that is the output of a publishing process."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000444",
+      "lbl" : "publishing process",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A planned process of making information, such as literature, music, and software etc., available to the public for sale or for free."
+        }
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0020000",
       "lbl" : "identifier",
       "type" : "CLASS",
@@ -318,6 +417,10 @@
           "val" : "A planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity."
         }
       }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "lbl" : "homo sapiens",
+      "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/OBI_0000011",
       "lbl" : "planned process",
@@ -343,6 +446,33 @@
       "meta" : {
         "definition" : {
           "val" : "A planned process that has the objective to produce information about a material entity (the evaluant) by examining it."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000245",
+      "lbl" : "organization",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An entity that can bear roles, has members, and has a set of organization rules. Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000571",
+      "lbl" : "manufacturer role",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Manufacturer role is a role which inheres in a person or organization and which is realized by a manufacturing process."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000835",
+      "lbl" : "manufacturer",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A person or organization that has a manufacturer role."
         }
       }
     }, {
@@ -684,20 +814,6 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000024",
-      "lbl" : "mold",
-      "type" : "CLASS",
-      "meta" : {
-        "comments" : [ "The tool that imparts the shape to the engineered material during the primary shaping process." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A hollowed-out block that is filled with a liquid or pliable material like plastic, glass, metal, or ceramic raw material."
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#example",
-          "val" : "Injection mold for a dashboard panel."
-        } ]
-      }
-    }, {
       "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000025",
       "lbl" : "shear viscosity",
       "type" : "CLASS",
@@ -819,6 +935,1622 @@
         } ]
       }
     }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010000",
+      "lbl" : "raw material",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Whether a material is raw material depends on its participation in a particular production or recycling workflow." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A material entity that is intended to be consumed, transformed, or incorporated as input in a manufacturing, recycling, or material processing process."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "PA66 pellets supplied to an injection molding process as input material."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010001",
+      "lbl" : "additive",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "This class represents the additive material itself; the context-dependent function is represented by additive role." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An engineered material intentionally incorporated in a base material in a comparatively small amount to modify processing behavior, performance properties, appearance, or cost."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A UV stabilizer added to an exterior polymer trim material."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010002",
+      "lbl" : "matrix",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "The corresponding realizable entity is PMD Core matrix role; this class is used for material entities considered as the continuous phase of a composite." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An engineered material that forms the continuous phase of a composite material and binds or embeds reinforcement, filler, or dispersed material constituents."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The PA66 phase in a PA66-GF25 composite."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010003",
+      "lbl" : "water absorption",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Values are normally reported for specified test conditions, such as ISO 62 or a specified conditioning atmosphere." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A disposition of a material to take up water from a liquid water or humid environment under specified exposure conditions."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The percentage mass increase of a polyamide specimen after immersion in water."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010004",
+      "lbl" : "materials information",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An information content entity that specifies material-related characteristics of a product, component, material batch, or material grade."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A data record listing material designation, density, fiber content, and recycled content for an automotive component."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010005",
+      "lbl" : "material composition",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A composition that describes the material constituents and constituent amounts of a product, component, material batch, or material grade."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A composition stating that PA66-GF25 contains a PA66 matrix and nominally 25 percent glass fiber by mass."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010006",
+      "lbl" : "recycled material",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "This class covers material entities whose origin is a recycling process; the amount or share of recycled content should be represented separately." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A material entity that has been recovered from waste, discarded products, by-products, or production residues through a recycling process for subsequent use."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Regranulated polypropylene produced from end-of-life vehicle parts."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010007",
+      "lbl" : "recycled",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Use for the origin state of a material; use recycled material share for quantities or proportions." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A quality of a material entity indicating that the material has an origin in a recycling process rather than only in primary material production."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A recycled quality borne by a polymer regrind used in a new injection molding batch."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010020",
+      "lbl" : "product footprint",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A realizable entity representing the environmental, carbon, material, or resource footprint associated with a product over a stated scope."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A product footprint report for an alternator covering cradle-to-gate carbon emissions and recycled material content."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010021",
+      "lbl" : "recycled material share",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "The glossary spelling 'recylced material share' was normalized to 'recycled material share'." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A relational quality that relates a material, component, or product to the proportion of its material content that originates from recycled sources."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A bumper fascia with 30 percent recycled polypropylene content."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022",
+      "lbl" : "product carbon footprint",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A product footprint that reports greenhouse gas emissions associated with a product over a stated lifecycle scope."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A product carbon footprint in kg CO2 equivalent for one steering system."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010023",
+      "lbl" : "process footprint",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A process attribute that quantifies environmental burden associated with executing a process under specified boundary conditions."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Electricity consumption and associated emissions for one injection molding cycle."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010024",
+      "lbl" : "process carbon footprint",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A process footprint that quantifies greenhouse gas emissions associated with executing a process."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The carbon footprint of recycling one kilogram of PA66-GF25 scrap."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010025",
+      "lbl" : "lifecycle",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A process chain that comprises the stages through which a product or material passes from raw material acquisition through production, use, and end-of-life treatment."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The lifecycle of an automotive control unit from material extraction to recycling."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010026",
+      "lbl" : "lifecycle stage",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A process that is a distinguishable part of a product or material lifecycle."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Main product production as a lifecycle stage for an automotive component."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010027",
+      "lbl" : "raw material acquisition",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "The glossary spelling 'raw material acquistion' was normalized to 'raw material acquisition'." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A lifecycle stage in which natural resources, secondary materials, or basic feedstocks are obtained and prepared for production."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Obtaining recycled polymer regranulate for later component production."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010028",
+      "lbl" : "main product production",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A lifecycle stage in which raw materials, intermediate products, or components are transformed into the main product."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Injection molding and assembly steps used to produce an automotive housing."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010029",
+      "lbl" : "distribution",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A lifecycle stage in which products, components, or materials are transported, stored, or transferred between supply chain actors."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Shipment of remanufactured components from a supplier to a vehicle manufacturer."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010030",
+      "lbl" : "end of life",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A lifecycle stage in which a product or component has reached the end of its intended use and is directed to reuse, remanufacturing, recycling, recovery, or disposal."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Removal of a component from an end-of-life vehicle for circular value assessment."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010031",
+      "lbl" : "recycling lifecycle stage",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A lifecycle stage in which used materials or products are processed to recover material for further use."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Grinding, sorting, and regranulating a polymer component after dismantling."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032",
+      "lbl" : "carbon footprint amount",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A product carbon footprint that quantifies a greenhouse gas emission burden as a carbon dioxide equivalent amount for a stated product, process, or scenario."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "12.4 kg CO2 equivalent for a selected reuse scenario."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010033",
+      "lbl" : "carbon footprint amount in recycling",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A carbon footprint amount calculated for a recycling scenario."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The kg CO2 equivalent attributed to recycling a dismantled component."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010034",
+      "lbl" : "carbon footprint amount in remanufacturing",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A carbon footprint amount calculated for a remanufacturing scenario."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The kg CO2 equivalent attributed to inspecting, repairing, and remanufacturing a component."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010035",
+      "lbl" : "carbon footprint amount in reuse",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A carbon footprint amount calculated for a reuse scenario."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The kg CO2 equivalent attributed to checking and reusing a component without remanufacturing."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010036",
+      "lbl" : "carbon footprint amount in new production",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A carbon footprint amount calculated for a new production scenario."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The kg CO2 equivalent attributed to manufacturing a replacement component from primary material."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010040",
+      "lbl" : "humidity absorption",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A disposition of a material or component to absorb water vapor from a humid environment under specified exposure conditions."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Moisture uptake by a PA66 component during use at 50 percent relative humidity."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010050",
+      "lbl" : "remaining lifetime",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A realizable entity representing the usable lifetime expected to remain for a product or component before it no longer satisfies its intended function or circular value criteria."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "An alternator estimated to have 24 months of usable service life remaining after inspection."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010051",
+      "lbl" : "actual lifetime",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A realizable entity representing the observed elapsed lifetime of a product or component up to a stated lifecycle event."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The time between first vehicle registration and dismantling of a component."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010052",
+      "lbl" : "non-destructive dismantlability",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "The glossary spelling 'Non-destructive Distmantlability' was normalized to 'non-destructive dismantlability'." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A disposition of a product or component to be dismantled without destroying the product, component, or material portions that are intended for later use."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A clipped interior trim part that can be removed intact for reuse."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010053",
+      "lbl" : "safety information",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A directive information entity that specifies safety-relevant instructions, warnings, or constraints for handling, dismantling, treating, transporting, or reusing a product or component."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A warning to disconnect a high-voltage battery before dismantling a component."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010054",
+      "lbl" : "recycling",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A process in which used materials, components, or products are collected and processed to recover material for further use."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Sorting and regranulating polymer parts from an end-of-life vehicle."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010055",
+      "lbl" : "dismantling",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A process in which a product or component is taken apart so that parts, materials, or information can be recovered, assessed, reused, repaired, remanufactured, recycled, or disposed."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Removing a vehicle door module from an end-of-life vehicle before quality assessment."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010056",
+      "lbl" : "dismantling guideline for recycling",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A plan specification that provides instructions for dismantling a product or component so that materials can be routed to appropriate recycling treatment."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A guideline specifying how to separate a polymer housing from attached metal inserts before recycling."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010057",
+      "lbl" : "recycling material quality",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A disposition of a product or material to be recycled while preserving a specified level of material quality."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A polymer component designed so that the recovered polymer remains suitable for automotive applications."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010058",
+      "lbl" : "recycling availability",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A disposition of a product, component, or material to be practically available for recycling in a technical cycle."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A component whose material can be separated and accepted by an established recycling route."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010059",
+      "lbl" : "dismantling instructions",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A plan specification that describes the actions, order, tools, and constraints for safely and correctly dismantling a product or component."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Stepwise instructions for removing a battery module from a vehicle."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010060",
+      "lbl" : "dismantlability",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A disposition of a product or component to be dismantled under stated technical, safety, time, and damage constraints."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A bolted assembly has higher dismantlability than an inseparably bonded assembly when reuse is intended."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010061",
+      "lbl" : "average dismantling time",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A realizable entity representing the estimated average time required to dismantle a product or component under specified conditions."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "An average dismantling time of 12 minutes for removal of a door module."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010062",
+      "lbl" : "treatment technique",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A process used to treat a dismantled component, product, or material after removal from its original assembly."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Mechanical shredding, cleaning, or material separation applied after dismantling."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010063",
+      "lbl" : "best treatment techniques",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An information content entity that recommends preferred treatment techniques for a dismantled product, component, or material in a given circular economy scenario."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A recommendation to remove electronics before shredding a polymer-rich component."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010064",
+      "lbl" : "disassembly software",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "Software used to support, guide, document, or validate the disassembly or dismantling of a product or component."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A workshop application that displays product-specific disassembly instructions."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010065",
+      "lbl" : "disassembly tool",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A device used to carry out a disassembly or dismantling operation on a product or component."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A puller tool used to remove a clipped trim component without damage."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010066",
+      "lbl" : "fastening technique",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A plan specification that describes how parts are joined, fixed, or released in an assembly."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A specification that a housing is fastened with Torx screws and snap-fit clips."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010067",
+      "lbl" : "dismantling sequence",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A plan specification that orders the steps required to dismantle a product or component."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Remove cover, disconnect cable, release clips, and lift out module."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010068",
+      "lbl" : "exploding diagram",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A document or figure that depicts a product or assembly with parts spatially separated to show their relative positions and dismantling relationships."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "An exploded-view diagram showing screws, clips, housing shells, and subcomponents of a control unit."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010069",
+      "lbl" : "sub-group name",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An identifier that records the name of a material sub-group in a material classification scheme."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The VDA 231-106 sub-group name 'cast aluminium alloys'."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010070",
+      "lbl" : "sub-group identifier",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An identifier that records the code or number of a material sub-group in a material classification scheme."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The VDA 231-106 sub-group code '2.1.1'."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010071",
+      "lbl" : "main group name",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An identifier that records the name of a material main group in a material classification scheme."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The VDA 231-106 main group name 'polymer materials'."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010072",
+      "lbl" : "main group identifier",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An identifier that records the code or number of a material main group in a material classification scheme."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The VDA 231-106 main group code '5'."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010073",
+      "lbl" : "reuse",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A process in which a discarded or removed product or component is used again while retaining its original function."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A dismantled and inspected body control module installed in another vehicle."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010074",
+      "lbl" : "product quality",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A disposition of a product or component to satisfy requirements for an intended circular economy route, based on relevant condition, completeness, functional, and standard-based criteria."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A reused body part assigned a quality class after inspection for dents, corrosion, paint damage, and completeness."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010075",
+      "lbl" : "necessary test protocols equipment",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A disposition of a product or component to require specific test protocols or uncommon equipment before it can be accepted for reuse, repair, remanufacturing, or recycling."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A high-voltage component requiring insulation resistance testing before reuse."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010076",
+      "lbl" : "reusability",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A disposition of a product or component to be reused in its original function under stated technical, legal, safety, and quality constraints."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A complete undamaged headlamp assembly that can be installed as a replacement part."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010077",
+      "lbl" : "quality body parts",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A quality of a body part component that characterizes its externally relevant condition, such as paint damage, dents, corrosion, and component-specific defects."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A door panel quality assessment based on dents and paint scratches."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010078",
+      "lbl" : "quality grade",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A quality that records the grade assigned to a product or component according to a stated quality standard or assessment scheme."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A, B, or C quality grade assigned to a used car part."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010079",
+      "lbl" : "completeness",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A quality of a product or component indicating whether required subcomponents, fasteners, interfaces, or accessories are present."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A mirror assembly assessed as complete because housing, glass, wiring, and mounting clips are present."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010080",
+      "lbl" : "used quality standard",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A plan specification that defines the quality assessment criteria applied to a reused, repaired, remanufactured, or recycled product or component."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "VDI 4080 used as the assessment standard for reuse quality."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010081",
+      "lbl" : "mounting point integrity",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A quality of a product or component indicating whether its mounting points, clips, tabs, or attachment features are intact and functional."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A bumper bracket with all mounting tabs undamaged."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010082",
+      "lbl" : "surface cleanliness",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A quality of a product, component, or material surface indicating the degree to which it is free from oil, dust, residues, and other contaminants."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A cleaned polymer surface acceptable for adhesive bonding during reuse preparation."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010083",
+      "lbl" : "repair time",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A temporal quality that estimates or records the time required to repair a specified damage or defect on a product or component."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The time needed to repair a paint scratch and small dent on a door panel."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010084",
+      "lbl" : "crack count",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A quality that records the number of cracks observed on a product, component, coating, or material surface."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Two cracks recorded in the paint layer during dismantling inspection."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010085",
+      "lbl" : "dent damage",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A quality of a sheet metal or body component indicating the presence or extent of dents or deformations that impair the component shape."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A quarter panel with two visible dents after vehicle use."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010086",
+      "lbl" : "damage area",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A quality that quantifies the surface area of visible damage on a product, component, coating, or material surface."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A paint damage area of 50 square centimeters on a door panel."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010087",
+      "lbl" : "paint damage",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A quality of a painted product or component indicating damage to the paintwork, such as scratches, chips, cracks, or coating loss."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Stone-chip damage on a painted bumper cover."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010088",
+      "lbl" : "vehicle identification number",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An identifier assigned to a vehicle according to a vehicle identification number scheme and used to identify the individual vehicle."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A 17-character VIN read from a vehicle during dismantling intake."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010090",
+      "lbl" : "manufacturer name",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An identifier that records the name by which a manufacturer is referred to in a data exchange, contract, product record, or manufacturer system."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The manufacturer name 'Schaeffler' in a supplier record."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010091",
+      "lbl" : "manufacturer plant site",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A site at which a manufacturer carries out production, assembly, treatment, storage, or related industrial operations."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A specific plant where a material batch or component was produced."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010092",
+      "lbl" : "CX business partner number",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "This is modeled as a Catena-X-specific subtype of the existing business partner number class." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A business partner number used in Catena-X to identify a legal entity, site, or address participating in automotive data exchange."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A Catena-X BPNL identifier for a supplier legal entity."
+        }, {
+          "pred" : "https://w3id.org/pmd/co/PMD_0050117",
+          "val" : "BPN"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010093",
+      "lbl" : "VIN",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An identifier assigned to an individual vehicle according to a vehicle identification number scheme."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A 17-character vehicle identification number used in a dismantling record."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010094",
+      "lbl" : "vehicle model",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An identifier that records the model designation of a vehicle type as defined by a manufacturer."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A manufacturer-specific vehicle model name used in a product data record."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010095",
+      "lbl" : "component information",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An information content entity that aggregates identifiers, specifications, usage data, condition data, or circular economy information about a component."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A component record containing part number, material designation, mileage, and reuse assessment."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010096",
+      "lbl" : "mileage of the component",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A quality that quantifies the travel distance accumulated by a component during use in a vehicle."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A used alternator recorded with 125000 km of component mileage."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010097",
+      "lbl" : "component age",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A temporal quality that quantifies elapsed time since a component was produced, commissioned, installed, or first used, according to a stated reference event."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A component age of six years measured from vehicle production date to dismantling date."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010098",
+      "lbl" : "year of construction",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A date value specification that records the calendar year in which a product, component, vehicle, or facility was constructed or manufactured."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The year 2019 recorded as the construction year of a vehicle."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010100",
+      "lbl" : "environmental condition",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A quality of an environment that is relevant to material behavior, processing, testing, storage, use, or degradation."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A conditioning atmosphere with specified temperature and relative humidity."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010101",
+      "lbl" : "filler",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "The role borne by such a material in a composite is PMD Core filler role." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An engineered material incorporated in another material to occupy volume, modify properties, reduce cost, or contribute reinforcement in a composite or compound."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Glass fibers or mineral particles added to a polymer compound."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010102",
+      "lbl" : "reinforcement",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "The Excel hint to PMD Core filler role was modeled as a material class here because the glossary term names the reinforcing material, not only the role." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A filler material that is incorporated into a matrix material to improve load-bearing, stiffness, strength, impact, or dimensional performance."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Chopped glass fiber used as reinforcement in PA66-GF25."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010103",
+      "lbl" : "further content",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A composition data item that records additional material constituents or content fractions not captured by the primary material composition fields."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A data item recording minor additive content in a polymer compound."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010104",
+      "lbl" : "water content",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "The Excel source references ISO 15512 for plastics water content measurement." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A mass proportion that quantifies the amount of water contained in a material under specified measurement or conditioning conditions."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Water content of a polyamide granulate measured before injection molding."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010105",
+      "lbl" : "ash content",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "The Excel source references ISO 3451 for ash content, often used to estimate inorganic filler content." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A mass proportion that quantifies the inorganic residue remaining after controlled combustion or calcination of a material sample."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Ash content used to estimate glass fiber or mineral filler content in a polymer compound."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010106",
+      "lbl" : "material class",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An information content entity that assigns a material, component, or product to a material category in a stated classification scheme."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A VDA 231-106 material class assignment for polymer materials."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010107",
+      "lbl" : "material abbreviation",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An identifier that records a short material designation or abbreviation used for a material or material family."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "PA66-GF25 as an abbreviated designation for a glass-fiber-reinforced polyamide 66 compound."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010108",
+      "lbl" : "manufacturing simulation",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A simulation process that represents a manufacturing process and its material, process, geometry, or performance consequences."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A simulation of an injection molding process used to predict filling and cooling behavior."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010109",
+      "lbl" : "injection molding simulation",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A manufacturing simulation that represents an injection molding process, including relevant material, mold, filling, packing, cooling, or warpage behavior."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A mold-filling simulation for a PA66-GF25 housing."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010110",
+      "lbl" : "quasistatic simulation",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A simulation process that represents material or component response under loading conditions where inertial effects are negligible."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A quasistatic finite element simulation of a bracket under service load."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010111",
+      "lbl" : "thermal simulation",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A simulation process that represents heat transfer, temperature distribution, or thermally induced material behavior."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A cooling simulation for an injection molded component."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010112",
+      "lbl" : "quasistatic stress normal",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A strength-related material or simulation output quality that represents stress normal to a reference direction under quasistatic loading."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Normal stress predicted by a quasistatic simulation perpendicular to fiber orientation."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010113",
+      "lbl" : "quasistatic stress parallel",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A strength-related material or simulation output quality that represents stress parallel to a reference direction under quasistatic loading."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Stress predicted parallel to fiber orientation in a quasistatic simulation."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010114",
+      "lbl" : "quasistatic strain normal",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A mechanical property or simulation output quality that represents strain normal to a reference direction under quasistatic loading."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Normal strain predicted perpendicular to fiber orientation in a quasistatic simulation."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010115",
+      "lbl" : "quasistatic strain parallel",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A mechanical property or simulation output quality that represents strain parallel to a reference direction under quasistatic loading."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Strain predicted parallel to fiber orientation in a quasistatic simulation."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010116",
+      "lbl" : "elongation expansion normal",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A length-related quality or simulation output that represents elongation or expansion normal to a reference direction."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Thermal expansion normal to fiber orientation in a molded composite."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010117",
+      "lbl" : "elongation expansion parallel",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A length-related quality or simulation output that represents elongation or expansion parallel to a reference direction."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Thermal expansion parallel to fiber orientation in a molded composite."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010118",
+      "lbl" : "length of fibers",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A length quality that quantifies the characteristic or measured length of fibers in a fiber-containing material."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Mean glass fiber length after injection molding of PA66-GF25."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010119",
+      "lbl" : "reutilization material share",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A mass proportion that quantifies the share of material from rework, regrind, or scrap that is reused within the process or production system that generated it."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The percentage of in-process regrind returned to an injection molding feedstock."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010120",
+      "lbl" : "origin",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An information content entity that records the source category, provenance, or supply-chain origin of a material."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "An origin statement that a polymer fraction is post-consumer automotive recycled material."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010121",
+      "lbl" : "pre-consumer material share",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A mass proportion that quantifies material content originating from pre-consumer production residues, by-products, rework, or scrap."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The share of molding scrap reused before the product reached a consumer."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010122",
+      "lbl" : "post-consumer material share",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A mass proportion that quantifies material content originating from products or materials recovered after consumer or user service."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The share of polypropylene recovered from end-of-life vehicle parts."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010123",
+      "lbl" : "material source share",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A mass proportion that quantifies the share of material from a stated source category, such as primary, secondary, pre-consumer, post-consumer, automotive, or non-automotive sources."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A material source share for secondary automotive recycled content."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010124",
+      "lbl" : "other recycling information",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A document or information content entity that provides additional evidence, provenance, compliance, or quality information about material origin or recycling."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A supplier declaration documenting recycled material origin and quality."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010125",
+      "lbl" : "automotive material share",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A mass proportion that quantifies the share of material content originating from automotive sources."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The fraction of recycled polymer sourced from end-of-life vehicle components."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010126",
+      "lbl" : "non-automotive material share",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A mass proportion that quantifies the share of material content originating from non-automotive sources."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The fraction of recycled polymer sourced from consumer packaging rather than vehicle components."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010127",
+      "lbl" : "secondary material",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A material entity obtained from waste, by-products, production residues, or recovered products and intended to substitute for primary material in a production process."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A recycled polymer regranulate used as feedstock for a new automotive component."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010128",
+      "lbl" : "primary material",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A material entity produced from virgin raw resources and used for the first time in a production process."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Virgin PA66 resin produced from primary chemical feedstocks."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010129",
+      "lbl" : "physical dimension",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A quality that characterizes a physical extent or dimensional feature of a material entity, product, component, or geometric feature."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Length, width, thickness, or diameter used to characterize an automotive component."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010130",
+      "lbl" : "injection molding process",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An injection molding process in which plasticized material is injected into a mold cavity, held under pressure, cooled or solidified, and ejected as a shaped part."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Injection molding of a PA66-GF25 connector housing."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010131",
+      "lbl" : "Young's modulus",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An elastic modulus that quantifies the ratio of uniaxial stress to uniaxial strain in the linear elastic region of a material response."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Young's modulus measured from a tensile test of a glass-fiber-reinforced polyamide specimen."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010140",
+      "lbl" : "unusual properties",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A data item that records noteworthy, unexpected, or abnormal properties observed for a component during use, inspection, dismantling, or circular economy assessment."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A note that a component shows unusual discoloration or deformation compared with its expected state."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010141",
+      "lbl" : "actual dismantling time",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A realizable entity representing the observed time required to dismantle a product, vehicle, or component in a specific dismantling event."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The measured time in minutes to remove a component from an end-of-life vehicle."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010142",
+      "lbl" : "reason for selected R-strategy",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An information content entity that states the rationale for selecting a reuse, repair, remanufacturing, recycling, recovery, or disposal strategy for a product or component."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A reason stating that reuse was rejected because mounting points were broken."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010143",
+      "lbl" : "selected R-strategy",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A directive information entity that specifies the circular economy strategy selected for a product or component."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A selected strategy of reuse, recycling, or remanufacturing for a dismantled component."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010144",
+      "lbl" : "actual dismantlability",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A disposition assessment that records how dismantlable a product or component was in an observed dismantling event."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "An actual dismantlability assessment from a dismantler after removing a door module."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010145",
+      "lbl" : "actual footprint of chosen R-strategy",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A carbon footprint amount that records the observed or calculated carbon dioxide equivalent burden of the selected circular economy strategy for a component."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The kg CO2 equivalent resulting from choosing reuse for a dismantled component."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010146",
+      "lbl" : "vehicle condition",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A quality of a vehicle that characterizes its observed state relevant to use, dismantling, reuse, repair, recycling, or valuation."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A vehicle condition assessment recorded at dismantling intake."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010147",
+      "lbl" : "drive type",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A quality of a vehicle that classifies its propulsion architecture or drive configuration."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Battery electric drive, hybrid drive, or combustion engine drive."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010148",
+      "lbl" : "empty weight",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A mass quality that quantifies the weight of a vehicle without load under the stated specification conditions."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The empty weight in kilograms from vehicle documentation."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010149",
+      "lbl" : "vehicle type",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A quality of a vehicle that classifies the vehicle according to its design, construction, or intended purpose."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Passenger car, light commercial vehicle, or heavy truck."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010150",
+      "lbl" : "corrosion",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A quality of a material, component, or surface indicating degradation by chemical or electrochemical reaction with its environment."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Rust on a steel mounting bracket observed during dismantling."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010160",
+      "lbl" : "model identifier",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An identifier assigned by an original equipment manufacturer to a vehicle model, vehicle project, or model variant."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "An OEM project code used to identify a vehicle model in product data."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010161",
+      "lbl" : "vehicle series",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An identifier that records the vehicle series or platform series associated with a vehicle model or component."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A vehicle series code used in dismantling or parts identification data."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010162",
+      "lbl" : "OEM",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A manufacturer role borne by an organization that designs or produces the original vehicle, component, or system for which circular economy data is recorded."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A vehicle manufacturer acting as original equipment manufacturer for a vehicle series."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010163",
+      "lbl" : "production date",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A date value specification that records when a vehicle, component, product, or material batch was produced."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The production date of a vehicle read from manufacturer records."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010164",
+      "lbl" : "anonymized VIN",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An identifier derived from a vehicle identification number by anonymization or hashing so that the vehicle can be linked across records without exposing the original VIN."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A hashed VIN used in circular economy data exchange."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010165",
+      "lbl" : "name at manufacturer",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An identifier or designation by which a manufacturer names a material grade, product line, component, or product in its own records or commercial communication."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A manufacturer trade name such as Ultradur, Zytel, or Grilamid."
+        } ]
+      }
+    }, {
       "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030000",
       "lbl" : "melt temperature",
       "type" : "CLASS",
@@ -926,6 +2658,33 @@
         } ]
       }
     }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000008",
+      "lbl" : "process attribute",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Process attribute for a process has a similar application to specifically dependened continuant (SDC) for an independent continuant (IC). Furthermore, process attribute describes how SDCs of some participants, i.e., ICs, change in a process. \n\nSpecific rates, e.g., tensile rate, cooling rate, etc. should be added as  subclasses of this class." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#altLabel",
+          "val" : "process characteristic"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "a process attribute is a dependent occurrent that existentially depends on a process."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Tensile rate in a tensile testing process. Cooling rate in a quenching process"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000075",
+      "lbl" : "mold device",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A form used to cast an object of a desired shape."
+        } ]
+      }
+    }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000503",
       "lbl" : "ASTM grainsize",
       "type" : "CLASS",
@@ -993,6 +2752,16 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "The application of (a) substance is the process of applying a material or substance to a surface or within a system."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000538",
+      "lbl" : "bulk",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "The bulk is a fiat object part that describes the volume or mass of material considered as a whole, often in contrast to surface or interface phenomena."
         } ]
       }
     }, {
@@ -1082,6 +2851,16 @@
         } ]
       }
     }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000618",
+      "lbl" : "elastic modulus",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An elastic modulus is a measure of a material's stiffness, defined as the ratio of stress to strain in the elastic deformation region."
+        } ]
+      }
+    }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000629",
       "lbl" : "emission of radiation",
       "type" : "CLASS",
@@ -1146,6 +2925,19 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "The heat capacity is a thermal property describing the amount of heat energy required to raise the temperature of a material by a given amount."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000794",
+      "lbl" : "injection molding machine",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An Injection Molding Machine is a Device used to produce plastic parts by injecting molten plastic into molds under high pressure."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "Eine Spritzgießmaschine ist ein Gerät, das verwendet wird, um Kunststoffteile durch Einspritzen von geschmolzenem Kunststoff in Formen unter hohem Druck herzustellen."
         } ]
       }
     }, {
@@ -1352,6 +3144,19 @@
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#example",
           "val" : "Thermoforming of plastic sheets."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000933",
+      "lbl" : "simulation process",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A Computing Process that models the behavior of a system over time using mathematical or computational techniques."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "Ein Datenverarbeitungsprozess, der das Verhalten eines Systems im Laufe der Zeit mit mathematischen oder rechnerischen Techniken modelliert"
         } ]
       }
     }, {
@@ -1575,6 +3380,36 @@
         } ]
       }
     }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020132",
+      "lbl" : "size",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "Size is the quality of a material entity that describes its spatial extend."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020143",
+      "lbl" : "process chain",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A process chain is a process that 'has contiuant part' subprocesses S1...Sn where S1...Sn precede each other and where some object or object aggregate that are output of Sn are then input to Sn+1."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020148",
+      "lbl" : "extensive quality",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An extensive quality is a qualty that inheres in only object or object aggregate or fiat object part or chemical entity and is dependent on the bearers (system-) size."
+        } ]
+      }
+    }, {
       "id" : "https://w3id.org/pmd/co/PMD_0025001",
       "lbl" : "composition",
       "type" : "CLASS",
@@ -1598,6 +3433,20 @@
         } ]
       }
     }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0040001",
+      "lbl" : "length",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Length is a size that describes the spacial extend of its bearer in one dimension." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#altLabel",
+          "val" : "dimension"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "Length is a one dimensional size."
+        } ]
+      }
+    }, {
       "id" : "https://w3id.org/pmd/co/PMD_0050004",
       "lbl" : "thermoplastics",
       "type" : "CLASS",
@@ -1605,6 +3454,31 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "A Thermoplastic is a Polymer that becomes moldable when heated and solidifies upon cooling."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0200002",
+      "lbl" : "injection molding",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/source",
+          "val" : "Official definition can be found in: DIN 8580, group 1.2.2 “Spritzgießen”."
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/source",
+          "val" : "Offizielle Definition findet man in: DIN 8580, Gruppe 1.2.2 „Spritzgießen“."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#altLabel",
+          "val" : "injection moulding; plastic injection molding"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A primary shaping process in which plastic granules are plasticised in an injection unit and the melt is injected under high pressure into a closed mold cavity, where it cools and solidifies to the final part shape."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "Urformverfahren, bei dem Kunststoffgranulat in einem Plastifizieraggregat aufgeschmolzen und die Schmelze mit hohem Druck in einen geschlossenen Formhohlraum eingespritzt wird, wo sie verdichtet, abkühlt und zum Formteil erstarrt."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Injection molding of polypropylene housings."
         } ]
       }
     }, {
@@ -3153,6 +5027,16 @@
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
+      "id" : "http://purl.org/dc/terms/contributor",
+      "lbl" : "contributor",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/creator",
+      "lbl" : "creator",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
       "id" : "http://purl.org/dc/terms/description",
       "lbl" : "description",
       "type" : "PROPERTY",
@@ -3256,9 +5140,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000024",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000027",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000029",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000141"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000030",
       "pred" : "is_a",
@@ -3276,6 +5168,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000141",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000145",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
@@ -3287,6 +5183,10 @@
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000007",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000033"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000010",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000104"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000027",
       "pred" : "is_a",
@@ -3328,6 +5228,18 @@
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000007"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000310",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000311",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000310"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000444",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0020000",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
@@ -3347,6 +5259,10 @@
       "sub" : "http://purl.obolibrary.org/obo/IAO_0020010",
       "pred" : "http://purl.obolibrary.org/obo/OBI_0000299",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0000011",
       "pred" : "is_a",
@@ -3371,6 +5287,22 @@
       "sub" : "http://purl.obolibrary.org/obo/OBI_0000070",
       "pred" : "http://purl.obolibrary.org/obo/OBI_0000417",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000005"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000245",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000571",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000023"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000835",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000835",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0000087",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000571"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0001930",
       "pred" : "is_a",
@@ -3468,10 +5400,6 @@
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0020131"
     }, {
-      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000024",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000030"
-    }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000025",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0020131"
@@ -3503,6 +5431,498 @@
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000032",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010000",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010001",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000002"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010002",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000002"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010003",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000016"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010004",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010005",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0025001"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010006",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010007",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010020",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010021",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000145"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010020"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010023",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000008"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010024",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010023"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010025",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020143"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010026",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010027",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010026"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010028",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010026"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010029",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010026"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010030",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010026"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010031",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010026"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010033",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010034",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010035",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010036",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010040",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000016"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010050",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010051",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010052",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000016"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010053",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000033"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010054",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010055",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010056",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000104"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010057",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000016"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010058",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000016"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010059",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000104"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010060",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000016"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010061",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010062",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010063",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010064",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000010"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010065",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000602"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010066",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000104"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010067",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000104"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010068",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000310"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010069",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010070",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010071",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010072",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010073",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010074",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000016"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010075",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000016"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010076",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000016"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010077",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010078",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010079",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010080",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000104"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010081",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010082",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010083",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010084",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010085",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010086",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010087",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010088",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010090",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010091",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000029"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010092",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000021"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010093",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010094",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010095",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010096",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010097",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010098",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0001933"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010100",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010101",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000002"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010102",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010101"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010103",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000027"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010104",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020102"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010105",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020102"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010106",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010107",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010108",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000933"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010109",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010108"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010110",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000933"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010111",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000933"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010112",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000952"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010113",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000952"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010114",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000848"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010115",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000848"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010116",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0040001"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010117",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0040001"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010118",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0040001"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010119",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020102"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010120",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010121",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020102"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010122",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020102"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010123",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020102"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010124",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000310"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010125",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020102"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010126",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020102"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010127",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010128",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010129",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010130",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0200002"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010131",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000618"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010140",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000027"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010141",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010142",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010143",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000033"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010144",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010060"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010145",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010146",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010147",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010148",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010149",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010150",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010160",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010161",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010162",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000571"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010163",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0001933"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010164",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010093"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010165",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030000",
       "pred" : "is_a",
@@ -3544,6 +5964,14 @@
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000054",
       "obj" : "https://w3id.org/pmd/co/PMD_0000950"
     }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000008",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000003"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000075",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000602"
+    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000503",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0020131"
@@ -3575,6 +6003,10 @@
       "sub" : "https://w3id.org/pmd/co/PMD_0000523",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000538",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000024"
     }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000549",
       "pred" : "is_a",
@@ -3608,6 +6040,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000030"
     }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000618",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000949"
+    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000629",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
@@ -3635,6 +6071,10 @@
       "sub" : "https://w3id.org/pmd/co/PMD_0000777",
       "pred" : "https://w3id.org/pmd/co/PMD_0001029",
       "obj" : "https://w3id.org/pmd/co/PMD_0000549"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000794",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000602"
     }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000802",
       "pred" : "is_a",
@@ -3719,6 +6159,10 @@
       "sub" : "https://w3id.org/pmd/co/PMD_0000907",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000899"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000933",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000583"
     }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000942",
       "pred" : "is_a",
@@ -3812,6 +6256,18 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
     }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020132",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020148"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020143",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020148",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0025001",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0020131"
@@ -3824,9 +6280,17 @@
       "pred" : "https://w3id.org/pmd/co/PMD_0000077",
       "obj" : "https://w3id.org/pmd/co/PMD_0020023"
     }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0040001",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020132"
+    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0050004",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000888"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0200002",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000907"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060001",
       "pred" : "type",

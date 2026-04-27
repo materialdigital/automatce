@@ -15,9 +15,9 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<https://w3id.org/pmd/automatce/imports/pmdco_import.owl>
-<https://w3id.org/pmd/automatce/releases/2026-01-27/imports/pmdco_import.owl>
+<https://w3id.org/pmd/automatce/releases/2026-04-24/imports/pmdco_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/pmd/co/3.0.0-rc2>)
-Annotation(owl:versionInfo "2026-01-27")
+Annotation(owl:versionInfo "2026-04-24")
 
 Declaration(Class(obo:BFO_0000001))
 Declaration(Class(obo:BFO_0000002))
@@ -29,31 +29,44 @@ Declaration(Class(obo:BFO_0000017))
 Declaration(Class(obo:BFO_0000019))
 Declaration(Class(obo:BFO_0000020))
 Declaration(Class(obo:BFO_0000023))
+Declaration(Class(obo:BFO_0000024))
 Declaration(Class(obo:BFO_0000027))
+Declaration(Class(obo:BFO_0000029))
 Declaration(Class(obo:BFO_0000030))
 Declaration(Class(obo:BFO_0000031))
 Declaration(Class(obo:BFO_0000034))
 Declaration(Class(obo:BFO_0000040))
+Declaration(Class(obo:BFO_0000141))
 Declaration(Class(obo:BFO_0000145))
 Declaration(Class(obo:IAO_0000005))
 Declaration(Class(obo:IAO_0000007))
+Declaration(Class(obo:IAO_0000010))
 Declaration(Class(obo:IAO_0000027))
 Declaration(Class(obo:IAO_0000030))
 Declaration(Class(obo:IAO_0000033))
 Declaration(Class(obo:IAO_0000078))
 Declaration(Class(obo:IAO_0000102))
 Declaration(Class(obo:IAO_0000104))
+Declaration(Class(obo:IAO_0000310))
+Declaration(Class(obo:IAO_0000311))
+Declaration(Class(obo:IAO_0000444))
 Declaration(Class(obo:IAO_0020000))
 Declaration(Class(obo:IAO_0020010))
+Declaration(Class(obo:NCBITaxon_9606))
 Declaration(Class(obo:OBI_0000011))
 Declaration(Class(obo:OBI_0000067))
 Declaration(Class(obo:OBI_0000070))
+Declaration(Class(obo:OBI_0000245))
+Declaration(Class(obo:OBI_0000571))
+Declaration(Class(obo:OBI_0000835))
 Declaration(Class(obo:OBI_0001930))
 Declaration(Class(obo:OBI_0001933))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000000>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000001>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000002>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000005>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000008>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000075>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000503>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000512>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000519>))
@@ -61,6 +74,7 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0000520>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000521>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000522>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000523>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000538>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000549>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000577>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000583>))
@@ -69,12 +83,14 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0000595>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000596>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000597>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000602>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000618>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000629>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000635>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000661>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000663>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000773>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000777>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000794>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000802>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000833>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000845>))
@@ -93,6 +109,7 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0000891>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000896>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000899>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000907>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000933>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000942>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000949>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000950>))
@@ -113,9 +130,14 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0020106>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020112>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020116>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020131>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020132>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020143>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020148>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025001>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025003>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0040001>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0050004>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0200002>))
 Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000051))
 Declaration(ObjectProperty(obo:BFO_0000054))
@@ -193,6 +215,8 @@ Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020124>))
 Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020125>))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
+Declaration(AnnotationProperty(dc:contributor))
+Declaration(AnnotationProperty(dc:creator))
 Declaration(AnnotationProperty(dc:description))
 Declaration(AnnotationProperty(dc:license))
 Declaration(AnnotationProperty(dc:title))
@@ -585,12 +609,26 @@ AnnotationAssertion(skos:definition obo:BFO_0000023 "(Elucidation) A role b is a
 AnnotationAssertion(skos:example obo:BFO_0000023 "The priest role; the student role; the role of subject in a clinical trial; the role of a stone in marking a property boundary; the role of a boundary to demarcate two neighbouring administrative territories; the role of a building in serving as a military target"@en)
 SubClassOf(obo:BFO_0000023 obo:BFO_0000017)
 
+# Class: obo:BFO_0000024 (fiat object part)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000024 "fiat object part"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000024 "(Elucidation) A fiat object part b is a material entity & such that if b exists then it is continuant part of some object c & demarcated from the remainder of c by one or more fiat surfaces"@en)
+AnnotationAssertion(skos:example obo:BFO_0000024 "The upper and lower lobes of the left lung; the dorsal and ventral surfaces of the body; the Western hemisphere of the Earth; the FMA:regional parts of an intact human body"@en)
+SubClassOf(obo:BFO_0000024 obo:BFO_0000040)
+
 # Class: obo:BFO_0000027 (object aggregate)
 
 AnnotationAssertion(rdfs:label obo:BFO_0000027 "object aggregate"@en)
 AnnotationAssertion(skos:definition obo:BFO_0000027 "(Elucidation) An object aggregate is a material entity consisting exactly of a plurality (≥1) of objects as member parts which together form a unit"@en)
 AnnotationAssertion(skos:example obo:BFO_0000027 "The aggregate of the musicians in a symphony orchestra and their instruments; the aggregate of bearings in a constant velocity axle joint; the nitrogen atoms in the atmosphere; a collection of cells in a blood biobank"@en)
 SubClassOf(obo:BFO_0000027 obo:BFO_0000040)
+
+# Class: obo:BFO_0000029 (site)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000029 "site"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000029 "(Elucidation) A site is a three-dimensional immaterial entity whose boundaries either (partially or wholly) coincide with the boundaries of one or more material entities or have locations determined in relation to some material entity"@en)
+AnnotationAssertion(skos:example obo:BFO_0000029 "A hole in a portion of cheese; a rabbit hole; the Grand Canyon; the Piazza San Marco; the kangaroo-joey-containing hole of a kangaroo pouch; your left nostril (a fiat part - the opening - of your left nasal cavity); the lumen of your gut; the hold of a ship; the interior of the trunk of your car; hole in an engineered floor joist"@en)
+SubClassOf(obo:BFO_0000029 obo:BFO_0000141)
 
 # Class: obo:BFO_0000030 (object)
 
@@ -620,6 +658,14 @@ AnnotationAssertion(rdfs:label obo:BFO_0000040 "material entity"@en)
 AnnotationAssertion(skos:definition obo:BFO_0000040 "(Elucidation) A material entity is an independent continuant has some portion of matter as continuant part"@en)
 AnnotationAssertion(skos:example obo:BFO_0000040 "A human being; the undetached arm of a human being; an aggregate of human beings"@en)
 SubClassOf(obo:BFO_0000040 obo:BFO_0000004)
+DisjointClasses(obo:BFO_0000040 obo:BFO_0000141)
+
+# Class: obo:BFO_0000141 (immaterial entity)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000141 "immaterial entity"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000141 "b is an immaterial entity =Def b is an independent continuant which is such that there is no time t when it has a material entity as continuant part"@en)
+AnnotationAssertion(skos:example obo:BFO_0000141 "As for fiat point, fiat line, fiat surface, site"@en)
+SubClassOf(obo:BFO_0000141 obo:BFO_0000004)
 
 # Class: obo:BFO_0000145 (relational quality)
 
@@ -639,6 +685,13 @@ SubClassOf(obo:IAO_0000005 obo:IAO_0000033)
 AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000007 "A directive information entity that describes an action the bearer will take."@en)
 AnnotationAssertion(rdfs:label obo:IAO_0000007 "action specification"@en)
 SubClassOf(obo:IAO_0000007 obo:IAO_0000033)
+
+# Class: obo:IAO_0000010 (software)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000010 "Software is a plan specification composed of a series of instructions that can be 
+interpreted by or directly executed by a processing unit."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000010 "software"@en)
+SubClassOf(obo:IAO_0000010 obo:IAO_0000104)
 
 # Class: obo:IAO_0000027 (data item)
 
@@ -681,6 +734,25 @@ SubClassOf(obo:IAO_0000104 obo:IAO_0000033)
 SubClassOf(obo:IAO_0000104 ObjectSomeValuesFrom(obo:BFO_0000051 obo:IAO_0000005))
 SubClassOf(obo:IAO_0000104 ObjectSomeValuesFrom(obo:BFO_0000051 obo:IAO_0000007))
 
+# Class: obo:IAO_0000310 (document)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000310 "A collection of information content entities intended to be understood together as a whole"@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000310 "document"@en)
+SubClassOf(obo:IAO_0000310 obo:IAO_0000030)
+
+# Class: obo:IAO_0000311 (publication)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000311 "A document that is the output of a publishing process."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000311 "publication"@en)
+EquivalentClasses(obo:IAO_0000311 ObjectIntersectionOf(obo:IAO_0000310 ObjectAllValuesFrom(obo:OBI_0000312 obo:IAO_0000444)))
+SubClassOf(obo:IAO_0000311 obo:IAO_0000310)
+
+# Class: obo:IAO_0000444 (publishing process)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000444 "A planned process of making information, such as literature, music, and software etc., available to the public for sale or for free."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000444 "publishing process"@en)
+SubClassOf(obo:IAO_0000444 obo:OBI_0000011)
+
 # Class: obo:IAO_0020000 (identifier)
 
 AnnotationAssertion(obo:IAO_0000115 obo:IAO_0020000 "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en)
@@ -697,6 +769,11 @@ AnnotationAssertion(rdfs:label obo:IAO_0020010 "identifier creating process"@en)
 EquivalentClasses(obo:IAO_0020010 ObjectIntersectionOf(obo:OBI_0000011 ObjectSomeValuesFrom(obo:OBI_0000299 obo:IAO_0020000)))
 SubClassOf(obo:IAO_0020010 obo:OBI_0000011)
 SubClassOf(obo:IAO_0020010 ObjectSomeValuesFrom(obo:OBI_0000299 obo:IAO_0020000))
+
+# Class: obo:NCBITaxon_9606 (homo sapiens)
+
+AnnotationAssertion(rdfs:label obo:NCBITaxon_9606 "homo sapiens")
+SubClassOf(obo:NCBITaxon_9606 obo:BFO_0000040)
 
 # Class: obo:OBI_0000011 (planned process)
 
@@ -724,6 +801,27 @@ SubClassOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:OBI_0000293 ObjectIntersecti
 SubClassOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:OBI_0000299 ObjectIntersectionOf(obo:IAO_0000027 ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:RO_0000087 obo:OBI_0000067))))))
 SubClassOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:OBI_0000417 obo:IAO_0000005))
 SubClassOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:RO_0009006 ObjectUnionOf(obo:BFO_0000019 <https://w3id.org/pmd/co/PMD_0000005>)))
+
+# Class: obo:OBI_0000245 (organization)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000245 "An entity that can bear roles, has members, and has a set of organization rules. Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000245 "organization"@en)
+SubClassOf(obo:OBI_0000245 obo:BFO_0000040)
+
+# Class: obo:OBI_0000571 (manufacturer role)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000571 "Manufacturer role is a role which inheres in a person or organization and which is realized by a manufacturing process."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000571 "manufacturer role")
+SubClassOf(obo:OBI_0000571 obo:BFO_0000023)
+SubClassOf(obo:OBI_0000571 ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(obo:NCBITaxon_9606 obo:OBI_0000245)))
+
+# Class: obo:OBI_0000835 (manufacturer)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000835 "A person or organization that has a manufacturer role."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000835 "manufacturer")
+EquivalentClasses(obo:OBI_0000835 ObjectIntersectionOf(ObjectUnionOf(obo:NCBITaxon_9606 obo:OBI_0000245) ObjectSomeValuesFrom(obo:RO_0000087 obo:OBI_0000571)))
+SubClassOf(obo:OBI_0000835 obo:BFO_0000040)
+SubClassOf(obo:OBI_0000835 ObjectSomeValuesFrom(obo:RO_0000087 obo:OBI_0000571))
 
 # Class: obo:OBI_0001930 (categorical value specification)
 
@@ -783,6 +881,23 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000005> obo:BFO_0000017)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000005> ObjectSomeValuesFrom(obo:BFO_0000054 <https://w3id.org/pmd/co/PMD_0000950>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000005> ObjectSomeValuesFrom(obo:RO_0000052 ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:RO_0000056 obo:BFO_0000015))))
 
+# Class: <https://w3id.org/pmd/co/PMD_0000008> (process attribute)
+
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0000008> "Process attribute for a process has a similar application to specifically dependened continuant (SDC) for an independent continuant (IC). Furthermore, process attribute describes how SDCs of some participants, i.e., ICs, change in a process. 
+
+Specific rates, e.g., tensile rate, cooling rate, etc. should be added as  subclasses of this class."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000008> "process attribute"@en)
+AnnotationAssertion(skos:altLabel <https://w3id.org/pmd/co/PMD_0000008> "process characteristic"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000008> "a process attribute is a dependent occurrent that existentially depends on a process."@en)
+AnnotationAssertion(skos:example <https://w3id.org/pmd/co/PMD_0000008> "Tensile rate in a tensile testing process. Cooling rate in a quenching process"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000008> obo:BFO_0000003)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000075> (mold device)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000075> "mold device"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000075> "A form used to cast an object of a desired shape."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000075> <https://w3id.org/pmd/co/PMD_0000602>)
+
 # Class: <https://w3id.org/pmd/co/PMD_0000503> (ASTM grainsize)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000503> "ASTM grainsize"@en)
@@ -826,6 +941,13 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000522> obo:BFO_0000015)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000523> "application of substance"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000523> "The application of (a) substance is the process of applying a material or substance to a surface or within a system."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000523> obo:BFO_0000015)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000538> (bulk)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000538> "bulk"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000538> "The bulk is a fiat object part that describes the volume or mass of material considered as a whole, often in contrast to surface or interface phenomena."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000538> obo:BFO_0000024)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000538> ObjectAllValuesFrom(obo:BFO_0000050 ObjectUnionOf(obo:BFO_0000027 obo:BFO_0000030)))
 
 # Class: <https://w3id.org/pmd/co/PMD_0000549> (change of temperature)
 
@@ -883,6 +1005,13 @@ AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000602> "A phy
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000602> "Ein physisches oder virtuelles Objekt, das verwendet wird, um eine bestimmte Funktion oder Aufgabe auszuführen, häufig im Zusammenhang mit der Messung, Manipulation oder Analyse von Materialien."@de)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000602> obo:BFO_0000030)
 
+# Class: <https://w3id.org/pmd/co/PMD_0000618> (elastic modulus)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000618> "elastic modulus"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000618> "An elastic modulus is a measure of a material's stiffness, defined as the ratio of stress to strain in the elastic deformation region."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000618> <https://w3id.org/pmd/co/PMD_0000949>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000618> ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(obo:BFO_0000027 obo:BFO_0000030 <https://w3id.org/pmd/co/PMD_0000538>)))
+
 # Class: <https://w3id.org/pmd/co/PMD_0000629> (emission of radiation)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000629> "emission of radiation"@en)
@@ -923,6 +1052,14 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000777> "heat capac
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000777> "The heat capacity is a thermal property describing the amount of heat energy required to raise the temperature of a material by a given amount."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000777> <https://w3id.org/pmd/co/PMD_0000981>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000777> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0001029> <https://w3id.org/pmd/co/PMD_0000549>))
+
+# Class: <https://w3id.org/pmd/co/PMD_0000794> (injection molding machine)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000794> "Spritzgießmaschine"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000794> "injection molding machine"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000794> "An Injection Molding Machine is a Device used to produce plastic parts by injecting molten plastic into molds under high pressure."@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000794> "Eine Spritzgießmaschine ist ein Gerät, das verwendet wird, um Kunststoffteile durch Einspritzen von geschmolzenem Kunststoff in Formen unter hohem Druck herzustellen."@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000794> <https://w3id.org/pmd/co/PMD_0000602>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0000802> (irradiation process)
 
@@ -1057,6 +1194,14 @@ AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000907> "A Pri
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000907> "Ein Urformprozess, der das Formen von Materialien aus einem plastischen Zustand beinhaltet."@de)
 AnnotationAssertion(skos:example <https://w3id.org/pmd/co/PMD_0000907> "Thermoforming of plastic sheets."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000907> <https://w3id.org/pmd/co/PMD_0000899>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000933> (Simulationsprozess)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000933> "Simulationsprozess"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000933> "simulation process"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000933> "A Computing Process that models the behavior of a system over time using mathematical or computational techniques."@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000933> "Ein Datenverarbeitungsprozess, der das Verhalten eines Systems im Laufe der Zeit mit mathematischen oder rechnerischen Techniken modelliert"@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000933> <https://w3id.org/pmd/co/PMD_0000583>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0000942> (specific surface area)
 
@@ -1198,6 +1343,25 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020131> "intensive 
 AnnotationAssertion(skos:altLabel <https://w3id.org/pmd/co/PMD_0020131> "Point property"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020131> "An intensive quality is a qualty that inheres in only portion of matter and thus is independent of the bearers (system-) size."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020131> obo:BFO_0000019)
+DisjointClasses(<https://w3id.org/pmd/co/PMD_0020131> <https://w3id.org/pmd/co/PMD_0020148>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020132> (size)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020132> "size"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020132> "Size is the quality of a material entity that describes its spatial extend."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020132> <https://w3id.org/pmd/co/PMD_0020148>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020143> (process chain)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020143> "process chain"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020143> "A process chain is a process that 'has contiuant part' subprocesses S1...Sn where S1...Sn precede each other and where some object or object aggregate that are output of Sn are then input to Sn+1."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020143> obo:BFO_0000015)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020148> (extensive quality)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020148> "extensive quality"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020148> "An extensive quality is a qualty that inheres in only object or object aggregate or fiat object part or chemical entity and is dependent on the bearers (system-) size."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020148> obo:BFO_0000019)
 
 # Class: <https://w3id.org/pmd/co/PMD_0025001> (composition)
 
@@ -1214,11 +1378,31 @@ EquivalentClasses(<https://w3id.org/pmd/co/PMD_0025003> ObjectExactCardinality(1
 SubClassOf(<https://w3id.org/pmd/co/PMD_0025003> <https://w3id.org/pmd/co/PMD_0020131>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0025003> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0020023>))
 
+# Class: <https://w3id.org/pmd/co/PMD_0040001> (length)
+
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0040001> "Length is a size that describes the spacial extend of its bearer in one dimension."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0040001> "length"@en)
+AnnotationAssertion(skos:altLabel <https://w3id.org/pmd/co/PMD_0040001> "dimension"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0040001> "Length is a one dimensional size.")
+SubClassOf(<https://w3id.org/pmd/co/PMD_0040001> <https://w3id.org/pmd/co/PMD_0020132>)
+
 # Class: <https://w3id.org/pmd/co/PMD_0050004> (thermoplastics)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0050004> "thermoplastics"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0050004> "A Thermoplastic is a Polymer that becomes moldable when heated and solidifies upon cooling."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0050004> <https://w3id.org/pmd/co/PMD_0000888>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0200002> (Spritzgießen)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/pmd/co/PMD_0200002> "Official definition can be found in: DIN 8580, group 1.2.2 “Spritzgießen”."@en)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/pmd/co/PMD_0200002> "Offizielle Definition findet man in: DIN 8580, Gruppe 1.2.2 „Spritzgießen“."@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0200002> "Spritzgießen"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0200002> "injection molding"@en)
+AnnotationAssertion(skos:altLabel <https://w3id.org/pmd/co/PMD_0200002> "injection moulding; plastic injection molding"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0200002> "A primary shaping process in which plastic granules are plasticised in an injection unit and the melt is injected under high pressure into a closed mold cavity, where it cools and solidifies to the final part shape."@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0200002> "Urformverfahren, bei dem Kunststoffgranulat in einem Plastifizieraggregat aufgeschmolzen und die Schmelze mit hohem Druck in einen geschlossenen Formhohlraum eingespritzt wird, wo sie verdichtet, abkühlt und zum Formteil erstarrt."@de)
+AnnotationAssertion(skos:example <https://w3id.org/pmd/co/PMD_0200002> "Injection molding of polypropylene housings."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0200002> <https://w3id.org/pmd/co/PMD_0000907>)
 
 
 ############################

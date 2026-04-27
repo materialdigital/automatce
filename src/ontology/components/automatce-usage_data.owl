@@ -2,6 +2,8 @@ Prefix: dcterms: <http://purl.org/dc/terms/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+Prefix: obo: <http://purl.obolibrary.org/obo/>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Prefix: : <https://w3id.org/pmd/automatce/components/automatce-usage_data.owl>
@@ -20,8 +22,22 @@ AnnotationProperty: dcterms:title
 
     
 AnnotationProperty: rdfs:comment
+AnnotationProperty: rdfs:label
+AnnotationProperty: skos:definition
+AnnotationProperty: skos:example
 
     
 Datatype: rdf:PlainLiteral
 
-    
+Class: obo:BFO_0000016
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010040>
+
+    Annotations:
+        rdfs:label "humidity absorption"@en,
+        skos:definition "A disposition of a material or component to absorb water vapor from a humid environment under specified exposure conditions."@en,
+        skos:example "Moisture uptake by a PA66 component during use at 50 percent relative humidity."@en
+
+    SubClassOf:
+        obo:BFO_0000016

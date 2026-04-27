@@ -40,6 +40,28 @@ AnnotationProperty: skos:example
 Datatype: rdf:PlainLiteral
 
     
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010130>
+
+    Annotations:
+        rdfs:label "injection molding process"@en,
+        skos:definition "An injection molding process in which plasticized material is injected into a mold cavity, held under pressure, cooled or solidified, and ejected as a shaped part."@en,
+        skos:example "Injection molding of a PA66-GF25 connector housing."@en
+
+    SubClassOf:
+        pmd:PMD_0200002
+
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010131>
+
+    Annotations:
+        rdfs:label "Young's modulus"@en,
+        skos:definition "An elastic modulus that quantifies the ratio of uniaxial stress to uniaxial strain in the linear elastic region of a material response."@en,
+        skos:example "Young's modulus measured from a tensile test of a glass-fiber-reinforced polyamide specimen."@en
+
+    SubClassOf:
+        pmd:PMD_0000618
+
+    
 Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000007>
 
     Annotations: 
@@ -62,18 +84,6 @@ Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000022>
     
     SubClassOf: 
         pmd:PMD_0000848
-    
-    
-Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000024>
-
-    Annotations: 
-        rdfs:comment "The tool that imparts the shape to the engineered material during the primary shaping process."@en,
-        rdfs:label "mold"@en,
-        skos:definition "A hollowed-out block that is filled with a liquid or pliable material like plastic, glass, metal, or ceramic raw material."@en,
-        skos:example "Injection mold for a dashboard panel."@en
-    
-    SubClassOf: 
-        obo:BFO_0000030
     
     
 Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000029>
@@ -187,6 +197,12 @@ Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0030005>
 Class: obo:BFO_0000030
 
     
+Class: pmd:PMD_0000075
+
+    
+Class: pmd:PMD_0000618
+
+    
 Class: pmd:PMD_0000848
 
     
@@ -197,5 +213,8 @@ Class: pmd:PMD_0000952
 
     
 Class: pmd:PMD_0000967
+
+    
+Class: pmd:PMD_0200002
 
     
