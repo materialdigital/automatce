@@ -112,6 +112,12 @@ env:
   # Default branch for git operations (used in some ODK make targets)
   DEFAULT_BRANCH: main
 
+# Prevent multiple ontology builds on the same ref from racing to push generated
+# artifacts back to the branch.
+concurrency:
+  group: ontology-qc-${{ github.ref }}
+  cancel-in-progress: false
+
 # ==============================================================================
 # JOBS
 # ==============================================================================
@@ -262,6 +268,11 @@ jobs:
           
           # Push to current branch
           push: true
+
+          # Rebase onto the latest branch tip before committing generated files.
+          # This avoids non-fast-forward push failures when another workflow or
+          # user commit lands while the ontology build is running.
+          pull: "--rebase --autostash"
 
       # ========================================================================
       # STEP 4: Trigger Documentation Workflow

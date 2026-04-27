@@ -99,6 +99,11 @@ env:
   # Default branch for git operations
   DEFAULT_BRANCH: main
 
+# Prevent automated config update runs on the same ref from racing to push.
+concurrency:
+  group: update-repo-${{ github.ref }}
+  cancel-in-progress: false
+
 # ==============================================================================
 # JOBS
 # ==============================================================================
@@ -292,6 +297,11 @@ jobs:
           
           # Push to current branch
           push: true
+
+          # Rebase onto the latest branch tip before committing generated files.
+          # This avoids non-fast-forward push failures when another workflow or
+          # user commit lands while the config update is running.
+          pull: "--rebase --autostash"
 
       # ========================================================================
       # STEP 2.4: Trigger Next Workflow (QC)
