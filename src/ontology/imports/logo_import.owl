@@ -15,16 +15,18 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<https://w3id.org/pmd/automatce/imports/logo_import.owl>
-<https://w3id.org/pmd/automatce/releases/2026-01-27/imports/logo_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/pmd/log/1.0.0>)
-Annotation(owl:versionInfo "2026-01-27")
+<https://w3id.org/pmd/automatce/releases/2026-04-27/imports/logo_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/pmd/log/1.0.2>)
+Annotation(owl:versionInfo "2026-04-27")
 
 Declaration(Class(obo:BFO_0000002))
 Declaration(Class(obo:BFO_0000004))
 Declaration(Class(obo:BFO_0000015))
 Declaration(Class(obo:BFO_0000017))
 Declaration(Class(obo:BFO_0000023))
+Declaration(Class(obo:BFO_0000024))
 Declaration(Class(obo:BFO_0000027))
+Declaration(Class(obo:BFO_0000029))
 Declaration(Class(obo:BFO_0000030))
 Declaration(Class(obo:BFO_0000034))
 Declaration(Class(obo:BFO_0000040))
@@ -32,27 +34,171 @@ Declaration(Class(obo:IAO_0000005))
 Declaration(Class(obo:IAO_0000030))
 Declaration(Class(obo:IAO_0000104))
 Declaration(Class(obo:IAO_0020000))
-Declaration(Class(obo:OBI_0000011))
+Declaration(Class(obo:OBI_0000260))
+Declaration(Class(obo:OBI_0000571))
+Declaration(Class(<http://www.w3.org/ns/org#FormalOrganization>))
+Declaration(Class(foaf:Person))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000008>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000833>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0040030>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_0080000>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000006>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000008>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000009>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000011>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000017>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000047>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000050>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000054>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000061>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000091>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000123>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000130>))
 Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000054))
 Declaration(ObjectProperty(obo:BFO_0000055))
+Declaration(ObjectProperty(obo:BFO_0000196))
+Declaration(ObjectProperty(obo:BFO_0000197))
 Declaration(ObjectProperty(obo:IAO_0000136))
 Declaration(ObjectProperty(obo:IAO_0000219))
 Declaration(ObjectProperty(obo:IAO_0000235))
 Declaration(ObjectProperty(obo:RO_0000056))
 Declaration(ObjectProperty(obo:RO_0000057))
 Declaration(ObjectProperty(obo:RO_0000059))
+Declaration(ObjectProperty(obo:RO_0002233))
 Declaration(ObjectProperty(obo:RO_0002234))
+Declaration(ObjectProperty(obo:RO_0002351))
 Declaration(ObjectProperty(obo:RO_0002353))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000004>))
+Declaration(ObjectProperty(<https://w3id.org/pmd/log/LOG_1900001>))
+Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0040128>))
+Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
+Declaration(AnnotationProperty(dc:creator))
 Declaration(AnnotationProperty(dc:description))
 Declaration(AnnotationProperty(dc:license))
 Declaration(AnnotationProperty(dc:title))
 Declaration(AnnotationProperty(skos:altLabel))
 Declaration(AnnotationProperty(skos:definition))
 
+############################
+#   Object Properties
+############################
+
+# Object Property: <https://w3id.org/pmd/log/LOG_1900001> (acts on behalf of)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1900001> "acts on behalf of"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1900001> "relation from a material entity to a person or a group of agents or engineered system that holds when the material entity participates in some planned process in order to fulfill an objective for the person or group of agents or engineered system")
+ObjectPropertyDomain(<https://w3id.org/pmd/log/LOG_1900001> ObjectIntersectionOf(obo:BFO_0000040 ObjectComplementOf(obo:BFO_0000024)))
+ObjectPropertyRange(<https://w3id.org/pmd/log/LOG_1900001> ObjectUnionOf(foaf:Person <https://w3id.org/pmd/log/LOG_1000050> ObjectIntersectionOf(obo:BFO_0000027 ObjectSomeValuesFrom(obo:RO_0002351 foaf:Person))))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:OBI_0000571 (obo:OBI_0000571)
+
+EquivalentClasses(obo:OBI_0000571 <https://w3id.org/pmd/log/LOG_1000061>)
+
+# Class: <https://w3id.org/pmd/log/LOG_0080000> (manufacturer identifier)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_0080000> "manufacturer identifier"@en)
+EquivalentClasses(<https://w3id.org/pmd/log/LOG_0080000> ObjectIntersectionOf(obo:IAO_0020000 ObjectSomeValuesFrom(obo:IAO_0000219 ObjectIntersectionOf(<https://w3id.org/pmd/log/LOG_1000050> ObjectSomeValuesFrom(obo:BFO_0000196 obo:OBI_0000571)))))
+SubClassOf(<https://w3id.org/pmd/log/LOG_0080000> <https://w3id.org/pmd/log/LOG_1000006>)
+SubClassOf(<https://w3id.org/pmd/log/LOG_0080000> ObjectSomeValuesFrom(obo:IAO_0000219 ObjectIntersectionOf(<https://w3id.org/pmd/log/LOG_1000050> ObjectSomeValuesFrom(obo:BFO_0000196 obo:OBI_0000571))))
+
+# Class: <https://w3id.org/pmd/log/LOG_1000006> (organization identifier)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000006> "organization identifier"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000006> "identifier that identifies an organization"@en-us)
+EquivalentClasses(<https://w3id.org/pmd/log/LOG_1000006> ObjectIntersectionOf(obo:IAO_0020000 ObjectSomeValuesFrom(obo:IAO_0000219 <https://w3id.org/pmd/log/LOG_1000050>)))
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000006> obo:IAO_0020000)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000006> ObjectSomeValuesFrom(obo:IAO_0000219 <https://w3id.org/pmd/log/LOG_1000050>))
+
+# Class: <https://w3id.org/pmd/log/LOG_1000008> (physical location identifier)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000008> "physical location identifier"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000008> "identifier that identifies a physical location (site)"@en-us)
+EquivalentClasses(<https://w3id.org/pmd/log/LOG_1000008> ObjectIntersectionOf(obo:IAO_0020000 ObjectSomeValuesFrom(obo:IAO_0000219 obo:BFO_0000029)))
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000008> obo:IAO_0020000)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000008> ObjectSomeValuesFrom(obo:IAO_0000219 obo:BFO_0000029))
+
+# Class: <https://w3id.org/pmd/log/LOG_1000009> (global location number)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000009> "global location number"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000009> "identifer that uniquely identifies a business organization or a geospatial location and complies with GS1 GLN coding scheme"@en-us)
+EquivalentClasses(<https://w3id.org/pmd/log/LOG_1000009> ObjectIntersectionOf(<https://w3id.org/pmd/log/LOG_1000008> ObjectUnionOf(<https://w3id.org/pmd/co/PMD_0040030> ObjectSomeValuesFrom(obo:IAO_0000219 <https://w3id.org/pmd/log/LOG_1000050>)) ObjectHasValue(<https://w3id.org/pmd/co/PMD_0000004> <https://w3id.org/pmd/co/PMD_0040128>)))
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000009> <https://w3id.org/pmd/log/LOG_1000008>)
+
+# Class: <https://w3id.org/pmd/log/LOG_1000011> (agent)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000011> "agent"@en)
+EquivalentClasses(<https://w3id.org/pmd/log/LOG_1000011> ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:BFO_0000196 <https://w3id.org/pmd/log/LOG_1000054>)))
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000011> obo:BFO_0000040)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000011> ObjectSomeValuesFrom(obo:BFO_0000196 <https://w3id.org/pmd/log/LOG_1000054>))
+
+# Class: <https://w3id.org/pmd/log/LOG_1000017> (manufacturer)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000017> "manufacturer"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000017> "organization which has a manufacturer role"@en-us)
+EquivalentClasses(<https://w3id.org/pmd/log/LOG_1000017> ObjectIntersectionOf(<https://w3id.org/pmd/log/LOG_1000050> ObjectSomeValuesFrom(obo:BFO_0000196 obo:OBI_0000571)))
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000017> <https://w3id.org/pmd/log/LOG_1000011>)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000017> <https://w3id.org/pmd/log/LOG_1000050>)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000017> ObjectSomeValuesFrom(obo:BFO_0000196 obo:OBI_0000571))
+
+# Class: <https://w3id.org/pmd/log/LOG_1000047> (business organization)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000047> "business organization"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000047> "organization engaging in or planning to engage in any activity of buying and selling goods or services for a profit")
+EquivalentClasses(<https://w3id.org/pmd/log/LOG_1000047> ObjectIntersectionOf(<https://w3id.org/pmd/log/LOG_1000050> ObjectSomeValuesFrom(obo:BFO_0000196 <https://w3id.org/pmd/log/LOG_1000091>)))
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000047> <https://w3id.org/pmd/log/LOG_1000050>)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000047> ObjectSomeValuesFrom(obo:BFO_0000196 <https://w3id.org/pmd/log/LOG_1000091>))
+
+# Class: <https://w3id.org/pmd/log/LOG_1000050> (organization)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000050> "organization"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000050> "An organization is an immaterial entity that has the organisation role and there exists some sort of legal framework that recognises the entity and its continued existence."@en)
+EquivalentClasses(<https://w3id.org/pmd/log/LOG_1000050> ObjectIntersectionOf(obo:BFO_0000027 ObjectSomeValuesFrom(obo:IAO_0000235 <https://w3id.org/pmd/log/LOG_1000006>) ObjectSomeValuesFrom(obo:RO_0002351 foaf:Person)))
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000050> obo:BFO_0000027)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000050> <http://www.w3.org/ns/org#FormalOrganization>)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000050> ObjectSomeValuesFrom(obo:IAO_0000235 <https://w3id.org/pmd/log/LOG_1000006>))
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000050> ObjectSomeValuesFrom(obo:RO_0002351 foaf:Person))
+
+# Class: <https://w3id.org/pmd/log/LOG_1000054> (agent role)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000054> "agent role"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000054> "role that someone or something has when they act on behalf of a person, engineered system or a group of agents"@en-us)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000054> obo:BFO_0000023)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000054> ObjectSomeValuesFrom(obo:BFO_0000197 ObjectIntersectionOf(ObjectIntersectionOf(obo:BFO_0000040 ObjectComplementOf(obo:BFO_0000024)) ObjectSomeValuesFrom(<https://w3id.org/pmd/log/LOG_1900001> ObjectUnionOf(foaf:Person <https://w3id.org/pmd/log/LOG_1000050>)))))
+
+# Class: <https://w3id.org/pmd/log/LOG_1000061> (manufacturer role)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000061> "manufacturer role"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000061> "agent role held by an organization when it produces material products"@en-us)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000061> <https://w3id.org/pmd/log/LOG_1000054>)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000061> ObjectSomeValuesFrom(obo:BFO_0000197 ObjectIntersectionOf(<https://w3id.org/pmd/log/LOG_1000050> ObjectSomeValuesFrom(obo:RO_0000056 <https://w3id.org/pmd/log/LOG_1000123>))))
+
+# Class: <https://w3id.org/pmd/log/LOG_1000091> (business function)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000091> "business function"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000091> "function of an organization to partake in for profit activities as prescribed by the objectives specified by that organization"@en-us)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000091> obo:BFO_0000034)
+
+# Class: <https://w3id.org/pmd/log/LOG_1000123> (product production process)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000123> "product production process"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000123> "business process that consists of at least one manufacturing process through which raw materials and components are transformed or modified to create a material product"@en-us)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000123> <https://w3id.org/pmd/log/LOG_1000130>)
+
+# Class: <https://w3id.org/pmd/log/LOG_1000130> (business process)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000130> "business process"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000130> "planned process which is prescribed by a plan specification with one or more objectives specified by a business organization"@en-us)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000130> obo:BFO_0000015)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000130> ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(<https://w3id.org/pmd/log/LOG_1000011> ObjectSomeValuesFrom(<https://w3id.org/pmd/log/LOG_1900001> <https://w3id.org/pmd/log/LOG_1000047>))))
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000130> ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:OBI_0000260 ObjectSomeValuesFrom(obo:RO_0000059 obo:IAO_0000104))))
 
 
 

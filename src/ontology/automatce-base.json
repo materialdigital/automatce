@@ -40,9 +40,9 @@
         "val" : "Automotive Circular Economy Ontology"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-04-24"
+        "val" : "2026-04-27"
       } ],
-      "version" : "https://w3id.org/pmd/automatce/releases/2026-04-24/automatce-base.json"
+      "version" : "https://w3id.org/pmd/automatce/releases/2026-04-27/automatce-base.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000015",
@@ -805,19 +805,6 @@
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#example",
           "val" : "Grinding, sorting, and regranulating a polymer component after dismantling."
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032",
-      "lbl" : "carbon footprint amount",
-      "type" : "CLASS",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A product carbon footprint that quantifies a greenhouse gas emission burden as a carbon dioxide equivalent amount for a stated product, process, or scenario."
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#example",
-          "val" : "12.4 kg CO2 equivalent for a selected reuse scenario."
         } ]
       }
     }, {
@@ -2282,6 +2269,9 @@
       "id" : "https://w3id.org/pmd/co/PMD_0200002",
       "type" : "CLASS"
     }, {
+      "id" : "https://w3id.org/pmd/log/LOG_1000061",
+      "type" : "CLASS"
+    }, {
       "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060001",
       "lbl" : "1. steel and iron materials",
       "type" : "INDIVIDUAL",
@@ -3443,25 +3433,21 @@
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010026"
     }, {
-      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010033",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022"
     }, {
-      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010033",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032"
-    }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010034",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032"
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010035",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032"
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010036",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032"
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010040",
       "pred" : "is_a",
@@ -3809,7 +3795,7 @@
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010145",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032"
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010146",
       "pred" : "is_a",
@@ -3842,6 +3828,10 @@
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010162",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/OBI_0000571"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010162",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/log/LOG_1000061"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010163",
       "pred" : "is_a",

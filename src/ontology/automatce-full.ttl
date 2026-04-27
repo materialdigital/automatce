@@ -20,7 +20,7 @@
 @base <https://w3id.org/pmd/automatce/automatce-full.ttl> .
 
 <https://w3id.org/pmd/automatce/automatce-full.ttl> rdf:type owl:Ontology ;
-                                                     owl:versionIRI <https://w3id.org/pmd/automatce/releases/2026-04-24/automatce-full.ttl> ;
+                                                     owl:versionIRI <https://w3id.org/pmd/automatce/releases/2026-04-27/automatce-full.ttl> ;
                                                      dcterms:contributor <https://orcid.org/0000-0003-0473-0070> ,
                                                                          <https://orcid.org/0000-0003-0744-8855> ,
                                                                          <https://orcid.org/0009-0003-1503-4422> ,
@@ -32,7 +32,7 @@
                                                      dcterms:description "Application ontology for automotive circular-economy product, material, sustainability, usage, dismantling, engineering and transactional data aligned to PMDCore and BFO 2020." ;
                                                      dcterms:license <https://w3id.org/pmd/automatce.owl#CC-BY-4.0> ;
                                                      dcterms:title "Automotive Circular Economy Ontology" ;
-                                                     owl:versionInfo "2026-04-24" .
+                                                     owl:versionInfo "2026-04-27" .
 
 #################################################################
 #    Annotation properties
@@ -40,14 +40,19 @@
 
 ###  http://purl.obolibrary.org/obo/IAO_0000115
 obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
-                obo:IAO_0000115 "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."@en ;
+                obo:IAO_0000115 "The official OBI definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."@en ,
+                                "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."@en ;
                 rdfs:label "definition" ,
-                           "definition"@en .
+                           "definition"@en ,
+                           "textual definition" .
 
 
 ###  http://purl.org/dc/elements/1.1/source
 dce:source rdf:type owl:AnnotationProperty ;
-           rdfs:label "Source" .
+           rdfs:comment """A reference to a resource from which the present resource
+         is derived."""@en-us ;
+           rdfs:label "Source" ,
+                      "Source"@en-us .
 
 
 ###  http://purl.org/dc/terms/contributor
@@ -154,7 +159,8 @@ obo:BFO_0000054 rdf:type owl:ObjectProperty ;
                 owl:inverseOf obo:BFO_0000055 ;
                 rdfs:domain obo:BFO_0000017 ;
                 rdfs:range obo:BFO_0000015 ;
-                rdfs:label "has realization"@en ;
+                rdfs:label "has realization"@en ,
+                           "realized in"@en ;
                 skos:definition "b has realization c =Def c realizes b"@en ;
                 skos:example "As for realizes"@en .
 
@@ -163,9 +169,18 @@ obo:BFO_0000054 rdf:type owl:ObjectProperty ;
 obo:BFO_0000055 rdf:type owl:ObjectProperty ;
                 rdfs:domain obo:BFO_0000015 ;
                 rdfs:range obo:BFO_0000017 ;
+                obo:IAO_0000115 "Paraphrase of elucidation: a relation between a process and a realizable entity, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process"@en ;
                 rdfs:label "realizes"@en ;
                 skos:definition "(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d & for all t, if b has participant d then c exists & the type instantiated by b is correlated with the type instantiated by c"@en ;
                 skos:example "A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000196
+obo:BFO_0000196 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000197
+obo:BFO_0000197 rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000136
@@ -183,7 +198,17 @@ obo:IAO_0000219 rdf:type owl:ObjectProperty ;
                 rdfs:domain obo:IAO_0000030 ;
                 rdfs:range obo:BFO_0000001 ;
                 obo:IAO_0000115 "A primitive, instance-level, relation obtaining between an information content entity and some portion of reality. Denotation is what happens when someone creates an information content entity E in order to specifically refer to something. The only relation between E and the thing is that E can be used to 'pick out' the thing. This relation connects those two together. Freedictionary.com sense 3: To signify directly; refer to specifically"@en ;
+                rdfs:comment ""@en ;
                 rdfs:label "denotes"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000221
+obo:IAO_0000221 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:IAO_0000136 ;
+                owl:inverseOf obo:IAO_0000417 ;
+                rdfs:domain obo:IAO_0000109 ;
+                obo:IAO_0000115 "m is a quality measurement of q at t. When q is a quality, there is a measurement process p that has specified output m, a measurement datum, that is about q"@en ;
+                rdfs:label "is quality measurement of"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000235
@@ -194,20 +219,26 @@ obo:IAO_0000235 rdf:type owl:ObjectProperty ;
                 rdfs:label "denoted by"@en .
 
 
+###  http://purl.obolibrary.org/obo/IAO_0000417
+obo:IAO_0000417 rdf:type owl:ObjectProperty ;
+                obo:IAO_0000115 "inverse of the relation of is quality measurement of"@en ;
+                rdfs:label "is quality measured as"@en .
+
+
 ###  http://purl.obolibrary.org/obo/OBI_0000293
 obo:OBI_0000293 rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf obo:RO_0000057 ;
                 owl:inverseOf obo:OBI_0000295 ;
-                rdfs:domain obo:OBI_0000011 ;
-                obo:IAO_0000115 "The inverse property of is specified input of"@en ;
+                rdfs:domain obo:COB_0000035 ;
+                obo:IAO_0000115 "The inverse property of is specified input of" ;
                 rdfs:label "has specified input"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000295
 obo:OBI_0000295 rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf obo:RO_0000056 ;
-                rdfs:range obo:OBI_0000011 ;
-                obo:IAO_0000115 "A relation between a planned process and a continuant participating in that process that is not created during  the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of."@en ;
+                rdfs:range obo:COB_0000035 ;
+                obo:IAO_0000115 "A relation between a completely executed planned process and a continuant participating in that process that is not created during the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of." ;
                 rdfs:label "is specified input of"@en .
 
 
@@ -217,22 +248,22 @@ obo:OBI_0000299 rdf:type owl:ObjectProperty ;
                                        ] ;
                 rdfs:subPropertyOf obo:RO_0000057 ;
                 owl:inverseOf obo:OBI_0000312 ;
-                rdfs:domain obo:OBI_0000011 ;
-                obo:IAO_0000115 "The inverse property of is specified output of"@en ;
+                rdfs:domain obo:COB_0000035 ;
+                obo:IAO_0000115 "The inverse property of is specified output of" ;
                 rdfs:label "has specified output"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000312
 obo:OBI_0000312 rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf obo:RO_0000056 ;
-                rdfs:range obo:OBI_0000011 ;
-                obo:IAO_0000115 "A relation between a planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."@en ;
+                rdfs:range obo:COB_0000035 ;
+                obo:IAO_0000115 "A relation between a completely executed planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."@en ;
                 rdfs:label "is specified output of"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000417
 obo:OBI_0000417 rdf:type owl:ObjectProperty ;
-                rdfs:domain obo:OBI_0000011 ;
+                rdfs:domain obo:COB_0000035 ;
                 rdfs:range obo:IAO_0000005 ;
                 obo:IAO_0000115 "This relation obtains between a planned process and a objective specification when the criteria specified in the objective specification are met at the end of the planned process."@en ;
                 rdfs:label "achieves_planned_objective" .
@@ -247,11 +278,21 @@ obo:OBI_0001927 rdf:type owl:ObjectProperty ;
                 rdfs:label "specifies value of" .
 
 
+###  http://purl.obolibrary.org/obo/OBI_0001938
+obo:OBI_0001938 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:BFO_0000051 ;
+                rdfs:domain obo:IAO_0000030 ;
+                rdfs:range obo:OBI_0001933 ;
+                obo:IAO_0000115 "A relation between an information content entity and a value specification that specifies its value."@en ;
+                rdfs:label "has value specification" .
+
+
 ###  http://purl.obolibrary.org/obo/RO_0000052
 obo:RO_0000052 rdf:type owl:ObjectProperty ;
                owl:inverseOf obo:RO_0000053 ;
                rdf:type owl:FunctionalProperty ;
                obo:IAO_0000115 "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."@en ;
+               rdfs:comment "Note that this relation was previously called \"inheres in\", but was changed to be called \"characteristic of\" because BFO2 uses \"inheres in\" in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing." ;
                rdfs:label "characteristic of"@en .
 
 
@@ -292,7 +333,8 @@ obo:RO_0000058 rdf:type owl:ObjectProperty ;
                                           obo:BFO_0000020
                                         )
                           ] ;
-               obo:IAO_0000115 "A relationship between a generically dependent continuant and a specifically dependent continuant or process, in which the generically dependent continuant depends on some independent continuant or process in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants or processes."@en ;
+               obo:IAO_0000115 "A relationship between a generically dependent continuant and a specifically dependent continuant or process, in which the generically dependent continuant depends on some independent continuant or process in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants or processes."@en ,
+                               "A relationship between a generically dependent continuant and a specifically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants."@en ;
                rdfs:label "is concretized as"@en .
 
 
@@ -304,7 +346,8 @@ obo:RO_0000059 rdf:type owl:ObjectProperty ;
                                          )
                            ] ;
                rdfs:range obo:BFO_0000031 ;
-               obo:IAO_0000115 "A relationship between a specifically dependent continuant or process and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. Multiple specifically dependent continuants or processes can concretize the same generically dependent continuant."@en ;
+               obo:IAO_0000115 "A relationship between a specifically dependent continuant and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. Multiple specifically dependent continuants can concretize the same generically dependent continuant."@en ,
+                               "A relationship between a specifically dependent continuant or process and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. Multiple specifically dependent continuants or processes can concretize the same generically dependent continuant."@en ;
                rdfs:label "concretizes"@en .
 
 
@@ -314,6 +357,7 @@ obo:RO_0000079 rdf:type owl:ObjectProperty ;
                owl:inverseOf obo:RO_0000085 ;
                rdfs:domain obo:BFO_0000034 ;
                obo:IAO_0000115 "a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence"@en ;
+               rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ;
                rdfs:label "function of"@en .
 
 
@@ -329,6 +373,7 @@ obo:RO_0000080 rdf:type owl:ObjectProperty ;
                              rdf:type owl:Class
                            ] ;
                obo:IAO_0000115 "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence"@en ;
+               rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ;
                rdfs:label "quality of"@en .
 
 
@@ -337,6 +382,7 @@ obo:RO_0000081 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf obo:RO_0000052 ;
                owl:inverseOf obo:RO_0000087 ;
                obo:IAO_0000115 "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence"@en ;
+               rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ;
                rdfs:label "role of"@en .
 
 
@@ -380,7 +426,12 @@ obo:RO_0000091 rdf:type owl:ObjectProperty ;
 obo:RO_0000092 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf obo:RO_0000052 ;
                obo:IAO_0000115 "inverse of has disposition" ;
+               rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ;
                rdfs:label "disposition of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002233
+obo:RO_0002233 rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0002234
@@ -389,6 +440,10 @@ obo:RO_0002234 rdf:type owl:ObjectProperty ;
                owl:inverseOf obo:RO_0002353 ;
                obo:IAO_0000115 "p has output c iff c is a participant in p, c is present at the end of p, and c is not present in the same state at the beginning of p." ;
                rdfs:label "has output"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002351
+obo:RO_0002351 rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0002353
@@ -444,10 +499,35 @@ co:PMD_0001028 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/pmd/co/PMD_0001029
 co:PMD_0001029 rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf owl:topObjectProperty ;
                rdfs:domain obo:BFO_0000017 ;
                rdfs:label "responds with"@en ;
-               skos:definition "The realizable entity must be \"stimulated\" by some Stimulus in order to respond with the Response. The bearer of the realizable entity must participate in Stimulation as well as in Response." .
+               skos:definition "The realizable entity must be \"stimulated\" by some Stimulus in order to respond with the Response. The bearer of the realizable entity must participate in Stimulation as well as in Response."@en .
+
+
+###  https://w3id.org/pmd/log/LOG_1900001
+<https://w3id.org/pmd/log/LOG_1900001> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain [ owl:intersectionOf ( obo:BFO_0000040
+                                                                          [ rdf:type owl:Class ;
+                                                                            owl:complementOf obo:BFO_0000024
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ;
+                                       rdfs:range [ rdf:type owl:Class ;
+                                                    owl:unionOf ( foaf:Person
+                                                                  <https://w3id.org/pmd/log/LOG_1000050>
+                                                                  [ owl:intersectionOf ( obo:BFO_0000027
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty obo:RO_0002351 ;
+                                                                                           owl:someValuesFrom foaf:Person
+                                                                                         ]
+                                                                                       ) ;
+                                                                    rdf:type owl:Class
+                                                                  ]
+                                                                )
+                                                  ] ;
+                                       rdfs:label "acts on behalf of"@en ;
+                                       skos:definition "relation from a material entity to a person or a group of agents or engineered system that holds when the material entity participates in some planned process in order to fulfill an objective for the person or group of agents or engineered system" .
 
 
 #################################################################
@@ -628,6 +708,7 @@ obo:BFO_0000034 rdf:type owl:Class ;
 obo:BFO_0000040 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000004 ;
                 owl:disjointWith obo:BFO_0000141 ;
+                obo:IAO_0000115 "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time."@en ;
                 rdfs:label "material entity"@en ;
                 skos:definition "(Elucidation) A material entity is an independent continuant has some portion of matter as continuant part"@en ;
                 skos:example "A human being; the undetached arm of a human being; an aggregate of human beings"@en .
@@ -647,6 +728,36 @@ obo:BFO_0000145 rdf:type owl:Class ;
                 rdfs:label "relational quality"@en ;
                 skos:definition "b is a relational quality =Def b is a quality & there exists c and d such that c and d are not identical & b specifically depends on c & b specifically depends on d"@en ;
                 skos:example "A marriage bond; an instance of love; an obligation between one person and another"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000035
+obo:COB_0000035 rdf:type owl:Class ;
+                rdfs:subClassOf obo:COB_0000082 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000055 ;
+                                  owl:someValuesFrom obo:OBI_0000260
+                                ] ;
+                owl:disjointWith obo:GO_0008150 ;
+                rdfs:label "completely executed planned process"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000082
+obo:COB_0000082 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000015 ;
+                obo:IAO_0000115 "A process that is initiated by an agent who intends to carry out a plan to achieve an objective through one or more actions as described in a plan specification."@en ;
+                rdfs:label "planned process"@en .
+
+
+###  http://purl.obolibrary.org/obo/GO_0008150
+obo:GO_0008150 rdf:type owl:Class ;
+               rdfs:subClassOf obo:BFO_0000015 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:BFO_0000051 ;
+                                 owl:someValuesFrom obo:BFO_0000015
+                               ] ;
+               obo:IAO_0000115 "A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." ;
+               rdfs:label "biological process"@en ,
+                          "biological_process" .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000005
@@ -700,32 +811,6 @@ obo:IAO_0000033 rdf:type owl:Class ;
                 rdfs:label "directive information entity"@en .
 
 
-###  http://purl.obolibrary.org/obo/IAO_0000078
-obo:IAO_0000078 rdf:type owl:Class ;
-                owl:equivalentClass [ rdf:type owl:Class ;
-                                      owl:oneOf ( obo:IAO_0000002
-                                                  obo:IAO_0000120
-                                                  obo:IAO_0000121
-                                                  obo:IAO_0000122
-                                                  obo:IAO_0000123
-                                                  obo:IAO_0000124
-                                                  obo:IAO_0000125
-                                                  obo:IAO_0000423
-                                                  obo:IAO_0000428
-                                                )
-                                    ] ;
-                rdfs:subClassOf obo:IAO_0000102 ;
-                obo:IAO_0000115 "The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value."@en ;
-                rdfs:label "curation status specification"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000102
-obo:IAO_0000102 rdf:type owl:Class ;
-                rdfs:subClassOf obo:IAO_0000027 ;
-                obo:IAO_0000115 "Data about an ontology part is a data item about a part of an ontology, for example a term"@en ;
-                rdfs:label "data about an ontology part"@en .
-
-
 ###  http://purl.obolibrary.org/obo/IAO_0000104
 obo:IAO_0000104 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000033 ,
@@ -738,7 +823,25 @@ obo:IAO_0000104 rdf:type owl:Class ;
                                   owl:someValuesFrom obo:IAO_0000007
                                 ] ;
                 obo:IAO_0000115 "A directive information entity with action specifications and objective specifications as parts, and that may be concretized as a realizable entity that, if realized, is realized in a process in which the bearer tries to achieve the objectives by taking the actions specified."@en ;
+                rdfs:comment """2/3/2009 Comment from OBI review.
+
+Action specification not well enough specified.
+Conditional specification not well enough specified.
+Question whether all plan specifications have objective specifications.
+
+Request that IAO either clarify these or change definitions not to use them"""@en ;
                 rdfs:label "plan specification"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000109
+obo:IAO_0000109 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000027 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:OBI_0001938 ;
+                                  owl:someValuesFrom obo:OBI_0001933
+                                ] ;
+                obo:IAO_0000115 "A measurement datum is an information content entity that is a recording of the output of a measurement such as produced by a device."@en ;
+                rdfs:label "measurement datum"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000310
@@ -760,12 +863,13 @@ obo:IAO_0000311 rdf:type owl:Class ;
                                     ] ;
                 rdfs:subClassOf obo:IAO_0000310 ;
                 obo:IAO_0000115 "A document that is the output of a publishing process."@en ;
+                rdfs:comment "Revisit the term in Octorber 2020. Improve the defintion."@en ;
                 rdfs:label "publication"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000444
 obo:IAO_0000444 rdf:type owl:Class ;
-                rdfs:subClassOf obo:OBI_0000011 ;
+                rdfs:subClassOf obo:COB_0000035 ;
                 obo:IAO_0000115 "A planned process of making information, such as literature, music, and software etc., available to the public for sale or for free."@en ;
                 rdfs:label "publishing process"@en .
 
@@ -794,12 +898,13 @@ obo:IAO_0020000 rdf:type owl:Class ;
                                   owl:someValuesFrom obo:IAO_0020010
                                 ] ;
                 obo:IAO_0000115 "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en ;
+                rdfs:comment "Sep 29, 2016: The current definition has been amended from the previous version: \"A proper name is an information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.\" to more accuratly reflect the necessary and sufficient condition on the class. (MB)"@en ;
                 rdfs:label "identifier"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0020010
 obo:IAO_0020010 rdf:type owl:Class ;
-                owl:equivalentClass [ owl:intersectionOf ( obo:OBI_0000011
+                owl:equivalentClass [ owl:intersectionOf ( obo:COB_0000035
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty obo:OBI_0000299 ;
                                                              owl:someValuesFrom obo:IAO_0020000
@@ -807,7 +912,7 @@ obo:IAO_0020010 rdf:type owl:Class ;
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
-                rdfs:subClassOf obo:OBI_0000011 ,
+                rdfs:subClassOf obo:COB_0000035 ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:OBI_0000299 ;
                                   owl:someValuesFrom obo:IAO_0020000
@@ -819,28 +924,14 @@ obo:IAO_0020010 rdf:type owl:Class ;
 ###  http://purl.obolibrary.org/obo/NCBITaxon_9606
 obo:NCBITaxon_9606 rdf:type owl:Class ;
                    rdfs:subClassOf obo:BFO_0000040 ;
-                   rdfs:label "homo sapiens" .
+                   rdfs:label "Homo sapiens" ,
+                              "homo sapiens" .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000011
 obo:OBI_0000011 rdf:type owl:Class ;
-                owl:equivalentClass [ rdf:type owl:Restriction ;
-                                      owl:onProperty obo:BFO_0000055 ;
-                                      owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                           owl:onProperty obo:RO_0000059 ;
-                                                           owl:someValuesFrom obo:IAO_0000104
-                                                         ]
-                                    ] ;
-                rdfs:subClassOf obo:BFO_0000015 ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000055 ;
-                                  owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                       owl:onProperty obo:RO_0000059 ;
-                                                       owl:someValuesFrom obo:IAO_0000104
-                                                     ]
-                                ] ;
                 obo:IAO_0000115 "A process that realizes a plan which is the concretization of a plan specification."@en ;
-                rdfs:label "planned process"@en .
+                rdfs:label "obsolete planned process" .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000067
@@ -860,7 +951,18 @@ obo:OBI_0000067 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/OBI_0000070
 obo:OBI_0000070 rdf:type owl:Class ;
-                rdfs:subClassOf obo:OBI_0000011 ,
+                rdfs:subClassOf obo:COB_0000035 ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000293 ;
+                                                         owl:someValuesFrom obo:BFO_0000040
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000299 ;
+                                                         owl:someValuesFrom obo:IAO_0000027
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000055 ;
                                   owl:someValuesFrom obo:OBI_0000067
@@ -917,9 +1019,25 @@ obo:OBI_0000245 rdf:type owl:Class ;
                 rdfs:label "organization"@en .
 
 
+###  http://purl.obolibrary.org/obo/OBI_0000260
+obo:OBI_0000260 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000017 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0000059 ;
+                                  owl:someValuesFrom obo:IAO_0000104
+                                ] ;
+                obo:IAO_0000115 "A plan is a realizable entity that is the inheres in a bearer who is committed to realizing it as a completely executed planned process."@en ;
+                rdfs:label "plan"@en .
+
+
 ###  http://purl.obolibrary.org/obo/OBI_0000571
 obo:OBI_0000571 rdf:type owl:Class ;
-                rdfs:subClassOf obo:BFO_0000023 ,
+                owl:equivalentClass <https://w3id.org/pmd/log/LOG_1000061> ;
+                rdfs:subClassOf <https://w3id.org/pmd/log/LOG_1000054> ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0000052 ;
+                                  owl:someValuesFrom obo:BFO_0000040
+                                ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0000052 ;
                                   owl:someValuesFrom [ rdf:type owl:Class ;
@@ -975,6 +1093,14 @@ skos:Concept rdf:type owl:Class .
 
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
 skos:ConceptScheme rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/org#FormalOrganization
+<http://www.w3.org/ns/org#FormalOrganization> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0000002
@@ -1417,17 +1543,9 @@ skos:ConceptScheme rdf:type owl:Class .
                                                    skos:example "Grinding, sorting, and regranulating a polymer component after dismantling."@en .
 
 
-###  https://w3id.org/pmd/automatce/AUTOMATCE_0010032
-<https://w3id.org/pmd/automatce/AUTOMATCE_0010032> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010022> ;
-                                                   rdfs:label "carbon footprint amount"@en ;
-                                                   skos:definition "A product carbon footprint that quantifies a greenhouse gas emission burden as a carbon dioxide equivalent amount for a stated product, process, or scenario."@en ;
-                                                   skos:example "12.4 kg CO2 equivalent for a selected reuse scenario."@en .
-
-
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010033
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010033> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010032> ;
+                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010022> ;
                                                    rdfs:label "carbon footprint amount in recycling"@en ;
                                                    skos:definition "A carbon footprint amount calculated for a recycling scenario."@en ;
                                                    skos:example "The kg CO2 equivalent attributed to recycling a dismantled component."@en .
@@ -1435,7 +1553,7 @@ skos:ConceptScheme rdf:type owl:Class .
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010034
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010034> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010032> ;
+                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010022> ;
                                                    rdfs:label "carbon footprint amount in remanufacturing"@en ;
                                                    skos:definition "A carbon footprint amount calculated for a remanufacturing scenario."@en ;
                                                    skos:example "The kg CO2 equivalent attributed to inspecting, repairing, and remanufacturing a component."@en .
@@ -1443,7 +1561,7 @@ skos:ConceptScheme rdf:type owl:Class .
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010035
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010035> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010032> ;
+                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010022> ;
                                                    rdfs:label "carbon footprint amount in reuse"@en ;
                                                    skos:definition "A carbon footprint amount calculated for a reuse scenario."@en ;
                                                    skos:example "The kg CO2 equivalent attributed to checking and reusing a component without remanufacturing."@en .
@@ -1451,7 +1569,7 @@ skos:ConceptScheme rdf:type owl:Class .
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010036
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010036> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010032> ;
+                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010022> ;
                                                    rdfs:label "carbon footprint amount in new production"@en ;
                                                    skos:definition "A carbon footprint amount calculated for a new production scenario."@en ;
                                                    skos:example "The kg CO2 equivalent attributed to manufacturing a replacement component from primary material."@en .
@@ -2154,7 +2272,7 @@ skos:ConceptScheme rdf:type owl:Class .
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010145
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010145> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010032> ;
+                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010022> ;
                                                    rdfs:label "actual footprint of chosen R-strategy"@en ;
                                                    skos:definition "A carbon footprint amount that records the observed or calculated carbon dioxide equivalent burden of the selected circular economy strategy for a component."@en ;
                                                    skos:example "The kg CO2 equivalent resulting from choosing reuse for a dismantled component."@en .
@@ -2218,7 +2336,8 @@ skos:ConceptScheme rdf:type owl:Class .
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010162
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010162> rdf:type owl:Class ;
-                                                   rdfs:subClassOf obo:OBI_0000571 ;
+                                                   rdfs:subClassOf obo:OBI_0000571 ,
+                                                                   <https://w3id.org/pmd/log/LOG_1000061> ;
                                                    rdfs:label "OEM"@en ;
                                                    skos:definition "A manufacturer role borne by an organization that designs or produces the original vehicle, component, or system for which circular economy data is recorded."@en ;
                                                    skos:example "A vehicle manufacturer acting as original equipment manufacturer for a vehicle series."@en .
@@ -2318,7 +2437,7 @@ When defining specific materials/material taxonomies, these three aspects shall 
                rdfs:label "Material"@de ,
                           "material"@en ;
                skos:altLabel "Portion of Material"@en ;
-               skos:definition "A Material is a Portion Of Matter that may participate in some Manifacturing Process and whose shape is not relevant for its participation in the Manifacuring Process."@en .
+               skos:definition "A material is a portion of matter that may participate in some manufacturing process and whose shape is not relevant for its participation in the manufacturing process."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000001
@@ -2335,39 +2454,60 @@ granularity. At these coarser levels, the individual molecules cannot be differe
 
 ###  https://w3id.org/pmd/co/PMD_0000002
 co:PMD_0000002 rdf:type owl:Class ;
-               rdfs:subClassOf co:PMD_0000000 ;
+               owl:equivalentClass [ owl:intersectionOf ( co:PMD_0000000
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:OBI_0000312 ;
+                                                            owl:someValuesFrom co:PMD_0000833
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf co:PMD_0000000 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:OBI_0000312 ;
+                                 owl:someValuesFrom co:PMD_0000833
+                               ] ;
                rdfs:comment "We recognize that some of the materials in the subclasses also occur naturally. However, these are not within the scope of our consideration for technical use."@en ;
                rdfs:label "engineered material"@en ;
-               skos:definition "An Engineered Material is a Material that is output of a Manufacturing Process."@en .
+               skos:definition "An engineered material is a material that is output of a manufacturing process."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000005
 co:PMD_0000005 rdf:type owl:Class ;
-               rdfs:subClassOf obo:BFO_0000017 ,
+               rdfs:subClassOf obo:BFO_0000016 ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty obo:BFO_0000054 ;
                                  owl:someValuesFrom co:PMD_0000950
                                ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty obo:RO_0000052 ;
-                                 owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000040
-                                                                           [ rdf:type owl:Restriction ;
-                                                                             owl:onProperty obo:RO_0000056 ;
-                                                                             owl:someValuesFrom obo:BFO_0000015
-                                                                           ]
-                                                                         ) ;
-                                                      rdf:type owl:Class
-                                                    ]
-                               ] ;
-               rdfs:comment """Technical materials are complex object aggregates. The properties that are determined for those object aggregates are intrinsically associated with the methodologies employed in the measurement process. This is in contrast to typical 'physical' properties, which like e.g. mass that can be determined to high accuracy independently of the measurement process. 
-As a consequence, the behavoiral material properties in the ontology are differeciated according to their measurement method, e.g. Brinell hardness and Vickers hardness are different types of indentation hardness rather than different measures/quantification (GDC) of the materials property 'indentation hardness'.
- The 'unit idenifieres' of such properties (e.g. \"HV1\", \"HV10\", \"HBW\") are strictly speaking not units but rather references to the measurement methodology used to determine a numeric value that quantifies the property."""@en ;
-               rdfs:label "behavioral material property"@en ;
-               skos:definition """A property is a material trait in terms of the kind and magnitude of response to a specific imposed stimulus. Generally, definitions of properties are made independent of material shape and size.
-
+                               _:genid116 ;
+               rdfs:comment """A property is a material trait in terms of the kind and magnitude of response to a specific imposed stimulus. Generally, definitions of properties are made independent of material shape and size.
 (Callister, W.D., Rethwisch, D.G., Materials Science and Engineering, Wiley, 2014)
 
-We only deal with intensive (system-size independent) materrial properties. Extensive properties that depend on the testpiece/specimen/probe size should be found in the respective testing method modules."""@en .
+Technical materials are complex aggregates. Many properties that are determined for those aggregates are intrinsically associated with the methodologies employed in the measurement process. This is in contrast to typical 'physical' properties, which like e.g. mass that can be determined to high accuracy independently of the measurement process. 
+As a consequence, material properties in the ontology are differeciated according to their measurement method, e.g. Brinell hardness and Vickers hardness are different types of indentation hardness rather than different measures/quantification (GDC) of the materials property 'indentation hardness'.
+ The 'unit idenifieres' of such properties (e.g. \"HV1\", \"HV10\", \"HBW\") are strictly speaking not units but rather references to the measurement methodology used to determine a numeric value that quantifies the property.
+
+Extensive properties that depend on the object being tested rather than on the portion of matter are (extensive) object- or system-properties."""@en ;
+               rdfs:label "material property"@en ;
+               skos:definition "a disposition of a portion of matter that is realized in a compatible process and whose realization is grounded in the portions intensive qualities"@en .
+
+_:genid116 rdf:type owl:Restriction ;
+            owl:onProperty obo:RO_0000052 ;
+            owl:someValuesFrom [ owl:intersectionOf ( co:PMD_0000001
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:RO_0000056 ;
+                                                        owl:someValuesFrom obo:BFO_0000015
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource co:PMD_0000005 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget _:genid116 ;
+   rdfs:comment "Due to the duality of object and portion of matter this axiom can not be an equivalent class axiom."@en
+ ] .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000008
@@ -2385,15 +2525,41 @@ Specific rates, e.g., tensile rate, cooling rate, etc. should be added as  subcl
 ###  https://w3id.org/pmd/co/PMD_0000075
 co:PMD_0000075 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0000602 ;
-               rdfs:label "mold device"@en ;
-               skos:definition "A form used to cast an object of a desired shape."@en .
+               rdfs:label "mold"@en-us ,
+                          "mould"@en ;
+               skos:definition "A device consisting of a hollowed-out cavity that shapes fluid or plastic material into a specific form through the process of solidification or cooling."@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000110
+co:PMD_0000110 rdf:type owl:Class ;
+               rdfs:subClassOf obo:BFO_0000015 ;
+               rdfs:label "geological process"@en ;
+               skos:definition "A natural process that operates within the Earth system to transform, transport, or deform Earth materials, thereby changing Earth structures and landforms"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000503
 co:PMD_0000503 rdf:type owl:Class ;
-               rdfs:subClassOf co:PMD_0020131 ;
+               rdfs:subClassOf co:PMD_0020243 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:IAO_0000417 ;
+                                 owl:someValuesFrom [ owl:intersectionOf ( obo:IAO_0000109
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty obo:OBI_0000312 ;
+                                                                             owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000015
+                                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                                         owl:onProperty obo:STATO_0000102 ;
+                                                                                                                         owl:someValuesFrom obo:IAO_0000104
+                                                                                                                       ]
+                                                                                                                     ) ;
+                                                                                                  rdf:type owl:Class
+                                                                                                ]
+                                                                           ]
+                                                                         ) ;
+                                                      rdf:type owl:Class
+                                                    ]
+                               ] ;
                rdfs:label "ASTM grainsize"@en ;
-               skos:definition "The ASTM grain size is a scalar specifically describing the size of grains in a crystalline material as defined by ASTM standards."@en .
+               skos:definition "The ASTM grain size is a quality that is measured through a process that follows the ASTM standard."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000512
@@ -2409,42 +2575,35 @@ co:PMD_0000512 rdf:type owl:Class ;
                                  owl:someValuesFrom co:PMD_0020116
                                ] ;
                rdfs:label "aggregate state"@en ;
-               skos:definition "The aggregate state is a morphological quality representing the physical state of a material, such as solid, liquid, or gas."@en .
+               skos:definition "an intensive quality representing the physical state of a material, such as solid, liquid, or gasous"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000519
 co:PMD_0000519 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000015 ;
-               rdfs:label "application of electric field"@en ;
-               skos:definition "An application of (an) electric field is the process of subjecting a material to an electric field to observe its behavior or modify its properties."@en .
+               rdfs:label "flow of electric charge"@en ;
+               skos:definition "is the process of movement of charged particles"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000520
 co:PMD_0000520 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000015 ;
-               rdfs:label "application of heat flux"@en ;
-               skos:definition "An application of heat flux describes the process of transferring thermal energy to or from a material, often used in thermal property measurements."@en .
+               rdfs:label "heat flow"@en ;
+               skos:definition "is a process in which transfer of thermal energy between or within material entities occurs"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000521
 co:PMD_0000521 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000015 ;
-               rdfs:label "application of magnetic field"@en ;
-               skos:definition "An application of (a) magnetic field is the process of subjecting a material to a magnetic field to study its magnetic properties or induce magnetization."@en .
+               rdfs:label "generation of magnetic field"@en ;
+               skos:definition "is a process that occurs as a reaction to change of elctric field or movement of charges and produces a magnetic field"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000522
 co:PMD_0000522 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000015 ;
-               rdfs:label "application of mechanical load"@en ;
-               skos:definition "An application of mechanical load is the process of applying force or stress to a material to observe its response or measure its properties."@en .
-
-
-###  https://w3id.org/pmd/co/PMD_0000523
-co:PMD_0000523 rdf:type owl:Class ;
-               rdfs:subClassOf obo:BFO_0000015 ;
-               rdfs:label "application of substance"@en ;
-               skos:definition "The application of (a) substance is the process of applying a material or substance to a surface or within a system."@en .
+               rdfs:label "mechanical process"@en ;
+               skos:definition "is a process in which forces, moments, or imposed displacements to objects or object aggregates occur and/or the equivalent (stresses, strains) to materials or portions of matter"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000538
@@ -2466,47 +2625,23 @@ co:PMD_0000538 rdf:type owl:Class ;
 co:PMD_0000549 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000015 ;
                rdfs:label "change of temperature"@en ;
-               skos:definition "A change of temperature is a process describing the variation in thermal energy within a material or system over time or due to external influences."@en .
+               skos:definition "change of temperature is a process in which a particpant changes its temperature"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000577
 co:PMD_0000577 rdf:type owl:Class ;
-               rdfs:subClassOf [ owl:intersectionOf ( co:PMD_0000002
-                                                      [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                               owl:onProperty obo:BFO_0000051 ;
-                                                                               owl:someValuesFrom [ owl:intersectionOf ( co:PMD_0000002
-                                                                                                                         [ rdf:type owl:Restriction ;
-                                                                                                                           owl:onProperty obo:RO_0000087 ;
-                                                                                                                           owl:someValuesFrom co:PMD_0000845
-                                                                                                                         ]
-                                                                                                                       ) ;
-                                                                                                    rdf:type owl:Class
-                                                                                                  ]
-                                                                             ]
-                                                                             [ rdf:type owl:Restriction ;
-                                                                               owl:onProperty obo:BFO_0000051 ;
-                                                                               owl:someValuesFrom [ owl:intersectionOf ( co:PMD_0000002
-                                                                                                                         [ rdf:type owl:Restriction ;
-                                                                                                                           owl:onProperty obo:RO_0000087 ;
-                                                                                                                           owl:someValuesFrom co:PMD_0020001
-                                                                                                                         ]
-                                                                                                                       ) ;
-                                                                                                    rdf:type owl:Class
-                                                                                                  ]
-                                                                             ]
-                                                                           ) ;
-                                                        rdf:type owl:Class
-                                                      ]
-                                                    ) ;
-                                 rdf:type owl:Class
-                               ] ;
-               rdfs:label "composite material"@en ;
-               skos:definition "A Composite Material is an Engineered Material that 'consists of' some Material that has a Matrix role and of some Material that has a Filler role."@en .
+               rdfs:subClassOf co:PMD_0000890 ;
+               rdfs:label "composite"@en ;
+               skos:definition "An object aggregate that consists of two or more bonded materials with dissimilar physical or chemical properties which are used to complement each other where the parts remain seperate and distinct in the resulting object aggregate."@en ;
+               skos:example """carbon fibre reinforced polymer
+laminated glass
+wood
+hard metal composites for abrasive tools""" .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000583
 co:PMD_0000583 rdf:type owl:Class ;
-               rdfs:subClassOf obo:OBI_0000011 ,
+               rdfs:subClassOf obo:COB_0000035 ,
                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                         owl:onProperty obo:OBI_0000293 ;
                                                         owl:someValuesFrom obo:IAO_0000030
@@ -2537,22 +2672,23 @@ co:PMD_0000591 rdf:type owl:Class ;
                                  owl:onProperty co:PMD_0000077 ;
                                  owl:someValuesFrom co:PMD_0020099
                                ] ;
+               rdfs:comment "The finite set of periodic geometric arrangements is described e.g. by the 14 possible Bravais Lattices in three-dimensional space."@en ;
                rdfs:label "crystal structure"@en ;
-               skos:definition "The crystal structure is a morphologic quality that describes the periodic geometric arrangement of entities in a crystalline material. The finite set of periodic geometric arrangements is described by the 14 possible Bravais Lattices in three-dimensional space."@en .
+               skos:definition "an intensive qualtty of a crystal that embodies the periodic geometric arrangement of entities in a crystal lattice."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000595
 co:PMD_0000595 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0020131 ;
                rdfs:label "defect density"@en ;
-               skos:definition "The defect density is a morphological quality describing the number of defects per unit volume or area in a material, which can affect its mechanical and electronic properties."@en .
+               skos:definition "an intensive quality describing the number of defects per unit volume or area in a material, which can affect its mechanical and electronic properties"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000596
 co:PMD_0000596 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000015 ;
                rdfs:label "deformation"@en ;
-               skos:definition "The deformation is a process describing a change in the shape, size, or structure of a material under the influence of stress or force."@en .
+               skos:definition "The deformation is a process describing a change in the shape, size, or structure of a material often under the influence of stress or force."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000597
@@ -2567,7 +2703,7 @@ co:PMD_0000602 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000030 ;
                rdfs:label "Gerät"@de ,
                           "device"@en ;
-               skos:definition "A physical or virtual entity used to perform a specific function or task, often involving measurement, manipulation, or analysis of materials."@en ,
+               skos:definition "A device is an object that is designed to perform a specific function or task involving measurement, manipulation, processing, or analysis."@en ,
                                "Ein physisches oder virtuelles Objekt, das verwendet wird, um eine bestimmte Funktion oder Aufgabe auszuführen, häufig im Zusammenhang mit der Messung, Manipulation oder Analyse von Materialien."@de .
 
 
@@ -2584,7 +2720,7 @@ co:PMD_0000618 rdf:type owl:Class ;
                                                     ]
                                ] ;
                rdfs:label "elastic modulus"@en ;
-               skos:definition "An elastic modulus is a measure of a material's stiffness, defined as the ratio of stress to strain in the elastic deformation region."@en .
+               skos:definition "represents a material's stiffness, defined as the ratio of stress to strain in the elastic deformation region."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000629
@@ -2601,9 +2737,42 @@ co:PMD_0000635 rdf:type owl:Class ;
                skos:definition "An evolution of damage is a process representing the progression of material degradation under mechanical, thermal, or chemical stresses."@en .
 
 
+###  https://w3id.org/pmd/co/PMD_0000654
+co:PMD_0000654 rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( co:PMD_0000000
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:BFO_0000050 ;
+                                                            owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000030
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty obo:RO_0000085 ;
+                                                                                                        owl:someValuesFrom obo:BFO_0000034
+                                                                                                      ]
+                                                                                                    ) ;
+                                                                                 rdf:type owl:Class
+                                                                               ]
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf co:PMD_0000000 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:BFO_0000050 ;
+                                 owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000030
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty obo:RO_0000085 ;
+                                                                             owl:someValuesFrom obo:BFO_0000034
+                                                                           ]
+                                                                         ) ;
+                                                      rdf:type owl:Class
+                                                    ]
+                               ] ;
+               rdfs:label "functional material"@en ;
+               skos:definition "A functional material F is an engineered material which has the disposition to be used for an object O (O consists of F) and O's function is other/more than mechanical load carrying."@en .
+
+
 ###  https://w3id.org/pmd/co/PMD_0000661
 co:PMD_0000661 rdf:type owl:Class ;
-               rdfs:subClassOf co:PMD_0000002 ;
+               rdfs:subClassOf co:PMD_0000000 ;
                rdfs:comment "It is often composed of silica-based compounds."@en ;
                rdfs:label "glass"@en ;
                skos:definition "A glass is an engineered material present as an amorphous solid typically formed by rapid cooling of a melt."@en .
@@ -2637,25 +2806,33 @@ co:PMD_0000777 rdf:type owl:Class ;
                skos:definition "The heat capacity is a thermal property describing the amount of heat energy required to raise the temperature of a material by a given amount."@en .
 
 
+###  https://w3id.org/pmd/co/PMD_0000790
+co:PMD_0000790 rdf:type owl:Class ;
+               rdfs:subClassOf co:PMD_0000877 ;
+               rdfs:comment "e.g., air into glass"@en ;
+               rdfs:label "refraction (optical)"@en ;
+               skos:definition "Optical property which describes the bending of light as it passes from one medium into another due to a change in the light’s speed."@en .
+
+
 ###  https://w3id.org/pmd/co/PMD_0000794
 co:PMD_0000794 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0000602 ;
                rdfs:label "Spritzgießmaschine"@de ,
                           "injection molding machine"@en ;
-               skos:definition "An Injection Molding Machine is a Device used to produce plastic parts by injecting molten plastic into molds under high pressure."@en ,
+               skos:definition "An injection molding machine is a device used to produce plastic parts by injecting molten plastic into molds under high pressure."@en ,
                                "Eine Spritzgießmaschine ist ein Gerät, das verwendet wird, um Kunststoffteile durch Einspritzen von geschmolzenem Kunststoff in Formen unter hohem Druck herzustellen."@de .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000802
 co:PMD_0000802 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000015 ;
-               rdfs:label "irradiation process"@en ;
-               skos:definition "An irradiation process is a process in which a radiation source (bearing a stimulus role) emits radiation towards a material entity (bearing the target role)"@en .
+               rdfs:label "absorption of radiation"@en ;
+               skos:definition "process of taking up radiation by a material entity"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000833
 co:PMD_0000833 rdf:type owl:Class ;
-               owl:equivalentClass [ owl:intersectionOf ( obo:OBI_0000011
+               owl:equivalentClass [ owl:intersectionOf ( obo:COB_0000035
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty obo:OBI_0000293 ;
                                                             owl:someValuesFrom [ rdf:type owl:Class ;
@@ -2675,7 +2852,7 @@ co:PMD_0000833 rdf:type owl:Class ;
                                                         ) ;
                                      rdf:type owl:Class
                                    ] ;
-               rdfs:subClassOf obo:OBI_0000011 ,
+               rdfs:subClassOf obo:COB_0000035 ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty obo:OBI_0000293 ;
                                  owl:someValuesFrom [ rdf:type owl:Class ;
@@ -2694,7 +2871,7 @@ co:PMD_0000833 rdf:type owl:Class ;
                                ] ;
                rdfs:comment """Manufacturing processes alternate qualities of materials, i.e., a value specification of some quality of a material entity, which is a specified input to the process, cannot be the same as a value specification of the same quality of another material entity, which is a specified output of the process. 
 
-Unfortunately is is not possible to write down such axiom based on OWL. Semi-working solution are the temporally qualified continuants + SPARQL constrains."""@en ;
+Unfortunately it is not possible to write down such axiom based on OWL. Semi-working solution are the temporally qualified continuants + SPARQL constrains."""@en ;
                rdfs:label "Herstellungsprozess"@de ,
                           "manufacturing process"@en ;
                skos:definition """A planned process that is driven by the primary intent to transform objects
@@ -2707,7 +2884,7 @@ co:PMD_0000845 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000023 ;
                owl:disjointWith co:PMD_0020001 ;
                rdfs:label "matrix role"@en ;
-               skos:definition "Matrix is the role of a PortionOfConnectedMatter that implies to host the Filler."@en .
+               skos:definition "Matrix is the role of a 'PortionOfConnectedMatter' that implies to host the Filler."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000848
@@ -2716,50 +2893,65 @@ co:PMD_0000848 rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty obo:BFO_0000054 ;
                                  owl:someValuesFrom co:PMD_0000522
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:RO_0000052 ;
+                                 owl:someValuesFrom co:PMD_0000000
                                ] ;
+               rdfs:comment "The axiom that mechanical property has realization some application of mechanical load treats only conventional materials and not such effects as magnetostriction etc."@en ;
                rdfs:label "mechanical property"@en ;
-               skos:definition """A mechanical property is a material property that inheres in a material M when an object O_target that consists of M is stimulated in a process through an interaction with an object O_stimulus and M changes its stress/strain/..(mechanical?) SDCs.
-
-TODO: Check general class axiom and defintion altogether !!!"""@en .
+               skos:definition "A mechanical property is a material property which is a characteristic of material M. Mechanical property has realization in a stimulating process (in most cases, application of mechanical load), and the stimulating process is an occurent part of another process, in which an object O that is an instance of M participates."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000853
 co:PMD_0000853 rdf:type owl:Class ;
-               rdfs:subClassOf co:PMD_0020131 ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty obo:RO_0000080 ;
-                                 owl:someValuesFrom co:PMD_0020106
-                               ] ;
+               rdfs:subClassOf co:PMD_0020131 ;
+               rdfs:comment "typically observed through crystallographic analysis"@en ;
                rdfs:label "crystallographic texture"@en ;
-               skos:definition "The crystallographic texture is a morphological quality describing the arrangement and orientation of grains in a metallic material, observed through crystallographic analysis."@en .
+               skos:definition "an intensive quality describing the arrangement and orientation of grains in a polychrystal"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000868
 co:PMD_0000868 rdf:type owl:Class ;
-               rdfs:subClassOf co:PMD_0000000 ;
+               owl:equivalentClass [ owl:intersectionOf ( co:PMD_0000000
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:RO_0000086 ;
+                                                            owl:someValuesFrom co:PMD_0010026
+                                                          ]
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:RO_0002353 ;
+                                                            owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                 owl:unionOf ( obo:GO_0008150
+                                                                                               co:PMD_0000110
+                                                                                             )
+                                                                               ]
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf co:PMD_0000000 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:RO_0000086 ;
+                                 owl:someValuesFrom co:PMD_0010026
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:RO_0002353 ;
+                                 owl:someValuesFrom [ rdf:type owl:Class ;
+                                                      owl:unionOf ( obo:GO_0008150
+                                                                    co:PMD_0000110
+                                                                  )
+                                                    ]
+                               ] ;
                rdfs:label "natural organic material"@en ;
-               skos:definition "Natural organic materials are materials derived from natural biological sources, primarily composed of carbon-based compounds."@en .
+               skos:definition "Natural organic materials are materials derived from natural biological sources, primarily composed of carbon-based compounds."@en ,
+                               "material derived from natural biological sources or processes"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000869
 co:PMD_0000869 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000015 ;
-               rdfs:label "occurence of chemical reaction"@en ;
+               rdfs:label "chemical reaction"@en ;
                skos:definition "The occurrence of (a) chemical reaction is the process in which substances interact to form new chemical compounds or alter their molecular structure."@en .
-
-
-###  https://w3id.org/pmd/co/PMD_0000870
-co:PMD_0000870 rdf:type owl:Class ;
-               rdfs:subClassOf obo:BFO_0000015 ;
-               rdfs:label "occurence of electic field"@en ;
-               skos:definition "The occurrence of (an) electric field is a process describing the presence or generation of an electric field in a material or system."@en .
-
-
-###  https://w3id.org/pmd/co/PMD_0000871
-co:PMD_0000871 rdf:type owl:Class ;
-               rdfs:subClassOf obo:BFO_0000015 ;
-               rdfs:label "occurence of magnetic field"@en ;
-               skos:definition "The occurrence of (a) magenetic field is a process describing the presence or generation of a magnetic field in a material or system."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000877
@@ -2773,13 +2965,6 @@ co:PMD_0000877 rdf:type owl:Class ;
                skos:definition "An optical property is a material property representing the characteristics that describe how a material interacts with light, including reflection, refraction, and absorption."@en .
 
 
-###  https://w3id.org/pmd/co/PMD_0000880
-co:PMD_0000880 rdf:type owl:Class ;
-               rdfs:subClassOf obo:BFO_0000015 ;
-               rdfs:label "passing of time"@en ;
-               skos:definition "Passing of time is a process that describes the progression of time, which can influence material aging and property changes."@en .
-
-
 ###  https://w3id.org/pmd/co/PMD_0000882
 co:PMD_0000882 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000017 ;
@@ -2789,16 +2974,28 @@ co:PMD_0000882 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/co/PMD_0000888
 co:PMD_0000888 rdf:type owl:Class ;
-               rdfs:subClassOf co:PMD_0000002 ;
+               owl:equivalentClass [ owl:intersectionOf ( co:PMD_0000000
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:RO_0002353 ;
+                                                            owl:someValuesFrom co:PMD_0010033
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf co:PMD_0000000 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:RO_0002353 ;
+                                 owl:someValuesFrom co:PMD_0010033
+                               ] ;
                rdfs:label "polymer"@en ;
-               skos:definition "A polymer is an engineered material that consists of many repeated subunits (monomers) to form long chains. The atoms within a polymer chain are bonded together by covalent bonds. The intermolecular forces between polymer chains are typically represented by Van der Waals forces and hydrogen bonds."@en .
+               skos:definition "A polymer is an engineered material that consists of many repeated subunits (monomers) to form long chains. The atoms within a polymer chain are bonded together by covalent bonds. The intermolecular forces between polymer chains are typically represented by van der waals forces and hydrogen bonds."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000890
 co:PMD_0000890 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000027 ;
                rdfs:label "connected material entity aggregate"@en ;
-               skos:definition "A material entity aggregate that is a mereological sum of separate material entities, which adhere to one another through chemical bonds or physical junctions that go beyond gravity."@en ;
+               skos:definition "An object aggregate that is a mereological sum of separate material entities, which adhere to one another through chemical bonds or physical junctions that go beyond gravity."@en ;
                skos:example "the atoms of a molecule, the molecules forming the membrane of a cell, the epidermis in a human body"@en .
 
 
@@ -2806,7 +3003,7 @@ co:PMD_0000890 rdf:type owl:Class ;
 co:PMD_0000891 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000027 ;
                rdfs:label "disconnected material entity aggregate"@en ;
-               skos:definition "A material entity aggregate that is a mereological sum of scattered (i.e. spatially separated) material entities, which do not adhere to one another through chemical bonds or physical junctions but, instead, relate to one another merely on grounds of metric proximity. The material entities are separated from one another through space or through other material entities that do not belong to the group."@en ;
+               skos:definition "An object aggregate that is a mereological sum of scattered (i.e. spatially separated) material entities, which do not adhere to one another through chemical bonds or physical junctions but, instead, relate to one another merely on grounds of metric proximity. The material entities are separated from one another through space or through other material entities that do not belong to the group."@en ;
                skos:example "a heap of stones, a colony of honeybees, a group of synapses, the trees of a forest, the canopy of a forest, the fish of a shoal, a group of commuters on the subway, the patients in a hospital"@en .
 
 
@@ -2816,7 +3013,7 @@ co:PMD_0000896 rdf:type owl:Class ;
                owl:disjointWith co:PMD_0000967 ;
                rdfs:comment "The pressure is commonly measured in Pascals."@en ;
                rdfs:label "pressure"@en ;
-               skos:definition "The pressure is a thermodynamic quality describing the force exerted per unit area on a material."@en .
+               skos:definition "an intensive quality describing the force exerted per unit area in or on a material."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000899
@@ -2835,7 +3032,7 @@ co:PMD_0000907 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0000899 ;
                rdfs:label "Urformen Aus Dem Plastischen Zustand"@de ,
                           "primary shaping from the plastic state"@en ;
-               skos:definition "A Primary Shaping process that involves forming materials from a plastic state."@en ,
+               skos:definition "A primary shaping process that involves forming materials from a plastic state."@en ,
                                "Ein Urformprozess, der das Formen von Materialien aus einem plastischen Zustand beinhaltet."@de ;
                skos:example "Thermoforming of plastic sheets."@en .
 
@@ -2845,7 +3042,7 @@ co:PMD_0000933 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0000583 ;
                rdfs:label "Simulationsprozess"@de ,
                           "simulation process"@en ;
-               skos:definition "A Computing Process that models the behavior of a system over time using mathematical or computational techniques."@en ,
+               skos:definition "A computing process that models the behavior of a system over time using mathematical or computational techniques."@en ,
                                "Ein Datenverarbeitungsprozess, der das Verhalten eines Systems im Laufe der Zeit mit mathematischen oder rechnerischen Techniken modelliert"@de .
 
 
@@ -2853,7 +3050,7 @@ co:PMD_0000933 rdf:type owl:Class ;
 co:PMD_0000942 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0020131 ;
                rdfs:label "specific surface area"@en ;
-               skos:definition "The specific surface area is a morphologic quality describing the total surface area of a material per unit of mass or volume."@en .
+               skos:definition "an intensive quality embodying the total surface area of a material per unit of mass or volume."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000949
@@ -2865,7 +3062,7 @@ co:PMD_0000949 rdf:type owl:Class ;
                                ] ;
                owl:disjointWith co:PMD_0000952 ;
                rdfs:label "stiffness"@en ;
-               skos:definition "The stiffness is a mechanical property describing the resistance of a material to deformation under an applied force."@en .
+               skos:definition "The stiffness is a material property describing the resistance of a material to deformation under an applied force."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000950
@@ -2913,13 +3110,13 @@ co:PMD_0000950 rdf:type owl:Class ;
 co:PMD_0000952 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0000848 ;
                rdfs:label "strength"@en ;
-               skos:definition "The strength is a mechanical property describing the maximum stress a material can withstand before failure."@en .
+               skos:definition "The strength is a material property describing the maximum stress a material can withstand before failure."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000967
 co:PMD_0000967 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0020131 ;
-               rdfs:comment "The concept refers to an absolute tempeature, not to be mistaken with temperature difference."@en ,
+               rdfs:comment "The concept refers to an absolute temperature, not to be mistaken with temperature difference."@en ,
                             "To express that an object has a temperature, the property 'intensive bearer of' can be used. It implies a chain of: object consists of some portion of matter and portion of matter bearer of some temperature."@en ;
                rdfs:label "temperature"@en ;
                skos:definition "The temperature is a fundamental intensive quality representing the average atomic or molcular movement or vibration of a portion of matter."@en .
@@ -2939,29 +3136,47 @@ co:PMD_0000981 rdf:type owl:Class ;
 ###  https://w3id.org/pmd/co/PMD_0001008
 co:PMD_0001008 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0000802 ;
-               rdfs:label "waver irradiation"@en ;
-               skos:definition "A waver irradiation is an irradiation describing an exposure of a material or system to electromagnetic waves or radiation."@en .
+               rdfs:label "absorption of wave radiation"@en ;
+               skos:definition "process of taking up elctromagnetic radiation by a material entity"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0010026
+co:PMD_0010026 rdf:type owl:Class ;
+               rdfs:subClassOf co:PMD_0025001 ;
+               rdfs:label "organic composition"@en ;
+               skos:definition "A composition characterized by a primary molecular structure of carbon atoms covalently bonded to hydrogen (C-H bonds), typically forming linear, branched, or networked chains."@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0010033
+co:PMD_0010033 rdf:type owl:Class ;
+               rdfs:subClassOf obo:BFO_0000015 ;
+               rdfs:label "polymerization"@en ;
+               skos:definition "The chemical process of reacting monomers, oligomers, or reactive precursors together to form longer macromolecular chains or three-dimensional networks"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020001
 co:PMD_0020001 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000023 ;
                rdfs:label "filler role"@en ;
-               skos:definition "Filler is the role of a PortionOfDisconnectedMatter that implies being hosted in a Matrix."@en .
+               skos:definition "Filler is the role of a 'PortionOfDisconnectedMatter' that implies being hosted in a matrix."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020003
 co:PMD_0020003 rdf:type owl:Class ;
-               rdfs:subClassOf obo:BFO_0000030 ;
+               rdfs:subClassOf obo:BFO_0000030 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:RO_0000086 ;
+                                 owl:someValuesFrom co:PMD_0000591
+                               ] ;
                rdfs:label "crystal"@en ;
-               skos:definition "A crystal is an object that has part some entities that concretize a Bravais lattice."@en .
+               skos:definition "A crystal is an object that has a quality \"crystal structure\"."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020005
 co:PMD_0020005 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0020131 ;
                rdfs:label "porosity"@en ;
-               skos:definition "The porosity is a quality describing the fraction of the materials (enclosing) spatial region occupied by pores."@en .
+               skos:definition "itensive quality embodiying the fraction of the materials (enclosing) spatial region occupied by pores."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020023
@@ -3004,8 +3219,8 @@ co:PMD_0020099 rdf:type owl:Class ;
                rdfs:comment """TODO: possibly extend for 2D (Graphene etc)
 
 More elaborate crystal descriptions may be found in http://emmo.info/domain-crystallography/crystallography or https://purls.helmholtz-metadaten.de/disos/cso"""@en ;
-               rdfs:label "bravais lattice (3d)"@en ;
-               skos:definition "The Bravais lattice is a categorical value specification that specifies value of the crystal structure quality. It describes the possible geometric arrangement of lattice points in a crystal. The present descriptor is limited to the 14 possible three-dimensional arrangements."@en .
+               rdfs:label "bravais lattice (3D)"@en ;
+               skos:definition "The bravais lattice is a categorical value specification that specifies value of the crystal structure quality. It describes the possible geometric arrangement of lattice points in a crystal. The present descriptor is limited to the 14 possible three-dimensional arrangements."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020101
@@ -3014,14 +3229,14 @@ co:PMD_0020101 rdf:type owl:Class ;
                rdfs:label "proportion"@en ;
                skos:altLabel "concentration"@en ,
                              "fraction"@en ;
-               skos:definition "A Proportion is a relational quality between two entites (the whole and the part) which quantifies the relation between the whole and its part."@en .
+               skos:definition "A proportion is a relational quality between two entities (the whole and the part) which quantifies the relation between the whole and its part."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020102
 co:PMD_0020102 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0020101 ;
                rdfs:label "mass proportion"@en ;
-               skos:definition "The Mass Proportion is a Proportion which quantifies the mass of the part relative to the mass of the whole."@en .
+               skos:definition "Mass proportion is a proportion which quantifies the mass of the part relative to the mass of the whole."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020103
@@ -3029,8 +3244,8 @@ co:PMD_0020103 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0020101 ;
                rdfs:label "molar proportion"@en ;
                skos:altLabel "Molar Ratio"@en ;
-               skos:definition "The Molar Proportion is the proportion which quantifies the entities count of the part in relation to the entites count of the whole."@en ;
-               skos:example """The molar ratio of hydrogen gas H2 molecules to water H2O molecules is 1/1 in the oxyhydrogen reaction. The molar ratio of oxigen molecules O2 to water molecules is 2/1.
+               skos:definition "Molar proportion is the proportion which quantifies the entities count of the part in relation to the entities count of the whole."@en ;
+               skos:example """The molar ratio of hydrogen gas H2 molecules to water H2O molecules is 1/1 in the oxyhydrogen reaction. The molar ratio of oxygen molecules O2 to water molecules is 2/1.
 The molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 2022 AD."""@en .
 
 
@@ -3038,7 +3253,7 @@ The molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 202
 co:PMD_0020104 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0020101 ;
                rdfs:label "volume proportion"@en ;
-               skos:definition "The Mass Proportion is a Proportion which quantifies the volume of the part relative to the volume of the whole."@en .
+               skos:definition "Volume proportion is a proportion which quantifies the volume of the part relative to the volume of the whole."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020106
@@ -3050,7 +3265,7 @@ co:PMD_0020106 rdf:type owl:Class ;
                                ] ;
                rdfs:label "polycrystal"@en ;
                skos:altLabel "Polycrystalline structure"@en ;
-               skos:definition "Polycrystal is a connected object aggregate that has continuant part some crystal grains"@en .
+               skos:definition "A polycrystal is a connected material entity aggregate that consists of multiple crystal grains joined through crystallographic interfaces."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020112
@@ -3076,44 +3291,97 @@ co:PMD_0020116 rdf:type owl:Class ;
                                    ] ;
                rdfs:subClassOf obo:OBI_0001930 ;
                rdfs:label "aggregate state value"@en ;
-               skos:definition "The aggregate state value is a categorical value specification that specifies value of the aggregatge state quality."@en .
+               skos:definition "The aggregate state value is a categorical value specification that specifies value of the aggregate state quality."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020131
 co:PMD_0020131 rdf:type owl:Class ;
-               rdfs:subClassOf obo:BFO_0000019 ;
+               rdfs:subClassOf obo:BFO_0000019 ,
+                               _:genid261 ;
                owl:disjointWith co:PMD_0020148 ;
                rdfs:label "intensive quality"@en ;
                skos:altLabel "Point property"@en ;
-               skos:definition "An intensive quality is a qualty that inheres in only portion of matter and thus is independent of the bearers (system-) size."@en .
+               skos:definition "An intensive quality is a quality that inheres in only portion of matter and thus is independent of the bearers (system-) size."@en .
+
+_:genid261 rdf:type owl:Restriction ;
+            owl:onProperty obo:RO_0000080 ;
+            owl:someValuesFrom co:PMD_0000001 .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource co:PMD_0020131 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget _:genid261 ;
+   rdfs:comment "Due to the duality of object and portion of matter this axiom can not be an equivalent class axiom."@en
+ ] .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020132
 co:PMD_0020132 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0020148 ;
                rdfs:label "size"@en ;
-               skos:definition "Size is the quality of a material entity that describes its spatial extend."@en .
+               skos:definition "an extensive quality of a material entity that describes its spatial extend."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020143
 co:PMD_0020143 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000015 ;
                rdfs:label "process chain"@en ;
-               skos:definition "A process chain is a process that 'has contiuant part' subprocesses S1...Sn where S1...Sn precede each other and where some object or object aggregate that are output of Sn are then input to Sn+1."@en .
+               skos:definition "A process chain is a process that 'has continuant part' subprocesses S1...Sn where S1...Sn precede each other and where some object or object aggregate that are output of Sn are then input to Sn+1."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020148
 co:PMD_0020148 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000019 ;
                rdfs:label "extensive quality"@en ;
-               skos:definition "An extensive quality is a qualty that inheres in only object or object aggregate or fiat object part or chemical entity and is dependent on the bearers (system-) size."@en .
+               skos:definition "An extensive quality is a quality that inheres in only object or object aggregate or fiat object part or chemical entity and is dependent on the bearers (system-) size."@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020216
+co:PMD_0020216 rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Class ;
+                                     owl:oneOf ( co:PMD_0020217
+                                                 co:PMD_0020218
+                                                 co:PMD_0020219
+                                                 co:PMD_0020242
+                                               )
+                                   ] ;
+               rdfs:subClassOf obo:OBI_0001930 ;
+               rdfs:label "order scale value"@en ;
+               skos:definition "possible values of characteristic length over which structural correlations persist in a material"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020220
+co:PMD_0020220 rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty co:PMD_0000077 ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass co:PMD_0020216
+                                   ] ;
+               rdfs:subClassOf co:PMD_0020131 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty co:PMD_0000077 ;
+                                 owl:someValuesFrom co:PMD_0020216
+                               ] ;
+               rdfs:label "order scale"@en ;
+               skos:definition "characteristic length over which structural correlations persist in a material"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020243
+co:PMD_0020243 rdf:type owl:Class ;
+               rdfs:subClassOf co:PMD_0020131 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:RO_0000080 ;
+                                 owl:someValuesFrom co:PMD_0020106
+                               ] ;
+               rdfs:label "grain size"@en ;
+               skos:definition "an intensive quality epitomizing the average size of the grains of a polycrystal"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0025001
 co:PMD_0025001 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0020131 ;
                rdfs:label "composition"@en ;
-               skos:definition "Composition is a morphological quality describing the types and proportions of compounds (but not chemical elements) present in a portion of matter."@en ;
+               skos:definition "Composition is an intensive quality which defines types and proportions of compounds present in a material entity and is subject of some composition data item."@en ;
                skos:example "4 vol.% nitric acid solution, Styrene-Butadiene-Styrene (SBS) Block Copolymer with 50 vol.% of both styrene and butadiene"@en .
 
 
@@ -3129,24 +3397,183 @@ co:PMD_0025003 rdf:type owl:Class ;
                                  owl:onProperty co:PMD_0000077 ;
                                  owl:someValuesFrom co:PMD_0020023
                                ] ;
+               rdfs:comment "ferrite, austenite, martensite, etc."@en ;
                rdfs:label "metallic grain structure"@en ;
-               skos:definition "metallic grain structure characterizes the distinct phases in the microscopic structure of a metallic material. It concretizes ferrite, austenite, martensite, etc."@en .
+               skos:definition "intensive quality epitomizing the distinct phases in the microscopic structure of a metallic material."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0040001
 co:PMD_0040001 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0020132 ;
-               rdfs:comment "Length is a size that describes the spacial extend of its bearer in one dimension."@en ;
+               rdfs:comment "Length is a size that describes the spatial extent of its bearer in one dimension."@en ;
                rdfs:label "length"@en ;
                skos:altLabel "dimension"@en ;
-               skos:definition "Length is a one dimensional size." .
+               skos:definition "Length is a one dimensional size."@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0040030
+co:PMD_0040030 rdf:type owl:Class .
 
 
 ###  https://w3id.org/pmd/co/PMD_0050004
 co:PMD_0050004 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0000888 ;
-               rdfs:label "thermoplastics"@en ;
-               skos:definition "A Thermoplastic is a Polymer that becomes moldable when heated and solidifies upon cooling."@en .
+               rdfs:label "thermoplastic polymer"@en ;
+               skos:definition "polymer that becomes moldable when heated and solidifies upon cooling"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0050118
+co:PMD_0050118 rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( co:PMD_0000661
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:RO_0000053 ;
+                                                            owl:someValuesFrom co:PMD_0000877
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf co:PMD_0000661 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:RO_0000053 ;
+                                 owl:someValuesFrom co:PMD_0000790
+                               ] ;
+               rdfs:label "optical glass"@en ;
+               skos:definition "glass manufactured for optical components"@en ;
+               skos:example "e.g., lenses, prisms, mirrors" .
+
+
+###  https://w3id.org/pmd/co/PMD_0050133
+co:PMD_0050133 rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( co:PMD_0000661
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:BFO_0000050 ;
+                                                            owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000030
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty obo:RO_0000085 ;
+                                                                                                        owl:someValuesFrom obo:BFO_0000034
+                                                                                                      ]
+                                                                                                    ) ;
+                                                                                 rdf:type owl:Class
+                                                                               ]
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf co:PMD_0000654 ,
+                               co:PMD_0000661 ;
+               rdfs:label "functional glass"@en ;
+               skos:definition "glass that is designed to perform specific roles beyond conventional optical applications"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0090012
+co:PMD_0090012 rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( co:PMD_0000000
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:RO_0002353 ;
+                                                            owl:someValuesFrom obo:GO_0008150
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf co:PMD_0000000 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:RO_0002353 ;
+                                 owl:someValuesFrom obo:GO_0008150
+                               ] ;
+               rdfs:label "biological material"@en ;
+               skos:altLabel "biomaterial" ;
+               skos:definition "material produced by a living organism"@en ;
+               skos:example "Biological Comosite such as Wood, Bone, Silk, Wool;  Biopolymers such as cellulose, colagene;  Biogenic minerals such as hydroxyapatite" .
+
+
+###  https://w3id.org/pmd/co/PMD_0090013
+co:PMD_0090013 rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( co:PMD_0000577
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:RO_0002353 ;
+                                                            owl:someValuesFrom obo:GO_0008150
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf co:PMD_0000577 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:RO_0002353 ;
+                                 owl:someValuesFrom obo:GO_0008150
+                               ] ;
+               rdfs:label "biological composite"@en ;
+               skos:definition "composite consisting of two or more distinct material phases organized in a multi-scale structure that act synergistically to fulfill specific properties or functions"@en ;
+               skos:example " such as Wood, Bone, Silk, Wool;" .
+
+
+###  https://w3id.org/pmd/co/PMD_0090014
+co:PMD_0090014 rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( co:PMD_0000888
+                                                          co:PMD_0090012
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf co:PMD_0000888 ,
+                               co:PMD_0090012 ;
+               rdfs:label "biopolymer"@en ;
+               skos:altLabel "biomacromoleules" ;
+               skos:definition "polymer produced by the metabolic processes of a living organism"@en ;
+               skos:example "such as Polysaccharides like cellulose or Chitin; Proteins like colagene or Fibroin" .
+
+
+###  https://w3id.org/pmd/co/PMD_0090016
+co:PMD_0090016 rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( co:PMD_0000000
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:RO_0002353 ;
+                                                            owl:someValuesFrom [ owl:intersectionOf ( co:PMD_0000833
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty obo:OBI_0000293 ;
+                                                                                                        owl:someValuesFrom co:PMD_0090012
+                                                                                                      ]
+                                                                                                    ) ;
+                                                                                 rdf:type owl:Class
+                                                                               ]
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf co:PMD_0000000 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:RO_0002353 ;
+                                 owl:someValuesFrom [ owl:intersectionOf ( co:PMD_0000833
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty obo:OBI_0000293 ;
+                                                                             owl:someValuesFrom co:PMD_0090012
+                                                                           ]
+                                                                         ) ;
+                                                      rdf:type owl:Class
+                                                    ]
+                               ] ;
+               rdfs:label "bio-based material"@en ;
+               skos:definition "material intentionally processed from materials derived from living (or once-living) organisms"@en ;
+               skos:example "Engineered Biopolymers such as Polylactic Acid (PLA);  Reconstituted Biopolymers such as Regenerated Cellulose (Rayon/Viscose); Biocomposites such as Wood-Plastic Composites (WPC);  Biochemicals (e.g. Bio-based Adhesives)" .
+
+
+###  https://w3id.org/pmd/co/PMD_0090018
+co:PMD_0090018 rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( co:PMD_0000577
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:BFO_0000051 ;
+                                                            owl:someValuesFrom co:PMD_0090016
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf co:PMD_0000577 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:BFO_0000051 ;
+                                 owl:someValuesFrom co:PMD_0090016
+                               ] ;
+               rdfs:label "bio-based composite"@en ;
+               skos:altLabel "biocomposite; bio-composite" ;
+               skos:definition "composite consisting of at least one constituent derived from biological or bio-based sources"@en ;
+               skos:example "such as Wood-Plastic Composite (WPC), Hemp-fiber reinforced Polypropylene" .
 
 
 ###  https://w3id.org/pmd/co/PMD_0200002
@@ -3157,67 +3584,281 @@ co:PMD_0200002 rdf:type owl:Class ;
                rdfs:label "Spritzgießen"@de ,
                           "injection molding"@en ;
                skos:altLabel "injection moulding; plastic injection molding"@en ;
-               skos:definition "A primary shaping process in which plastic granules are plasticised in an injection unit and the melt is injected under high pressure into a closed mold cavity, where it cools and solidifies to the final part shape."@en ,
+               skos:definition "A primary shaping from the plastic state process in which plastic granules are plasticised in an injection unit and the melt is injected under high pressure into a closed mold cavity, where it cools and solidifies to the final part shape."@en ,
                                "Urformverfahren, bei dem Kunststoffgranulat in einem Plastifizieraggregat aufgeschmolzen und die Schmelze mit hohem Druck in einen geschlossenen Formhohlraum eingespritzt wird, wo sie verdichtet, abkühlt und zum Formteil erstarrt."@de ;
                skos:example "Injection molding of polypropylene housings."@en .
+
+
+###  https://w3id.org/pmd/log/LOG_0080000
+<https://w3id.org/pmd/log/LOG_0080000> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( obo:IAO_0020000
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty obo:IAO_0000219 ;
+                                                                                    owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/log/LOG_1000050>
+                                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                                owl:onProperty obo:BFO_0000196 ;
+                                                                                                                                owl:someValuesFrom obo:OBI_0000571
+                                                                                                                              ]
+                                                                                                                            ) ;
+                                                                                                         rdf:type owl:Class
+                                                                                                       ]
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/log/LOG_1000006> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:IAO_0000219 ;
+                                                         owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/log/LOG_1000050>
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty obo:BFO_0000196 ;
+                                                                                                     owl:someValuesFrom obo:OBI_0000571
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ]
+                                                       ] ;
+                                       rdfs:label "manufacturer identifier"@en .
+
+
+###  https://w3id.org/pmd/log/LOG_1000006
+<https://w3id.org/pmd/log/LOG_1000006> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( obo:IAO_0020000
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty obo:IAO_0000219 ;
+                                                                                    owl:someValuesFrom <https://w3id.org/pmd/log/LOG_1000050>
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:subClassOf obo:IAO_0020000 ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:IAO_0000219 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/log/LOG_1000050>
+                                                       ] ;
+                                       rdfs:label "organization identifier"@en ;
+                                       skos:definition "identifier that identifies an organization"@en-us .
+
+
+###  https://w3id.org/pmd/log/LOG_1000008
+<https://w3id.org/pmd/log/LOG_1000008> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( obo:IAO_0020000
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty obo:IAO_0000219 ;
+                                                                                    owl:someValuesFrom obo:BFO_0000029
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:subClassOf obo:IAO_0020000 ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:IAO_0000219 ;
+                                                         owl:someValuesFrom obo:BFO_0000029
+                                                       ] ;
+                                       rdfs:label "physical location identifier"@en ;
+                                       skos:definition "identifier that identifies a physical location (site)"@en-us .
+
+
+###  https://w3id.org/pmd/log/LOG_1000009
+<https://w3id.org/pmd/log/LOG_1000009> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/log/LOG_1000008>
+                                                                                  [ rdf:type owl:Class ;
+                                                                                    owl:unionOf ( co:PMD_0040030
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:IAO_0000219 ;
+                                                                                                    owl:someValuesFrom <https://w3id.org/pmd/log/LOG_1000050>
+                                                                                                  ]
+                                                                                                )
+                                                                                  ]
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty co:PMD_0000004 ;
+                                                                                    owl:hasValue co:PMD_0040128
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/log/LOG_1000008> ;
+                                       rdfs:label "global location number"@en ;
+                                       skos:definition "identifer that uniquely identifies a business organization or a geospatial location and complies with GS1 GLN coding scheme"@en-us .
+
+
+###  https://w3id.org/pmd/log/LOG_1000011
+<https://w3id.org/pmd/log/LOG_1000011> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000040
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty obo:BFO_0000196 ;
+                                                                                    owl:someValuesFrom <https://w3id.org/pmd/log/LOG_1000054>
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:subClassOf obo:BFO_0000040 ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:BFO_0000196 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/log/LOG_1000054>
+                                                       ] ;
+                                       rdfs:label "agent"@en .
+
+
+###  https://w3id.org/pmd/log/LOG_1000017
+<https://w3id.org/pmd/log/LOG_1000017> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/log/LOG_1000050>
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty obo:BFO_0000196 ;
+                                                                                    owl:someValuesFrom obo:OBI_0000571
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/log/LOG_1000011> ,
+                                                       <https://w3id.org/pmd/log/LOG_1000050> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:BFO_0000196 ;
+                                                         owl:someValuesFrom obo:OBI_0000571
+                                                       ] ;
+                                       rdfs:label "manufacturer"@en ;
+                                       skos:definition "organization which has a manufacturer role"@en-us .
+
+
+###  https://w3id.org/pmd/log/LOG_1000047
+<https://w3id.org/pmd/log/LOG_1000047> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/log/LOG_1000050>
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty obo:BFO_0000196 ;
+                                                                                    owl:someValuesFrom <https://w3id.org/pmd/log/LOG_1000091>
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/log/LOG_1000050> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:BFO_0000196 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/log/LOG_1000091>
+                                                       ] ;
+                                       rdfs:label "business organization"@en ;
+                                       skos:definition "organization engaging in or planning to engage in any activity of buying and selling goods or services for a profit" .
+
+
+###  https://w3id.org/pmd/log/LOG_1000050
+<https://w3id.org/pmd/log/LOG_1000050> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000027
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty obo:IAO_0000235 ;
+                                                                                    owl:someValuesFrom <https://w3id.org/pmd/log/LOG_1000006>
+                                                                                  ]
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty obo:RO_0002351 ;
+                                                                                    owl:someValuesFrom foaf:Person
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:subClassOf obo:BFO_0000027 ,
+                                                       <http://www.w3.org/ns/org#FormalOrganization> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:IAO_0000235 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/log/LOG_1000006>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:RO_0002351 ;
+                                                         owl:someValuesFrom foaf:Person
+                                                       ] ;
+                                       rdfs:label "organization"@en ;
+                                       skos:definition "An organization is an immaterial entity that has the organisation role and there exists some sort of legal framework that recognises the entity and its continued existence."@en .
+
+
+###  https://w3id.org/pmd/log/LOG_1000054
+<https://w3id.org/pmd/log/LOG_1000054> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:BFO_0000023 ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:BFO_0000197 ;
+                                                         owl:someValuesFrom [ owl:intersectionOf ( [ owl:intersectionOf ( obo:BFO_0000040
+                                                                                                                          [ rdf:type owl:Class ;
+                                                                                                                            owl:complementOf obo:BFO_0000024
+                                                                                                                          ]
+                                                                                                                        ) ;
+                                                                                                     rdf:type owl:Class
+                                                                                                   ]
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty <https://w3id.org/pmd/log/LOG_1900001> ;
+                                                                                                     owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                          owl:unionOf ( foaf:Person
+                                                                                                                                        <https://w3id.org/pmd/log/LOG_1000050>
+                                                                                                                                      )
+                                                                                                                        ]
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ]
+                                                       ] ;
+                                       rdfs:label "agent role"@en ;
+                                       skos:definition "role that someone or something has when they act on behalf of a person, engineered system or a group of agents"@en-us .
+
+
+###  https://w3id.org/pmd/log/LOG_1000061
+<https://w3id.org/pmd/log/LOG_1000061> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/log/LOG_1000054> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:BFO_0000197 ;
+                                                         owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/log/LOG_1000050>
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty obo:RO_0000056 ;
+                                                                                                     owl:someValuesFrom <https://w3id.org/pmd/log/LOG_1000123>
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ]
+                                                       ] ;
+                                       rdfs:label "manufacturer role"@en ;
+                                       skos:definition "agent role held by an organization when it produces material products"@en-us .
+
+
+###  https://w3id.org/pmd/log/LOG_1000091
+<https://w3id.org/pmd/log/LOG_1000091> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:BFO_0000034 ;
+                                       rdfs:label "business function"@en ;
+                                       skos:definition "function of an organization to partake in for profit activities as prescribed by the objectives specified by that organization"@en-us .
+
+
+###  https://w3id.org/pmd/log/LOG_1000123
+<https://w3id.org/pmd/log/LOG_1000123> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/log/LOG_1000130> ;
+                                       rdfs:label "product production process"@en ;
+                                       skos:definition "business process that consists of at least one manufacturing process through which raw materials and components are transformed or modified to create a material product"@en-us .
+
+
+###  https://w3id.org/pmd/log/LOG_1000130
+<https://w3id.org/pmd/log/LOG_1000130> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:BFO_0000015 ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:RO_0000057 ;
+                                                         owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/log/LOG_1000011>
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty <https://w3id.org/pmd/log/LOG_1900001> ;
+                                                                                                     owl:someValuesFrom <https://w3id.org/pmd/log/LOG_1000047>
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ]
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:RO_0002233 ;
+                                                         owl:someValuesFrom [ owl:intersectionOf ( obo:OBI_0000260
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty obo:RO_0000059 ;
+                                                                                                     owl:someValuesFrom obo:IAO_0000104
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ]
+                                                       ] ;
+                                       rdfs:label "business process"@en ;
+                                       skos:definition "planned process which is prescribed by a plan specification with one or more objectives specified by a business organization"@en-us .
 
 
 #################################################################
 #    Individuals
 #################################################################
-
-###  http://purl.obolibrary.org/obo/IAO_0000002
-obo:IAO_0000002 rdf:type owl:NamedIndividual ;
-                rdfs:label "example to be eventually removed"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000120
-obo:IAO_0000120 rdf:type owl:NamedIndividual ;
-                obo:IAO_0000115 "Class has all its metadata, but is either not guaranteed to be in its final location in the asserted IS_A hierarchy or refers to another class that is not complete."@en ;
-                rdfs:label "metadata complete"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000121
-obo:IAO_0000121 rdf:type owl:NamedIndividual ;
-                obo:IAO_0000115 "Term created to ease viewing/sort terms for development purpose, and will not be included in a release"@en ;
-                rdfs:label "organizational term"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000122
-obo:IAO_0000122 rdf:type owl:NamedIndividual ;
-                obo:IAO_0000115 "Class has undergone final review, is ready for use, and will be included in the next release. Any class lacking \"ready_for_release\" should be considered likely to change place in hierarchy, have its definition refined, or be obsoleted in the next release.  Those classes deemed \"ready_for_release\" will also derived from a chain of ancestor classes that are also \"ready_for_release.\""@en ;
-                rdfs:label "ready for release"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000123
-obo:IAO_0000123 rdf:type owl:NamedIndividual ;
-                obo:IAO_0000115 "Class is being worked on; however, the metadata (including definition) are not complete or sufficiently clear to the branch editors."@en ;
-                rdfs:label "metadata incomplete"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000124
-obo:IAO_0000124 rdf:type owl:NamedIndividual ;
-                obo:IAO_0000115 "Nothing done yet beyond assigning a unique class ID and proposing a preferred term."@en ;
-                rdfs:label "uncurated"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000125
-obo:IAO_0000125 rdf:type owl:NamedIndividual ;
-                obo:IAO_0000115 "All definitions, placement in the asserted IS_A hierarchy and required minimal metadata are complete. The class is awaiting a final review by someone other than the term editor."@en ;
-                rdfs:label "pending final vetting"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000423
-obo:IAO_0000423 rdf:type owl:NamedIndividual ;
-                obo:IAO_0000115 "Terms with this status should eventually replaced with a term from another ontology."@en ;
-                rdfs:label "to be replaced with external ontology term"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000428
-obo:IAO_0000428 rdf:type owl:NamedIndividual ;
-                obo:IAO_0000115 "A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues."@en ;
-                rdfs:label "requires discussion"@en .
-
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_1060001
 <https://w3id.org/pmd/automatce/AUTOMATCE_1060001> rdf:type owl:NamedIndividual ,
@@ -3900,7 +4541,7 @@ obo:IAO_0000428 rdf:type owl:NamedIndividual ;
 
 ###  https://w3id.org/pmd/co/PMD_0020006
 co:PMD_0020006 rdf:type owl:NamedIndividual ;
-               rdfs:label "bravais lattice triclinic primitve"@en .
+               rdfs:label "bravais lattice triclinic primitive"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020007
@@ -4006,25 +4647,25 @@ co:PMD_0020111 rdf:type owl:NamedIndividual ;
 ###  https://w3id.org/pmd/co/PMD_0020117
 co:PMD_0020117 rdf:type owl:NamedIndividual ;
                rdfs:label "aggregate state solid"@en ;
-               skos:definition "A state where the bonds between entites trasmit shear forces."@en .
+               skos:definition "A state where the bonds between entities transmit shear forces."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020118
 co:PMD_0020118 rdf:type owl:NamedIndividual ;
                rdfs:label "aggregate state liquid"@en ;
-               skos:definition "A state where the bonds of the entites transmit no shear force."@en .
+               skos:definition "A state where the bonds of the entities transmit no shear force."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020119
 co:PMD_0020119 rdf:type owl:NamedIndividual ;
-               rdfs:label "aggregate state gasous"@en ;
+               rdfs:label "aggregate state gaseous"@en ;
                skos:definition "A state where the entities have no bonding."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020120
 co:PMD_0020120 rdf:type owl:NamedIndividual ;
                rdfs:label "aggregate state plasma"@en ;
-               skos:definition "An aggregate state where the entites are atom nuclei and have no bonds."@en .
+               skos:definition "An aggregate state where the entities are atom nuclei and have no bonds."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020121
@@ -4036,7 +4677,7 @@ co:PMD_0020121 rdf:type owl:NamedIndividual ;
 ###  https://w3id.org/pmd/co/PMD_0020122
 co:PMD_0020122 rdf:type owl:NamedIndividual ;
                rdfs:label "aggregate state supercritical fluid"@en ;
-               skos:definition "A state with strong bindings between entites that do not transmit shear force."@en .
+               skos:definition "A state with strong bindings between entities that do not transmit shear force."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020123
@@ -4048,13 +4689,41 @@ co:PMD_0020123 rdf:type owl:NamedIndividual ;
 ###  https://w3id.org/pmd/co/PMD_0020124
 co:PMD_0020124 rdf:type owl:NamedIndividual ;
                rdfs:label "aggregate state suprafluid"@en ;
-               skos:definition "A state with frictionless binding that transmits no shear force between entites."@en .
+               skos:definition "A state with frictionless binding that transmits no shear force between entities."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020125
 co:PMD_0020125 rdf:type owl:NamedIndividual ;
                rdfs:label "aggregate state suprasolid"@en ;
                skos:definition "A state that exhibits suprafluid and solid properties."@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020217
+co:PMD_0020217 rdf:type owl:NamedIndividual ;
+               rdfs:label "short range order"@en ;
+               skos:definition "periodic arrangement of structural features up to a few entities"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020218
+co:PMD_0020218 rdf:type owl:NamedIndividual ;
+               rdfs:label "medium range order"@en ;
+               skos:definition "periodic arrangement of structural features of many entities"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020219
+co:PMD_0020219 rdf:type owl:NamedIndividual ;
+               rdfs:label "long range order"@en ;
+               skos:definition "periodic arrangement of structural features of virtually all entities"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020242
+co:PMD_0020242 rdf:type owl:NamedIndividual ;
+               rdfs:label "no range order"@en ;
+               skos:definition "no periodic arrangement of structural features of entites"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0040128
+co:PMD_0040128 rdf:type owl:NamedIndividual .
 
 
 #################################################################
@@ -4091,40 +4760,6 @@ co:PMD_0020125 rdf:type owl:NamedIndividual ;
                 co:PMD_0020112
                 co:PMD_0025001
                 co:PMD_0025003
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( co:PMD_0000519
-                co:PMD_0000520
-                co:PMD_0000521
-                co:PMD_0000522
-                co:PMD_0000523
-                co:PMD_0000802
-                co:PMD_0000880
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( co:PMD_0000519
-                co:PMD_0000520
-                co:PMD_0000521
-                co:PMD_0000522
-                co:PMD_0000802
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( co:PMD_0000549
-                co:PMD_0000596
-                co:PMD_0000629
-                co:PMD_0000635
-                co:PMD_0000869
-                co:PMD_0000870
-                co:PMD_0000871
               )
 ] .
 

@@ -37,9 +37,9 @@
         "val" : "Automotive Circular Economy Ontology"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-04-24"
+        "val" : "2026-04-27"
       } ],
-      "version" : "https://w3id.org/pmd/automatce/releases/2026-04-24/automatce-full.json"
+      "version" : "https://w3id.org/pmd/automatce/releases/2026-04-27/automatce-full.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000001",
@@ -257,6 +257,9 @@
       "lbl" : "material entity",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "(Elucidation) A material entity is an independent continuant has some portion of matter as continuant part"
@@ -290,6 +293,28 @@
           "pred" : "http://www.w3.org/2004/02/skos/core#example",
           "val" : "A marriage bond; an instance of love; an obligation between one person and another"
         } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/COB_0000035",
+      "lbl" : "completely executed planned process",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/COB_0000082",
+      "lbl" : "planned process",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A process that is initiated by an agent who intends to carry out a plan to achieve an objective through one or more actions as described in a plan specification."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0008150",
+      "lbl" : "biological_process",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence."
+        }
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000005",
@@ -346,30 +371,22 @@
         }
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000078",
-      "lbl" : "curation status specification",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value."
-        }
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000102",
-      "lbl" : "data about an ontology part",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "Data about an ontology part is a data item about a part of an ontology, for example a term"
-        }
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000104",
       "lbl" : "plan specification",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
           "val" : "A directive information entity with action specifications and objective specifications as parts, and that may be concretized as a realizable entity that, if realized, is realized in a process in which the bearer tries to achieve the objectives by taking the actions specified."
+        },
+        "comments" : [ "2/3/2009 Comment from OBI review.\n\nAction specification not well enough specified.\nConditional specification not well enough specified.\nQuestion whether all plan specifications have objective specifications.\n\nRequest that IAO either clarify these or change definitions not to use them" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000109",
+      "lbl" : "measurement datum",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A measurement datum is an information content entity that is a recording of the output of a measurement such as produced by a device."
         }
       }
     }, {
@@ -388,7 +405,8 @@
       "meta" : {
         "definition" : {
           "val" : "A document that is the output of a publishing process."
-        }
+        },
+        "comments" : [ "Revisit the term in Octorber 2020. Improve the defintion." ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000444",
@@ -406,7 +424,8 @@
       "meta" : {
         "definition" : {
           "val" : "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."
-        }
+        },
+        "comments" : [ "Sep 29, 2016: The current definition has been amended from the previous version: \"A proper name is an information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.\" to more accuratly reflect the necessary and sufficient condition on the class. (MB)" ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0020010",
@@ -423,7 +442,7 @@
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/OBI_0000011",
-      "lbl" : "planned process",
+      "lbl" : "obsolete planned process",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -455,6 +474,15 @@
       "meta" : {
         "definition" : {
           "val" : "An entity that can bear roles, has members, and has a set of organization rules. Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000260",
+      "lbl" : "plan",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A plan is a realizable entity that is the inheres in a bearer who is committed to realizing it as a completely executed planned process."
         }
       }
     }, {
@@ -498,6 +526,12 @@
       "type" : "CLASS"
     }, {
       "id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/org#FormalOrganization",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://xmlns.com/foaf/0.1/Person",
       "type" : "CLASS"
     }, {
       "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000002",
@@ -1200,19 +1234,6 @@
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#example",
           "val" : "Grinding, sorting, and regranulating a polymer component after dismantling."
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032",
-      "lbl" : "carbon footprint amount",
-      "type" : "CLASS",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A product carbon footprint that quantifies a greenhouse gas emission burden as a carbon dioxide equivalent amount for a stated product, process, or scenario."
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#example",
-          "val" : "12.4 kg CO2 equivalent for a selected reuse scenario."
         } ]
       }
     }, {
@@ -2621,7 +2642,7 @@
           "val" : "Portion of Material"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A Material is a Portion Of Matter that may participate in some Manifacturing Process and whose shape is not relevant for its participation in the Manifacuring Process."
+          "val" : "A material is a portion of matter that may participate in some manufacturing process and whose shape is not relevant for its participation in the manufacturing process."
         } ]
       }
     }, {
@@ -2643,18 +2664,18 @@
         "comments" : [ "We recognize that some of the materials in the subclasses also occur naturally. However, these are not within the scope of our consideration for technical use." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "An Engineered Material is a Material that is output of a Manufacturing Process."
+          "val" : "An engineered material is a material that is output of a manufacturing process."
         } ]
       }
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000005",
-      "lbl" : "behavioral material property",
+      "lbl" : "material property",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "Technical materials are complex object aggregates. The properties that are determined for those object aggregates are intrinsically associated with the methodologies employed in the measurement process. This is in contrast to typical 'physical' properties, which like e.g. mass that can be determined to high accuracy independently of the measurement process. \nAs a consequence, the behavoiral material properties in the ontology are differeciated according to their measurement method, e.g. Brinell hardness and Vickers hardness are different types of indentation hardness rather than different measures/quantification (GDC) of the materials property 'indentation hardness'.\n The 'unit idenifieres' of such properties (e.g. \"HV1\", \"HV10\", \"HBW\") are strictly speaking not units but rather references to the measurement methodology used to determine a numeric value that quantifies the property." ],
+        "comments" : [ "A property is a material trait in terms of the kind and magnitude of response to a specific imposed stimulus. Generally, definitions of properties are made independent of material shape and size.\n(Callister, W.D., Rethwisch, D.G., Materials Science and Engineering, Wiley, 2014)\n\nTechnical materials are complex aggregates. Many properties that are determined for those aggregates are intrinsically associated with the methodologies employed in the measurement process. This is in contrast to typical 'physical' properties, which like e.g. mass that can be determined to high accuracy independently of the measurement process. \nAs a consequence, material properties in the ontology are differeciated according to their measurement method, e.g. Brinell hardness and Vickers hardness are different types of indentation hardness rather than different measures/quantification (GDC) of the materials property 'indentation hardness'.\n The 'unit idenifieres' of such properties (e.g. \"HV1\", \"HV10\", \"HBW\") are strictly speaking not units but rather references to the measurement methodology used to determine a numeric value that quantifies the property.\n\nExtensive properties that depend on the object being tested rather than on the portion of matter are (extensive) object- or system-properties." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A property is a material trait in terms of the kind and magnitude of response to a specific imposed stimulus. Generally, definitions of properties are made independent of material shape and size.\n\n(Callister, W.D., Rethwisch, D.G., Materials Science and Engineering, Wiley, 2014)\n\nWe only deal with intensive (system-size independent) materrial properties. Extensive properties that depend on the testpiece/specimen/probe size should be found in the respective testing method modules."
+          "val" : "a disposition of a portion of matter that is realized in a compatible process and whose realization is grounded in the portions intensive qualities"
         } ]
       }
     }, {
@@ -2676,12 +2697,22 @@
       }
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000075",
-      "lbl" : "mold device",
+      "lbl" : "mould",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A form used to cast an object of a desired shape."
+          "val" : "A device consisting of a hollowed-out cavity that shapes fluid or plastic material into a specific form through the process of solidification or cooling."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000110",
+      "lbl" : "geological process",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A natural process that operates within the Earth system to transform, transport, or deform Earth materials, thereby changing Earth structures and landforms"
         } ]
       }
     }, {
@@ -2691,7 +2722,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The ASTM grain size is a scalar specifically describing the size of grains in a crystalline material as defined by ASTM standards."
+          "val" : "The ASTM grain size is a quality that is measured through a process that follows the ASTM standard."
         } ]
       }
     }, {
@@ -2701,57 +2732,47 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The aggregate state is a morphological quality representing the physical state of a material, such as solid, liquid, or gas."
+          "val" : "an intensive quality representing the physical state of a material, such as solid, liquid, or gasous"
         } ]
       }
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000519",
-      "lbl" : "application of electric field",
+      "lbl" : "flow of electric charge",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "An application of (an) electric field is the process of subjecting a material to an electric field to observe its behavior or modify its properties."
+          "val" : "is the process of movement of charged particles"
         } ]
       }
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000520",
-      "lbl" : "application of heat flux",
+      "lbl" : "heat flow",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "An application of heat flux describes the process of transferring thermal energy to or from a material, often used in thermal property measurements."
+          "val" : "is a process in which transfer of thermal energy between or within material entities occurs"
         } ]
       }
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000521",
-      "lbl" : "application of magnetic field",
+      "lbl" : "generation of magnetic field",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "An application of (a) magnetic field is the process of subjecting a material to a magnetic field to study its magnetic properties or induce magnetization."
+          "val" : "is a process that occurs as a reaction to change of elctric field or movement of charges and produces a magnetic field"
         } ]
       }
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000522",
-      "lbl" : "application of mechanical load",
+      "lbl" : "mechanical process",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "An application of mechanical load is the process of applying force or stress to a material to observe its response or measure its properties."
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/co/PMD_0000523",
-      "lbl" : "application of substance",
-      "type" : "CLASS",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The application of (a) substance is the process of applying a material or substance to a surface or within a system."
+          "val" : "is a process in which forces, moments, or imposed displacements to objects or object aggregates occur and/or the equivalent (stresses, strains) to materials or portions of matter"
         } ]
       }
     }, {
@@ -2771,17 +2792,20 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A change of temperature is a process describing the variation in thermal energy within a material or system over time or due to external influences."
+          "val" : "change of temperature is a process in which a particpant changes its temperature"
         } ]
       }
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000577",
-      "lbl" : "composite material",
+      "lbl" : "composite",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A Composite Material is an Engineered Material that 'consists of' some Material that has a Matrix role and of some Material that has a Filler role."
+          "val" : "An object aggregate that consists of two or more bonded materials with dissimilar physical or chemical properties which are used to complement each other where the parts remain seperate and distinct in the resulting object aggregate."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "carbon fibre reinforced polymer\nlaminated glass\nwood\nhard metal composites for abrasive tools"
         } ]
       }
     }, {
@@ -2802,9 +2826,10 @@
       "lbl" : "crystal structure",
       "type" : "CLASS",
       "meta" : {
+        "comments" : [ "The finite set of periodic geometric arrangements is described e.g. by the 14 possible Bravais Lattices in three-dimensional space." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The crystal structure is a morphologic quality that describes the periodic geometric arrangement of entities in a crystalline material. The finite set of periodic geometric arrangements is described by the 14 possible Bravais Lattices in three-dimensional space."
+          "val" : "an intensive qualtty of a crystal that embodies the periodic geometric arrangement of entities in a crystal lattice."
         } ]
       }
     }, {
@@ -2814,7 +2839,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The defect density is a morphological quality describing the number of defects per unit volume or area in a material, which can affect its mechanical and electronic properties."
+          "val" : "an intensive quality describing the number of defects per unit volume or area in a material, which can affect its mechanical and electronic properties"
         } ]
       }
     }, {
@@ -2824,7 +2849,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The deformation is a process describing a change in the shape, size, or structure of a material under the influence of stress or force."
+          "val" : "The deformation is a process describing a change in the shape, size, or structure of a material often under the influence of stress or force."
         } ]
       }
     }, {
@@ -2844,7 +2869,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A physical or virtual entity used to perform a specific function or task, often involving measurement, manipulation, or analysis of materials."
+          "val" : "A device is an object that is designed to perform a specific function or task involving measurement, manipulation, processing, or analysis."
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "Ein physisches oder virtuelles Objekt, das verwendet wird, um eine bestimmte Funktion oder Aufgabe auszuführen, häufig im Zusammenhang mit der Messung, Manipulation oder Analyse von Materialien."
@@ -2857,7 +2882,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "An elastic modulus is a measure of a material's stiffness, defined as the ratio of stress to strain in the elastic deformation region."
+          "val" : "represents a material's stiffness, defined as the ratio of stress to strain in the elastic deformation region."
         } ]
       }
     }, {
@@ -2878,6 +2903,16 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "An evolution of damage is a process representing the progression of material degradation under mechanical, thermal, or chemical stresses."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000654",
+      "lbl" : "functional material",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A functional material F is an engineered material which has the disposition to be used for an object O (O consists of F) and O's function is other/more than mechanical load carrying."
         } ]
       }
     }, {
@@ -2928,13 +2963,24 @@
         } ]
       }
     }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000790",
+      "lbl" : "refraction (optical)",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "e.g., air into glass" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "Optical property which describes the bending of light as it passes from one medium into another due to a change in the light’s speed."
+        } ]
+      }
+    }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000794",
       "lbl" : "injection molding machine",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "An Injection Molding Machine is a Device used to produce plastic parts by injecting molten plastic into molds under high pressure."
+          "val" : "An injection molding machine is a device used to produce plastic parts by injecting molten plastic into molds under high pressure."
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "Eine Spritzgießmaschine ist ein Gerät, das verwendet wird, um Kunststoffteile durch Einspritzen von geschmolzenem Kunststoff in Formen unter hohem Druck herzustellen."
@@ -2942,12 +2988,12 @@
       }
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000802",
-      "lbl" : "irradiation process",
+      "lbl" : "absorption of radiation",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "An irradiation process is a process in which a radiation source (bearing a stimulus role) emits radiation towards a material entity (bearing the target role)"
+          "val" : "process of taking up radiation by a material entity"
         } ]
       }
     }, {
@@ -2955,7 +3001,7 @@
       "lbl" : "manufacturing process",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "Manufacturing processes alternate qualities of materials, i.e., a value specification of some quality of a material entity, which is a specified input to the process, cannot be the same as a value specification of the same quality of another material entity, which is a specified output of the process. \n\nUnfortunately is is not possible to write down such axiom based on OWL. Semi-working solution are the temporally qualified continuants + SPARQL constrains." ],
+        "comments" : [ "Manufacturing processes alternate qualities of materials, i.e., a value specification of some quality of a material entity, which is a specified input to the process, cannot be the same as a value specification of the same quality of another material entity, which is a specified output of the process. \n\nUnfortunately it is not possible to write down such axiom based on OWL. Semi-working solution are the temporally qualified continuants + SPARQL constrains." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "A planned process that is driven by the primary intent to transform objects\nA manufacturing process is always a transformative process."
@@ -2971,7 +3017,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "Matrix is the role of a PortionOfConnectedMatter that implies to host the Filler."
+          "val" : "Matrix is the role of a 'PortionOfConnectedMatter' that implies to host the Filler."
         } ]
       }
     }, {
@@ -2979,9 +3025,10 @@
       "lbl" : "mechanical property",
       "type" : "CLASS",
       "meta" : {
+        "comments" : [ "The axiom that mechanical property has realization some application of mechanical load treats only conventional materials and not such effects as magnetostriction etc." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A mechanical property is a material property that inheres in a material M when an object O_target that consists of M is stimulated in a process through an interaction with an object O_stimulus and M changes its stress/strain/..(mechanical?) SDCs.\n\nTODO: Check general class axiom and defintion altogether !!!"
+          "val" : "A mechanical property is a material property which is a characteristic of material M. Mechanical property has realization in a stimulating process (in most cases, application of mechanical load), and the stimulating process is an occurent part of another process, in which an object O that is an instance of M participates."
         } ]
       }
     }, {
@@ -2989,9 +3036,10 @@
       "lbl" : "crystallographic texture",
       "type" : "CLASS",
       "meta" : {
+        "comments" : [ "typically observed through crystallographic analysis" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The crystallographic texture is a morphological quality describing the arrangement and orientation of grains in a metallic material, observed through crystallographic analysis."
+          "val" : "an intensive quality describing the arrangement and orientation of grains in a polychrystal"
         } ]
       }
     }, {
@@ -3002,36 +3050,19 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "Natural organic materials are materials derived from natural biological sources, primarily composed of carbon-based compounds."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "material derived from natural biological sources or processes"
         } ]
       }
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000869",
-      "lbl" : "occurence of chemical reaction",
+      "lbl" : "chemical reaction",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "The occurrence of (a) chemical reaction is the process in which substances interact to form new chemical compounds or alter their molecular structure."
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/co/PMD_0000870",
-      "lbl" : "occurence of electic field",
-      "type" : "CLASS",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The occurrence of (an) electric field is a process describing the presence or generation of an electric field in a material or system."
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/co/PMD_0000871",
-      "lbl" : "occurence of magnetic field",
-      "type" : "CLASS",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The occurrence of (a) magenetic field is a process describing the presence or generation of a magnetic field in a material or system."
         } ]
       }
     }, {
@@ -3042,16 +3073,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "An optical property is a material property representing the characteristics that describe how a material interacts with light, including reflection, refraction, and absorption."
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/co/PMD_0000880",
-      "lbl" : "passing of time",
-      "type" : "CLASS",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "Passing of time is a process that describes the progression of time, which can influence material aging and property changes."
         } ]
       }
     }, {
@@ -3071,7 +3092,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A polymer is an engineered material that consists of many repeated subunits (monomers) to form long chains. The atoms within a polymer chain are bonded together by covalent bonds. The intermolecular forces between polymer chains are typically represented by Van der Waals forces and hydrogen bonds."
+          "val" : "A polymer is an engineered material that consists of many repeated subunits (monomers) to form long chains. The atoms within a polymer chain are bonded together by covalent bonds. The intermolecular forces between polymer chains are typically represented by van der waals forces and hydrogen bonds."
         } ]
       }
     }, {
@@ -3081,7 +3102,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A material entity aggregate that is a mereological sum of separate material entities, which adhere to one another through chemical bonds or physical junctions that go beyond gravity."
+          "val" : "An object aggregate that is a mereological sum of separate material entities, which adhere to one another through chemical bonds or physical junctions that go beyond gravity."
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#example",
           "val" : "the atoms of a molecule, the molecules forming the membrane of a cell, the epidermis in a human body"
@@ -3094,7 +3115,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A material entity aggregate that is a mereological sum of scattered (i.e. spatially separated) material entities, which do not adhere to one another through chemical bonds or physical junctions but, instead, relate to one another merely on grounds of metric proximity. The material entities are separated from one another through space or through other material entities that do not belong to the group."
+          "val" : "An object aggregate that is a mereological sum of scattered (i.e. spatially separated) material entities, which do not adhere to one another through chemical bonds or physical junctions but, instead, relate to one another merely on grounds of metric proximity. The material entities are separated from one another through space or through other material entities that do not belong to the group."
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#example",
           "val" : "a heap of stones, a colony of honeybees, a group of synapses, the trees of a forest, the canopy of a forest, the fish of a shoal, a group of commuters on the subway, the patients in a hospital"
@@ -3108,7 +3129,7 @@
         "comments" : [ "The pressure is commonly measured in Pascals." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The pressure is a thermodynamic quality describing the force exerted per unit area on a material."
+          "val" : "an intensive quality describing the force exerted per unit area in or on a material."
         } ]
       }
     }, {
@@ -3137,7 +3158,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A Primary Shaping process that involves forming materials from a plastic state."
+          "val" : "A primary shaping process that involves forming materials from a plastic state."
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "Ein Urformprozess, der das Formen von Materialien aus einem plastischen Zustand beinhaltet."
@@ -3153,7 +3174,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A Computing Process that models the behavior of a system over time using mathematical or computational techniques."
+          "val" : "A computing process that models the behavior of a system over time using mathematical or computational techniques."
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "Ein Datenverarbeitungsprozess, der das Verhalten eines Systems im Laufe der Zeit mit mathematischen oder rechnerischen Techniken modelliert"
@@ -3166,7 +3187,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The specific surface area is a morphologic quality describing the total surface area of a material per unit of mass or volume."
+          "val" : "an intensive quality embodying the total surface area of a material per unit of mass or volume."
         } ]
       }
     }, {
@@ -3176,7 +3197,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The stiffness is a mechanical property describing the resistance of a material to deformation under an applied force."
+          "val" : "The stiffness is a material property describing the resistance of a material to deformation under an applied force."
         } ]
       }
     }, {
@@ -3196,7 +3217,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The strength is a mechanical property describing the maximum stress a material can withstand before failure."
+          "val" : "The strength is a material property describing the maximum stress a material can withstand before failure."
         } ]
       }
     }, {
@@ -3204,7 +3225,7 @@
       "lbl" : "temperature",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "The concept refers to an absolute tempeature, not to be mistaken with temperature difference.", "To express that an object has a temperature, the property 'intensive bearer of' can be used. It implies a chain of: object consists of some portion of matter and portion of matter bearer of some temperature." ],
+        "comments" : [ "The concept refers to an absolute temperature, not to be mistaken with temperature difference.", "To express that an object has a temperature, the property 'intensive bearer of' can be used. It implies a chain of: object consists of some portion of matter and portion of matter bearer of some temperature." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "The temperature is a fundamental intensive quality representing the average atomic or molcular movement or vibration of a portion of matter."
@@ -3222,12 +3243,32 @@
       }
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0001008",
-      "lbl" : "waver irradiation",
+      "lbl" : "absorption of wave radiation",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A waver irradiation is an irradiation describing an exposure of a material or system to electromagnetic waves or radiation."
+          "val" : "process of taking up elctromagnetic radiation by a material entity"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0010026",
+      "lbl" : "organic composition",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A composition characterized by a primary molecular structure of carbon atoms covalently bonded to hydrogen (C-H bonds), typically forming linear, branched, or networked chains."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0010033",
+      "lbl" : "polymerization",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "The chemical process of reacting monomers, oligomers, or reactive precursors together to form longer macromolecular chains or three-dimensional networks"
         } ]
       }
     }, {
@@ -3237,7 +3278,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "Filler is the role of a PortionOfDisconnectedMatter that implies being hosted in a Matrix."
+          "val" : "Filler is the role of a 'PortionOfDisconnectedMatter' that implies being hosted in a matrix."
         } ]
       }
     }, {
@@ -3247,7 +3288,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A crystal is an object that has part some entities that concretize a Bravais lattice."
+          "val" : "A crystal is an object that has a quality \"crystal structure\"."
         } ]
       }
     }, {
@@ -3257,7 +3298,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The porosity is a quality describing the fraction of the materials (enclosing) spatial region occupied by pores."
+          "val" : "itensive quality embodiying the fraction of the materials (enclosing) spatial region occupied by pores."
         } ]
       }
     }, {
@@ -3272,13 +3313,13 @@
       }
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0020099",
-      "lbl" : "bravais lattice (3d)",
+      "lbl" : "bravais lattice (3D)",
       "type" : "CLASS",
       "meta" : {
         "comments" : [ "TODO: possibly extend for 2D (Graphene etc)\n\nMore elaborate crystal descriptions may be found in http://emmo.info/domain-crystallography/crystallography or https://purls.helmholtz-metadaten.de/disos/cso" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The Bravais lattice is a categorical value specification that specifies value of the crystal structure quality. It describes the possible geometric arrangement of lattice points in a crystal. The present descriptor is limited to the 14 possible three-dimensional arrangements."
+          "val" : "The bravais lattice is a categorical value specification that specifies value of the crystal structure quality. It describes the possible geometric arrangement of lattice points in a crystal. The present descriptor is limited to the 14 possible three-dimensional arrangements."
         } ]
       }
     }, {
@@ -3294,7 +3335,7 @@
           "val" : "fraction"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A Proportion is a relational quality between two entites (the whole and the part) which quantifies the relation between the whole and its part."
+          "val" : "A proportion is a relational quality between two entities (the whole and the part) which quantifies the relation between the whole and its part."
         } ]
       }
     }, {
@@ -3304,7 +3345,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The Mass Proportion is a Proportion which quantifies the mass of the part relative to the mass of the whole."
+          "val" : "Mass proportion is a proportion which quantifies the mass of the part relative to the mass of the whole."
         } ]
       }
     }, {
@@ -3317,10 +3358,10 @@
           "val" : "Molar Ratio"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The Molar Proportion is the proportion which quantifies the entities count of the part in relation to the entites count of the whole."
+          "val" : "Molar proportion is the proportion which quantifies the entities count of the part in relation to the entities count of the whole."
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#example",
-          "val" : "The molar ratio of hydrogen gas H2 molecules to water H2O molecules is 1/1 in the oxyhydrogen reaction. The molar ratio of oxigen molecules O2 to water molecules is 2/1.\nThe molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 2022 AD."
+          "val" : "The molar ratio of hydrogen gas H2 molecules to water H2O molecules is 1/1 in the oxyhydrogen reaction. The molar ratio of oxygen molecules O2 to water molecules is 2/1.\nThe molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 2022 AD."
         } ]
       }
     }, {
@@ -3330,7 +3371,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The Mass Proportion is a Proportion which quantifies the volume of the part relative to the volume of the whole."
+          "val" : "Volume proportion is a proportion which quantifies the volume of the part relative to the volume of the whole."
         } ]
       }
     }, {
@@ -3343,7 +3384,7 @@
           "val" : "Polycrystalline structure"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "Polycrystal is a connected object aggregate that has continuant part some crystal grains"
+          "val" : "A polycrystal is a connected material entity aggregate that consists of multiple crystal grains joined through crystallographic interfaces."
         } ]
       }
     }, {
@@ -3363,7 +3404,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "The aggregate state value is a categorical value specification that specifies value of the aggregatge state quality."
+          "val" : "The aggregate state value is a categorical value specification that specifies value of the aggregate state quality."
         } ]
       }
     }, {
@@ -3376,7 +3417,7 @@
           "val" : "Point property"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "An intensive quality is a qualty that inheres in only portion of matter and thus is independent of the bearers (system-) size."
+          "val" : "An intensive quality is a quality that inheres in only portion of matter and thus is independent of the bearers (system-) size."
         } ]
       }
     }, {
@@ -3386,7 +3427,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "Size is the quality of a material entity that describes its spatial extend."
+          "val" : "an extensive quality of a material entity that describes its spatial extend."
         } ]
       }
     }, {
@@ -3396,7 +3437,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A process chain is a process that 'has contiuant part' subprocesses S1...Sn where S1...Sn precede each other and where some object or object aggregate that are output of Sn are then input to Sn+1."
+          "val" : "A process chain is a process that 'has continuant part' subprocesses S1...Sn where S1...Sn precede each other and where some object or object aggregate that are output of Sn are then input to Sn+1."
         } ]
       }
     }, {
@@ -3406,7 +3447,37 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "An extensive quality is a qualty that inheres in only object or object aggregate or fiat object part or chemical entity and is dependent on the bearers (system-) size."
+          "val" : "An extensive quality is a quality that inheres in only object or object aggregate or fiat object part or chemical entity and is dependent on the bearers (system-) size."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020216",
+      "lbl" : "order scale value",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "possible values of characteristic length over which structural correlations persist in a material"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020220",
+      "lbl" : "order scale",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "characteristic length over which structural correlations persist in a material"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020243",
+      "lbl" : "grain size",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "an intensive quality epitomizing the average size of the grains of a polycrystal"
         } ]
       }
     }, {
@@ -3416,7 +3487,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "Composition is a morphological quality describing the types and proportions of compounds (but not chemical elements) present in a portion of matter."
+          "val" : "Composition is an intensive quality which defines types and proportions of compounds present in a material entity and is subject of some composition data item."
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#example",
           "val" : "4 vol.% nitric acid solution, Styrene-Butadiene-Styrene (SBS) Block Copolymer with 50 vol.% of both styrene and butadiene"
@@ -3427,9 +3498,10 @@
       "lbl" : "metallic grain structure",
       "type" : "CLASS",
       "meta" : {
+        "comments" : [ "ferrite, austenite, martensite, etc." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "metallic grain structure characterizes the distinct phases in the microscopic structure of a metallic material. It concretizes ferrite, austenite, martensite, etc."
+          "val" : "intensive quality epitomizing the distinct phases in the microscopic structure of a metallic material."
         } ]
       }
     }, {
@@ -3437,7 +3509,7 @@
       "lbl" : "length",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "Length is a size that describes the spacial extend of its bearer in one dimension." ],
+        "comments" : [ "Length is a size that describes the spatial extent of its bearer in one dimension." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#altLabel",
           "val" : "dimension"
@@ -3447,13 +3519,113 @@
         } ]
       }
     }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0040030",
+      "type" : "CLASS"
+    }, {
       "id" : "https://w3id.org/pmd/co/PMD_0050004",
-      "lbl" : "thermoplastics",
+      "lbl" : "thermoplastic polymer",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A Thermoplastic is a Polymer that becomes moldable when heated and solidifies upon cooling."
+          "val" : "polymer that becomes moldable when heated and solidifies upon cooling"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0050118",
+      "lbl" : "optical glass",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "glass manufactured for optical components"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "e.g., lenses, prisms, mirrors"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0050133",
+      "lbl" : "functional glass",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "glass that is designed to perform specific roles beyond conventional optical applications"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0090012",
+      "lbl" : "biological material",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#altLabel",
+          "val" : "biomaterial"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "material produced by a living organism"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Biological Comosite such as Wood, Bone, Silk, Wool;  Biopolymers such as cellulose, colagene;  Biogenic minerals such as hydroxyapatite"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0090013",
+      "lbl" : "biological composite",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "composite consisting of two or more distinct material phases organized in a multi-scale structure that act synergistically to fulfill specific properties or functions"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : " such as Wood, Bone, Silk, Wool;"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0090014",
+      "lbl" : "biopolymer",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#altLabel",
+          "val" : "biomacromoleules"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "polymer produced by the metabolic processes of a living organism"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "such as Polysaccharides like cellulose or Chitin; Proteins like colagene or Fibroin"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0090016",
+      "lbl" : "bio-based material",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "material intentionally processed from materials derived from living (or once-living) organisms"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Engineered Biopolymers such as Polylactic Acid (PLA);  Reconstituted Biopolymers such as Regenerated Cellulose (Rayon/Viscose); Biocomposites such as Wood-Plastic Composites (WPC);  Biochemicals (e.g. Bio-based Adhesives)"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0090018",
+      "lbl" : "bio-based composite",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#altLabel",
+          "val" : "biocomposite; bio-composite"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "composite consisting of at least one constituent derived from biological or bio-based sources"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "such as Wood-Plastic Composite (WPC), Hemp-fiber reinforced Polypropylene"
         } ]
       }
     }, {
@@ -3472,13 +3644,131 @@
           "val" : "injection moulding; plastic injection molding"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A primary shaping process in which plastic granules are plasticised in an injection unit and the melt is injected under high pressure into a closed mold cavity, where it cools and solidifies to the final part shape."
+          "val" : "A primary shaping from the plastic state process in which plastic granules are plasticised in an injection unit and the melt is injected under high pressure into a closed mold cavity, where it cools and solidifies to the final part shape."
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "Urformverfahren, bei dem Kunststoffgranulat in einem Plastifizieraggregat aufgeschmolzen und die Schmelze mit hohem Druck in einen geschlossenen Formhohlraum eingespritzt wird, wo sie verdichtet, abkühlt und zum Formteil erstarrt."
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#example",
           "val" : "Injection molding of polypropylene housings."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/log/LOG_0080000",
+      "lbl" : "manufacturer identifier",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/log/LOG_1000006",
+      "lbl" : "organization identifier",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "identifier that identifies an organization"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/log/LOG_1000008",
+      "lbl" : "physical location identifier",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "identifier that identifies a physical location (site)"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/log/LOG_1000009",
+      "lbl" : "global location number",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "identifer that uniquely identifies a business organization or a geospatial location and complies with GS1 GLN coding scheme"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/log/LOG_1000011",
+      "lbl" : "agent",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/log/LOG_1000017",
+      "lbl" : "manufacturer",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "organization which has a manufacturer role"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/log/LOG_1000047",
+      "lbl" : "business organization",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "organization engaging in or planning to engage in any activity of buying and selling goods or services for a profit"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/log/LOG_1000050",
+      "lbl" : "organization",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An organization is an immaterial entity that has the organisation role and there exists some sort of legal framework that recognises the entity and its continued existence."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/log/LOG_1000054",
+      "lbl" : "agent role",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "role that someone or something has when they act on behalf of a person, engineered system or a group of agents"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/log/LOG_1000061",
+      "lbl" : "manufacturer role",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "agent role held by an organization when it produces material products"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/log/LOG_1000091",
+      "lbl" : "business function",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "function of an organization to partake in for profit activities as prescribed by the objectives specified by that organization"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/log/LOG_1000123",
+      "lbl" : "product production process",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "business process that consists of at least one manufacturing process through which raw materials and components are transformed or modified to create a material product"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/log/LOG_1000130",
+      "lbl" : "business process",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "planned process which is prescribed by a plan specification with one or more objectives specified by a business organization"
         } ]
       }
     }, {
@@ -3503,7 +3793,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000054",
-      "lbl" : "has realization",
+      "lbl" : "realized in",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
@@ -3521,6 +3811,9 @@
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
+        "definition" : {
+          "val" : "Paraphrase of elucidation: a relation between a process and a realizable entity, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process"
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d & for all t, if b has participant d then c exists & the type instantiated by b is correlated with the type instantiated by c"
@@ -3529,6 +3822,14 @@
           "val" : "A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart"
         } ]
       }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000196",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000197",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000136",
       "lbl" : "is about",
@@ -3547,6 +3848,17 @@
       "meta" : {
         "definition" : {
           "val" : "A primitive, instance-level, relation obtaining between an information content entity and some portion of reality. Denotation is what happens when someone creates an information content entity E in order to specifically refer to something. The only relation between E and the thing is that E can be used to 'pick out' the thing. This relation connects those two together. Freedictionary.com sense 3: To signify directly; refer to specifically"
+        },
+        "comments" : [ "" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000221",
+      "lbl" : "is quality measurement of",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "m is a quality measurement of q at t. When q is a quality, there is a measurement process p that has specified output m, a measurement datum, that is about q"
         }
       }
     }, {
@@ -3557,6 +3869,16 @@
       "meta" : {
         "definition" : {
           "val" : "inverse of the relation 'denotes'"
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000417",
+      "lbl" : "is quality measured as",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "inverse of the relation of is quality measurement of"
         }
       }
     }, {
@@ -3576,7 +3898,7 @@
       "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "A relation between a planned process and a continuant participating in that process that is not created during  the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of."
+          "val" : "A relation between a completely executed planned process and a continuant participating in that process that is not created during the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of."
         }
       }
     }, {
@@ -3596,7 +3918,7 @@
       "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "A relation between a planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."
+          "val" : "A relation between a completely executed planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."
         }
       }
     }, {
@@ -3620,6 +3942,16 @@
         }
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0001938",
+      "lbl" : "has value specification",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "A relation between an information content entity and a value specification that specifies its value."
+        }
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0000052",
       "lbl" : "characteristic of",
       "type" : "PROPERTY",
@@ -3627,7 +3959,8 @@
       "meta" : {
         "definition" : {
           "val" : "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."
-        }
+        },
+        "comments" : [ "Note that this relation was previously called \"inheres in\", but was changed to be called \"characteristic of\" because BFO2 uses \"inheres in\" in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing." ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0000053",
@@ -3666,7 +3999,7 @@
       "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "A relationship between a generically dependent continuant and a specifically dependent continuant or process, in which the generically dependent continuant depends on some independent continuant or process in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants or processes."
+          "val" : "A relationship between a generically dependent continuant and a specifically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants."
         }
       }
     }, {
@@ -3687,7 +4020,8 @@
       "meta" : {
         "definition" : {
           "val" : "a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence"
-        }
+        },
+        "comments" : [ "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0000080",
@@ -3697,7 +4031,8 @@
       "meta" : {
         "definition" : {
           "val" : "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence"
-        }
+        },
+        "comments" : [ "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0000081",
@@ -3707,7 +4042,8 @@
       "meta" : {
         "definition" : {
           "val" : "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence"
-        }
+        },
+        "comments" : [ "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0000085",
@@ -3757,8 +4093,13 @@
       "meta" : {
         "definition" : {
           "val" : "inverse of has disposition"
-        }
+        },
+        "comments" : [ "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ]
       }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002233",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002234",
       "lbl" : "has output",
@@ -3769,6 +4110,10 @@
           "val" : "p has output c iff c is a participant in p, c is present at the end of p, and c is not present in the same state at the beginning of p."
         }
       }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002353",
       "lbl" : "output of",
@@ -3854,80 +4199,15 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000002",
-      "lbl" : "example to be eventually removed",
-      "type" : "INDIVIDUAL"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000120",
-      "lbl" : "metadata complete",
-      "type" : "INDIVIDUAL",
+      "id" : "https://w3id.org/pmd/log/LOG_1900001",
+      "lbl" : "acts on behalf of",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
-        "definition" : {
-          "val" : "Class has all its metadata, but is either not guaranteed to be in its final location in the asserted IS_A hierarchy or refers to another class that is not complete."
-        }
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000121",
-      "lbl" : "organizational term",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "definition" : {
-          "val" : "Term created to ease viewing/sort terms for development purpose, and will not be included in a release"
-        }
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000122",
-      "lbl" : "ready for release",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "definition" : {
-          "val" : "Class has undergone final review, is ready for use, and will be included in the next release. Any class lacking \"ready_for_release\" should be considered likely to change place in hierarchy, have its definition refined, or be obsoleted in the next release.  Those classes deemed \"ready_for_release\" will also derived from a chain of ancestor classes that are also \"ready_for_release.\""
-        }
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000123",
-      "lbl" : "metadata incomplete",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "definition" : {
-          "val" : "Class is being worked on; however, the metadata (including definition) are not complete or sufficiently clear to the branch editors."
-        }
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000124",
-      "lbl" : "uncurated",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "definition" : {
-          "val" : "Nothing done yet beyond assigning a unique class ID and proposing a preferred term."
-        }
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000125",
-      "lbl" : "pending final vetting",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "definition" : {
-          "val" : "All definitions, placement in the asserted IS_A hierarchy and required minimal metadata are complete. The class is awaiting a final review by someone other than the term editor."
-        }
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000423",
-      "lbl" : "to be replaced with external ontology term",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "definition" : {
-          "val" : "Terms with this status should eventually replaced with a term from another ontology."
-        }
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000428",
-      "lbl" : "requires discussion",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "definition" : {
-          "val" : "A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues."
-        }
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "relation from a material entity to a person or a group of agents or engineered system that holds when the material entity participates in some planned process in order to fulfill an objective for the person or group of agents or engineered system"
+        } ]
       }
     }, {
       "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060001",
@@ -4839,7 +5119,7 @@
       }
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0020006",
-      "lbl" : "bravais lattice triclinic primitve",
+      "lbl" : "bravais lattice triclinic primitive",
       "type" : "INDIVIDUAL"
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0020007",
@@ -4928,7 +5208,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A state where the bonds between entites trasmit shear forces."
+          "val" : "A state where the bonds between entities transmit shear forces."
         } ]
       }
     }, {
@@ -4938,12 +5218,12 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A state where the bonds of the entites transmit no shear force."
+          "val" : "A state where the bonds of the entities transmit no shear force."
         } ]
       }
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0020119",
-      "lbl" : "aggregate state gasous",
+      "lbl" : "aggregate state gaseous",
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -4958,7 +5238,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "An aggregate state where the entites are atom nuclei and have no bonds."
+          "val" : "An aggregate state where the entities are atom nuclei and have no bonds."
         } ]
       }
     }, {
@@ -4978,7 +5258,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A state with strong bindings between entites that do not transmit shear force."
+          "val" : "A state with strong bindings between entities that do not transmit shear force."
         } ]
       }
     }, {
@@ -4998,7 +5278,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A state with frictionless binding that transmits no shear force between entites."
+          "val" : "A state with frictionless binding that transmits no shear force between entities."
         } ]
       }
     }, {
@@ -5012,8 +5292,51 @@
         } ]
       }
     }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020217",
+      "lbl" : "short range order",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "periodic arrangement of structural features up to a few entities"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020218",
+      "lbl" : "medium range order",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "periodic arrangement of structural features of many entities"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020219",
+      "lbl" : "long range order",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "periodic arrangement of structural features of virtually all entities"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0020242",
+      "lbl" : "no range order",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "no periodic arrangement of structural features of entites"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0040128",
+      "type" : "INDIVIDUAL"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
-      "lbl" : "definition",
+      "lbl" : "textual definition",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION",
       "meta" : {
@@ -5025,7 +5348,10 @@
       "id" : "http://purl.org/dc/elements/1.1/source",
       "lbl" : "Source",
       "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "A reference to a resource from which the present resource\n         is derived." ]
+      }
     }, {
       "id" : "http://purl.org/dc/terms/contributor",
       "lbl" : "contributor",
@@ -5176,6 +5502,26 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/COB_0000035",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/COB_0000082"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/COB_0000035",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000055",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000260"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/COB_0000082",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0008150",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0008150",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000005",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000033"
@@ -5208,14 +5554,6 @@
       "pred" : "http://purl.obolibrary.org/obo/IAO_0000136",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/IAO_0000078",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000102"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/IAO_0000102",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000027"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000104",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000033"
@@ -5228,6 +5566,14 @@
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000007"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000109",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000027"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000109",
+      "pred" : "http://purl.obolibrary.org/obo/OBI_0001938",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0001933"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000310",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
@@ -5238,7 +5584,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000444",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
+      "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0020000",
       "pred" : "is_a",
@@ -5254,7 +5600,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0020010",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
+      "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0020010",
       "pred" : "http://purl.obolibrary.org/obo/OBI_0000299",
@@ -5263,10 +5609,6 @@
       "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_9606",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/OBI_0000011",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0000067",
       "pred" : "is_a",
@@ -5278,7 +5620,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0000070",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
+      "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0000070",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000055",
@@ -5292,9 +5634,21 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000260",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000260",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0000059",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000104"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0000571",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000023"
+      "obj" : "https://w3id.org/pmd/log/LOG_1000054"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000571",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0000052",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0000835",
       "pred" : "is_a",
@@ -5512,25 +5866,21 @@
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010026"
     }, {
-      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032",
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010033",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022"
     }, {
-      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010033",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032"
-    }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010034",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032"
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010035",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032"
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010036",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032"
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010040",
       "pred" : "is_a",
@@ -5878,7 +6228,7 @@
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010145",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010032"
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010146",
       "pred" : "is_a",
@@ -5911,6 +6261,10 @@
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010162",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/OBI_0000571"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010162",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/log/LOG_1000061"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010163",
       "pred" : "is_a",
@@ -5956,9 +6310,13 @@
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000000"
     }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000002",
+      "pred" : "http://purl.obolibrary.org/obo/OBI_0000312",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000833"
+    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000005",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000016"
     }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000005",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000054",
@@ -5972,9 +6330,13 @@
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000602"
     }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000110",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000503",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+      "obj" : "https://w3id.org/pmd/co/PMD_0020243"
     }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000512",
       "pred" : "is_a",
@@ -6000,10 +6362,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
     }, {
-      "sub" : "https://w3id.org/pmd/co/PMD_0000523",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
-    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000538",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000024"
@@ -6012,9 +6370,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
     }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000577",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000890"
+    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000583",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
+      "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
     }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000591",
       "pred" : "is_a",
@@ -6052,9 +6414,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
     }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000654",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000000"
+    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000661",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/co/PMD_0000002"
+      "obj" : "https://w3id.org/pmd/co/PMD_0000000"
     }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000663",
       "pred" : "is_a",
@@ -6072,6 +6438,10 @@
       "pred" : "https://w3id.org/pmd/co/PMD_0001029",
       "obj" : "https://w3id.org/pmd/co/PMD_0000549"
     }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000790",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000877"
+    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000794",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000602"
@@ -6082,7 +6452,7 @@
     }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000833",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
+      "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
     }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000845",
       "pred" : "is_a",
@@ -6096,27 +6466,23 @@
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000054",
       "obj" : "https://w3id.org/pmd/co/PMD_0000522"
     }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000848",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0000052",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000000"
+    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000853",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0020131"
-    }, {
-      "sub" : "https://w3id.org/pmd/co/PMD_0000853",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0000080",
-      "obj" : "https://w3id.org/pmd/co/PMD_0020106"
     }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000868",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000000"
     }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000868",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0000086",
+      "obj" : "https://w3id.org/pmd/co/PMD_0010026"
+    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000869",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
-    }, {
-      "sub" : "https://w3id.org/pmd/co/PMD_0000870",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
-    }, {
-      "sub" : "https://w3id.org/pmd/co/PMD_0000871",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
     }, {
@@ -6128,17 +6494,17 @@
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000054",
       "obj" : "https://w3id.org/pmd/co/PMD_0001008"
     }, {
-      "sub" : "https://w3id.org/pmd/co/PMD_0000880",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
-    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000882",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
     }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000888",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/co/PMD_0000002"
+      "obj" : "https://w3id.org/pmd/co/PMD_0000000"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000888",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002353",
+      "obj" : "https://w3id.org/pmd/co/PMD_0010033"
     }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000890",
       "pred" : "is_a",
@@ -6200,6 +6566,14 @@
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000802"
     }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0010026",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0025001"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0010033",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0020001",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000023"
@@ -6207,6 +6581,10 @@
       "sub" : "https://w3id.org/pmd/co/PMD_0020003",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020003",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0000086",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000591"
     }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0020005",
       "pred" : "is_a",
@@ -6256,6 +6634,16 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
     }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020131",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0000080",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000001",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Due to the duality of object and portion of matter this axiom can not be an equivalent class axiom."
+        } ]
+      }
+    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0020132",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0020148"
@@ -6267,6 +6655,26 @@
       "sub" : "https://w3id.org/pmd/co/PMD_0020148",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020216",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0001930"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020220",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020220",
+      "pred" : "https://w3id.org/pmd/co/PMD_0000077",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020216"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020243",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020131"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0020243",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0000080",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020106"
     }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0025001",
       "pred" : "is_a",
@@ -6288,9 +6696,149 @@
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000888"
     }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0050118",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000661"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0050118",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0000053",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000790"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0050133",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000654"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0050133",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000661"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0090012",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000000"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0090012",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002353",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0008150"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0090013",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000577"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0090013",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002353",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0008150"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0090014",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000888"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0090014",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0090012"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0090016",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000000"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0090018",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000577"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0090018",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
+      "obj" : "https://w3id.org/pmd/co/PMD_0090016"
+    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0200002",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000907"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_0080000",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/log/LOG_1000006"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000006",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000006",
+      "pred" : "http://purl.obolibrary.org/obo/IAO_0000219",
+      "obj" : "https://w3id.org/pmd/log/LOG_1000050"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000008",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000008",
+      "pred" : "http://purl.obolibrary.org/obo/IAO_0000219",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000029"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000009",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/log/LOG_1000008"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000011",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000011",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000196",
+      "obj" : "https://w3id.org/pmd/log/LOG_1000054"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000017",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/log/LOG_1000011"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000017",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/log/LOG_1000050"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000017",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000196",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000571"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000047",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/log/LOG_1000050"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000047",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000196",
+      "obj" : "https://w3id.org/pmd/log/LOG_1000091"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000050",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000027"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000050",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/ns/org#FormalOrganization"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000050",
+      "pred" : "http://purl.obolibrary.org/obo/IAO_0000235",
+      "obj" : "https://w3id.org/pmd/log/LOG_1000006"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000050",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://xmlns.com/foaf/0.1/Person"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000054",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000023"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000061",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/log/LOG_1000054"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000091",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000034"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000123",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/log/LOG_1000130"
+    }, {
+      "sub" : "https://w3id.org/pmd/log/LOG_1000130",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060001",
       "pred" : "type",
@@ -6976,6 +7524,10 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000136"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000221",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000136"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0000293",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0000057"
@@ -6995,6 +7547,10 @@
       "sub" : "http://purl.obolibrary.org/obo/OBI_0001927",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000136"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0001938",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000051"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0000079",
       "pred" : "subPropertyOf",
@@ -7040,10 +7596,6 @@
       "pred" : "subPropertyOf",
       "obj" : "https://w3id.org/pmd/co/PMD_0000004"
     }, {
-      "sub" : "https://w3id.org/pmd/co/PMD_0001029",
-      "pred" : "subPropertyOf",
-      "obj" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000051"
@@ -7059,6 +7611,10 @@
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000219",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000235"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000221",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000417"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0000293",
       "pred" : "inverseOf",
@@ -7112,6 +7668,10 @@
       "pred" : "inverseOf",
       "obj" : "https://w3id.org/pmd/co/PMD_0001029"
     } ],
+    "equivalentNodesSets" : [ {
+      "representativeNodeId" : "http://purl.obolibrary.org/obo/OBI_0000571",
+      "nodeIds" : [ "http://purl.obolibrary.org/obo/OBI_0000571", "https://w3id.org/pmd/log/LOG_1000061" ]
+    } ],
     "logicalDefinitionAxioms" : [ {
       "definedClassId" : "http://purl.obolibrary.org/obo/IAO_0020000",
       "genusIds" : [ "http://purl.obolibrary.org/obo/IAO_0000030" ],
@@ -7124,17 +7684,126 @@
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/IAO_0020010",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ],
+      "genusIds" : [ "http://purl.obolibrary.org/obo/COB_0000035" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/OBI_0000299",
         "fillerId" : "http://purl.obolibrary.org/obo/IAO_0020000"
       } ]
     }, {
+      "definedClassId" : "https://w3id.org/pmd/co/PMD_0000002",
+      "genusIds" : [ "https://w3id.org/pmd/co/PMD_0000000" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/OBI_0000312",
+        "fillerId" : "https://w3id.org/pmd/co/PMD_0000833"
+      } ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/co/PMD_0000654",
+      "genusIds" : [ "https://w3id.org/pmd/co/PMD_0000000" ]
+    }, {
       "definedClassId" : "https://w3id.org/pmd/co/PMD_0000833",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/COB_0000035" ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/co/PMD_0000868",
+      "genusIds" : [ "https://w3id.org/pmd/co/PMD_0000000" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0000086",
+        "fillerId" : "https://w3id.org/pmd/co/PMD_0010026"
+      } ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/co/PMD_0000888",
+      "genusIds" : [ "https://w3id.org/pmd/co/PMD_0000000" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002353",
+        "fillerId" : "https://w3id.org/pmd/co/PMD_0010033"
+      } ]
     }, {
       "definedClassId" : "https://w3id.org/pmd/co/PMD_0000950",
       "genusIds" : [ "http://purl.obolibrary.org/obo/BFO_0000015" ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/co/PMD_0050118",
+      "genusIds" : [ "https://w3id.org/pmd/co/PMD_0000661" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0000053",
+        "fillerId" : "https://w3id.org/pmd/co/PMD_0000877"
+      } ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/co/PMD_0050133",
+      "genusIds" : [ "https://w3id.org/pmd/co/PMD_0000661" ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/co/PMD_0090012",
+      "genusIds" : [ "https://w3id.org/pmd/co/PMD_0000000" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002353",
+        "fillerId" : "http://purl.obolibrary.org/obo/GO_0008150"
+      } ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/co/PMD_0090013",
+      "genusIds" : [ "https://w3id.org/pmd/co/PMD_0000577" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002353",
+        "fillerId" : "http://purl.obolibrary.org/obo/GO_0008150"
+      } ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/co/PMD_0090014",
+      "genusIds" : [ "https://w3id.org/pmd/co/PMD_0000888", "https://w3id.org/pmd/co/PMD_0090012" ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/co/PMD_0090016",
+      "genusIds" : [ "https://w3id.org/pmd/co/PMD_0000000" ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/co/PMD_0090018",
+      "genusIds" : [ "https://w3id.org/pmd/co/PMD_0000577" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
+        "fillerId" : "https://w3id.org/pmd/co/PMD_0090016"
+      } ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/log/LOG_0080000",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/IAO_0020000" ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/log/LOG_1000006",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/IAO_0020000" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/IAO_0000219",
+        "fillerId" : "https://w3id.org/pmd/log/LOG_1000050"
+      } ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/log/LOG_1000008",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/IAO_0020000" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/IAO_0000219",
+        "fillerId" : "http://purl.obolibrary.org/obo/BFO_0000029"
+      } ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/log/LOG_1000011",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/BFO_0000040" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000196",
+        "fillerId" : "https://w3id.org/pmd/log/LOG_1000054"
+      } ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/log/LOG_1000017",
+      "genusIds" : [ "https://w3id.org/pmd/log/LOG_1000050" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000196",
+        "fillerId" : "http://purl.obolibrary.org/obo/OBI_0000571"
+      } ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/log/LOG_1000047",
+      "genusIds" : [ "https://w3id.org/pmd/log/LOG_1000050" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000196",
+        "fillerId" : "https://w3id.org/pmd/log/LOG_1000091"
+      } ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/log/LOG_1000050",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/BFO_0000027" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/IAO_0000235",
+        "fillerId" : "https://w3id.org/pmd/log/LOG_1000006"
+      }, {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002351",
+        "fillerId" : "http://xmlns.com/foaf/0.1/Person"
+      } ]
     } ],
     "domainRangeAxioms" : [ {
       "predicateId" : "http://purl.obolibrary.org/obo/BFO_0000050",
@@ -7188,22 +7857,29 @@
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/IAO_0000030" ],
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000001" ]
     }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/IAO_0000221",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/IAO_0000109" ]
+    }, {
       "predicateId" : "http://purl.obolibrary.org/obo/IAO_0000235",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000001" ],
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/IAO_0000030" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/OBI_0000293",
-      "domainClassIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ]
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/COB_0000035" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/OBI_0000299",
-      "domainClassIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ]
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/COB_0000035" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/OBI_0000417",
-      "domainClassIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ],
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/COB_0000035" ],
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/IAO_0000005" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/OBI_0001927",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/OBI_0001933" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/OBI_0001938",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/IAO_0000030" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/OBI_0001933" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0000056",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000002" ],
@@ -7238,10 +7914,10 @@
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000017" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/OBI_0000295",
-      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ]
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/COB_0000035" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/OBI_0000312",
-      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ]
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/COB_0000035" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0000053",
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000020" ]
