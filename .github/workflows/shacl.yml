@@ -34,11 +34,11 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install Python validation dependencies
         run: |
-          python3 -m pip install --no-cache-dir pyshacl pyyaml
+          python3 -m pip install --no-cache-dir --break-system-packages pyshacl pyyaml
 
       - name: Build ontology release graph
         env:

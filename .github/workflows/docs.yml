@@ -201,7 +201,7 @@ jobs:
       # Full history included for consistency with other workflows
       # ========================================================================
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0  # Full history
 
@@ -269,7 +269,7 @@ jobs:
       # Fetch repository code for documentation generation
       # ========================================================================
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0  # Full history
 
@@ -287,7 +287,7 @@ jobs:
       # Read more: https://github.com/actions/configure-pages
       # ========================================================================
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       # ========================================================================
       # STEP 2.3: Build HTML Documentation with Widoco
@@ -415,11 +415,11 @@ jobs:
       # - CSS, JavaScript, images
       # - Multi-language documentation
       #
-      # Uses v3 for stability
+      # Uses the current Pages artifact action for Node 24 compatibility.
       # Read more: https://github.com/actions/upload-pages-artifact
       # ========================================================================
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
 
   # ============================================================================
   # JOB 3: deploy
@@ -484,4 +484,4 @@ jobs:
       # ========================================================================
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

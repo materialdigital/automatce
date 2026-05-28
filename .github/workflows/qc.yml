@@ -171,7 +171,7 @@ jobs:
       # - Required for accurate versioning in releases
       # ========================================================================
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0  # Full history
 
@@ -248,7 +248,7 @@ jobs:
       - name: Commit ontology assets
         # Skip commits for pull requests (review changes manually in PR)
         if: github.event_name != 'pull_request'
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@v10
         with:
           # Descriptive commit message for git history
           message: "Building the ontology from the edits"
@@ -303,7 +303,7 @@ jobs:
       - name: Trigger Documentation Workflow
         # Skip for pull requests (docs will build via push trigger after PR merge)
         if: github.event_name != 'pull_request'
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           # Use default GitHub token (automatically available)
           token: ${{ secrets.GITHUB_TOKEN }}

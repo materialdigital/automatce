@@ -133,7 +133,7 @@ jobs:
       # Lightweight checkout (no full history needed for directory check)
       # ========================================================================
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # ========================================================================
       # STEP 1.2: Check for Ontology Directory
@@ -190,7 +190,7 @@ jobs:
       # - Required for accurate configuration synchronization
       # ========================================================================
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0  # Full history
 
@@ -280,7 +280,7 @@ jobs:
       - name: Commit changes
         # Skip commits for pull requests (review changes manually in PR)
         if: github.event_name != 'pull_request'
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@v10
         with:
           # Descriptive commit message for git history
           message: "ODK: Update repo configuration"
@@ -324,7 +324,7 @@ jobs:
       - name: Trigger QC Workflow
         # Skip for pull requests (QC will run via push trigger after PR merge)
         if: github.event_name != 'pull_request'
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           # Use default GitHub token (automatically available)
           token: ${{ secrets.GITHUB_TOKEN }}
