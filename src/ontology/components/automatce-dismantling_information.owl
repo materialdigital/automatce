@@ -127,7 +127,7 @@ Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010145>
         rdfs:label "selected r-strategy carbon footprint"@en,
         skos:altLabel "actual footprint of chosen r-strategy"@en,
         skos:definition "A product carbon footprint that specifies the greenhouse gas emissions of the selected circular economy strategy for a component."@en,
-        skos:example "8.2 kg CO2e resulting from choosing reuse for a dismantled component."@en
+        skos:example "3.2 kg CO2e resulting from choosing reuse for a dismantled component."@en
 
     SubClassOf:
         <https://w3id.org/pmd/automatce/AUTOMATCE_0010022>,
