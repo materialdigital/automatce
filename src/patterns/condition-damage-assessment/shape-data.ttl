@@ -1,0 +1,23 @@
+@prefix automatce: <https://w3id.org/pmd/automatce/> .
+@prefix ex: <https://example.org/automatce/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+
+ex:used_door_panel_1
+    a pmd:PMD_0000000 ;
+    obo:RO_0000086 ex:paint_damage_1 ;
+    obo:RO_0000086 ex:dent_damage_1 .
+
+ex:paint_damage_1
+    a automatce:AUTOMATCE_0010087 .
+
+ex:dent_damage_1
+    a automatce:AUTOMATCE_0010085 .
+
+ex:corrosion_process_1
+    a pmd:PMD_0020022 ;
+    obo:RO_0000057 ex:corroded_region_1 .
+
+ex:corroded_region_1
+    a automatce:AUTOMATCE_0010174 .
+

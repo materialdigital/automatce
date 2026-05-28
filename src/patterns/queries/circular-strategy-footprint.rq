@@ -1,0 +1,18 @@
+PREFIX automatce: <https://w3id.org/pmd/automatce/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entity ?entityLabel ?strategy ?strategyLabel ?footprint ?amount ?unit
+WHERE {
+  ?entity automatce:AUTOMATCE_0009005 ?circularEconomyInformation .
+  ?circularEconomyInformation automatce:AUTOMATCE_0009006 ?strategy .
+  OPTIONAL { ?entity rdfs:label ?entityLabel . }
+  OPTIONAL { ?strategy rdfs:label ?strategyLabel . }
+  OPTIONAL {
+    ?footprint a automatce:AUTOMATCE_0010022 ;
+      obo:IAO_0000136 ?entity ;
+      obo:OBI_0001937 ?amount .
+    OPTIONAL { ?footprint obo:IAO_0000039 ?unit . }
+  }
+}
+ORDER BY ?entity ?strategy ?footprint

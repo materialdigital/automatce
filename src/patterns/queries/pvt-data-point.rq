@@ -1,0 +1,19 @@
+PREFIX automatce: <https://w3id.org/pmd/automatce/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?dataset ?datasetLabel ?point ?pressure ?pressureUnit ?temperature ?temperatureUnit ?specificVolume ?specificVolumeUnit
+WHERE {
+  ?dataset automatce:AUTOMATCE_0009008 ?point .
+  OPTIONAL { ?dataset rdfs:label ?datasetLabel . }
+  ?point automatce:AUTOMATCE_0009009 ?pressureDatum ;
+    automatce:AUTOMATCE_0009010 ?temperatureDatum ;
+    automatce:AUTOMATCE_0009011 ?specificVolumeDatum .
+  ?pressureDatum obo:OBI_0001937 ?pressure .
+  ?temperatureDatum obo:OBI_0001937 ?temperature .
+  ?specificVolumeDatum obo:OBI_0001937 ?specificVolume .
+  OPTIONAL { ?pressureDatum obo:IAO_0000039 ?pressureUnit . }
+  OPTIONAL { ?temperatureDatum obo:IAO_0000039 ?temperatureUnit . }
+  OPTIONAL { ?specificVolumeDatum obo:IAO_0000039 ?specificVolumeUnit . }
+}
+ORDER BY ?dataset ?point

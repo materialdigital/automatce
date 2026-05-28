@@ -1,0 +1,29 @@
+pattern_name: dismantling information
+pattern_iri: https://w3id.org/pmd/automatce/patterns/dismantling-information
+description: >
+  Pattern for linking a component to dismantling instructions, dismantlability,
+  average dismantling time, tools, and safety information.
+
+data_vars:
+  component_label: xsd:string
+  instruction_label: xsd:string
+  dismantlability_label: xsd:string
+  time_label: xsd:string
+  tool_label: xsd:string
+  example: xsd:string
+
+name:
+  text: "%s"
+  vars:
+    - instruction_label
+
+def:
+  text: "A dismantling information record that specifies instructions and dismantlability for %s."
+  vars:
+    - component_label
+
+annotations:
+  - annotationProperty: skos:example
+    text: "%s"
+    vars:
+      - example

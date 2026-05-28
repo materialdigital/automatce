@@ -1,0 +1,35 @@
+pattern_name: lifecycle footprint
+pattern_iri: https://w3id.org/pmd/automatce/patterns/lifecycle-footprint
+description: >
+  Pattern for product carbon footprint records that carry a numeric value, a
+  unit, and lifecycle or scenario context.
+
+data_vars:
+  footprint_label: xsd:string
+  lifecycle_stage_label: xsd:string
+  target_label: xsd:string
+  expected_datatype: xsd:string
+  expected_unit: xsd:string
+  example: xsd:string
+
+name:
+  text: "%s"
+  vars:
+    - footprint_label
+
+def:
+  text: "A product carbon footprint that quantifies greenhouse gas emissions for %s in the %s context."
+  vars:
+    - target_label
+    - lifecycle_stage_label
+
+annotations:
+  - annotationProperty: rdfs:comment
+    text: "Expected value datatype: %s; expected unit: %s."
+    vars:
+      - expected_datatype
+      - expected_unit
+  - annotationProperty: skos:example
+    text: "%s"
+    vars:
+      - example

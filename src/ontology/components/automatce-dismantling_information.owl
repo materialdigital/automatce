@@ -1,0 +1,1196 @@
+Prefix: dcterms: <http://purl.org/dc/terms/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+Prefix: obo: <http://purl.obolibrary.org/obo/>
+Prefix: pmd: <https://w3id.org/pmd/co/>
+Prefix: log: <https://w3id.org/pmd/log/>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: : <https://w3id.org/pmd/automatce/components/automatce-dismantling_information.owl>
+
+
+
+Ontology: <https://w3id.org/pmd/automatce/components/automatce-dismantling_information.owl>
+
+    Import: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
+
+    Annotations: 
+        dcterms:title "AUTOMATCE - Dismantling Information Module"@en,
+        rdfs:comment "The dismantling information module of the AUTOMATCE Ontology."@en
+
+AnnotationProperty: dcterms:title
+AnnotationProperty: rdfs:comment
+AnnotationProperty: rdfs:label
+AnnotationProperty: skos:definition
+AnnotationProperty: skos:example
+
+AnnotationProperty: skos:altLabel
+
+
+
+    
+Datatype: rdf:PlainLiteral
+
+Class: obo:BFO_0000015
+Class: obo:BFO_0000016
+Class: obo:BFO_0000017
+Class: obo:BFO_0000019
+Class: obo:BFO_0000030
+Class: obo:BFO_0000024
+Class: obo:BFO_0000040
+Class: obo:BFO_0000202
+Class: obo:IAO_0000010
+Class: obo:IAO_0000027
+Class: obo:IAO_0000030
+Class: obo:IAO_0000033
+Class: obo:IAO_0000104
+Class: obo:IAO_0000310
+Class: obo:IAO_0020000
+Class: obo:OBI_0001933
+Class: pmd:PMD_0000602
+Class: pmd:PMD_0000852
+Class: pmd:PMD_0020022
+Class: pmd:PMD_0040001
+Class: pmd:PMD_0001044
+Class: pmd:PMD_0020102
+Class: pmd:PMD_0020133
+Class: pmd:PMD_0020150
+Class: log:LOG_0080002
+Class: log:LOG_1000042
+Class: log:LOG_1000130
+Class: log:LOG_1000143
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010022>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010175>
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010140>
+
+    Annotations:
+        rdfs:label "unusual properties"@en,
+        skos:definition "A data item that records noteworthy, unexpected, or abnormal properties observed for a component during use, inspection, dismantling, or circular economy assessment."@en,
+        skos:example "A note that a component shows unusual discoloration or deformation compared with its expected state."@en
+
+    SubClassOf:
+        obo:IAO_0000027
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010141>
+
+    Annotations:
+        rdfs:label "actual dismantling time"@en,
+        skos:definition "A temporal interval occupied by an observed dismantling process for a product, vehicle, or component."@en,
+        skos:example "The measured time in minutes to remove a component from an end-of-life vehicle."@en
+
+    SubClassOf:
+        obo:BFO_0000202
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010142>
+
+    Annotations:
+        rdfs:label "selected r-strategy rationale"@en,
+        skos:altLabel "reason for selected r-strategy"@en,
+        skos:definition "An information content entity that states the rationale for selecting a reuse, repair, remanufacturing, recycling, recovery, or disposal strategy for a product or component."@en,
+        skos:example "A reason stating that reuse was rejected because mounting points were broken."@en
+
+    SubClassOf:
+        obo:IAO_0000030
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010143>
+
+    Annotations:
+        rdfs:label "selected r-strategy"@en,
+        skos:definition "A directive information entity that specifies the circular economy strategy selected for a product or component."@en,
+        skos:example "A selected strategy of reuse, recycling, or remanufacturing for a dismantled component."@en
+
+    SubClassOf:
+        obo:IAO_0000033
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010144>
+
+    Annotations:
+        rdfs:label "actual dismantlability"@en,
+        skos:definition "A disposition assessment that records how dismantlable a product or component was in an observed dismantling event."@en,
+        skos:example "An actual dismantlability assessment from a dismantler after removing a door module."@en
+
+    SubClassOf:
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0010060>
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010145>
+
+    Annotations:
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: kg CO2e."@en,
+        rdfs:label "selected r-strategy carbon footprint"@en,
+        skos:altLabel "actual footprint of chosen r-strategy"@en,
+        skos:definition "A product carbon footprint that specifies the greenhouse gas emissions of the selected circular economy strategy for a component."@en,
+        skos:example "8.2 kg CO2e resulting from choosing reuse for a dismantled component."@en
+
+    SubClassOf:
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0010022>,
+        obo:OBI_0001933
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010146>
+
+    Annotations:
+        rdfs:label "vehicle condition"@en,
+        skos:definition "A quality of a vehicle that characterizes its observed state relevant to use, dismantling, reuse, repair, recycling, or valuation."@en,
+        skos:example "A vehicle condition assessment recorded at dismantling intake."@en
+
+    SubClassOf:
+        obo:BFO_0000019
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010147>
+
+    Annotations:
+        rdfs:label "drive type"@en,
+        skos:definition "A quality of a vehicle that classifies its propulsion architecture or drive configuration."@en,
+        skos:example "Battery electric drive, hybrid drive, or combustion engine drive."@en
+
+    SubClassOf:
+        obo:BFO_0000019
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010148>
+
+    Annotations:
+        rdfs:label "empty weight"@en,
+        skos:definition "A mass quality that quantifies the weight of a vehicle without load under the stated specification conditions."@en,
+        skos:example "The empty weight in kilograms from vehicle documentation."@en
+
+    SubClassOf:
+        pmd:PMD_0020133
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010149>
+
+    Annotations:
+        rdfs:label "vehicle type"@en,
+        skos:definition "A quality of a vehicle that classifies the vehicle according to its design, construction, or intended purpose."@en,
+        skos:example "Passenger car, light commercial vehicle, or heavy truck."@en
+
+    SubClassOf:
+        obo:BFO_0000019
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010050>
+
+    Annotations:
+        rdfs:label "remaining lifetime"@en,
+        skos:definition "A temporal interval expected to remain before a product or component no longer satisfies its intended function or circular value criteria."@en,
+        skos:example "An alternator estimated to have 24 months of usable service life remaining after inspection."@en
+
+    SubClassOf:
+        obo:BFO_0000202
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010051>
+
+    Annotations:
+        rdfs:label "actual lifetime"@en,
+        skos:definition "A temporal interval extending from a stated start event to an observed lifecycle event of a product or component."@en,
+        skos:example "The time between first vehicle registration and dismantling of a component."@en
+
+    SubClassOf:
+        obo:BFO_0000202
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010052>
+
+    Annotations:
+        rdfs:label "non-destructive dismantlability"@en,
+        skos:definition "A disposition of a product or component to be dismantled without destroying the product, component, or material portions that are intended for later use."@en,
+        skos:example "A clipped interior trim part that can be removed intact for reuse."@en
+
+    SubClassOf:
+        obo:BFO_0000016
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010053>
+
+    Annotations:
+        rdfs:label "safety information"@en,
+        skos:altLabel "safetyInfo"@en,
+        skos:definition "A directive information entity that specifies safety-relevant instructions, warnings, or constraints for handling, dismantling, treating, transporting, or reusing a product or component."@en,
+        skos:example "A warning to disconnect a high-voltage battery before dismantling a component."@en
+
+    SubClassOf:
+        obo:IAO_0000033
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010054>
+
+    Annotations:
+        rdfs:label "recycling"@en,
+        skos:definition "A process in which used materials, components, or products are collected and processed to recover material for further use."@en,
+        skos:example "Sorting and regranulating polymer parts from an end-of-life vehicle."@en
+
+    SubClassOf:
+        obo:BFO_0000015
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010055>
+
+    Annotations:
+        rdfs:label "dismantling"@en,
+        skos:definition "A process in which a product or component is taken apart so that parts, materials, or information can be recovered, assessed, reused, repaired, remanufactured, recycled, or disposed."@en,
+        skos:example "Removing a vehicle door module from an end-of-life vehicle before quality assessment."@en
+
+    SubClassOf:
+        obo:BFO_0000015
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010056>
+
+    Annotations:
+        rdfs:label "dismantling guideline for recycling"@en,
+        skos:altLabel "dismantlingGuidelineRecycling"@en,
+        skos:altLabel "dismantling guideline recycling"@en,
+        skos:definition "A plan specification that provides instructions for dismantling a product or component so that materials can be routed to appropriate recycling treatment."@en,
+        skos:example "A guideline specifying how to separate a polymer housing from attached metal inserts before recycling."@en
+
+    SubClassOf:
+        obo:IAO_0000104
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010057>
+
+    Annotations:
+        rdfs:label "recycling material quality"@en,
+        skos:altLabel "recyclingMaterialQuality"@en,
+        skos:definition "A disposition of a product or material to be recycled while preserving a specified level of material quality."@en,
+        skos:example "A polymer component designed so that the recovered polymer remains suitable for automotive applications."@en
+
+    SubClassOf:
+        obo:BFO_0000016
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010058>
+
+    Annotations:
+        rdfs:label "recycling availability"@en,
+        skos:altLabel "recyclingAvailability"@en,
+        skos:definition "A disposition of a product, component, or material to be practically available for recycling in a technical cycle."@en,
+        skos:example "A component whose material can be separated and accepted by an established recycling route."@en
+
+    SubClassOf:
+        obo:BFO_0000016
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010059>
+
+    Annotations:
+        rdfs:label "dismantling instructions"@en,
+        skos:altLabel "dismantlingInstructions"@en,
+        skos:definition "A plan specification that describes the actions, order, tools, and constraints for safely and correctly dismantling a product or component."@en,
+        skos:example "Stepwise instructions for removing a battery module from a vehicle."@en
+
+    SubClassOf:
+        obo:IAO_0000104
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010060>
+
+    Annotations:
+        rdfs:label "dismantlability"@en,
+        skos:definition "A disposition of a product or component to be dismantled under stated technical, safety, time, and damage constraints."@en,
+        skos:example "A bolted assembly has higher dismantlability than an inseparably bonded assembly when reuse is intended."@en
+
+    SubClassOf:
+        obo:BFO_0000016
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010061>
+
+    Annotations:
+        rdfs:label "average dismantling time"@en,
+        skos:altLabel "averageDismantlingTime"@en,
+        skos:definition "A temporal interval that represents the mean duration of dismantling a product or component under specified conditions."@en,
+        skos:example "An average dismantling time of 12 minutes for removal of a door module."@en
+
+    SubClassOf:
+        obo:BFO_0000202
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010062>
+
+    Annotations:
+        rdfs:label "treatment technique"@en,
+        skos:altLabel "treatmentTechnique"@en,
+        skos:definition "A process used to treat a dismantled component, product, or material after removal from its original assembly."@en,
+        skos:example "Mechanical shredding, cleaning, or material separation applied after dismantling."@en
+
+    SubClassOf:
+        obo:BFO_0000015
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010063>
+
+    Annotations:
+        rdfs:label "best treatment techniques"@en,
+        skos:altLabel "bestTreatmentTechniques"@en,
+        skos:definition "An information content entity that recommends preferred treatment techniques for a dismantled product, component, or material in a given circular economy scenario."@en,
+        skos:example "A recommendation to remove electronics before shredding a polymer-rich component."@en
+
+    SubClassOf:
+        obo:IAO_0000030
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010064>
+
+    Annotations:
+        rdfs:label "disassembly software"@en,
+        skos:definition "A software that supports, guides, documents, or validates disassembly or dismantling of a product or component."@en,
+        skos:example "A workshop application that displays product-specific disassembly instructions."@en
+
+    SubClassOf:
+        obo:IAO_0000010
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010065>
+
+    Annotations:
+        rdfs:label "disassembly tool"@en,
+        skos:definition "A device used to carry out a disassembly or dismantling operation on a product or component."@en,
+        skos:example "A puller tool used to remove a clipped trim component without damage."@en
+
+    SubClassOf:
+        pmd:PMD_0000602
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010066>
+
+    Annotations:
+        rdfs:label "fastening technique"@en,
+        skos:definition "A plan specification that describes how parts are joined, fixed, or released in an assembly."@en,
+        skos:example "A specification that a housing is fastened with Torx screws and snap-fit clips."@en
+
+    SubClassOf:
+        obo:IAO_0000104
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010067>
+
+    Annotations:
+        rdfs:label "dismantling sequence"@en,
+        skos:definition "A plan specification that orders the steps required to dismantle a product or component."@en,
+        skos:example "Remove cover, disconnect cable, release clips, and lift out module."@en
+
+    SubClassOf:
+        obo:IAO_0000104
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010068>
+
+    Annotations:
+        rdfs:label "exploding diagram"@en,
+        skos:definition "A document or figure that depicts a product or assembly with parts spatially separated to show their relative positions and dismantling relationships."@en,
+        skos:example "An exploded-view diagram showing screws, clips, housing shells, and subcomponents of a control unit."@en
+
+    SubClassOf:
+        obo:IAO_0000310
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010069>
+
+    Annotations:
+        rdfs:label "sub-group name"@en,
+        skos:definition "An identifier that records the name of a material sub-group in a material classification scheme."@en,
+        skos:example "The VDA 231-106 sub-group name 'cast aluminium alloys'."@en
+
+    SubClassOf:
+        obo:IAO_0020000
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010070>
+
+    Annotations:
+        rdfs:label "sub-group identifier"@en,
+        skos:altLabel "sub-group ID"@en,
+        skos:altLabel "subgroup"@en,
+        skos:definition "An identifier that records the code or number of a material sub-group in a material classification scheme."@en,
+        skos:example "The VDA 231-106 sub-group code '2.1.1'."@en
+
+    SubClassOf:
+        obo:IAO_0020000
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010071>
+
+    Annotations:
+        rdfs:label "main group name"@en,
+        skos:definition "An identifier that records the name of a material main group in a material classification scheme."@en,
+        skos:example "The VDA 231-106 main group name 'polymer materials'."@en
+
+    SubClassOf:
+        obo:IAO_0020000
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010072>
+
+    Annotations:
+        rdfs:label "main group identifier"@en,
+        skos:altLabel "main group ID"@en,
+        skos:altLabel "main group"@en,
+        skos:definition "An identifier that records the code or number of a material main group in a material classification scheme."@en,
+        skos:example "The VDA 231-106 main group code '5'."@en
+
+    SubClassOf:
+        obo:IAO_0020000
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010073>
+
+    Annotations:
+        rdfs:label "reuse"@en,
+        skos:definition "A process in which a discarded or removed product or component is used again while retaining its original function."@en,
+        skos:example "A dismantled and inspected body control module installed in another vehicle."@en
+
+    SubClassOf:
+        obo:BFO_0000015
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010074>
+
+    Annotations:
+        rdfs:label "product quality"@en,
+        skos:definition "A disposition of a product or component to satisfy requirements for an intended circular economy route, based on relevant condition, completeness, functional, and standard-based criteria."@en,
+        skos:example "A reused body part assigned a quality class after inspection for dents, corrosion, paint damage, and completeness."@en
+
+    SubClassOf:
+        obo:BFO_0000016
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010075>
+
+    Annotations:
+        rdfs:label "test requirements"@en,
+        skos:altLabel "necessary test protocols and equipment"@en,
+        skos:altLabel "necessary test protocols equipment"@en,
+        skos:definition "An information content entity that states the test protocols and equipment required to assess a product or component for reuse, repair, remanufacturing, or recycling."@en,
+        skos:example "A high-voltage component requiring insulation resistance testing before reuse."@en
+
+    SubClassOf:
+        obo:IAO_0000030
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010076>
+
+    Annotations:
+        rdfs:label "reusability"@en,
+        skos:definition "A disposition of a product or component to be reused in its original function under stated technical, legal, safety, and quality constraints."@en,
+        skos:example "A complete undamaged headlamp assembly that can be installed as a replacement part."@en
+
+    SubClassOf:
+        obo:BFO_0000016
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010077>
+
+    Annotations:
+        rdfs:label "body part quality"@en,
+        skos:altLabel "quality body parts"@en,
+        skos:altLabel "component quality state"@en,
+        skos:definition "A quality of a body part component that characterizes its externally relevant condition, such as paint damage, dents, corrosion, and component-specific defects."@en,
+        skos:example "A door panel quality assessment based on dents and paint scratches."@en
+
+    SubClassOf:
+        obo:BFO_0000019
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010078>
+
+    Annotations:
+        rdfs:label "quality grade"@en,
+        skos:altLabel "qualityGrade"@en,
+        skos:definition "A quality that records the grade assigned to a product or component according to a stated quality standard or assessment scheme."@en,
+        skos:example "A, B, or C quality grade assigned to a used car part."@en
+
+    SubClassOf:
+        obo:BFO_0000019
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010079>
+
+    Annotations:
+        rdfs:label "completeness"@en,
+        skos:definition "A quality of a product or component indicating whether required subcomponents, fasteners, interfaces, or accessories are present."@en,
+        skos:example "A mirror assembly assessed as complete because housing, glass, wiring, and mounting clips are present."@en
+
+    SubClassOf:
+        obo:BFO_0000019
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010080>
+
+    Annotations:
+        rdfs:label "used quality standard"@en,
+        skos:altLabel "usedQualityStandard"@en,
+        skos:definition "A plan specification that defines the quality assessment criteria applied to a reused, repaired, remanufactured, or recycled product or component."@en,
+        skos:example "VDI 4080 used as the assessment standard for reuse quality."@en
+
+    SubClassOf:
+        obo:IAO_0000104
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010081>
+
+    Annotations:
+        rdfs:label "mounting point integrity"@en,
+        skos:altLabel "mountingPointIntegrity"@en,
+        skos:definition "A quality of a product or component indicating whether its mounting points, clips, tabs, or attachment features are intact and functional."@en,
+        skos:example "A bumper bracket with all mounting tabs undamaged."@en
+
+    SubClassOf:
+        obo:BFO_0000019
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010082>
+
+    Annotations:
+        rdfs:label "surface cleanliness"@en,
+        skos:altLabel "surfaceCleanliness"@en,
+        skos:definition "A quality of a product, component, or material surface indicating the degree to which it is free from oil, dust, residues, and other contaminants."@en,
+        skos:example "A cleaned polymer surface acceptable for adhesive bonding during reuse preparation."@en
+
+    SubClassOf:
+        obo:BFO_0000019
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010083>
+
+    Annotations:
+        rdfs:label "repair time"@en,
+        skos:altLabel "repairTime"@en,
+        skos:definition "A temporal interval required or estimated to repair a specified damage or defect on a product or component."@en,
+        skos:example "The time needed to repair a paint scratch and small dent on a door panel."@en
+
+    SubClassOf:
+        obo:BFO_0000202
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010084>
+
+    Annotations:
+        rdfs:label "crack count"@en,
+        skos:altLabel "(number of paint) cracks"@en,
+        skos:altLabel "cracks"@en,
+        skos:definition "A quality that records the number of cracks observed on a product, component, coating, or material surface."@en,
+        skos:example "Two cracks recorded in the paint layer during dismantling inspection."@en
+
+    SubClassOf:
+        obo:BFO_0000019
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010085>
+
+    Annotations:
+        rdfs:label "dent damage"@en,
+        skos:altLabel "dents"@en,
+        skos:definition "A quality of a sheet metal or body component indicating the presence or extent of dents or deformations that impair the component shape."@en,
+        skos:example "A quarter panel with two visible dents after vehicle use."@en
+
+    SubClassOf:
+        obo:BFO_0000019
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010086>
+
+    Annotations:
+        rdfs:label "damage area"@en,
+        skos:altLabel "damageArea"@en,
+        skos:definition "A quality that quantifies the surface area of visible damage on a product, component, coating, or material surface."@en,
+        skos:example "A paint damage area of 50 square centimeters on a door panel."@en
+
+    SubClassOf:
+        obo:BFO_0000019
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010087>
+
+    Annotations:
+        rdfs:label "paint damage"@en,
+        skos:altLabel "paintDamage"@en,
+        skos:definition "A quality of a painted product or component indicating damage to the paintwork, such as scratches, chips, cracks, or coating loss."@en,
+        skos:example "Stone-chip damage on a painted bumper cover."@en
+
+    SubClassOf:
+        obo:BFO_0000019
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010174> (corroded region)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010174>
+
+  Annotations:
+    rdfs:label "corroded region"@en,
+    skos:definition "A fiat object part of a material entity that is spatially demarcated by corrosion-related material alteration."@en,
+    skos:example "A rusted area on a steel mounting bracket identified during dismantling inspection."@en
+
+  SubClassOf:
+    obo:BFO_0000024
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010210> (recycling batch)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010210>
+
+  Annotations:
+    rdfs:label "recycling batch"@en,
+    skos:definition "A batch that is collected, transferred, or treated as one quantity in a recycling process."@en,
+    skos:example "A sorted batch of dismantled polymer components sent to a recycler."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010175>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010211> (container mass)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010211>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:float; expected unit: kg."@en,
+    rdfs:label "container mass"@en,
+    skos:altLabel "container weight"@en,
+    skos:definition "A mass quality that quantifies the empty mass of a container."@en,
+    skos:example "An empty recycling container with a mass of 3000 kg."@en
+
+  SubClassOf:
+    pmd:PMD_0020133
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010212> (container volume)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010212>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:positiveInteger; expected unit: L."@en,
+    rdfs:label "container volume"@en,
+    skos:definition "A volume quality that quantifies the internal capacity of a container."@en,
+    skos:example "A roll-off container with a capacity of 20000 L."@en
+
+  SubClassOf:
+    pmd:PMD_0020150
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010213> (container type identifier)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010213>
+
+  Annotations:
+    rdfs:label "container type identifier"@en,
+    skos:definition "An identifier assigned to a standardized container type."@en,
+    skos:example "An AVAL container type identifier used for a recycling container."@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010214> (container description)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010214>
+
+  Annotations:
+    rdfs:label "container description"@en,
+    skos:definition "An information content entity that describes a container type or container instance."@en,
+    skos:example "A standardized description such as roll-off container for a recycling batch."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010215> (recycling process step)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010215>
+
+  Annotations:
+    rdfs:label "recycling process step"@en,
+    skos:altLabel "process step"@en,
+    skos:altLabel "child process steps"@en,
+    skos:definition "A business process that is a distinguishable step in the handling or treatment of a recycling batch."@en,
+    skos:example "Shredding, sorting, washing, or weighing as a recycling process step."@en
+
+  SubClassOf:
+    log:LOG_1000130
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010216> (child process type)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010216>
+
+  Annotations:
+    rdfs:label "child process type"@en,
+    skos:definition "An information content entity that classifies a subordinate process step in a recycling process."@en,
+    skos:example "Shredding recorded as the child process type for a recycling batch step."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010217> (process information)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010217>
+
+  Annotations:
+    rdfs:label "process information"@en,
+    skos:definition "An information content entity that records the type, method, timing, or outcome of a process."@en,
+    skos:example "A recycling batch process record containing treatment procedure and process type."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010218> (process type)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010218>
+
+  Annotations:
+    rdfs:label "process type"@en,
+    skos:definition "An information content entity that classifies a process according to its role in a treatment, recycling, or logistics chain."@en,
+    skos:example "Sorting or transport recorded as the process type for a reverse-chain process step."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010219> (treatment procedure)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010219>
+
+  Annotations:
+    rdfs:label "treatment procedure"@en,
+    skos:definition "A treatment technique selected or applied for handling waste, components, materials, or recycling batches."@en,
+    skos:example "An R4 treatment procedure recorded for a recycling batch."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010062>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010220> (mechanical recycling)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010220>
+
+  Annotations:
+    rdfs:label "mechanical recycling"@en,
+    skos:definition "A recycling process that recovers material through mechanical operations without intentional chemical depolymerization."@en,
+    skos:example "Sorting, shredding, washing, and regranulating polymer parts."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010054>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010221> (chemical recycling)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010221>
+
+  Annotations:
+    rdfs:label "chemical recycling"@en,
+    skos:definition "A recycling process that converts material through chemical reaction into monomers, feedstock, or other chemical products."@en,
+    skos:example "Solvolysis or depolymerization applied to a polymer waste stream."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010054>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010222> (process loss)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010222>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:float; expected unit: kg."@en,
+    rdfs:label "process loss"@en,
+    skos:definition "A mass quality that quantifies material lost during a process step."@en,
+    skos:example "A process loss of 0.5 kg during washing of a recycling batch."@en
+
+  SubClassOf:
+    pmd:PMD_0020133
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010223> (loss type)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010223>
+
+  Annotations:
+    rdfs:label "loss type"@en,
+    skos:definition "An information content entity that classifies the cause or form of material loss in a process."@en,
+    skos:example "Abrasion or contamination recorded as the loss type for a recycling process step."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010224> (weighing slip)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010224>
+
+  Annotations:
+    rdfs:label "weighing slip"@en,
+    skos:definition "A document that records the result of weighing materials, components, products, or recycling batches."@en,
+    skos:example "A weighing slip issued by a scale during intake of a recycling batch."@en
+
+  SubClassOf:
+    obo:IAO_0000310
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010225> (measurement type)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010225>
+
+  Annotations:
+    rdfs:label "measurement type"@en,
+    skos:definition "An information content entity that classifies the measurement method or instrument used to obtain a value."@en,
+    skos:example "Material scale recorded as the measurement type for a mass determination."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010226> (measurement timestamp)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010226>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:dateTime; expected unit: not specified."@en,
+    rdfs:label "measurement timestamp"@en,
+    skos:definition "A date value specification that records the time at which a measurement was made."@en,
+    skos:example "2024-01-01T14:23:00+01:00 recorded as a measurement timestamp."@en
+
+  SubClassOf:
+    pmd:PMD_0001044
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010227> (start timestamp)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010227>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:dateTime; expected unit: not specified."@en,
+    rdfs:label "start timestamp"@en,
+    skos:definition "A date value specification that records the start time of a process step."@en,
+    skos:example "The start timestamp of a sorting step in a recycling batch process."@en
+
+  SubClassOf:
+    pmd:PMD_0001044
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010228> (end timestamp)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010228>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:dateTime; expected unit: not specified."@en,
+    rdfs:label "end timestamp"@en,
+    skos:definition "A date value specification that records the end time of a process step."@en,
+    skos:example "The end timestamp of a washing step in a recycling batch process."@en
+
+  SubClassOf:
+    pmd:PMD_0001044
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010229> (input net mass)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010229>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:float; expected unit: kg."@en,
+    rdfs:label "input net mass"@en,
+    skos:definition "A mass quality that quantifies the net mass entering a process step."@en,
+    skos:example "Input net mass of 10.0 kg for a recycling process step."@en
+
+  SubClassOf:
+    pmd:PMD_0020133
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010230> (output net mass)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010230>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:float; expected unit: kg."@en,
+    rdfs:label "output net mass"@en,
+    skos:definition "A mass quality that quantifies the net mass leaving a process step."@en,
+    skos:example "Output net mass of 9.5 kg after a recycling process step."@en
+
+  SubClassOf:
+    pmd:PMD_0020133
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010231> (remanufacturability)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010231>
+
+    Annotations:
+    rdfs:label "remanufacturability"@en,
+    skos:definition "A disposition of a product or component to be restored through remanufacturing to a specified performance or quality state."@en,
+    skos:example "A starter motor assessed as remanufacturable after inspection."@en
+
+  SubClassOf:
+    obo:BFO_0000016
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010232> (refurbishability)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010232>
+
+    Annotations:
+    rdfs:label "refurbishability"@en,
+    skos:definition "A disposition of a product or component to be restored through refurbishment to an acceptable use state."@en,
+    skos:example "A body control module assessed as refurbishable after testing."@en
+
+  SubClassOf:
+    obo:BFO_0000016
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010233> (restricted heavy metals)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010233>
+
+  Annotations:
+    rdfs:label "restricted heavy metals"@en,
+    skos:definition "A material entity aggregate comprising heavy metal substances whose concentration is restricted by a stated regulation or standard."@en,
+    skos:example "Lead, mercury, cadmium, and hexavalent chromium considered in ELV compliance."@en
+
+  SubClassOf:
+    pmd:PMD_0000852
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010234> (lead threshold compliance)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010234>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:boolean; expected unit: not specified."@en,
+    rdfs:label "lead threshold compliance"@en,
+    skos:definition "A data item that records whether lead concentration complies with a stated threshold."@en,
+    skos:example "A true value indicating that lead concentration is below the applicable threshold."@en
+
+  SubClassOf:
+    obo:IAO_0000027
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010235> (mercury threshold compliance)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010235>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:boolean; expected unit: not specified."@en,
+    rdfs:label "mercury threshold compliance"@en,
+    skos:definition "A data item that records whether mercury concentration complies with a stated threshold."@en,
+    skos:example "A true value indicating that mercury concentration is below the applicable threshold."@en
+
+  SubClassOf:
+    obo:IAO_0000027
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010236> (cadmium threshold compliance)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010236>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:boolean; expected unit: not specified."@en,
+    rdfs:label "cadmium threshold compliance"@en,
+    skos:definition "A data item that records whether cadmium concentration complies with a stated threshold."@en,
+    skos:example "A false value indicating that cadmium concentration exceeds the applicable threshold."@en
+
+  SubClassOf:
+    obo:IAO_0000027
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010237> (hexavalent chromium threshold compliance)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010237>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:boolean; expected unit: not specified."@en,
+    rdfs:label "hexavalent chromium threshold compliance"@en,
+    skos:definition "A data item that records whether hexavalent chromium concentration complies with a stated threshold."@en,
+    skos:example "A true value indicating that hexavalent chromium concentration is below the applicable threshold."@en
+
+  SubClassOf:
+    obo:IAO_0000027
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010238> (required tool and software)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010238>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string; expected unit: not specified."@en,
+    rdfs:label "required tool and software"@en,
+    skos:definition "A directive information entity that specifies tools and software required for disassembly, testing, treatment, or reuse assessment."@en,
+    skos:example "A list requiring a diagnostic application and a puller tool for proper disassembly."@en
+
+  SubClassOf:
+    obo:IAO_0000033
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010239> (component position)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010239>
+
+  Annotations:
+    rdfs:label "component position"@en,
+    skos:altLabel "position"@en,
+    skos:definition "An information content entity that records the position of a component within a product or vehicle."@en,
+    skos:example "Front left door recorded as the component position within a vehicle."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010240> (component quantity)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010240>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:integer; expected unit: count."@en,
+    rdfs:label "component quantity"@en,
+    skos:altLabel "quantity"@en,
+    skos:definition "A quality that quantifies how many instances of a component occur in a product or vehicle."@en,
+    skos:example "Four identical door speakers recorded as a component quantity."@en
+
+  SubClassOf:
+    obo:BFO_0000019
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010241> (expected mileage)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010241>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:integer; expected unit: km."@en,
+    rdfs:label "expected mileage"@en,
+    skos:definition "A quality that quantifies the expected travel distance over which a component can perform its intended function."@en,
+    skos:example "Expected mileage of 200000 km for a vehicle component."@en
+
+  SubClassOf:
+    obo:BFO_0000019
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010242> (feedback to design information)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010242>
+
+    Annotations:
+    rdfs:label "design feedback information"@en,
+    skos:altLabel "feedback to design"@en,
+    skos:definition "An information content entity that records dismantling, reuse, repair, or recycling observations for later design improvement."@en,
+    skos:example "Feedback that a bonded joint should be replaced by a reversible fastening for easier dismantling."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010243> (waste code)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010243>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string; expected unit: not specified."@en,
+    rdfs:label "waste code"@en,
+    skos:definition "An identifier that classifies a waste material or waste-containing part according to a stated waste code system."@en,
+    skos:example "A European List of Waste code assigned to a dismantled material fraction."@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010244> (dismantling characteristics information)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010244>
+
+  Annotations:
+    rdfs:label "dismantling characteristics information"@en,
+    skos:altLabel "dismantling information characteristics"@en,
+    skos:definition "An information content entity that records product or component characteristics relevant to dismantling."@en,
+    skos:example "A dismantling characteristics record containing position, quantity, and expected mileage."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010245> (component identification information)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010245>
+
+  Annotations:
+    rdfs:label "component identification information"@en,
+    skos:altLabel "identification"@en,
+    skos:definition "An information content entity that records identifiers for a product, component, vehicle, material, or batch."@en,
+    skos:example "A component identification record containing part number, batch identifier, and anonymized vehicle identification number."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010246> (circular economy information)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010246>
+
+  Annotations:
+    rdfs:label "circular economy information"@en,
+    skos:altLabel "dismantling information circular economy"@en,
+    skos:definition "An information content entity that records reuse, repair, remanufacturing, recycling, recovery, or disposal information for a product or component."@en,
+    skos:example "Circular economy information containing selected r-strategy, restricted substance compliance, and required tools."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010247> (recycling batch identifier)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010247>
+
+  Annotations:
+    rdfs:label "recycling batch identifier"@en,
+    skos:definition "A batch identifier assigned to a recycling batch for traceability."@en,
+    skos:example "BATCH-0001-9999-abcd recorded as a recycling batch identifier."@en
+
+  SubClassOf:
+    log:LOG_0080002
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010248> (recycling information)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010248>
+
+  Annotations:
+    rdfs:label "recycling information"@en,
+    skos:definition "An information content entity that records recycling-related source, batch, process, composition, or actor data."@en,
+    skos:example "A recycling information record containing batch identifier, material source, and consumer share."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010249> (material source)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010249>
+
+  Annotations:
+    rdfs:label "material source"@en,
+    skos:altLabel "material source entity"@en,
+    skos:definition "An information content entity that records the source category or provenance of material used in a recycling or production context."@en,
+    skos:example "Automotive post-consumer material recorded as a material source."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010251> (consumer share)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010251>
+
+  Annotations:
+    rdfs:label "consumer share"@en,
+    skos:altLabel "consumer share entity"@en,
+    skos:definition "A mass proportion that quantifies consumer-origin material within a material source or recycled content record."@en,
+    skos:example "The post-consumer automotive share in a recycled polymer material source."@en
+
+  SubClassOf:
+    pmd:PMD_0020102

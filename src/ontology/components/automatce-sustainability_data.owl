@@ -1,0 +1,248 @@
+Prefix: dcterms: <http://purl.org/dc/terms/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+Prefix: obo: <http://purl.obolibrary.org/obo/>
+Prefix: pmd: <https://w3id.org/pmd/co/>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: : <https://w3id.org/pmd/automatce/components/automatce-sustainability_data.owl>
+
+
+
+Ontology: <https://w3id.org/pmd/automatce/components/automatce-sustainability_data.owl>
+
+Import: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
+
+Annotations: 
+    dcterms:title "AUTOMATCE - Sustainability Data Module"@en,
+    rdfs:comment "The sustainability data module of the AUTOMATCE Ontology."@en
+
+AnnotationProperty: dcterms:title
+
+    
+AnnotationProperty: rdfs:comment
+AnnotationProperty: rdfs:label
+AnnotationProperty: skos:definition
+AnnotationProperty: skos:example
+
+AnnotationProperty: skos:altLabel
+
+
+
+    
+Datatype: rdf:PlainLiteral
+
+Class: obo:BFO_0000015
+Class: obo:BFO_0000017
+Class: obo:BFO_0000019
+Class: obo:BFO_0000145
+Class: obo:IAO_0000030
+Class: obo:OBI_0001933
+Class: pmd:PMD_0000008
+Class: pmd:PMD_0020143
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010020>
+
+    Annotations:
+        rdfs:label "product footprint"@en,
+        skos:definition "An information content entity that records an environmental footprint of a product over a stated scope."@en,
+        skos:example "A product footprint report for an alternator covering cradle-to-gate carbon emissions and recycled material content."@en
+
+    SubClassOf:
+        obo:IAO_0000030
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010021>
+
+    Annotations:
+        rdfs:label "recycled material share"@en,
+        skos:altLabel "recycled share"@en,
+        skos:definition "A relational quality that relates a material, component, or product to the proportion of its material content that originates from recycled sources."@en,
+        skos:example "A bumper fascia with 30 percent recycled polypropylene content."@en
+
+    SubClassOf:
+        obo:BFO_0000145
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010022>
+
+    Annotations:
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: kg CO2e."@en,
+        rdfs:label "product carbon footprint"@en,
+        skos:altLabel "carbon footprint amount"@en,
+        skos:altLabel "carbon footprint"@en,
+        skos:definition "A product footprint that specifies greenhouse gas emissions associated with a product over a stated lifecycle scope."@en,
+        skos:example "18.4 kg CO2e as the product carbon footprint for one steering system."@en
+
+    SubClassOf:
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0010020>,
+        obo:OBI_0001933
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010023>
+
+    Annotations:
+        rdfs:label "process footprint"@en,
+        skos:definition "A process attribute that quantifies environmental burden associated with executing a process under specified boundary conditions."@en,
+        skos:example "Electricity consumption and associated emissions for one injection molding cycle."@en
+
+    SubClassOf:
+        pmd:PMD_0000008
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010024>
+
+    Annotations:
+        rdfs:label "process carbon footprint"@en,
+        skos:definition "A process footprint that quantifies greenhouse gas emissions associated with executing a process."@en,
+        skos:example "The carbon footprint of recycling one kilogram of PA66-GF25 scrap."@en
+
+    SubClassOf:
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0010023>
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010025>
+
+    Annotations:
+        rdfs:label "lifecycle"@en,
+        skos:definition "A process chain that comprises the stages through which a product or material passes from raw material acquisition through production, use, and end-of-life treatment."@en,
+        skos:example "The lifecycle of an automotive control unit from material extraction to recycling."@en
+
+    SubClassOf:
+        pmd:PMD_0020143
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010026>
+
+    Annotations:
+        rdfs:label "lifecycle stage"@en,
+        skos:altLabel "footprint lifecycle"@en,
+        skos:definition "A process that is a distinguishable part of a product or material lifecycle."@en,
+        skos:example "Main product production as a lifecycle stage for an automotive component."@en
+
+    SubClassOf:
+        obo:BFO_0000015
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010027>
+
+    Annotations:
+        rdfs:label "raw material acquisition"@en,
+        skos:definition "A lifecycle stage in which natural resources, secondary materials, or basic feedstocks are obtained and prepared for production."@en,
+        skos:example "Obtaining recycled polymer regranulate for later component production."@en
+
+    SubClassOf:
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0010026>
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010028>
+
+    Annotations:
+        rdfs:label "main product production"@en,
+        skos:definition "A lifecycle stage in which raw materials, intermediate products, or components are transformed into the main product."@en,
+        skos:example "Injection molding and assembly steps used to produce an automotive housing."@en
+
+    SubClassOf:
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0010026>
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010029>
+
+    Annotations:
+        rdfs:label "distribution"@en,
+        skos:definition "A lifecycle stage in which products, components, or materials are transported, stored, or transferred between supply chain actors."@en,
+        skos:example "Shipment of remanufactured components from a supplier to a vehicle manufacturer."@en
+
+    SubClassOf:
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0010026>
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010030>
+
+    Annotations:
+        rdfs:label "end of life"@en,
+        skos:definition "A lifecycle stage in which a product or component has reached the end of its intended use and is directed to reuse, remanufacturing, recycling, recovery, or disposal."@en,
+        skos:example "Removal of a component from an end-of-life vehicle for circular value assessment."@en
+
+    SubClassOf:
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0010026>
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010031>
+
+    Annotations:
+        rdfs:label "recycling lifecycle stage"@en,
+        skos:altLabel "recycling"@en,
+        skos:definition "A lifecycle stage in which used materials or products are processed to recover material for further use."@en,
+        skos:example "Grinding, sorting, and regranulating a polymer component after dismantling."@en
+
+    SubClassOf:
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0010026>
+
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010033>
+
+    Annotations:
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: kg CO2e."@en,
+        rdfs:label "recycling carbon footprint"@en,
+        skos:altLabel "footprint recycling"@en,
+        skos:definition "A product carbon footprint that specifies greenhouse gas emissions for a recycling scenario."@en,
+        skos:example "12 kg CO2e attributed to recycling one dismantled bumper cover."@en
+
+    SubClassOf:
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0010022>
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010034>
+
+    Annotations:
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: kg CO2e."@en,
+        rdfs:label "remanufacturing carbon footprint"@en,
+        skos:altLabel "footprint remanufacturing"@en,
+        skos:definition "A product carbon footprint that specifies greenhouse gas emissions for a remanufacturing scenario."@en,
+        skos:example "7.5 kg CO2e attributed to inspecting, repairing, and remanufacturing one alternator."@en
+
+    SubClassOf:
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0010022>
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010035>
+
+    Annotations:
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: kg CO2e."@en,
+        rdfs:label "reuse carbon footprint"@en,
+        skos:altLabel "footprint reuse"@en,
+        skos:definition "A product carbon footprint that specifies greenhouse gas emissions for a reuse scenario."@en,
+        skos:example "2.1 kg CO2e attributed to checking and reusing one component."@en
+
+    SubClassOf:
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0010022>
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010036>
+
+    Annotations:
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: kg CO2e."@en,
+        rdfs:label "new production carbon footprint"@en,
+        skos:altLabel "footprint new production"@en,
+        skos:definition "A product carbon footprint that specifies greenhouse gas emissions for a new production scenario."@en,
+        skos:example "24 kg CO2e attributed to manufacturing one replacement component from primary material."@en
+
+    SubClassOf:
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0010022>
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010250>
+
+    Annotations:
+        rdfs:label "sustainability information"@en,
+        skos:altLabel "sustainability"@en,
+        skos:definition "An information content entity that records sustainability-related attributes of a product, material, process, or circular economy scenario."@en,
+        skos:example "A sustainability record containing recycled share, carbon footprint, and lifecycle stage."@en
+
+    SubClassOf:
+        obo:IAO_0000030

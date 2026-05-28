@@ -1,0 +1,43 @@
+pattern_name: quantitative attribute
+pattern_iri: https://w3id.org/pmd/automatce/patterns/quantitative-attribute
+description: >
+  Pattern for AutoMatCE classes that represent a measurable quality, process
+  attribute, proportion, or simulation output with an expected datatype and unit.
+
+vars:
+  superclass: "'entity'"
+
+data_vars:
+  label: xsd:string
+  definition_genus: xsd:string
+  differentia: xsd:string
+  example: xsd:string
+  expected_datatype: xsd:string
+  expected_unit: xsd:string
+
+name:
+  text: "%s"
+  vars:
+    - label
+
+def:
+  text: "A %s that %s."
+  vars:
+    - definition_genus
+    - differentia
+
+annotations:
+  - annotationProperty: rdfs:comment
+    text: "Expected value datatype: %s; expected unit: %s."
+    vars:
+      - expected_datatype
+      - expected_unit
+  - annotationProperty: skos:example
+    text: "%s"
+    vars:
+      - example
+
+subClassOf:
+  text: "%s"
+  vars:
+    - superclass

@@ -1,0 +1,18 @@
+@prefix automatce: <https://w3id.org/pmd/automatce/> .
+@prefix ex: <https://example.org/automatce/> .
+@prefix log: <https://w3id.org/pmd/log/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:recycling_batch_1
+    a automatce:AUTOMATCE_0010210 ;
+    automatce:AUTOMATCE_0009001 ex:recycling_batch_identifier_1 ;
+    automatce:AUTOMATCE_0009007 ex:recycling_supplier_1 .
+
+ex:recycling_batch_identifier_1
+    a log:LOG_0080002 ;
+    rdf:value "RB-2026-0001"^^xsd:string .
+
+ex:recycling_supplier_1
+    a log:LOG_1000023 .
+

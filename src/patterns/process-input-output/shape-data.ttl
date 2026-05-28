@@ -1,0 +1,14 @@
+@prefix ex: <https://example.org/automatce/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+
+ex:injection_molding_run_1
+    a obo:BFO_0000015, pmd:PMD_0000833 ;
+    obo:RO_0000057 ex:injection_molding_machine_1 ;
+    obo:RO_0002233 ex:pa66_gf25_pellet_batch ;
+    obo:RO_0002234 ex:molded_housing_1 .
+
+ex:pa66_gf25_pellet_batch a pmd:PMD_0000000 .
+ex:molded_housing_1 a pmd:PMD_0000000 .
+ex:injection_molding_machine_1 a pmd:PMD_0000602 .
+

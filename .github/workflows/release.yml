@@ -1,0 +1,230 @@
+name: Release Ontology
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version as semver X.Y.Z, without v prefix."
+        required: true
+        type: string
+      dry_run:
+        description: "Validate and prepare artifacts without committing, tagging, or publishing."
+        required: true
+        type: boolean
+        default: true
+      release_notes:
+        description: "Release notes in Markdown. Leave empty to generate notes from commits."
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ inputs.version }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Build, validate, stamp, and release
+    runs-on: ubuntu-latest
+    container: obolibrary/odkfull:v1.6
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Python validation dependencies
+        run: |
+          python3 -m pip install --no-cache-dir pyshacl pyyaml
+
+      - name: Resolve release version
+        id: version
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION="${{ inputs.version }}"
+          if ! [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Version '$VERSION' is not valid semver. Use X.Y.Z without a v prefix."
+            exit 1
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "dry_run=${{ inputs.dry_run }}" >> "$GITHUB_OUTPUT"
+
+      - name: Check ontology scaffold
+        run: |
+          test -d src/ontology
+          test -f src/ontology/Makefile
+          test -f src/ontology/automatce-odk.yaml
+
+      - name: Check release and tag do not already exist
+        if: inputs.dry_run == false
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.version.outputs.version }}"
+          if gh release view "v${VERSION}" >/dev/null 2>&1; then
+            echo "::error::Release v${VERSION} already exists."
+            exit 1
+          fi
+          if git rev-parse "v${VERSION}" >/dev/null 2>&1; then
+            echo "::error::Tag v${VERSION} already exists."
+            exit 1
+          fi
+
+      - name: Build ontology release artifacts
+        env:
+          ROBOT_ENV: "ROBOT_JAVA_ARGS=-Xmx6G"
+        run: |
+          cd src/ontology
+          make -B all_main
+          make copy_release_files
+          make IMP=false PAT=false COMP=false MIR=false test
+
+      - name: Validate SHACL shapes and pattern examples
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 src/scripts/validate_patterns.py \
+            --ontology src/ontology/automatce-full.ttl
+          python3 src/scripts/validate_release_artifacts.py
+          pyshacl -a -s src/shapes/automatce-ontology-shapes.ttl src/ontology/automatce.ttl
+          pyshacl -a -s src/shapes/automatce-ontology-shapes.ttl src/ontology/automatce-full.ttl
+          shopt -s nullglob
+          for dir in src/patterns/*/; do
+            shape="${dir}shape.ttl"
+            data="${dir}shape-data.ttl"
+            if [[ -f "$shape" && -f "$data" ]]; then
+              pyshacl -s "$shape" "$data"
+            fi
+          done
+
+      - name: Stamp version into release artifacts
+        id: stamp
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.version.outputs.version }}"
+          python3 - <<'PY' > /tmp/automatce-release.env
+          import yaml
+          from pathlib import Path
+
+          odk = yaml.safe_load(Path("src/ontology/automatce-odk.yaml").read_text())
+          uribase = str(odk["uribase"]).rstrip("/")
+          suffix = str(odk.get("uribase_suffix") or odk["id"]).strip("/")
+          print(f"ONTBASE={uribase}/{suffix}")
+          PY
+          source /tmp/automatce-release.env
+          echo "ontbase=${ONTBASE}" >> "$GITHUB_OUTPUT"
+
+          for owl in src/ontology/*.owl; do
+            case "$owl" in
+              *-edit.owl|*-idranges.owl) continue ;;
+            esac
+            artifact="$(basename "$owl")"
+            version_iri="${ONTBASE}/releases/${VERSION}/${artifact}"
+            robot annotate \
+              --input "$owl" \
+              --version-iri "$version_iri" \
+              --annotation owl:versionInfo "$VERSION" \
+              --output "$owl"
+
+            ttl="${owl%.owl}.ttl"
+            json="${owl%.owl}.json"
+            if [[ -f "$ttl" ]]; then
+              robot convert --input "$owl" --format ttl --output "$ttl"
+            fi
+            if [[ -f "$json" ]]; then
+              robot convert --input "$owl" --check false --format json --output "$json"
+            fi
+          done
+          cd src/ontology
+          make copy_release_files
+
+      - name: Re-validate stamped artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 src/scripts/validate_release_artifacts.py
+          pyshacl -a -s src/shapes/automatce-ontology-shapes.ttl src/ontology/automatce.ttl
+          pyshacl -a -s src/shapes/automatce-ontology-shapes.ttl src/ontology/automatce-full.ttl
+
+      - name: Upload prepared release artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: automatce-release-v${{ steps.version.outputs.version }}
+          path: |
+            automatce*.owl
+            automatce*.ttl
+            automatce*.json
+            src/ontology/*.owl
+            src/ontology/*.ttl
+            src/ontology/*.json
+            !src/ontology/*-edit.owl
+            !src/ontology/*-idranges.owl
+          retention-days: 30
+
+      - name: Commit stamped release artifacts
+        if: inputs.dry_run == false
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.version.outputs.version }}"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add -f automatce*.owl automatce*.ttl automatce*.json \
+            src/ontology/*.owl src/ontology/*.ttl src/ontology/*.json src/ontology/imports/*.owl
+          if git diff --cached --quiet; then
+            echo "No artifact changes to commit."
+          else
+            git commit -m "Release v${VERSION}"
+            git push
+          fi
+
+      - name: Create and push release tag
+        if: inputs.dry_run == false
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.version.outputs.version }}"
+          git tag "v${VERSION}"
+          git push origin "v${VERSION}"
+
+      - name: Create GitHub release
+        if: inputs.dry_run == false
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_NOTES: ${{ inputs.release_notes }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.version.outputs.version }}"
+          mapfile -t ASSETS < <(find . -maxdepth 1 \
+            \( -name "*.owl" -o -name "*.ttl" -o -name "*.json" \) \
+            -name "automatce*" | sort)
+          if [[ "${#ASSETS[@]}" -eq 0 ]]; then
+            echo "::error::No release artifacts found in src/ontology."
+            exit 1
+          fi
+          if [[ -n "$RELEASE_NOTES" ]]; then
+            gh release create "v${VERSION}" "${ASSETS[@]}" \
+              --title "AutoMatCE v${VERSION}" \
+              --notes "$RELEASE_NOTES"
+          else
+            gh release create "v${VERSION}" "${ASSETS[@]}" \
+              --title "AutoMatCE v${VERSION}" \
+              --generate-notes
+          fi
+
+      - name: Trigger documentation workflow
+        if: inputs.dry_run == false
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: trigger-docs
+          client-payload: '{"version": "${{ steps.version.outputs.version }}"}'

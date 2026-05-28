@@ -1,0 +1,9 @@
+@prefix ex: <https://example.org/automatce/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix log: <https://w3id.org/pmd/log/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+ex:recycling_batch_identifier
+    a obo:IAO_0020000, log:LOG_0080002 ;
+    rdf:value "BATCH-0001-9999-abcd" ;
+    obo:IAO_0000219 ex:recycling_batch_1 .

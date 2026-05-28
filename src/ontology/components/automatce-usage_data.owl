@@ -1,0 +1,327 @@
+Prefix: dcterms: <http://purl.org/dc/terms/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+Prefix: obo: <http://purl.obolibrary.org/obo/>
+Prefix: pmd: <https://w3id.org/pmd/co/>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: : <https://w3id.org/pmd/automatce/components/automatce-usage_data.owl>
+
+
+
+Ontology: <https://w3id.org/pmd/automatce/components/automatce-usage_data.owl>
+
+Import: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
+
+Annotations: 
+    dcterms:title "AUTOMATCE - Usage Data Module"@en,
+    rdfs:comment "The usage data module of the AUTOMATCE Ontology."@en
+
+AnnotationProperty: dcterms:title
+
+    
+AnnotationProperty: rdfs:comment
+AnnotationProperty: rdfs:label
+AnnotationProperty: skos:altLabel
+AnnotationProperty: skos:definition
+AnnotationProperty: skos:example
+
+    
+Datatype: rdf:PlainLiteral
+
+Class: obo:BFO_0000016
+Class: obo:BFO_0000019
+Class: obo:BFO_0000202
+Class: obo:IAO_0000027
+Class: obo:IAO_0000030
+Class: pmd:PMD_0000005
+
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010040>
+
+    Annotations:
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: %."@en,
+        rdfs:label "humidity absorption"@en,
+        skos:definition "A disposition of a material or component to absorb water vapor from a humid environment under specified exposure conditions."@en,
+        skos:example "Moisture uptake by a PA66 component during use at 50 percent relative humidity."@en
+
+    SubClassOf:
+        pmd:PMD_0000005
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010260> (service life)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010260>
+
+  Annotations:
+    rdfs:label "service life"@en,
+    skos:altLabel "service life component"@en,
+    skos:definition "A temporal interval during which a component can perform its intended function under stated service conditions."@en,
+    skos:example "A service life interval of 12000 h for a bearing under stated load and temperature."@en
+
+  SubClassOf:
+    obo:BFO_0000202
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010261> (mechanical service life component)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010261>
+
+  Annotations:
+    rdfs:label "mechanical service life component"@en,
+    skos:definition "A service life component limited by mechanical loading conditions."@en,
+    skos:example "A 12000 h mechanical service life component under a stated cyclic load spectrum."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010260>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010262> (thermal service life component)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010262>
+
+  Annotations:
+    rdfs:label "thermal service life component"@en,
+    skos:definition "A service life component limited by thermal loading conditions."@en,
+    skos:example "A 9000 h thermal service life component at a stated operating temperature."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010260>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010263> (chemical service life component)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010263>
+
+  Annotations:
+    rdfs:label "chemical service life component"@en,
+    skos:definition "A service life component limited by chemical exposure conditions."@en,
+    skos:example "A 5000 h chemical service life component under stated oil exposure."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010260>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010264> (chemical medium service life component)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010264>
+
+  Annotations:
+    rdfs:label "chemical medium service life component"@en,
+    skos:definition "A chemical service life component limited by exposure to a specified chemical medium."@en,
+    skos:example "A service life component for contact with engine oil or coolant."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010263>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010265> (humidity medium service life component)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010265>
+
+  Annotations:
+    rdfs:label "humidity medium service life component"@en,
+    skos:definition "A chemical service life component limited by humidity or water exposure."@en,
+    skos:example "A service life component for exposure to 85 percent relative humidity."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010263>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010266> (usage data)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010266>
+
+  Annotations:
+    rdfs:label "usage data"@en,
+    skos:definition "An information content entity that records service life, load, environmental, status, or incident data observed during product or component use."@en,
+    skos:example "A usage data record containing component age, load spectrum, incidents, and service life estimates."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010267> (component status)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010267>
+
+  Annotations:
+    rdfs:label "component status"@en,
+    skos:definition "A quality of a component that records its functional, operational, or lifecycle state during use or assessment."@en,
+    skos:example "In service, failed, removed, repaired, or reused as a component status."@en
+
+  SubClassOf:
+    obo:BFO_0000019
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010268> (component age in use)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010268>
+
+  Annotations:
+    rdfs:label "component age in use"@en,
+    skos:altLabel "age of component"@en,
+    skos:definition "A temporal interval that extends from a stated component use event to a stated observation event."@en,
+    skos:example "Age of a component calculated from installation date to dismantling date."@en
+
+  SubClassOf:
+    obo:BFO_0000202
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010269> (incident record)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010269>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string; expected unit: not specified."@en,
+    rdfs:label "incident record"@en,
+    skos:altLabel "incidents"@en,
+    skos:definition "A data item that records incidents affecting a product or component during use."@en,
+    skos:example "A record of overload, crash exposure, overheating, or water ingress."@en
+
+  SubClassOf:
+    obo:IAO_0000027
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010270> (load spectrum)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010270>
+
+  Annotations:
+    rdfs:label "load spectrum"@en,
+    skos:definition "A data item that represents the distribution of loads experienced by a component over time or cycles."@en,
+    skos:example "A load collective describing cyclic forces experienced by a suspension component."@en
+
+  SubClassOf:
+    obo:IAO_0000027
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010271> (mechanical load spectrum at instance level)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010271>
+
+  Annotations:
+    rdfs:label "mechanical load spectrum at instance level"@en,
+    skos:altLabel "mechanical load spectrum level of instance"@en,
+    skos:definition "A load spectrum that records mechanical loads experienced by one individual component or product."@en,
+    skos:example "The load profile measured for one vehicle component during operation."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010270>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010272> (mechanical load spectrum at fleet level)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010272>
+
+  Annotations:
+    rdfs:label "mechanical load spectrum at fleet level"@en,
+    skos:altLabel "mechanical load spectrum level of fleet"@en,
+    skos:definition "A load spectrum that aggregates mechanical loads experienced by a fleet of components or products."@en,
+    skos:example "An aggregated load profile calculated from all units in a fleet."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010270>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010273> (mechanical load amplitude at instance level)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010273>
+
+    Annotations:
+    rdfs:comment "Expected value datatype: xsd:float; expected unit: N."@en,
+    rdfs:label "mechanical load amplitude at instance level"@en,
+    skos:altLabel "mechanical load amplitude level of instance"@en,
+    skos:definition "A quality that quantifies cyclic mechanical load amplitude experienced by one component or product."@en,
+    skos:example "A 450 N peak cyclic force amplitude recorded for one component during operation."@en
+
+  SubClassOf:
+    obo:BFO_0000019
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010274> (mechanical load amplitude at fleet level)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010274>
+
+    Annotations:
+    rdfs:comment "Expected value datatype: xsd:float; expected unit: N."@en,
+    rdfs:label "mechanical load amplitude at fleet level"@en,
+    skos:altLabel "mechanical load amplitude level of fleet"@en,
+    skos:definition "A quality that quantifies representative cyclic mechanical load amplitude across a fleet."@en,
+    skos:example "A 380 N representative cyclic force amplitude across a vehicle fleet."@en
+
+  SubClassOf:
+    obo:BFO_0000019
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010275> (mechanical load cycles at instance level)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010275>
+
+    Annotations:
+    rdfs:comment "Expected value datatype: xsd:nonNegativeInteger; expected unit: cycle."@en,
+    rdfs:label "mechanical load cycles at instance level"@en,
+    skos:altLabel "mechanical load cycles level of instance"@en,
+    skos:definition "A quality that quantifies the number of mechanical load cycles experienced by one component or product."@en,
+    skos:example "250000 load cycles counted for one component during operation."@en
+
+  SubClassOf:
+    obo:BFO_0000019
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010276> (mechanical load cycles at fleet level)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010276>
+
+    Annotations:
+    rdfs:comment "Expected value datatype: xsd:nonNegativeInteger; expected unit: cycle."@en,
+    rdfs:label "mechanical load cycles at fleet level"@en,
+    skos:altLabel "mechanical load cycles level of fleet"@en,
+    skos:definition "A quality that quantifies the number or distribution of mechanical load cycles across a fleet."@en,
+    skos:example "1200000 load cycles derived from aggregated fleet operating data."@en
+
+  SubClassOf:
+    obo:BFO_0000019
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010277> (temperature spectrum)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010277>
+
+  Annotations:
+    rdfs:label "temperature spectrum"@en,
+    skos:definition "A data item that represents temperature magnitudes, durations, or cycles experienced by a component or product."@en,
+    skos:example "A thermal load spectrum showing temperature cycles over vehicle use."@en
+
+  SubClassOf:
+    obo:IAO_0000027
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010278> (temperature over cycles)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010278>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string; expected unit: not specified."@en,
+    rdfs:label "temperature over cycles"@en,
+    skos:definition "A data item that records temperature change or temperature values across cycles."@en,
+    skos:example "A temperature-over-cycles profile used in service-life assessment."@en
+
+  SubClassOf:
+    obo:IAO_0000027
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010279> (environmental spectrum)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010279>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string; expected unit: not specified."@en,
+    rdfs:label "environmental spectrum"@en,
+    skos:definition "A data item that represents environmental exposure conditions over time or cycles."@en,
+    skos:example "A combined exposure profile for humidity, chemical media, radiation, and dust."@en
+
+  SubClassOf:
+    obo:IAO_0000027

@@ -1,0 +1,27 @@
+pattern_name: object property bridge
+pattern_iri: https://w3id.org/pmd/automatce/patterns/object-property-bridge
+description: >
+  Pattern for reusing imported BFO, RO, PMD, OBI, IAO, or LOG object
+  properties while adding local display annotations when an SLME import brings
+  only a declaration.
+
+data_vars:
+  property_iri: xsd:anyURI
+  label: xsd:string
+  definition: xsd:string
+  source_ontology: xsd:string
+
+annotations:
+  - annotationProperty: rdfs:label
+    text: "%s"
+    vars:
+      - label
+  - annotationProperty: skos:definition
+    text: "%s"
+    vars:
+      - definition
+  - annotationProperty: rdfs:comment
+    text: "Annotation bridge for a reused %s property; no AutoMatCE replacement property is minted."
+    vars:
+      - source_ontology
+

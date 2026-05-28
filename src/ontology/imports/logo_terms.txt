@@ -1,0 +1,21 @@
+# Terms to import from logo ontology (SLME extraction)
+# Format: One IRI per line
+# This is the explicit SLME seed list. Additional classes in logo_import.owl
+# are dependency-closure terms produced by the ODK BOT extractor, not a full LOG import.
+# Do not seed LOG manufacturer or manufacturer identifier terms here.
+# Manufacturer entities and roles use the PMD Core/OBI import.
+https://w3id.org/pmd/log/LOG_0080001 #product identifier
+https://w3id.org/pmd/log/LOG_0080002 #batch identifier
+https://w3id.org/pmd/log/LOG_1000007 #part number
+https://w3id.org/pmd/log/LOG_1000008 #physical location identifier
+https://w3id.org/pmd/log/LOG_1000013 #consignee
+https://w3id.org/pmd/log/LOG_1000014 #consignor
+https://w3id.org/pmd/log/LOG_1000023 #supply chain agent
+https://w3id.org/pmd/log/LOG_1000026 #load
+https://w3id.org/pmd/log/LOG_1000042 #container
+https://w3id.org/pmd/log/LOG_1000047 #business organization
+https://w3id.org/pmd/log/LOG_1000051 #shipment
+https://w3id.org/pmd/log/LOG_1000079 #raw material role
+https://w3id.org/pmd/log/LOG_1000102 #raw material
+https://w3id.org/pmd/log/LOG_1000130 #business process
+https://w3id.org/pmd/log/LOG_1000143 #transport process

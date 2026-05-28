@@ -1,0 +1,183 @@
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: obo: <http://purl.obolibrary.org/obo/>
+Prefix: log: <https://w3id.org/pmd/log/>
+Prefix: pmd: <https://w3id.org/pmd/co/>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: : <https://w3id.org/pmd/automatce/components/automatce-axioms-shared.owl>
+
+
+
+Ontology: <https://w3id.org/pmd/automatce/components/automatce-axioms-shared.owl>
+
+Import: <https://w3id.org/pmd/automatce/components/automatce-dismantling_information.owl>
+Import: <https://w3id.org/pmd/automatce/components/automatce-engineering_data.owl>
+Import: <https://w3id.org/pmd/automatce/components/automatce-material_data.owl>
+Import: <https://w3id.org/pmd/automatce/components/automatce-product_data.owl>
+Import: <https://w3id.org/pmd/automatce/components/automatce-sustainability_data.owl>
+Import: <https://w3id.org/pmd/automatce/components/automatce-transactional_data.owl>
+Import: <https://w3id.org/pmd/automatce/components/automatce-usage_data.owl>
+
+AnnotationProperty: rdfs:label
+AnnotationProperty: skos:definition
+
+Class: obo:BFO_0000001
+Class: obo:IAO_0020000
+Class: pmd:PMD_0025001
+Class: log:LOG_1000023
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010143>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010210>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010246>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010250>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010266>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010346>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010354>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010355>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010356>
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010357>
+
+ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009001>
+
+  Annotations:
+    rdfs:label "has identifier"@en,
+    skos:definition "A relation that links an entity to an identifier denoting it in a stated system."@en
+
+  Domain:
+    obo:BFO_0000001
+
+  Range:
+    obo:IAO_0020000
+
+
+ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009002>
+
+  Annotations:
+    rdfs:label "has material composition"@en,
+    skos:definition "A relation that links a product, component, material, or batch to a composition that describes its material constitution."@en
+
+  Domain:
+    obo:BFO_0000001
+
+  Range:
+    pmd:PMD_0025001
+
+
+ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009003>
+
+  Annotations:
+    rdfs:label "has sustainability information"@en,
+    skos:definition "A relation that links an entity or process to information about sustainability-relevant attributes."@en
+
+  Domain:
+    obo:BFO_0000001
+
+  Range:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010250>
+
+
+ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009004>
+
+  Annotations:
+    rdfs:label "has usage data"@en,
+    skos:definition "A relation that links a product or component to data recorded during use."@en
+
+  Domain:
+    obo:BFO_0000001
+
+  Range:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010266>
+
+
+ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009005>
+
+  Annotations:
+    rdfs:label "has circular economy information"@en,
+    skos:definition "A relation that links a product, component, material, or batch to information about circular economy handling or assessment."@en
+
+  Domain:
+    obo:BFO_0000001
+
+  Range:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010246>
+
+
+ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009006>
+
+  Annotations:
+    rdfs:label "has selected r-strategy"@en,
+    skos:definition "A relation that links circular economy information to the selected circular economy strategy."@en
+
+  Domain:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010246>
+
+  Range:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010143>
+
+
+ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009007>
+
+  Annotations:
+    rdfs:label "has recycling batch actor"@en,
+    skos:definition "A relation that links a recycling batch to an actor participating in its transfer, treatment, or documentation."@en
+
+  Domain:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010210>
+
+  Range:
+    log:LOG_1000023
+
+
+ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009008>
+
+  Annotations:
+    rdfs:label "has pressure-volume-temperature data point"@en,
+    skos:definition "A relation that links pressure-volume-temperature data to one recorded pressure, temperature, and specific volume tuple."@en
+
+  Domain:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010346>
+
+  Range:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010354>
+
+
+ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009009>
+
+  Annotations:
+    rdfs:label "has pressure-volume-temperature pressure datum"@en,
+    skos:definition "A relation that links a pressure-volume-temperature data point to its pressure value specification."@en
+
+  Domain:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010354>
+
+  Range:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010355>
+
+
+ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009010>
+
+  Annotations:
+    rdfs:label "has pressure-volume-temperature temperature datum"@en,
+    skos:definition "A relation that links a pressure-volume-temperature data point to its temperature value specification."@en
+
+  Domain:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010354>
+
+  Range:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010356>
+
+
+ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009011>
+
+  Annotations:
+    rdfs:label "has pressure-volume-temperature specific volume datum"@en,
+    skos:definition "A relation that links a pressure-volume-temperature data point to its specific volume value specification."@en
+
+  Domain:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010354>
+
+  Range:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010357>
+

@@ -1,0 +1,31 @@
+pattern_name: logistics transfer
+pattern_iri: https://w3id.org/pmd/automatce/patterns/logistics-transfer
+description: >
+  Pattern for recycling batch or shipment records that connect identifiers,
+  supply chain actors, locations, and transfer or transport processes.
+
+data_vars:
+  transfer_label: xsd:string
+  identifier_label: xsd:string
+  actor_label: xsd:string
+  process_label: xsd:string
+  site_label: xsd:string
+  example: xsd:string
+
+name:
+  text: "%s"
+  vars:
+    - transfer_label
+
+def:
+  text: "An information record that documents transfer of %s by %s through %s."
+  vars:
+    - transfer_label
+    - actor_label
+    - process_label
+
+annotations:
+  - annotationProperty: skos:example
+    text: "%s"
+    vars:
+      - example

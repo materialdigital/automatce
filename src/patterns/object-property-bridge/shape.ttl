@@ -1,0 +1,22 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix pattern: <https://w3id.org/pmd/automatce/patterns/> .
+
+pattern:ObjectPropertyBridgeShape
+    a sh:NodeShape ;
+    sh:targetClass owl:ObjectProperty ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:uniqueLang true ;
+        sh:languageIn ( "en" ) ;
+        sh:message "A reused object property should have an English display label in the release graph." ;
+    ] ;
+    sh:property [
+        sh:path skos:definition ;
+        sh:minCount 1 ;
+        sh:languageIn ( "en" ) ;
+        sh:message "A bridge annotation should state the intended meaning of the reused object property." ;
+    ] .

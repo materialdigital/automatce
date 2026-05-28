@@ -1,0 +1,9 @@
+@prefix ex: <https://example.org/automatce/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:container_mass_value
+    a obo:OBI_0001933 ;
+    obo:OBI_0001937 "3000.0"^^xsd:float ;
+    obo:IAO_0000039 unit:KiloGM .

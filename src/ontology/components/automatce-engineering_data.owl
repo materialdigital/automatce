@@ -1,0 +1,473 @@
+Prefix: : <https://w3id.org/pmd/automatce/components/automatce-engineering_data.owl>
+Prefix: dcterms: <http://purl.org/dc/terms/>
+Prefix: obo: <http://purl.obolibrary.org/obo/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: pmd: <https://w3id.org/pmd/co/>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <https://w3id.org/pmd/automatce/components/automatce-engineering_data.owl>
+
+Import: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
+
+Annotations: 
+    dcterms:title "AUTOMATCE - Engineering Data Module"@en,
+    rdfs:comment "The engineering data module of the AUTOMATCE Ontology."@en
+
+AnnotationProperty: dcterms:title
+
+    
+AnnotationProperty: pmd:PMD_0050117
+
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: skos:definition
+
+    
+AnnotationProperty: skos:example
+
+AnnotationProperty: skos:altLabel
+
+
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010131>
+
+    Annotations:
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: GPa."@en,
+        rdfs:label "young's modulus"@en,
+        skos:altLabel "youngs modulus"@en,
+        skos:definition "An elastic modulus that quantifies the ratio of uniaxial stress to uniaxial strain in the linear elastic region of a material response."@en,
+        skos:example "9.5 GPa Young's modulus for PA66-GF30 measured by tensile testing."@en
+
+    SubClassOf:
+        pmd:PMD_0000618
+
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000007>
+
+    Annotations: 
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: MPa."@en,
+        rdfs:comment "For brittle materials, this is equal to tensile strength. For ductile materials, it may be lower than the yield point."@en,
+        rdfs:label "stress at break"@en,
+        skos:definition "A strength that quantifies tensile stress at specimen rupture."@en,
+        skos:example "A value of 150 MPa for a GF-reinforced polymer."@en
+    
+    SubClassOf: 
+        pmd:PMD_0000952
+    
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000022>
+
+    Annotations: 
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: not specified."@en,
+        rdfs:comment "Indicates ductility. Low strain at break (less than 5%) suggests brittle behavior."@en,
+        rdfs:label "strain at break"@en,
+        skos:definition "A mechanical property that quantifies specimen strain at rupture."@en,
+        skos:example "3% strain at break for a glass-filled polyamide."@en
+    
+    SubClassOf: 
+        pmd:PMD_0000848
+    
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000029>
+
+    Annotations: 
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: kJ/m^2."@en,
+        rdfs:comment "Often measured via Charpy or Izod notched impact tests."@en,
+        rdfs:label "impact strength"@en,
+        skos:definition "A strength that quantifies material resistance to fracture under impact loading."@en,
+        skos:example "45 kJ/m^2 notched impact strength for a bumper material."@en
+    
+    SubClassOf: 
+        pmd:PMD_0000952
+    
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000030>
+
+    Annotations: 
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: MPa / GPa."@en,
+        rdfs:comment "Standard metric for stiffness in plastics (ISO 178)."@en,
+        rdfs:label "flexural modulus"@en,
+        skos:definition "A stiffness that quantifies the ratio of flexural stress to flexural strain."@en,
+        skos:example "Flexural modulus of 8500 MPa for PA66-GF30."@en
+    
+    SubClassOf: 
+        pmd:PMD_0000949
+    
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000031>
+
+    Annotations: 
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: MPa / GPa."@en,
+        rdfs:comment "Relevant for snap-fit joints in automotive interiors."@en,
+        rdfs:label "flexural strength"@en,
+        skos:definition "A strength that quantifies maximum stress under flexural loading before yielding or rupture."@en,
+        skos:example "250 MPa for a high-performance composite."@en
+    
+    SubClassOf: 
+        pmd:PMD_0000952
+    
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0030000>
+
+    Annotations: 
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: degC."@en,
+        rdfs:label "melt temperature"@en,
+        skos:definition "A temperature quality that inheres in polymer melt material at a specified point or interval in a manufacturing process."@en,
+        skos:example "A melt temperature of 280 degC specified for processing PA66-GF25."@en
+    
+    SubClassOf: 
+        pmd:PMD_0000967
+    
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0030001>
+
+    Annotations: 
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: degC."@en,
+        rdfs:label "maximum melt temperature"@en,
+        skos:definition "A melt temperature that specifies the upper allowed or observed temperature of input melt in a manufacturing process."@en,
+        skos:example "A maximum melt temperature of 290 degC in an injection molding process window."@en
+    
+    SubClassOf: 
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0030000>
+    
+    DisjointWith: 
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0030002>
+    
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0030002>
+
+    Annotations: 
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: degC."@en,
+        rdfs:label "minimum melt temperature"@en,
+        skos:definition "A melt temperature that specifies the lower allowed or observed temperature of input melt in a manufacturing process."@en,
+        skos:example "A minimum melt temperature of 270 degC in an injection molding process window."@en
+    
+    SubClassOf: 
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0030000>
+    
+    DisjointWith: 
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0030001>
+    
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0030003>
+
+    Annotations: 
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: degC."@en,
+        rdfs:label "mold temperature"@en,
+        skos:definition "A temperature quality that inheres in a mold during a manufacturing process."@en,
+        skos:example "A mold temperature of 90 degC specified for processing a glass-fiber-reinforced polyamide."@en
+    
+    SubClassOf: 
+        pmd:PMD_0000967
+    
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0030004>
+
+    Annotations: 
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: degC."@en,
+        rdfs:label "maximum mold temperature"@en,
+        skos:definition "A mold temperature that specifies the upper allowed or observed temperature of a mold during a manufacturing process."@en,
+        skos:example "A maximum mold temperature of 100 degC in an injection molding process window."@en
+    
+    SubClassOf: 
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0030003>
+    
+    DisjointWith: 
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0030005>
+    
+    
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0030005>
+
+    Annotations: 
+        rdfs:comment "Expected value datatype: xsd:float; expected unit: degC."@en,
+        rdfs:label "minimum mold temperature"@en,
+        skos:definition "A mold temperature that specifies the lower allowed or observed temperature of a mold during a manufacturing process."@en,
+        skos:example "A minimum mold temperature of 80 degC in an injection molding process window."@en
+    
+    SubClassOf: 
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0030003>
+    
+    DisjointWith: 
+        <https://w3id.org/pmd/automatce/AUTOMATCE_0030004>
+    
+    
+Class: obo:BFO_0000030
+
+    
+Class: pmd:PMD_0000075
+
+    
+Class: pmd:PMD_0000618
+
+    
+Class: pmd:PMD_0000848
+
+    
+Class: pmd:PMD_0000949
+
+    
+Class: pmd:PMD_0000952
+
+    
+Class: pmd:PMD_0000967
+
+    
+Class: pmd:PMD_0200002
+
+Class: pmd:PMD_0000794
+Class: obo:IAO_0000010
+Class: obo:IAO_0000030
+Class: obo:OBI_0001933
+Class: pmd:PMD_0000933
+Class: pmd:PMD_0001044
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010290> (simulation card)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010290>
+
+  Annotations:
+    rdfs:label "simulation card"@en,
+    skos:definition "An information content entity that specifies material, software, calibration, and parameter data used for simulation."@en,
+    skos:example "A material card used for an injection molding or structural simulation."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010291> (material card)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010291>
+
+  Annotations:
+    rdfs:label "material card"@en,
+    skos:altLabel "simulation material card"@en,
+    skos:definition "A simulation card that specifies material data for a simulation model."@en,
+    skos:example "A polymer material card calibrated for injection molding simulation."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010290>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010292> (simulation type)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010292>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string; expected unit: not specified."@en,
+    rdfs:label "simulation type"@en,
+    skos:definition "An information content entity that classifies a simulation according to the modeled process or response."@en,
+    skos:example "Structural simulation or manufacturing simulation recorded as a simulation type."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010293> (simulation software)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010293>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string; expected unit: not specified."@en,
+    rdfs:label "simulation software"@en,
+    skos:definition "A software used to create, execute, calibrate, or interpret a simulation."@en,
+    skos:example "A named simulation software and version used for a material card."@en
+
+  SubClassOf:
+    obo:IAO_0000010
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010294> (calibration time)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010294>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:dateTime; expected unit: not specified."@en,
+    rdfs:label "calibration time"@en,
+    skos:definition "A date value specification that records when a simulation card or material model was calibrated."@en,
+    skos:example "The calibration time of a material card used in an injection molding simulation."@en
+
+  SubClassOf:
+    pmd:PMD_0001044
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010295> (file format)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010295>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string; expected unit: not specified."@en,
+    rdfs:label "file format"@en,
+    skos:definition "An information content entity that identifies the format in which a file or simulation card is encoded."@en,
+    skos:example "A material-card file format recorded for simulation data exchange."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010296> (manufacturing simulation parameter)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010296>
+
+  Annotations:
+    rdfs:label "manufacturing simulation parameter"@en,
+    skos:definition "A value specification that provides an input, calibration, or output parameter for a manufacturing simulation."@en,
+    skos:example "Specific volume or viscosity data used as a manufacturing simulation parameter."@en
+
+  SubClassOf:
+    obo:OBI_0001933
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010297> (structural simulation parameter)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010297>
+
+  Annotations:
+    rdfs:label "structural simulation parameter"@en,
+    skos:definition "A value specification that provides an input, calibration, or output parameter for a structural simulation."@en,
+    skos:example "Stress, strain, or temperature values used in a structural material model."@en
+
+  SubClassOf:
+    obo:OBI_0001933
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010298> (fatigue simulation)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010298>
+
+  Annotations:
+    rdfs:label "fatigue simulation"@en,
+    skos:altLabel "fatigue entity"@en,
+    skos:definition "A simulation process that represents material or component response under repeated cyclic loading."@en,
+    skos:example "A fatigue simulation used to estimate component life under cyclic service loads."@en
+
+  SubClassOf:
+    pmd:PMD_0000933
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010299> (creep simulation)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010299>
+
+  Annotations:
+    rdfs:label "creep simulation"@en,
+    skos:altLabel "creep entity"@en,
+    skos:definition "A simulation process that represents time-dependent deformation under sustained load."@en,
+    skos:example "A creep simulation based on strain-time curves from ISO 899 testing."@en
+
+  SubClassOf:
+    pmd:PMD_0000933
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010300> (ageing simulation)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010300>
+
+  Annotations:
+    rdfs:label "ageing simulation"@en,
+    skos:altLabel "ageing entity"@en,
+    skos:definition "A simulation process that represents changes in material or component properties caused by ageing conditions."@en,
+    skos:example "A simulation of property degradation after thermal ageing."@en
+
+  SubClassOf:
+    pmd:PMD_0000933
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010301> (parallel parameter temperature)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010301>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:float; expected unit: K."@en,
+    rdfs:label "parallel parameter temperature"@en,
+    skos:definition "A structural simulation parameter that specifies temperature for behavior parallel to a reference direction."@en,
+    skos:example "Temperature parameter parallel to fiber orientation in a material card."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010297>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010302> (parallel parameter expansion)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010302>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:float; expected unit: percent."@en,
+    rdfs:label "parallel parameter expansion"@en,
+    skos:definition "A structural simulation parameter that specifies expansion parallel to a reference direction."@en,
+    skos:example "Expansion parameter parallel to flow direction in a material card."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010297>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010303> (normal parameter temperature)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010303>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:float; expected unit: K."@en,
+    rdfs:label "normal parameter temperature"@en,
+    skos:definition "A structural simulation parameter that specifies temperature for behavior normal to a reference direction."@en,
+    skos:example "Temperature parameter normal to fiber orientation in a material card."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010297>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010304> (parallel quasistatic temperature parameter)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010304>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:float; expected unit: K."@en,
+    rdfs:label "parallel quasistatic temperature parameter"@en,
+    skos:altLabel "parallel parameter quasi static temperature"@en,
+    skos:definition "A structural simulation parameter that specifies the test temperature for quasistatic behavior parallel to a reference direction."@en,
+    skos:example "Temperature used for a parallel-direction ISO 527 stress-strain curve."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010301>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010305> (normal quasistatic temperature parameter)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010305>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:float; expected unit: K."@en,
+    rdfs:label "normal quasistatic temperature parameter"@en,
+    skos:altLabel "normal parameter quasi static temperature"@en,
+    skos:definition "A structural simulation parameter that specifies the test temperature for quasistatic behavior normal to a reference direction."@en,
+    skos:example "Temperature used for a normal-direction ISO 527 stress-strain curve."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010303>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010306> (simulation parameter)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010306>
+
+  Annotations:
+    rdfs:label "simulation parameter"@en,
+    skos:definition "A value specification that supplies an input, calibration, boundary, or output value for a simulation."@en,
+    skos:example "A stress, strain, temperature, viscosity, or specific-volume parameter used in a material card."@en
+
+  SubClassOf:
+    obo:OBI_0001933

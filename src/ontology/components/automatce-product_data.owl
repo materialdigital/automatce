@@ -1,0 +1,277 @@
+Prefix: dcterms: <http://purl.org/dc/terms/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+Prefix: obo: <http://purl.obolibrary.org/obo/>
+Prefix: pmd: <https://w3id.org/pmd/co/>
+Prefix: log: <https://w3id.org/pmd/log/>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: : <https://w3id.org/pmd/automatce/components/automatce-product_data.owl>
+
+
+
+Ontology: <https://w3id.org/pmd/automatce/components/automatce-product_data.owl>
+
+Import: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
+
+Annotations: 
+    dcterms:title "AUTOMATCE - Product Data Module"@en,
+    rdfs:comment "The product data module of the AUTOMATCE Ontology."@en
+
+AnnotationProperty: dcterms:title
+
+    
+AnnotationProperty: rdfs:comment
+AnnotationProperty: rdfs:label
+AnnotationProperty: skos:altLabel
+AnnotationProperty: skos:definition
+AnnotationProperty: skos:example
+
+    
+Datatype: rdf:PlainLiteral
+
+
+Class: obo:IAO_0000030
+Class: obo:IAO_0020000
+Class: obo:OBI_0001933
+Class: pmd:PMD_0000891
+Class: pmd:PMD_0020138
+Class: pmd:PMD_0025001
+Class: log:LOG_0080002
+Class: log:LOG_1000007
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010175> (batch)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010175>
+
+  Annotations:
+    rdfs:label "batch"@en,
+    skos:definition "A disconnected material entity aggregate that is produced, handled, or traced as one quantity under a common production or logistics context."@en,
+    skos:example "A batch of polymer granulate produced under one manufacturing order."@en
+
+  SubClassOf:
+    pmd:PMD_0020138
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010176> (catena-x batch identifier)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010176>
+
+  Annotations:
+    rdfs:label "catena-x batch identifier"@en,
+    skos:altLabel "Catena-X identifier"@en,
+    skos:definition "A batch identifier assigned for anonymous traceability of a batch in the Catena-X dataspace."@en,
+    skos:example "A Catena-X identifier used to reference a batch without exposing a local production number."@en
+
+  SubClassOf:
+    log:LOG_0080002
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010177> (local identifier)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010177>
+
+  Annotations:
+    rdfs:label "local identifier"@en,
+    skos:altLabel "local identifiers"@en,
+    skos:definition "An identifier that identifies an entity within a stated local system, organization, or dataspace."@en,
+    skos:example "A local batch number used inside a manufacturer's production system."@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010178> (local identifier key)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010178>
+
+  Annotations:
+    rdfs:label "local identifier key"@en,
+    skos:altLabel "identifier key"@en,
+    skos:altLabel "key value list"@en,
+    skos:definition "An information content entity that names the local identifier scheme or field in which an identifier value is given."@en,
+    skos:example "A key such as plant batch number or supplier lot number in a key-value identifier list."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010179> (local identifier value)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010179>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string; expected unit: not specified."@en,
+    rdfs:label "local identifier value"@en,
+    skos:altLabel "identifier value"@en,
+    skos:definition "An identifier value used within a stated local identifier scheme."@en,
+    skos:example "The value 2024-11-A in a supplier lot identifier."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010177>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010180> (manufacturing information)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010180>
+
+  Annotations:
+    rdfs:label "manufacturing information"@en,
+    skos:altLabel "manufacturing entity"@en,
+    skos:definition "An information content entity that records production-related data about a batch, part, product, or material."@en,
+    skos:example "Manufacturing date and manufacturing country recorded for a produced batch."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010181> (manufacturing country code)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010181>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string; expected code scheme: ISO 3166-1 alpha-2 or alpha-3."@en,
+    rdfs:label "manufacturing country code"@en,
+    skos:altLabel "country code"@en,
+    skos:definition "An identifier that records the country in which a part, product, material, or batch was manufactured."@en,
+    skos:example "\"DE\" as the manufacturing country code for a part manufactured in Germany."@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010182> (part type information)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010182>
+
+  Annotations:
+    rdfs:label "part type information"@en,
+    skos:definition "An information content entity that describes the designed part type instantiated by a physical part or batch."@en,
+    skos:example "Part type information for a connector housing used across several produced parts."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010183> (manufacturer part number)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010183>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string; expected unit: not specified."@en,
+    rdfs:label "manufacturer part number"@en,
+    skos:altLabel "manufacturer part ID"@en,
+    skos:definition "A part number assigned by the manufacturer to a designed part type."@en,
+    skos:example "A manufacturer's part number for a steering control unit housing."@en
+
+  SubClassOf:
+    log:LOG_1000007
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010184> (part name at manufacturer)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010184>
+
+  Annotations:
+    rdfs:label "part name at manufacturer"@en,
+    skos:definition "An identifier or designation by which a manufacturer names a part type in its own records."@en,
+    skos:example "A manufacturer-specific sales or engineering name for a vehicle part."@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010185> (product data)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010185>
+
+  Annotations:
+    rdfs:label "product data"@en,
+    skos:definition "An information content entity that records identifying, descriptive, composition, or lifecycle data about a product."@en,
+    skos:example "A vehicle product data record containing model range, brand, production date, and material composition."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010186> (model range)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010186>
+
+  Annotations:
+    rdfs:label "model range"@en,
+    skos:definition "An identifier that records a vehicle sales or platform range used to group related model variants."@en,
+    skos:example "A model range name used in a vehicle product data aspect."@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010187> (overall material composition)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010187>
+
+  Annotations:
+    rdfs:label "overall material composition"@en,
+    skos:definition "A composition that summarizes material groups and amounts at the level of a whole product or vehicle."@en,
+    skos:example "Overall material composition of a vehicle reported for homologation."@en
+
+  SubClassOf:
+    pmd:PMD_0025001
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010188> (model range lifecycle)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010188>
+
+  Annotations:
+    rdfs:label "model range lifecycle"@en,
+    skos:definition "An identifier that records the lifecycle state or generation of a vehicle model range."@en,
+    skos:example "A lifecycle code for a vehicle series used in product data exchange."@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010189> (sales name)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010189>
+
+  Annotations:
+    rdfs:label "sales name"@en,
+    skos:definition "An identifier that records the commercial name under which a vehicle, part, or product is sold."@en,
+    skos:example "The sales name shown in vehicle product data."@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010190> (brand)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010190>
+
+  Annotations:
+    rdfs:label "brand"@en,
+    skos:definition "An identifier that records the commercial brand associated with a vehicle, part, material, or product."@en,
+    skos:example "A vehicle brand recorded in product data."@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010191> (vehicle information)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010191>
+
+  Annotations:
+    rdfs:label "vehicle information"@en,
+    skos:definition "An information content entity that records identifying, technical, lifecycle, or manufacturer data about a vehicle."@en,
+    skos:example "Vehicle information containing original equipment manufacturer, model range, production date, and anonymized vehicle identification number."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+    

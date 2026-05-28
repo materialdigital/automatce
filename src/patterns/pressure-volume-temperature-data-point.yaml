@@ -1,0 +1,30 @@
+pattern_name: pressure volume temperature data point
+pattern_iri: https://w3id.org/pmd/automatce/patterns/pressure-volume-temperature-data-point
+description: >
+  Pattern for one pressure-volume-temperature data point containing pressure,
+  temperature, and specific volume value specifications.
+
+data_vars:
+  data_point_label: xsd:string
+  pressure_value: xsd:decimal
+  temperature_value: xsd:decimal
+  specific_volume_value: xsd:decimal
+  pressure_unit: xsd:string
+  temperature_unit: xsd:string
+  specific_volume_unit: xsd:string
+  example: xsd:string
+
+name:
+  text: "%s"
+  vars:
+    - data_point_label
+
+def:
+  text: "A value specification set that records pressure, temperature, and specific volume for one material state."
+  vars: []
+
+annotations:
+  - annotationProperty: skos:example
+    text: "%s"
+    vars:
+      - example

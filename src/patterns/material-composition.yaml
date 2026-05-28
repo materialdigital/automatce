@@ -1,0 +1,41 @@
+pattern_name: material composition
+pattern_iri: https://w3id.org/pmd/automatce/patterns/material-composition
+description: >
+  Pattern for linking a product, component, material, or batch to a PMD
+  composition record and to explicit material proportion qualities.
+
+vars:
+  carrier_superclass: "'entity'"
+  composition_superclass: "'composition'"
+
+data_vars:
+  carrier_label: xsd:string
+  composition_label: xsd:string
+  constituent_label: xsd:string
+  proportion_label: xsd:string
+  expected_datatype: xsd:string
+  expected_unit: xsd:string
+  example: xsd:string
+
+name:
+  text: "%s"
+  vars:
+    - composition_label
+
+def:
+  text: "A composition that specifies %s and its %s for %s."
+  vars:
+    - constituent_label
+    - proportion_label
+    - carrier_label
+
+annotations:
+  - annotationProperty: rdfs:comment
+    text: "Composition values use datatype %s and unit %s."
+    vars:
+      - expected_datatype
+      - expected_unit
+  - annotationProperty: skos:example
+    text: "%s"
+    vars:
+      - example

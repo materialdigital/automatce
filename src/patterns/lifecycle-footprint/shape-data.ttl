@@ -1,0 +1,16 @@
+@prefix automatce: <https://w3id.org/pmd/automatce/> .
+@prefix ex: <https://example.org/automatce/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:reuse_carbon_footprint_1
+    a automatce:AUTOMATCE_0010022, automatce:AUTOMATCE_0010035 ;
+    obo:IAO_0000136 ex:reuse_lifecycle_stage ;
+    obo:OBI_0001937 "2.1"^^xsd:decimal ;
+    obo:IAO_0000039 ex:kg_co2e .
+
+ex:reuse_lifecycle_stage
+    a automatce:AUTOMATCE_0010030 .
+
+ex:kg_co2e
+    a obo:IAO_0000003 .

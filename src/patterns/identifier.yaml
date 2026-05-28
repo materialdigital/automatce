@@ -1,0 +1,42 @@
+pattern_name: identifier
+pattern_iri: https://w3id.org/pmd/automatce/patterns/identifier
+description: >
+  Pattern for identifiers assigned to manufacturers, vehicles, materials,
+  batches, components, sites, and business partners.
+
+vars:
+  superclass: "'identifier'"
+
+data_vars:
+  label: xsd:string
+  identified_entity: xsd:string
+  assigning_context: xsd:string
+  example: xsd:string
+  expected_datatype: xsd:string
+
+name:
+  text: "%s"
+  vars:
+    - label
+
+def:
+  text: "An identifier that denotes %s within %s."
+  vars:
+    - identified_entity
+    - assigning_context
+
+annotations:
+  - annotationProperty: rdfs:comment
+    text: "Expected value datatype: %s."
+    vars:
+      - expected_datatype
+  - annotationProperty: skos:example
+    text: "%s"
+    vars:
+      - example
+
+subClassOf:
+  text: "%s"
+  vars:
+    - superclass
+

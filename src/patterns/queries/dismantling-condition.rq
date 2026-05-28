@@ -1,0 +1,25 @@
+PREFIX automatce: <https://w3id.org/pmd/automatce/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX pmd: <https://w3id.org/pmd/co/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?component ?componentLabel ?strategy ?condition ?conditionClass ?damage
+WHERE {
+  ?component automatce:AUTOMATCE_0009005 ?circularEconomyInformation .
+  OPTIONAL { ?component rdfs:label ?componentLabel . }
+  OPTIONAL { ?circularEconomyInformation automatce:AUTOMATCE_0009006 ?strategy . }
+  OPTIONAL {
+    ?component obo:BFO_0000196 ?condition .
+    ?condition a ?conditionClass .
+    VALUES ?conditionClass {
+      automatce:AUTOMATCE_0010077
+      automatce:AUTOMATCE_0010146
+      pmd:PMD_0020022
+    }
+  }
+  OPTIONAL {
+    ?damage a pmd:PMD_0020022 ;
+      obo:BFO_0000197 ?component .
+  }
+}
+ORDER BY ?component ?condition ?damage

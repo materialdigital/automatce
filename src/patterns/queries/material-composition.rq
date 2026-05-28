@@ -1,0 +1,12 @@
+PREFIX automatce: <https://w3id.org/pmd/automatce/>
+PREFIX pmd: <https://w3id.org/pmd/co/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?carrier ?carrierLabel ?composition ?compositionLabel
+WHERE {
+  ?carrier automatce:AUTOMATCE_0009002 ?composition .
+  ?composition a pmd:PMD_0025001 .
+  OPTIONAL { ?carrier rdfs:label ?carrierLabel . }
+  OPTIONAL { ?composition rdfs:label ?compositionLabel . }
+}
+ORDER BY ?carrier ?composition

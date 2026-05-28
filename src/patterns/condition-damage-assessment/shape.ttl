@@ -1,0 +1,22 @@
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix pattern: <https://w3id.org/pmd/automatce/patterns/> .
+
+pattern:ConditionDamageAssessmentShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf obo:RO_0000086 ;
+    sh:property [
+        sh:path obo:RO_0000086 ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "A condition assessment subject should link to at least one quality." ;
+    ] .
+
+pattern:CorrosionProcessShape
+    a sh:NodeShape ;
+    sh:targetClass <https://w3id.org/pmd/co/PMD_0020022> ;
+    sh:property [
+        sh:path obo:RO_0000057 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "A corrosion process may name the corroded region or material entity as participant." ;
+    ] .

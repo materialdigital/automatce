@@ -1,0 +1,16 @@
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?process ?processLabel ?participant ?input ?output ?plan
+WHERE {
+  ?process a ?processClass .
+  OPTIONAL { ?process rdfs:label ?processLabel . }
+  OPTIONAL { ?process obo:RO_0000057 ?participant . }
+  OPTIONAL { ?process obo:RO_0002233 ?input . }
+  OPTIONAL { ?process obo:RO_0002234 ?output . }
+  OPTIONAL { ?process obo:RO_0000059 ?plan . }
+  FILTER EXISTS {
+    ?process obo:RO_0000057|obo:RO_0002233|obo:RO_0002234|obo:RO_0000059 ?related .
+  }
+}
+ORDER BY ?process ?participant ?input ?output

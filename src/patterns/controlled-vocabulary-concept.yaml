@@ -1,0 +1,29 @@
+pattern_name: controlled vocabulary concept
+pattern_iri: https://w3id.org/pmd/automatce/patterns/controlled-vocabulary-concept
+description: >
+  Pattern for material classification entries that are controlled vocabulary
+  values, such as VDA 231-106 categories. These are modelled as SKOS concepts,
+  not as OWL classes.
+
+data_vars:
+  label: xsd:string
+  notation: xsd:string
+  scheme_iri: xsd:anyURI
+  example: xsd:string
+
+annotations:
+  - annotationProperty: rdfs:label
+    text: "%s"
+    vars:
+      - label
+  - annotationProperty: skos:notation
+    text: "%s"
+    vars:
+      - notation
+  - annotationProperty: skos:inScheme
+    value: scheme_iri
+  - annotationProperty: skos:example
+    text: "%s"
+    vars:
+      - example
+

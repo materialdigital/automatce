@@ -1,0 +1,16 @@
+@prefix automatce: <https://w3id.org/pmd/automatce/> .
+@prefix ex: <https://example.org/automatce/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+
+ex:door_module_dismantling_instructions
+    a automatce:AUTOMATCE_0010059 ;
+    obo:IAO_0000136 ex:door_module_1 .
+
+ex:door_module_dismantlability
+    a automatce:AUTOMATCE_0010060 ;
+    obo:RO_0000052 ex:door_module_1 .
+
+ex:door_module_1
+    a pmd:PMD_0000000 .
+

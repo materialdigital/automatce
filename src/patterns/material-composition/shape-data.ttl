@@ -1,0 +1,14 @@
+@prefix automatce: <https://w3id.org/pmd/automatce/> .
+@prefix ex: <https://example.org/automatce/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:pa66_gf25_housing
+    a pmd:PMD_0000000 ;
+    rdfs:label "PA66-GF25 housing"@en ;
+    automatce:AUTOMATCE_0009002 ex:pa66_gf25_composition .
+
+ex:pa66_gf25_composition
+    a pmd:PMD_0025001 ;
+    rdfs:label "PA66-GF25 material composition"@en .
+

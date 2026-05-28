@@ -1,0 +1,172 @@
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: obo: <http://purl.obolibrary.org/obo/>
+Prefix: org: <http://www.w3.org/ns/org#>
+Prefix: pmd: <https://w3id.org/pmd/co/>
+Prefix: log: <https://w3id.org/pmd/log/>
+Prefix: foaf: <http://xmlns.com/foaf/0.1/>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: : <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
+
+
+
+Ontology: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
+
+Import: <https://w3id.org/pmd/automatce/components/imports-edit.owl>
+
+AnnotationProperty: owl:deprecated
+
+AnnotationProperty: rdfs:comment
+
+AnnotationProperty: rdfs:label
+
+AnnotationProperty: skos:definition
+
+ObjectProperty: obo:BFO_0000196
+
+  Annotations:
+    rdfs:label "bearer of"@en,
+    skos:definition "A relation between an independent continuant and a specifically dependent continuant that inheres in it."@en
+
+
+ObjectProperty: obo:BFO_0000197
+
+  Annotations:
+    rdfs:label "inheres in"@en,
+    skos:definition "A relation between a specifically dependent continuant and the independent continuant that bears it."@en
+
+
+ObjectProperty: obo:RO_0002502
+
+  Annotations:
+    rdfs:label "depends on"@en,
+    skos:definition "A relation between an entity and another entity on which it depends."@en
+
+
+Class: obo:BFO_0000023
+
+Class: obo:BFO_0000029
+
+Class: obo:COB_0000035
+
+Class: obo:IAO_0000005
+
+Class: obo:IAO_0000030
+
+Class: obo:NCBITaxon_9606
+
+Class: obo:OBI_0000245
+
+Class: obo:OBI_0000571
+
+  SubClassOf:
+    Annotations: rdfs:comment "Bridge axiom retained to keep manufacturer role in the BFO role hierarchy without using the duplicate LOG manufacturer role."@en
+    obo:BFO_0000023
+
+Class: pmd:PMD_0000000
+
+  SubClassOf:
+    Annotations: rdfs:comment "Bridge axiom retained for asserted hierarchy display in release artifacts."@en
+    pmd:PMD_0000001
+
+
+Class: pmd:PMD_0000001
+
+
+Class: pmd:PMD_0000852
+
+  SubClassOf:
+    Annotations: rdfs:comment "Bridge axiom retained for asserted hierarchy display in release artifacts."@en
+    pmd:PMD_0000000
+
+
+Class: pmd:PMD_0040030
+
+  Annotations:
+    rdfs:comment "Bridge axiom for the PMD class stub referenced by the LOG import."@en,
+    rdfs:label "geospatial location"@en,
+    skos:definition "A site whose location is specified by geospatial, address, or administrative location information."@en
+
+  SubClassOf:
+    obo:BFO_0000029
+
+
+Class: pmd:PMD_0040129
+
+  Annotations:
+    rdfs:comment "Bridge axiom for the PMD class stub referenced by the LOG import."@en,
+    rdfs:label "supply chain objective specification"@en,
+    skos:definition "An objective specification that states an objective for a supply chain process."@en
+
+  SubClassOf:
+    obo:IAO_0000005
+
+
+Class: foaf:Person
+
+  Annotations:
+    rdfs:label "person"@en
+
+  SubClassOf:
+    obo:NCBITaxon_9606
+
+
+Class: org:FormalOrganization
+
+  Annotations:
+    rdfs:label "formal organization"@en
+
+  SubClassOf:
+    obo:OBI_0000245
+
+
+Class: skos:Concept
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+Class: skos:ConceptScheme
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+Class: obo:OBI_0000011
+
+  Annotations:
+    rdfs:comment "Deprecated upstream class retained through import closure; use COB_0000035 instead."@en,
+    owl:deprecated true
+
+  SubClassOf:
+    obo:COB_0000035
+
+
+Class: log:LOG_1000117
+
+  SubClassOf:
+    Annotations: rdfs:comment "Bridge axiom retained for asserted hierarchy display in release artifacts."@en
+    log:LOG_1000113
+
+
+Class: log:LOG_1000113
+
+
+Class: log:LOG_1000121
+
+  SubClassOf:
+    Annotations: rdfs:comment "Bridge axiom retained for asserted hierarchy display in release artifacts."@en
+    log:LOG_1000130
+
+
+Class: log:LOG_1000126
+
+  SubClassOf:
+    Annotations: rdfs:comment "Bridge axiom retained for asserted hierarchy display in release artifacts."@en
+    log:LOG_1000130
+
+
+Class: log:LOG_1000130

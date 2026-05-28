@@ -1,0 +1,74 @@
+name: SHACL and Pattern Validation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "src/ontology/**"
+      - "src/patterns/**"
+      - "src/shapes/**"
+      - "src/scripts/validate_patterns.py"
+      - ".github/workflows/shacl.yml"
+  push:
+    branches: [main]
+    paths:
+      - "src/ontology/**"
+      - "src/patterns/**"
+      - "src/shapes/**"
+      - "src/scripts/validate_patterns.py"
+      - ".github/workflows/shacl.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: shacl-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate SHACL shapes and pattern examples
+    runs-on: ubuntu-latest
+    container: obolibrary/odkfull:v1.6
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Python validation dependencies
+        run: |
+          python3 -m pip install --no-cache-dir pyshacl pyyaml
+
+      - name: Build ontology release graph
+        env:
+          ROBOT_ENV: "ROBOT_JAVA_ARGS=-Xmx6G"
+        run: |
+          cd src/ontology
+          make -B all_main
+          make copy_release_files
+
+      - name: Validate pattern syntax and ontology references
+        run: |
+          python3 src/scripts/validate_patterns.py \
+            --ontology src/ontology/automatce-full.ttl
+          python3 src/scripts/validate_release_artifacts.py
+
+      - name: Validate global ontology SHACL shapes
+        run: |
+          pyshacl -a -s src/shapes/automatce-ontology-shapes.ttl src/ontology/automatce.ttl
+          pyshacl -a -s src/shapes/automatce-ontology-shapes.ttl src/ontology/automatce-full.ttl
+
+      - name: Validate each pattern example against its shape
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          for dir in src/patterns/*/; do
+            shape="${dir}shape.ttl"
+            data="${dir}shape-data.ttl"
+            if [[ -f "$shape" && -f "$data" ]]; then
+              echo "Validating ${dir}"
+              pyshacl -s "$shape" "$data"
+            fi
+          done

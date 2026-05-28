@@ -1,0 +1,23 @@
+@prefix automatce: <https://w3id.org/pmd/automatce/> .
+@prefix ex: <https://example.org/automatce/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:pvt_data_point_1
+    a automatce:AUTOMATCE_0010354 ;
+    automatce:AUTOMATCE_0009009 ex:pvt_pressure_1 ;
+    automatce:AUTOMATCE_0009010 ex:pvt_temperature_1 ;
+    automatce:AUTOMATCE_0009011 ex:pvt_specific_volume_1 .
+
+ex:pvt_pressure_1
+    a automatce:AUTOMATCE_0010355 ;
+    obo:OBI_0001937 "80.0"^^xsd:decimal .
+
+ex:pvt_temperature_1
+    a automatce:AUTOMATCE_0010356 ;
+    obo:OBI_0001937 "260.0"^^xsd:decimal .
+
+ex:pvt_specific_volume_1
+    a automatce:AUTOMATCE_0010357 ;
+    obo:OBI_0001937 "0.92"^^xsd:decimal .
+

@@ -1,0 +1,477 @@
+Prefix: dcterms: <http://purl.org/dc/terms/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+Prefix: obo:  <http://purl.obolibrary.org/obo/>
+Prefix: pmd:  <https://w3id.org/pmd/co/>
+Prefix: log:  <https://w3id.org/pmd/log/>
+Prefix: : <https://w3id.org/pmd/automatce/components/automatce-transactional_data.owl>
+
+
+Ontology: <https://w3id.org/pmd/automatce/components/automatce-transactional_data.owl>
+
+    Import: <https://w3id.org/pmd/automatce/components/automatce-shared.owl>
+    Annotations: 
+        dcterms:title "AUTOMATCE - Transactional Data Module"@en,
+        rdfs:comment "The transactional data module of the AUTOMATCE Ontology."@en
+
+
+AnnotationProperty: dcterms:title
+AnnotationProperty: rdfs:comment
+AnnotationProperty: rdfs:label
+AnnotationProperty: skos:definition
+AnnotationProperty: skos:example
+AnnotationProperty: pmd:PMD_0050117
+
+AnnotationProperty: skos:altLabel
+
+
+
+    
+Datatype: rdf:PlainLiteral
+
+
+Class: obo:BFO_0000202
+Class: <http://purl.obolibrary.org/obo/IAO_0020000>
+Class: obo:BFO_0000019
+Class: obo:BFO_0000029
+Class: obo:IAO_0000030
+Class: obo:OBI_0000571
+Class: obo:OBI_0000835
+Class: obo:OBI_0001933
+Class: pmd:PMD_0000008
+Class: pmd:PMD_0001044
+Class: log:LOG_0080001
+Class: log:LOG_0080002
+Class: log:LOG_1000008
+Class: log:LOG_1000013
+Class: log:LOG_1000014
+Class: log:LOG_1000023
+Class: log:LOG_1000051
+Class: log:LOG_1000143
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010090> (manufacturer name)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010090>
+
+  Annotations:
+    rdfs:label "manufacturer name"@en,
+    skos:definition "An identifier that records the name by which a manufacturer is referred to in a data exchange, contract, product record, or manufacturer system."@en,
+    skos:example "The manufacturer name 'Schaeffler' in a supplier record."@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010165> (name at manufacturer)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010165>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string; expected unit: not specified."@en,
+    rdfs:label "name at manufacturer"@en,
+    skos:definition "An identifier or designation by which a manufacturer names a material grade, product line, component, or product in its own records or commercial communication."@en,
+    skos:example "A manufacturer trade name such as Ultradur, Zytel, or Grilamid."@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010091> (manufacturer plant site)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010091>
+
+  Annotations:
+    rdfs:label "manufacturer plant site"@en,
+    skos:altLabel "manufacturer plant/site"@en,
+    skos:definition "A site at which a manufacturer carries out production, assembly, treatment, storage, or related industrial operations."@en,
+    skos:example "A specific plant where a material batch or component was produced."@en
+
+  SubClassOf:
+    obo:BFO_0000029
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010092> (CX business partner number)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010092>
+
+  Annotations:
+    rdfs:comment "This is modeled as a Catena-X-specific subtype of the existing business partner number class."@en,
+    rdfs:label "catena-x business partner number"@en,
+    skos:altLabel "CX business partner number"@en,
+    skos:definition "A business partner number used in Catena-X to identify a legal entity, site, or address participating in automotive data exchange."@en,
+    skos:example "A Catena-X BPNL identifier for a supplier legal entity."@en,
+    pmd:PMD_0050117 "BPN"
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0000021>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010093> (vehicle identification number)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010093>
+
+  Annotations:
+    rdfs:label "vehicle identification number"@en,
+    skos:altLabel "VIN"@en,
+    skos:altLabel "vehicle identification number"@en,
+    skos:definition "An identifier assigned to an individual vehicle according to a vehicle identification number scheme."@en,
+    skos:example "A 17-character vehicle identification number used in a dismantling record."@en
+
+  SubClassOf:
+    log:LOG_0080001
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010094> (vehicle model)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010094>
+
+  Annotations:
+    rdfs:label "vehicle model"@en,
+    skos:altLabel "vehicle model (Fahrzeugmodell)"@en,
+    skos:definition "An identifier that records the model designation of a vehicle type as defined by a manufacturer."@en,
+    skos:example "A manufacturer-specific vehicle model name used in a product data record."@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010095> (component information)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010095>
+
+  Annotations:
+    rdfs:label "component information"@en,
+    skos:altLabel "component information (Bauteilinformationen)"@en,
+    skos:definition "An information content entity that aggregates identifiers, specifications, usage data, condition data, or circular economy information about a component."@en,
+    skos:example "A component record containing part number, material designation, mileage, and reuse assessment."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010096> (component mileage)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010096>
+
+  Annotations:
+    rdfs:label "component mileage"@en,
+    skos:altLabel "mileage of the component"@en,
+    skos:altLabel "mileage of the component (Laufleistung der Komponente)"@en,
+    skos:definition "A process attribute that quantifies the travel distance accumulated by a component during use in a vehicle."@en,
+    skos:example "A used alternator recorded with 125000 km of component mileage."@en
+
+  SubClassOf:
+    pmd:PMD_0000008
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010097> (component age)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010097>
+
+  Annotations:
+    rdfs:label "component age"@en,
+    skos:altLabel "component age (Alter der Komponente)"@en,
+    skos:definition "A temporal interval that extends from a stated component reference event to a stated observation event."@en,
+    skos:example "A component age of six years measured from vehicle production date to dismantling date."@en
+
+  SubClassOf:
+    obo:BFO_0000202
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010098> (year of construction)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010098>
+
+  Annotations:
+    rdfs:label "year of construction"@en,
+    skos:altLabel "year of construction (Baujahr)"@en,
+    skos:definition "A date value specification that records the calendar year in which a product, component, vehicle, or facility was constructed or manufactured."@en,
+    skos:example "The year 2019 recorded as the construction year of a vehicle."@en
+
+  SubClassOf:
+    pmd:PMD_0001044
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010160> (model identifier)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010160>
+
+  Annotations:
+    rdfs:label "model identifier"@en,
+    skos:definition "An identifier assigned by an original equipment manufacturer to a vehicle model, vehicle project, or model variant."@en,
+    skos:example "An original equipment manufacturer project code used to identify a vehicle model in product data."@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010161> (vehicle series)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010161>
+
+  Annotations:
+    rdfs:label "vehicle series"@en,
+    skos:definition "An identifier that records the vehicle series or platform series associated with a vehicle model or component."@en,
+    skos:example "A vehicle series code used in dismantling or parts identification data."@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010162> (original equipment manufacturer)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010162>
+
+  Annotations:
+    rdfs:label "original equipment manufacturer"@en,
+    skos:altLabel "OEM"@en,
+    skos:altLabel "original equipment manufacturer"@en,
+    skos:definition "A manufacturer that designs or produces the original vehicle, component, or system for which circular economy data is recorded."@en,
+    skos:example "A vehicle manufacturer recorded as the original equipment manufacturer for a vehicle series."@en
+
+  SubClassOf:
+    obo:OBI_0000835
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010163> (production date)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010163>
+
+  Annotations:
+    rdfs:label "production date"@en,
+    skos:altLabel "date of production"@en,
+    skos:definition "A date value specification that records when a vehicle, component, product, or material batch was produced."@en,
+    skos:example "The production date of a vehicle read from manufacturer records."@en
+
+  SubClassOf:
+    pmd:PMD_0001044
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010164> (anonymized vehicle identification number)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010164>
+
+  Annotations:
+    rdfs:label "anonymized vehicle identification number"@en,
+    skos:altLabel "anonymized VIN"@en,
+    skos:altLabel "VAN"@en,
+    skos:altLabel "vehicle anonymized number"@en,
+    skos:definition "An identifier derived from a vehicle identification number by anonymization or hashing so that the vehicle can be linked across records without exposing the original vehicle identification number."@en,
+    skos:example "A hashed vehicle identification number used in circular economy data exchange."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0010093>
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000016> (identifier at manufacturer)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000016>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string; expected unit: not specified."@en,
+    rdfs:label "identifier at manufacturer"@en,
+    skos:definition "An identifier assigned by a manufacturer to a product, component, material grade, or material batch in its own system."@en,
+    skos:example "A manufacturer code for a specific polymer grade."@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000017> (identifier name at manufacturer)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000017>
+
+  Annotations:
+    rdfs:label "identifier name at manufacturer"@en,
+    skos:definition "An identifier that records the manufacturer name, brand name, or trade name used for a material or product."@en,
+    skos:example "Zytel or Durethan used as a material trade name."@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000018> (material designation)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000018>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string; expected unit: not specified."@en,
+    rdfs:label "material designation"@en,
+    skos:definition "An identifier that records a standard or supplier designation for a material composition."@en,
+    skos:example "PA66-GF25"@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000019> (material identifier)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000019>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string; expected unit: not specified."@en,
+    rdfs:label "material identifier"@en,
+    skos:definition "An identifier assigned to a material entity, material batch, material grade, or material data record."@en,
+    skos:example "A material twin identifier used in data exchange."@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000020> (material batch identifier)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000020>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string; expected unit: not specified."@en,
+    rdfs:label "material batch identifier"@en,
+    skos:definition "A batch identifier assigned to a material batch for traceability."@en,
+    skos:example "Batch 2023-10-A-X55."@en
+
+  SubClassOf:
+    log:LOG_0080002
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000021> (business partner number)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0000021>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string; expected unit: not specified."@en,
+    rdfs:label "business partner number"@en,
+    skos:definition "An identifier assigned to a business partner in an automotive supply-chain network."@en,
+    skos:example "BPNL00000003AY2 (Example BPN)."@en,
+    pmd:PMD_0050117 "BPN"
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010192> (recycling batch actor)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010192>
+
+  Annotations:
+    rdfs:label "recycling batch actor"@en,
+    skos:altLabel "actor"@en,
+    skos:definition "A supply chain agent that participates in the transfer, treatment, or documentation of a recycling batch."@en,
+    skos:example "A dismantler, recycler, logistics provider, or receiving plant recorded for a recycling batch."@en
+
+  SubClassOf:
+    log:LOG_1000023
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010193> (recycling batch sender)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010193>
+
+  Annotations:
+    rdfs:label "recycling batch sender"@en,
+    skos:altLabel "sender"@en,
+    skos:definition "A consignor that sends a recycling batch to another actor."@en,
+    skos:example "A dismantling facility sending a sorted polymer batch to a recycler."@en
+
+  SubClassOf:
+    log:LOG_1000014
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010194> (recycling batch receiver)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010194>
+
+  Annotations:
+    rdfs:label "recycling batch receiver"@en,
+    skos:altLabel "receiver"@en,
+    skos:definition "A consignee that receives a recycling batch from another actor."@en,
+    skos:example "A recycling facility receiving a batch of dismantled polymer components."@en
+
+  SubClassOf:
+    log:LOG_1000013
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010195> (recycling batch operator)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010195>
+
+  Annotations:
+    rdfs:label "recycling batch operator"@en,
+    skos:altLabel "operator"@en,
+    skos:definition "A supply chain agent that operates a transport, treatment, or recycling process for a recycling batch."@en,
+    skos:example "The company operating the transport process for a recycling batch."@en
+
+  SubClassOf:
+    log:LOG_1000023
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010196> (actor number)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010196>
+
+  Annotations:
+    rdfs:label "actor number"@en,
+    skos:definition "An identifier assigned to an actor in a recycling, logistics, or supply-chain process."@en,
+    skos:example "An operating number used to identify a recycling batch actor."@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010197> (actor role type)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010197>
+
+  Annotations:
+    rdfs:label "actor role type"@en,
+    skos:altLabel "actor role"@en,
+    skos:definition "An information content entity that records the role type under which an actor participates in a recycling or logistics process."@en,
+    skos:example "Sender, receiver, recycler, operator, or transporter recorded as an actor role type."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010198> (transfer identifier)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010198>
+
+  Annotations:
+    rdfs:label "transfer identifier"@en,
+    skos:definition "An identifier assigned to a transfer of material, components, products, or recycling batches between actors."@en,
+    skos:example "A transfer identifier for movement of a recycling batch from dismantler to recycler."@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010199> (global asset identifier)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010199>
+
+  Annotations:
+    rdfs:label "global asset identifier"@en,
+    skos:altLabel "global asset ID"@en,
+    skos:altLabel "global asset i d"@en,
+    skos:definition "An identifier that globally identifies an asset in a digital twin or data exchange environment."@en,
+    skos:example "A global asset identifier for the digital twin of a material card or recycling batch."@en
+
+  SubClassOf:
+    <http://purl.obolibrary.org/obo/IAO_0020000>
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010200> (owner business partner number)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010200>
+
+  Annotations:
+    rdfs:label "owner business partner number"@en,
+    skos:altLabel "owner BPNL"@en,
+    skos:altLabel "owner b p n l"@en,
+    skos:definition "A business partner number that identifies the owner of a data asset, material card, or digital twin record."@en,
+    skos:example "A BPNL recorded as the owner of a simulation material card."@en
+
+  SubClassOf:
+    <https://w3id.org/pmd/automatce/AUTOMATCE_0000021>

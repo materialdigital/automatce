@@ -1,0 +1,14 @@
+PREFIX automatce: <https://w3id.org/pmd/automatce/>
+PREFIX log: <https://w3id.org/pmd/log/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?batch ?batchLabel ?actor ?actorLabel ?actorClass
+WHERE {
+  ?batch a automatce:AUTOMATCE_0010210 ;
+    automatce:AUTOMATCE_0009007 ?actor .
+  ?actor a ?actorClass .
+  FILTER(?actorClass = log:LOG_1000023 || STRSTARTS(STR(?actorClass), "https://w3id.org/pmd/log/"))
+  OPTIONAL { ?batch rdfs:label ?batchLabel . }
+  OPTIONAL { ?actor rdfs:label ?actorLabel . }
+}
+ORDER BY ?batch ?actor

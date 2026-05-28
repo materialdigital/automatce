@@ -1,0 +1,28 @@
+pattern_name: circular strategy selection
+pattern_iri: https://w3id.org/pmd/automatce/patterns/circular-strategy-selection
+description: >
+  Pattern for circular economy information that records the selected R-strategy
+  for a product, component, material, or recycling batch.
+
+data_vars:
+  record_label: xsd:string
+  strategy_label: xsd:string
+  target_label: xsd:string
+  example: xsd:string
+
+name:
+  text: "%s"
+  vars:
+    - record_label
+
+def:
+  text: "An information content entity that specifies %s as the selected circular economy strategy for %s."
+  vars:
+    - strategy_label
+    - target_label
+
+annotations:
+  - annotationProperty: skos:example
+    text: "%s"
+    vars:
+      - example

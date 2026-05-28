@@ -1,0 +1,36 @@
+pattern_name: process input output
+pattern_iri: https://w3id.org/pmd/automatce/patterns/process-input-output
+description: >
+  Pattern for modeling manufacturing, recycling, dismantling, and logistics
+  processes with RO/OBI participants, specified inputs, outputs, and optional
+  realized plan specifications.
+
+vars:
+  process_superclass: "'process'"
+
+data_vars:
+  process_label: xsd:string
+  input_label: xsd:string
+  output_label: xsd:string
+  participant_label: xsd:string
+  plan_label: xsd:string
+  example: xsd:string
+
+name:
+  text: "%s"
+  vars:
+    - process_label
+
+def:
+  text: "A process that transforms %s into %s with participation of %s."
+  vars:
+    - input_label
+    - output_label
+    - participant_label
+
+annotations:
+  - annotationProperty: skos:example
+    text: "%s"
+    vars:
+      - example
+

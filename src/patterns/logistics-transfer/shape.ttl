@@ -1,0 +1,20 @@
+@prefix automatce: <https://w3id.org/pmd/automatce/> .
+@prefix log: <https://w3id.org/pmd/log/> .
+@prefix pattern: <https://w3id.org/pmd/automatce/patterns/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+pattern:RecyclingBatchTransferShape
+    a sh:NodeShape ;
+    sh:targetClass automatce:AUTOMATCE_0010210 ;
+    sh:property [
+        sh:path automatce:AUTOMATCE_0009001 ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "A recycling batch should have at least one identifier." ;
+    ] ;
+    sh:property [
+        sh:path automatce:AUTOMATCE_0009007 ;
+        sh:minCount 1 ;
+        sh:class log:LOG_1000023 ;
+        sh:message "A recycling batch should name at least one supply chain actor." ;
+    ] .

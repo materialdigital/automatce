@@ -1,0 +1,16 @@
+@prefix automatce: <https://w3id.org/pmd/automatce/> .
+@prefix ex: <https://example.org/automatce/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+
+ex:door_module_circular_economy_information
+    a automatce:AUTOMATCE_0010246 ;
+    obo:IAO_0000136 ex:door_module_1 ;
+    automatce:AUTOMATCE_0009006 ex:reuse_strategy_selection .
+
+ex:reuse_strategy_selection
+    a automatce:AUTOMATCE_0010143 .
+
+ex:door_module_1
+    a pmd:PMD_0000000 .
+

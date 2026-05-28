@@ -1,0 +1,24 @@
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix pattern: <https://w3id.org/pmd/automatce/patterns/> .
+
+pattern:QuantitativeValueSpecificationShape
+    a sh:NodeShape ;
+    sh:targetClass obo:OBI_0001933 ;
+    sh:property [
+        sh:path obo:OBI_0001937 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:or (
+            [ sh:datatype xsd:decimal ]
+            [ sh:datatype xsd:double ]
+            [ sh:datatype xsd:float ]
+            [ sh:datatype xsd:integer ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path obo:IAO_0000039 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] .

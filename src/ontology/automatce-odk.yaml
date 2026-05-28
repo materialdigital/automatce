@@ -1,0 +1,211 @@
+# ==============================================================================
+# PROJECT-ODK.YAML - PMD Core Application Ontology Configuration
+# ==============================================================================
+# This is the main configuration file for the Ontology Development Kit (ODK).
+# It defines how your ontology is structured, built, and released.
+#
+# IMPORTANT: This is the active ODK configuration used by the ontology build.
+# Keep changes reviewed because CI and release artifacts are generated from it.
+#
+# Documentation: https://github.com/INCATools/ontology-development-kit
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# BASIC METADATA
+# ------------------------------------------------------------------------------
+# These identify your ontology and its location in version control
+
+id: automatce
+title: "Automotive Circular Economy Ontology"
+github_org: materialdigital
+repo: materialdigital/automatce
+git_main_branch: main
+license: "CC-BY-4.0"
+description: >
+  PMD Core application ontology for automotive circular economy data.
+
+# ------------------------------------------------------------------------------
+# ONTOLOGY FILE CONFIGURATION
+# ------------------------------------------------------------------------------
+# Defines the format and location of your ontology files
+
+# edit_format: Format of the edit file (owl = OWL/XML, ofn = OWL Functional)
+edit_format: owl
+# edit_ontology_file: Path to your main ontology development file
+# This is where you make changes to your ontology
+# Will be updated to: src/ontology/<your_id>-edit.owl
+edit_ontology_file: "src/ontology/automatce-edit.owl"
+# ------------------------------------------------------------------------------
+# URI STRUCTURE (PMD CORE STANDARD)
+# ------------------------------------------------------------------------------
+# Defines how IRIs are constructed for your ontology and its entities
+#
+# AutoMatCE Structure: https://w3id.org/pmd/automatce/
+# 
+# - Ontology IRI: https://w3id.org/pmd/automatce.owl
+# - Entity IDs:   https://w3id.org/pmd/automatce/AUTOMATCE_0000001
+# - Components:   https://w3id.org/pmd/automatce/components/annotations.owl
+
+# uribase: Base path for all ontology IRIs (WITHOUT trailing slash or ID)
+# ODK will append uribase_suffix to form the complete ontology IRI
+uribase: "https://w3id.org/pmd"
+# uribase_suffix: Your ontology ID (gets appended to uribase)
+# Combined result: https://w3id.org/pmd/<uribase_suffix>/
+uribase_suffix: "automatce"
+# preferredPrefix: Uppercase prefix used in entity IDs and serializations
+# Example: "TRYCE" results in entity IDs like TRYCE_0000001
+preferredPrefix: "AUTOMATCE"
+# ------------------------------------------------------------------------------
+# NAMESPACES
+# ------------------------------------------------------------------------------
+# Defines which IRI patterns belong to your ontology
+# CRITICAL: This tells ODK where to generate new entity IDs
+#
+# Format: Must include trailing slash
+# Example: ["https://w3id.org/pmd/automatce/"]
+#
+# When you create a new class in Protege, ODK uses this namespace to generate:
+# https://w3id.org/pmd/automatce/AUTOMATCE_0000001
+namespaces:
+  - "https://w3id.org/pmd/automatce/"
+# ------------------------------------------------------------------------------
+# TEMPLATES (DISABLED)
+# ------------------------------------------------------------------------------
+# We edit OWL files directly rather than using ROBOT templates
+use_templates: false
+use_context: true
+# ------------------------------------------------------------------------------
+# IMPORTS: PMD CORE ONTOLOGY
+# ------------------------------------------------------------------------------
+# Defines external ontologies to import
+#
+# PMD Core is the upper-level ontology for all PMD application ontologies
+# module_type: slme = Syntactic Locality Module Extractor (extracts only needed terms)
+import_group:
+  annotation_properties: ['rdfs:label', 'skos:definition', 'skos:example', 'skos:altLabel']
+  products:
+    - id: pmdco
+      title: "PMD Core Ontology"
+      # Source of PMD Core ontology to import
+      mirror_from: "https://raw.githubusercontent.com/materialdigital/core-ontology/refs/heads/main/pmdco-full.owl"
+      # slme: Extract only terms referenced in your ontology (reduces file size)
+      module_type: slme
+      # base_iris: Tells ODK which IRI patterns belong to PMD Core
+      # This prevents PMD Core entities from being treated as local entities
+      base_iris:
+        - https://w3id.org/pmd/co/
+    - id: logo
+      mirror_from: https://raw.githubusercontent.com/materialdigital/logistics-application-ontology/main/src/ontology/log-base.owl
+      module_type: slme
+# ------------------------------------------------------------------------------
+# COMPONENTS
+# ------------------------------------------------------------------------------
+# Modular OWL files for organizing ontology content
+# Examples: annotations.owl, individuals.owl, relations.owl
+#
+# Components are separate OWL files that get merged during build
+# This helps organize large ontologies into logical modules
+#
+# Components are curated directly here. Keep this list synchronized with
+# src/ontology/components and the generated OTHER_SRC list in the ODK Makefile.
+components:
+  products:
+    - filename: imports-edit.owl
+      base_iris:
+        - https://w3id.org/pmd/automatce/components/imports-edit.owl
+    - filename: automatce-shared.owl
+      base_iris:
+        - https://w3id.org/pmd/automatce/components/automatce-shared.owl
+    - filename: automatce-axioms-shared.owl
+      base_iris:
+        - https://w3id.org/pmd/automatce/components/automatce-axioms-shared.owl
+    - filename: automatce-material_data.owl
+      base_iris:
+        - https://w3id.org/pmd/automatce/components/automatce-material_data.owl
+    - filename: automatce-product_data.owl
+      base_iris:
+        - https://w3id.org/pmd/automatce/components/automatce-product_data.owl
+    - filename: automatce-engineering_data.owl
+      base_iris:
+        - https://w3id.org/pmd/automatce/components/automatce-engineering_data.owl
+    - filename: automatce-usage_data.owl
+      base_iris:
+        - https://w3id.org/pmd/automatce/components/automatce-usage_data.owl
+    - filename: automatce-dismantling_information.owl
+      base_iris:
+        - https://w3id.org/pmd/automatce/components/automatce-dismantling_information.owl
+    - filename: automatce-sustainability_data.owl
+      base_iris:
+        - https://w3id.org/pmd/automatce/components/automatce-sustainability_data.owl
+    - filename: automatce-transactional_data.owl
+      base_iris:
+        - https://w3id.org/pmd/automatce/components/automatce-transactional_data.owl
+# ------------------------------------------------------------------------------
+# RELEASES
+# ------------------------------------------------------------------------------
+# Defines what files are generated when you release your ontology
+
+# primary_release: The main release file (usually 'full')
+primary_release: full
+# release_artefacts: Types of release files to generate
+# - base: Just your ontology (no imports)
+# - full: Your ontology + all imports merged
+release_artefacts:
+  - base
+  - full
+# export_formats: File formats to generate for each release
+# - owl: OWL/XML (standard format, verbose)
+# - ttl: Turtle (human-readable RDF)
+# - json: JSON-LD (for web applications)
+export_formats:
+  - owl
+  - ttl
+  - json
+# ------------------------------------------------------------------------------
+# CI/CD CONFIGURATION
+# ------------------------------------------------------------------------------
+# Controls GitHub Actions workflow generation
+#
+# IMPORTANT: Set to empty array [] to disable ODK's default workflows
+# We use custom workflows in .github/workflows/ instead
+ci: []
+# ------------------------------------------------------------------------------
+# ID RANGES
+# ------------------------------------------------------------------------------
+# Defines how entity IDs are structured and allocated to contributors
+#
+# Format:
+# - idsfor: Your ontology ID
+# - idprefix: Base IRI for entity IDs (must match namespace + PREFIX)
+# - iddigits: Number of digits in IDs (7 = _0000001 to _9999999)
+#
+# Example for ontology "tryce":
+# idprefix: "https://w3id.org/pmd/co/tryce/TRYCE_"
+# Result: https://w3id.org/pmd/co/tryce/TRYCE_0000001
+#
+# ID ranges are curated directly here.
+idranges:
+  - allocatedto: naeim
+    idsfor: automatce
+    idprefix: https://w3id.org/pmd/automatce/AUTOMATCE_
+    iddigits: 7
+    range_start: 0
+    range_end: 9999
+  - allocatedto: sai
+    idsfor: automatce
+    idprefix: https://w3id.org/pmd/automatce/AUTOMATCE_
+    iddigits: 7
+    range_start: 10000
+    range_end: 19999
+  - allocatedto: kamilla
+    idsfor: automatce
+    idprefix: https://w3id.org/pmd/automatce/AUTOMATCE_
+    iddigits: 7
+    range_start: 20000
+    range_end: 29999
+  - allocatedto: akhil
+    idsfor: automatce
+    idprefix: https://w3id.org/pmd/automatce/AUTOMATCE_
+    iddigits: 7
+    range_start: 30000
+    range_end: 39999

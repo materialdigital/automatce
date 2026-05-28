@@ -1,0 +1,66 @@
+https://w3id.org/pmd/co/PMD_0000833 #manufacturing process
+https://w3id.org/pmd/co/PMD_0000000 #material
+http://purl.obolibrary.org/obo/OBI_0000070 #assay
+https://w3id.org/pmd/co/PMD_0000583 #computing process
+https://w3id.org/pmd/co/PMD_0000001 #portion of matter
+https://w3id.org/pmd/co/PMD_0000602 #Device
+http://purl.obolibrary.org/obo/OBI_0000112 #Specimen role
+https://w3id.org/pmd/co/PMD_0000907 # primary shaping from the plastic state
+http://purl.obolibrary.org/obo/BFO_0000040 #material entity
+https://w3id.org/pmd/co/PMD_0000868 #natural organic material
+https://w3id.org/pmd/co/PMD_0000661 #glass
+https://w3id.org/pmd/co/PMD_0000952 #strength
+https://w3id.org/pmd/co/PMD_0000877 #optical property
+https://w3id.org/pmd/co/PMD_0050004 #thermoplastics
+https://w3id.org/pmd/co/PMD_0000891 #disconnected material entity aggregate
+https://w3id.org/pmd/co/PMD_0020102 #mass proportion
+https://w3id.org/pmd/co/PMD_0020104 #volume proportion
+http://purl.obolibrary.org/obo/IAO_0020000 #identifier
+https://w3id.org/pmd/co/PMD_0000597 #Density
+https://w3id.org/pmd/co/PMD_0000848 #mechanical property
+https://w3id.org/pmd/co/PMD_0000896 #pressure
+https://w3id.org/pmd/co/PMD_0000967 #temperature
+https://w3id.org/pmd/co/PMD_0000882 #phase boundary
+https://w3id.org/pmd/co/PMD_0000777 #heat capacity
+https://w3id.org/pmd/co/PMD_0000852 #metal
+https://w3id.org/pmd/co/PMD_0000949 #stiffness
+https://w3id.org/pmd/co/PMD_0000577 #composite material
+https://w3id.org/pmd/co/PMD_0000008 #process attribute
+https://w3id.org/pmd/co/PMD_0000075 #mold
+https://w3id.org/pmd/co/PMD_0000618 #elastic modulus
+https://w3id.org/pmd/co/PMD_0000794 #injection molding machine
+https://w3id.org/pmd/co/PMD_0000888 #polymer
+https://w3id.org/pmd/co/PMD_0000933 #simulation process
+https://w3id.org/pmd/co/PMD_0000981 #thermal property
+https://w3id.org/pmd/co/PMD_0001036 #uncertainty
+https://w3id.org/pmd/co/PMD_0020001 #filler role
+https://w3id.org/pmd/co/PMD_0020022 #corrosion
+https://w3id.org/pmd/co/PMD_0020138 #lot
+https://w3id.org/pmd/co/PMD_0020143 #process chain
+https://w3id.org/pmd/co/PMD_0025001 #composition
+https://w3id.org/pmd/co/PMD_0040001 #length
+https://w3id.org/pmd/co/PMD_0200002 #injection molding
+http://purl.obolibrary.org/obo/BFO_0000015 #process
+http://purl.obolibrary.org/obo/BFO_0000016 #disposition
+http://purl.obolibrary.org/obo/BFO_0000017 #realizable entity
+http://purl.obolibrary.org/obo/BFO_0000019 #quality
+http://purl.obolibrary.org/obo/BFO_0000029 #site
+http://purl.obolibrary.org/obo/BFO_0000030 #object
+http://purl.obolibrary.org/obo/IAO_0000010 #software
+http://purl.obolibrary.org/obo/IAO_0000027 #data item
+http://purl.obolibrary.org/obo/IAO_0000030 #information content entity
+http://purl.obolibrary.org/obo/IAO_0000033 #directive information entity
+http://purl.obolibrary.org/obo/IAO_0000104 #plan specification
+http://purl.obolibrary.org/obo/IAO_0000310 #document
+http://purl.obolibrary.org/obo/IAO_0000136 #is about
+http://purl.obolibrary.org/obo/IAO_0000039 #has measurement unit label
+http://purl.obolibrary.org/obo/OBI_0000571 #manufacturer role
+http://purl.obolibrary.org/obo/OBI_0000835 #manufacturer
+http://purl.obolibrary.org/obo/OBI_0001933 #value specification
+http://purl.obolibrary.org/obo/OBI_0001937 #has specified numeric value
+https://w3id.org/pmd/co/PMD_0000845 #matrix role
+http://purl.obolibrary.org/obo/BFO_0000202 #temporal interval
+https://w3id.org/pmd/co/PMD_0001044 #date value specification
+https://w3id.org/pmd/co/PMD_0020132 #size
+https://w3id.org/pmd/co/PMD_0020133 #mass
+https://w3id.org/pmd/co/PMD_0020150 #volume

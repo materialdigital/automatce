@@ -1,0 +1,13 @@
+@prefix ex: <https://example.org/automatce/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ex:vda_231_106
+    a skos:ConceptScheme ;
+    rdfs:label "VDA 231-106 material classification"@en .
+
+ex:vda_5_1
+    a skos:Concept ;
+    skos:inScheme ex:vda_231_106 ;
+    skos:notation "5.1" ;
+    rdfs:label "5.1 thermoplastics"@en .

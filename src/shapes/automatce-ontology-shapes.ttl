@@ -1,0 +1,149 @@
+@prefix automatce: <https://w3id.org/pmd/automatce/> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO_> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO_> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+automatce:AutoMatCEClassShape
+    a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:select """
+            SELECT ?this WHERE {
+              ?this a owl:Class .
+              FILTER(STRSTARTS(STR(?this), "https://w3id.org/pmd/automatce/AUTOMATCE_"))
+            }
+        """ ;
+    ] ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:uniqueLang true ;
+        sh:languageIn ( "en" ) ;
+        sh:message "Each local AutoMatCE class should have exactly one English rdfs:label." ;
+    ] ;
+    sh:property [
+        sh:path skos:definition ;
+        sh:minCount 1 ;
+        sh:languageIn ( "en" ) ;
+        sh:message "Each local AutoMatCE class should have an Aristotelian English skos:definition." ;
+    ] ;
+    sh:property [
+        sh:path skos:example ;
+        sh:minCount 1 ;
+        sh:languageIn ( "en" ) ;
+        sh:message "Each local AutoMatCE class should have a concrete skos:example." ;
+    ] ;
+    sh:or (
+        [ sh:property [ sh:path rdfs:subClassOf ; sh:minCount 1 ] ]
+        [ sh:property [ sh:path owl:equivalentClass ; sh:minCount 1 ] ]
+    ) .
+
+automatce:VDAConceptShape
+    a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:select """
+            SELECT ?this WHERE {
+              ?this a skos:Concept .
+              FILTER(STRSTARTS(STR(?this), "https://w3id.org/pmd/automatce/AUTOMATCE_106"))
+            }
+        """ ;
+    ] ;
+    sh:property [
+        sh:path skos:notation ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "VDA classification concepts should carry exactly one skos:notation code." ;
+    ] ;
+    sh:property [
+        sh:path skos:inScheme ;
+        sh:minCount 1 ;
+        sh:class skos:ConceptScheme ;
+        sh:message "VDA classification concepts should be attached to a skos:ConceptScheme." ;
+    ] ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:uniqueLang true ;
+        sh:languageIn ( "en" ) ;
+        sh:message "Controlled vocabulary concepts should have language-tagged labels." ;
+    ] .
+
+automatce:ValueSpecificationShape
+    a sh:NodeShape ;
+    sh:targetClass obo:OBI_0001933 ;
+    sh:property [
+        sh:path obo:OBI_0001937 ;
+        sh:maxCount 1 ;
+        sh:or (
+            [ sh:datatype xsd:decimal ]
+            [ sh:datatype xsd:double ]
+            [ sh:datatype xsd:float ]
+            [ sh:datatype xsd:integer ]
+        ) ;
+        sh:message "A scalar value specification should expose at most one OBI has specified numeric value literal." ;
+    ] ;
+    sh:property [
+        sh:path obo:IAO_0000039 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "A quantitative value specification should link to at most one measurement unit label individual or unit IRI." ;
+    ] .
+
+automatce:ObjectPropertyLabelShape
+    a sh:NodeShape ;
+    sh:targetClass owl:ObjectProperty ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:message "Each object property in the release graph should have an rdfs:label for display in editors." ;
+    ] .
+
+automatce:LocalObjectPropertyAxiomShape
+    a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:select """
+            SELECT ?this WHERE {
+              ?this a owl:ObjectProperty .
+              FILTER(STRSTARTS(STR(?this), "https://w3id.org/pmd/automatce/AUTOMATCE_"))
+            }
+        """ ;
+    ] ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:uniqueLang true ;
+        sh:languageIn ( "en" ) ;
+        sh:message "Each local AutoMatCE object property should have exactly one English rdfs:label." ;
+    ] ;
+    sh:property [
+        sh:path rdfs:domain ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "Each local AutoMatCE object property should have exactly one named domain." ;
+    ] ;
+    sh:property [
+        sh:path rdfs:range ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "Each local AutoMatCE object property should have exactly one named range." ;
+    ] ;
+    sh:property [
+        sh:path skos:definition ;
+        sh:minCount 1 ;
+        sh:languageIn ( "en" ) ;
+        sh:message "Each local AutoMatCE object property should have an English skos:definition." ;
+    ] .

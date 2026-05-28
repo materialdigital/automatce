@@ -1,0 +1,25 @@
+@prefix automatce: <https://w3id.org/pmd/automatce/> .
+@prefix pattern: <https://w3id.org/pmd/automatce/patterns/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+pattern:MaterialCompositionCarrierShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf automatce:AUTOMATCE_0009002 ;
+    sh:property [
+        sh:path automatce:AUTOMATCE_0009002 ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class pmd:PMD_0025001 ;
+        sh:message "A material composition link should point to a PMD composition record." ;
+    ] .
+
+pattern:MaterialCompositionRecordShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf automatce:AUTOMATCE_0009002 ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:message "A composition record should have a readable label in exchange data." ;
+    ] .

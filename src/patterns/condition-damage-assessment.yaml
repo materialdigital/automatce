@@ -1,0 +1,31 @@
+pattern_name: condition damage assessment
+pattern_iri: https://w3id.org/pmd/automatce/patterns/condition-damage-assessment
+description: >
+  Pattern for representing observed component condition, damage qualities,
+  corroded regions, and corrosion processes without duplicating PMD corrosion.
+
+data_vars:
+  component_label: xsd:string
+  quality_label: xsd:string
+  damage_label: xsd:string
+  region_label: xsd:string
+  process_label: xsd:string
+  example: xsd:string
+
+name:
+  text: "%s"
+  vars:
+    - quality_label
+
+def:
+  text: "A condition assessment that records %s and %s for %s."
+  vars:
+    - quality_label
+    - damage_label
+    - component_label
+
+annotations:
+  - annotationProperty: skos:example
+    text: "%s"
+    vars:
+      - example
