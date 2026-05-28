@@ -3,37 +3,37 @@
     "id" : "https://w3id.org/pmd/automatce.json",
     "meta" : {
       "basicPropertyValues" : [ {
-        "pred" : "http://purl.org/dc/terms/contributor",
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
         "val" : "https://orcid.org/0000-0003-0473-0070"
       }, {
-        "pred" : "http://purl.org/dc/terms/contributor",
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
         "val" : "https://orcid.org/0000-0003-0744-8855"
       }, {
-        "pred" : "http://purl.org/dc/terms/contributor",
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
         "val" : "https://orcid.org/0009-0003-1503-4422"
       }, {
-        "pred" : "http://purl.org/dc/terms/contributor",
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
         "val" : "https://orcid.org/0009-0007-7468-3544"
       }, {
-        "pred" : "http://purl.org/dc/terms/creator",
+        "pred" : "http://purl.org/dc/elements/1.1/creator",
         "val" : "https://orcid.org/0000-0003-0473-0070"
       }, {
-        "pred" : "http://purl.org/dc/terms/creator",
+        "pred" : "http://purl.org/dc/elements/1.1/creator",
         "val" : "https://orcid.org/0000-0003-0744-8855"
       }, {
-        "pred" : "http://purl.org/dc/terms/creator",
+        "pred" : "http://purl.org/dc/elements/1.1/creator",
         "val" : "https://orcid.org/0009-0003-1503-4422"
       }, {
-        "pred" : "http://purl.org/dc/terms/creator",
+        "pred" : "http://purl.org/dc/elements/1.1/creator",
         "val" : "https://orcid.org/0009-0007-7468-3544"
       }, {
-        "pred" : "http://purl.org/dc/terms/description",
+        "pred" : "http://purl.org/dc/elements/1.1/description",
         "val" : "Application ontology for automotive circular-economy product, material, sustainability, usage, dismantling, engineering and transactional data aligned to PMDCore and BFO 2020."
       }, {
-        "pred" : "http://purl.org/dc/terms/license",
+        "pred" : "http://purl.org/dc/elements/1.1/license",
         "val" : "https://w3id.org/pmd/automatce.owl#CC-BY-4.0"
       }, {
-        "pred" : "http://purl.org/dc/terms/title",
+        "pred" : "http://purl.org/dc/elements/1.1/title",
         "val" : "Automotive Circular Economy Ontology"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
@@ -2793,7 +2793,7 @@
           "val" : "A product carbon footprint that specifies the greenhouse gas emissions of the selected circular economy strategy for a component."
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#example",
-          "val" : "8.2 kg CO2e resulting from choosing reuse for a dismantled component."
+          "val" : "3.2 kg CO2e resulting from choosing reuse for a dismantled component."
         } ]
       }
     }, {
@@ -8255,10 +8255,10 @@
       "type" : "INDIVIDUAL",
       "meta" : {
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.org/dc/terms/description",
+          "pred" : "http://purl.org/dc/elements/1.1/description",
           "val" : "Standardized material classification system used in the German automotive industry."
         }, {
-          "pred" : "http://purl.org/dc/terms/title",
+          "pred" : "http://purl.org/dc/elements/1.1/title",
           "val" : "VDA 231-106 material classification"
         } ]
       }
@@ -9072,6 +9072,22 @@
         }
       }
     }, {
+      "id" : "http://purl.org/dc/elements/1.1/contributor",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/creator",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/description",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/license",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
       "id" : "http://purl.org/dc/elements/1.1/source",
       "lbl" : "Source",
       "type" : "PROPERTY",
@@ -9079,6 +9095,10 @@
       "meta" : {
         "comments" : [ "A reference to a resource from which the present resource\n         is derived." ]
       }
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/title",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://purl.org/dc/terms/contributor",
       "lbl" : "contributor",

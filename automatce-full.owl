@@ -2,7 +2,7 @@
 <rdf:RDF xmlns="https://w3id.org/pmd/automatce/automatce-full.owl#"
      xml:base="https://w3id.org/pmd/automatce/automatce-full.owl"
      xmlns:co="https://w3id.org/pmd/co/"
-     xmlns:dce="http://purl.org/dc/elements/1.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -16,21 +16,20 @@
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:void="http://rdfs.org/ns/void#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/automatce/automatce-full.owl">
         <owl:versionIRI rdf:resource="https://w3id.org/pmd/automatce/releases/2026-05-28/automatce-full.owl"/>
-        <dcterms:contributor rdf:resource="https://orcid.org/0000-0003-0473-0070"/>
-        <dcterms:contributor rdf:resource="https://orcid.org/0000-0003-0744-8855"/>
-        <dcterms:contributor rdf:resource="https://orcid.org/0009-0003-1503-4422"/>
-        <dcterms:contributor rdf:resource="https://orcid.org/0009-0007-7468-3544"/>
-        <dcterms:creator rdf:resource="https://orcid.org/0000-0003-0473-0070"/>
-        <dcterms:creator rdf:resource="https://orcid.org/0000-0003-0744-8855"/>
-        <dcterms:creator rdf:resource="https://orcid.org/0009-0003-1503-4422"/>
-        <dcterms:creator rdf:resource="https://orcid.org/0009-0007-7468-3544"/>
-        <dcterms:description>Application ontology for automotive circular-economy product, material, sustainability, usage, dismantling, engineering and transactional data aligned to PMDCore and BFO 2020.</dcterms:description>
-        <dcterms:license rdf:resource="https://w3id.org/pmd/automatce.owl#CC-BY-4.0"/>
-        <dcterms:title>Automotive Circular Economy Ontology</dcterms:title>
+        <dc:contributor rdf:resource="https://orcid.org/0000-0003-0473-0070"/>
+        <dc:contributor rdf:resource="https://orcid.org/0000-0003-0744-8855"/>
+        <dc:contributor rdf:resource="https://orcid.org/0009-0003-1503-4422"/>
+        <dc:contributor rdf:resource="https://orcid.org/0009-0007-7468-3544"/>
+        <dc:creator rdf:resource="https://orcid.org/0000-0003-0473-0070"/>
+        <dc:creator rdf:resource="https://orcid.org/0000-0003-0744-8855"/>
+        <dc:creator rdf:resource="https://orcid.org/0009-0003-1503-4422"/>
+        <dc:creator rdf:resource="https://orcid.org/0009-0007-7468-3544"/>
+        <dc:description>Application ontology for automotive circular-economy product, material, sustainability, usage, dismantling, engineering and transactional data aligned to PMDCore and BFO 2020.</dc:description>
+        <dc:license rdf:resource="https://w3id.org/pmd/automatce.owl#CC-BY-4.0"/>
+        <dc:title>Automotive Circular Economy Ontology</dc:title>
         <owl:versionInfo>2026-05-28</owl:versionInfo>
     </owl:Ontology>
     
@@ -3885,7 +3884,7 @@ Request that IAO either clarify these or change definitions not to use them</rdf
         <rdfs:label xml:lang="en">selected r-strategy carbon footprint</rdfs:label>
         <skos:altLabel xml:lang="en">actual footprint of chosen r-strategy</skos:altLabel>
         <skos:definition xml:lang="en">A product carbon footprint that specifies the greenhouse gas emissions of the selected circular economy strategy for a component.</skos:definition>
-        <skos:example xml:lang="en">8.2 kg CO2e resulting from choosing reuse for a dismantled component.</skos:example>
+        <skos:example xml:lang="en">3.2 kg CO2e resulting from choosing reuse for a dismantled component.</skos:example>
     </owl:Class>
     
 
@@ -7554,8 +7553,8 @@ The molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 202
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0200002">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000907"/>
-        <dce:source xml:lang="en">Official definition can be found in: DIN 8580, group 1.2.2 “Spritzgießen”.</dce:source>
-        <dce:source xml:lang="de">Offizielle Definition findet man in: DIN 8580, Gruppe 1.2.2 „Spritzgießen“.</dce:source>
+        <dc:source xml:lang="en">Official definition can be found in: DIN 8580, group 1.2.2 “Spritzgießen”.</dc:source>
+        <dc:source xml:lang="de">Offizielle Definition findet man in: DIN 8580, Gruppe 1.2.2 „Spritzgießen“.</dc:source>
         <rdfs:label xml:lang="de">Spritzgießen</rdfs:label>
         <rdfs:label xml:lang="en">injection molding</rdfs:label>
         <skos:altLabel xml:lang="en">injection moulding; plastic injection molding</skos:altLabel>
@@ -10342,8 +10341,8 @@ The molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 202
     <owl:NamedIndividual rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_1060056">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-        <dcterms:description xml:lang="en">Standardized material classification system used in the German automotive industry.</dcterms:description>
-        <dcterms:title xml:lang="en">VDA 231-106 material classification</dcterms:title>
+        <dc:description xml:lang="en">Standardized material classification system used in the German automotive industry.</dc:description>
+        <dc:title xml:lang="en">VDA 231-106 material classification</dc:title>
         <rdfs:label xml:lang="en">VDA 231-106 material classification</rdfs:label>
     </owl:NamedIndividual>
     

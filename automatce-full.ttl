@@ -1,7 +1,6 @@
 @prefix : <https://w3id.org/pmd/automatce/automatce-full.ttl#> .
 @prefix co: <https://w3id.org/pmd/co/> .
 @prefix dc: <http://purl.org/dc/terms/> .
-@prefix dce: <http://purl.org/dc/elements/1.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -15,23 +14,22 @@
 @prefix swrl: <http://www.w3.org/2003/11/swrl#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
 @base <https://w3id.org/pmd/automatce/automatce-full.ttl> .
 
 <https://w3id.org/pmd/automatce/automatce-full.ttl> rdf:type owl:Ontology ;
                                                      owl:versionIRI <https://w3id.org/pmd/automatce/releases/2026-05-28/automatce-full.ttl> ;
-                                                     dcterms:contributor <https://orcid.org/0000-0003-0473-0070> ,
-                                                                         <https://orcid.org/0000-0003-0744-8855> ,
-                                                                         <https://orcid.org/0009-0003-1503-4422> ,
-                                                                         <https://orcid.org/0009-0007-7468-3544> ;
-                                                     dcterms:creator <https://orcid.org/0000-0003-0473-0070> ,
-                                                                     <https://orcid.org/0000-0003-0744-8855> ,
-                                                                     <https://orcid.org/0009-0003-1503-4422> ,
-                                                                     <https://orcid.org/0009-0007-7468-3544> ;
-                                                     dcterms:description "Application ontology for automotive circular-economy product, material, sustainability, usage, dismantling, engineering and transactional data aligned to PMDCore and BFO 2020." ;
-                                                     dcterms:license <https://w3id.org/pmd/automatce.owl#CC-BY-4.0> ;
-                                                     dcterms:title "Automotive Circular Economy Ontology" ;
+                                                     <http://purl.org/dc/elements/1.1/contributor> <https://orcid.org/0000-0003-0473-0070> ,
+                                                                                                   <https://orcid.org/0000-0003-0744-8855> ,
+                                                                                                   <https://orcid.org/0009-0003-1503-4422> ,
+                                                                                                   <https://orcid.org/0009-0007-7468-3544> ;
+                                                     <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-0473-0070> ,
+                                                                                               <https://orcid.org/0000-0003-0744-8855> ,
+                                                                                               <https://orcid.org/0009-0003-1503-4422> ,
+                                                                                               <https://orcid.org/0009-0007-7468-3544> ;
+                                                     <http://purl.org/dc/elements/1.1/description> "Application ontology for automotive circular-economy product, material, sustainability, usage, dismantling, engineering and transactional data aligned to PMDCore and BFO 2020." ;
+                                                     <http://purl.org/dc/elements/1.1/license> <https://w3id.org/pmd/automatce.owl#CC-BY-4.0> ;
+                                                     <http://purl.org/dc/elements/1.1/title> "Automotive Circular Economy Ontology" ;
                                                      owl:versionInfo "2026-05-28" .
 
 #################################################################
@@ -47,38 +45,58 @@ obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
                            "textual definition" .
 
 
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+<http://purl.org/dc/elements/1.1/license> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/elements/1.1/source
-dce:source rdf:type owl:AnnotationProperty ;
-           rdfs:comment """A reference to a resource from which the present resource
+<http://purl.org/dc/elements/1.1/source> rdf:type owl:AnnotationProperty ;
+                                         rdfs:comment """A reference to a resource from which the present resource
          is derived."""@en-us ;
-           rdfs:label "Source" ,
-                      "Source"@en-us .
+                                         rdfs:label "Source" ,
+                                                    "Source"@en-us .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/contributor
-dcterms:contributor rdf:type owl:AnnotationProperty ;
-                    rdfs:label "contributor" .
+dc:contributor rdf:type owl:AnnotationProperty ;
+               rdfs:label "contributor" .
 
 
 ###  http://purl.org/dc/terms/creator
-dcterms:creator rdf:type owl:AnnotationProperty ;
-                rdfs:label "creator" .
+dc:creator rdf:type owl:AnnotationProperty ;
+           rdfs:label "creator" .
 
 
 ###  http://purl.org/dc/terms/description
-dcterms:description rdf:type owl:AnnotationProperty ;
-                    rdfs:label "description" .
+dc:description rdf:type owl:AnnotationProperty ;
+               rdfs:label "description" .
 
 
 ###  http://purl.org/dc/terms/license
-dcterms:license rdf:type owl:AnnotationProperty ;
-                rdfs:label "dcterms:license" ,
-                           "license" .
+dc:license rdf:type owl:AnnotationProperty ;
+           rdfs:label "dcterms:license" ,
+                      "license" .
 
 
 ###  http://purl.org/dc/terms/title
-dcterms:title rdf:type owl:AnnotationProperty ;
-              rdfs:label "title" .
+dc:title rdf:type owl:AnnotationProperty ;
+         rdfs:label "title" .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#comment
@@ -2832,7 +2850,7 @@ foaf:Person rdf:type owl:Class ;
                                                    rdfs:label "selected r-strategy carbon footprint"@en ;
                                                    skos:altLabel "actual footprint of chosen r-strategy"@en ;
                                                    skos:definition "A product carbon footprint that specifies the greenhouse gas emissions of the selected circular economy strategy for a component."@en ;
-                                                   skos:example "8.2 kg CO2e resulting from choosing reuse for a dismantled component."@en .
+                                                   skos:example "3.2 kg CO2e resulting from choosing reuse for a dismantled component."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010146
@@ -5530,8 +5548,8 @@ co:PMD_0090018 rdf:type owl:Class ;
 ###  https://w3id.org/pmd/co/PMD_0200002
 co:PMD_0200002 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0000907 ;
-               dce:source "Official definition can be found in: DIN 8580, group 1.2.2 “Spritzgießen”."@en ,
-                          "Offizielle Definition findet man in: DIN 8580, Gruppe 1.2.2 „Spritzgießen“."@de ;
+               <http://purl.org/dc/elements/1.1/source> "Official definition can be found in: DIN 8580, group 1.2.2 “Spritzgießen”."@en ,
+                                                        "Offizielle Definition findet man in: DIN 8580, Gruppe 1.2.2 „Spritzgießen“."@de ;
                rdfs:label "Spritzgießen"@de ,
                           "injection molding"@en ;
                skos:altLabel "injection moulding; plastic injection molding"@en ;
@@ -7544,8 +7562,8 @@ co:PMD_0200002 rdf:type owl:Class ;
 <https://w3id.org/pmd/automatce/AUTOMATCE_1060056> rdf:type owl:NamedIndividual ,
                                                             obo:IAO_0000030 ,
                                                             skos:ConceptScheme ;
-                                                   dcterms:description "Standardized material classification system used in the German automotive industry."@en ;
-                                                   dcterms:title "VDA 231-106 material classification"@en ;
+                                                   <http://purl.org/dc/elements/1.1/description> "Standardized material classification system used in the German automotive industry."@en ;
+                                                   <http://purl.org/dc/elements/1.1/title> "VDA 231-106 material classification"@en ;
                                                    rdfs:label "VDA 231-106 material classification"@en .
 
 
