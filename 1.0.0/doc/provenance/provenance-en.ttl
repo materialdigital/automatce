@@ -1,0 +1,24 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://w3id.org/pmd/automatce/1.0.0> a prov:Entity;
+	 dc:title "Automotive Circular Economy Ontology";
+	 prov:wasAttributedTo <https://orcid.org/0000-0003-0473-0070>;
+	 dc:creator <https://orcid.org/0000-0003-0473-0070>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0003-0744-8855>;
+	 dc:creator <https://orcid.org/0000-0003-0744-8855>;
+	 prov:wasAttributedTo <https://orcid.org/0009-0003-1503-4422>;
+	 dc:creator <https://orcid.org/0009-0003-1503-4422>;
+	 prov:wasAttributedTo <https://orcid.org/0009-0007-7468-3544>;
+	 dc:creator <https://orcid.org/0009-0007-7468-3544>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0003-0473-0070>;
+	 dc:contributor <https://orcid.org/0000-0003-0473-0070>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0003-0744-8855>;
+	 dc:contributor <https://orcid.org/0000-0003-0744-8855>;
+	 prov:wasAttributedTo <https://orcid.org/0009-0003-1503-4422>;
+	 dc:contributor <https://orcid.org/0009-0003-1503-4422>;
+	 prov:wasAttributedTo <https://orcid.org/0009-0007-7468-3544>;
+	 dc:contributor <https://orcid.org/0009-0007-7468-3544>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+.
