@@ -34,9 +34,13 @@ Datatype: rdf:PlainLiteral
 
 
 Class: obo:IAO_0000030
+Class: obo:IAO_0000104
 Class: obo:IAO_0020000
+Class: obo:OBI_0001930
+Class: obo:OBI_0001931
 Class: obo:OBI_0001933
 Class: pmd:PMD_0000891
+Class: pmd:PMD_0020133
 Class: pmd:PMD_0020138
 Class: pmd:PMD_0025001
 Class: log:LOG_0080002
@@ -274,4 +278,156 @@ Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010191>
   SubClassOf:
     obo:IAO_0000030
 
-    
+
+# ============================================================================
+# EDCar BOM mapping additions (bill-of-materials structure and product master)
+# ============================================================================
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010358> (bill of materials)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010358>
+
+  Annotations:
+    rdfs:label "bill of materials"@en,
+    skos:altLabel "BOM"@en,
+    skos:definition "A plan specification that prescribes the component material entities and the quantities required to manufacture a given product, as exported from a bill-of-materials explosion."@en,
+    skos:example "The bill of materials of a belt tensioner assembly listing every required component and its quantity."@en
+
+  SubClassOf:
+    obo:IAO_0000104
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010359> (bom position)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010359>
+
+  Annotations:
+    rdfs:label "bom position"@en,
+    skos:altLabel "BOM item"@en,
+    skos:definition "An information content entity that represents a single position of a bill of materials, relating a parent assembly to a required child component and carrying the item number, required quantity, and alternative-item handling."@en,
+    skos:example "BOM position 0010 requiring one bracket per assembled belt tensioner."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010360> (material master record)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010360>
+
+  Annotations:
+    rdfs:label "material master record"@en,
+    skos:definition "An information content entity that captures the material-master snapshot of a material at a plant, including material type, status, product hierarchy, material group, segment, base quantity, and weights."@en,
+    skos:example "The plant-specific material master record of a steering component at plant 1001."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010361> (alternative item group)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010361>
+
+  Annotations:
+    rdfs:label "alternative item group"@en,
+    skos:definition "An information content entity that groups bill-of-materials positions which are mutually substitutable alternative items, with their usage probabilities, strategy, and ranking order."@en,
+    skos:example "An alternative item group holding two interchangeable fastener variants ranked by usage probability."@en
+
+  SubClassOf:
+    obo:IAO_0000030
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010362> (product hierarchy node)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010362>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string."@en,
+    rdfs:label "product hierarchy node"@en,
+    skos:definition "An identifier that denotes a node of the product hierarchy classification assigned to a material."@en,
+    skos:example "The product hierarchy code 0846194007 assigned to a belt-tensioner material."@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010363> (material group)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010363>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string."@en,
+    rdfs:label "material group"@en,
+    skos:definition "An identifier that denotes the material group (commodity class) to which a material belongs."@en,
+    skos:example "A material group code grouping all metal stamping parts."@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010364> (product segment)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010364>
+
+  Annotations:
+    rdfs:comment "Expected value datatype: xsd:string."@en,
+    rdfs:label "product segment"@en,
+    skos:definition "An identifier that denotes the functional product segment of a material."@en,
+    skos:example "The segment 020000 Belt Tensioner assigned to a material."@en
+
+  SubClassOf:
+    obo:IAO_0020000
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010365> (gross mass)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010365>
+
+  Annotations:
+    rdfs:label "gross mass"@en,
+    skos:definition "The gross mass quality of a material entity, i.e. its mass including packaging as recorded in the material master."@en,
+    skos:example "The gross mass of 1 kg recorded for a packaged component."@en
+
+  SubClassOf:
+    pmd:PMD_0020133
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010366> (net mass)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010366>
+
+  Annotations:
+    rdfs:label "net mass"@en,
+    skos:definition "The net mass quality of a material entity, i.e. the mass of the material itself excluding packaging as recorded in the material master."@en,
+    skos:example "The net mass of 1 kg recorded for an unpackaged component."@en
+
+  SubClassOf:
+    pmd:PMD_0020133
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010367> (procurement type specification)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010367>
+
+  Annotations:
+    rdfs:label "procurement type specification"@en,
+    skos:definition "A categorical value specification of the procurement type of a material, distinguishing in-house production from external procurement."@en,
+    skos:example "A procurement type specification with value E denoting in-house production."@en
+
+  SubClassOf:
+    obo:OBI_0001930
+
+
+# Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010368> (unit conversion factor)
+
+Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010368>
+
+  Annotations:
+    rdfs:label "unit conversion factor"@en,
+    skos:definition "A scalar value specification giving the conversion factor between a material's base unit and another unit, such as base unit to kilogram."@en,
+    skos:example "A unit conversion factor of 1 kg per piece for a component."@en
+
+  SubClassOf:
+    obo:OBI_0001931
+
+

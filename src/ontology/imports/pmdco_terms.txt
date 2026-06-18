@@ -64,3 +64,7 @@ https://w3id.org/pmd/co/PMD_0001044 #date value specification
 https://w3id.org/pmd/co/PMD_0020132 #size
 https://w3id.org/pmd/co/PMD_0020133 #mass
 https://w3id.org/pmd/co/PMD_0020150 #volume
+http://purl.obolibrary.org/obo/OBI_0001930 #categorical value specification
+http://purl.obolibrary.org/obo/OBI_0001931 #scalar value specification
+http://purl.obolibrary.org/obo/RO_0000086 #has quality
+http://purl.obolibrary.org/obo/BFO_0000051 #has part

@@ -19,3 +19,14 @@ https://w3id.org/pmd/log/LOG_1000079 #raw material role
 https://w3id.org/pmd/log/LOG_1000102 #raw material
 https://w3id.org/pmd/log/LOG_1000130 #business process
 https://w3id.org/pmd/log/LOG_1000143 #transport process
+# --- BOM / production seed (EDCar BOM mapping); manufacturer terms excluded by policy above ---
+https://w3id.org/pmd/log/LOG_1000011 #agent
+https://w3id.org/pmd/log/LOG_1000020 #supplier
+https://w3id.org/pmd/log/LOG_1000028 #material component
+https://w3id.org/pmd/log/LOG_1000029 #material product
+https://w3id.org/pmd/log/LOG_1000063 #supplier role
+https://w3id.org/pmd/log/LOG_1000105 #material component role
+https://w3id.org/pmd/log/LOG_1000123 #product production process
+https://w3id.org/pmd/log/LOG_1000132 #assembly process
+https://w3id.org/pmd/log/LOG_1000032 #facility
+https://w3id.org/pmd/log/LOG_1000004 #purchase order
