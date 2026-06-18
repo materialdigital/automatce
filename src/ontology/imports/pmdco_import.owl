@@ -92,6 +92,7 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0000519>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000520>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000521>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000522>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000524>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000538>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000549>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000551>))
@@ -171,6 +172,7 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0020220>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020243>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025001>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025003>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0025009>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0040001>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0050000>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0050002>))
@@ -188,9 +190,11 @@ Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000051))
 Declaration(ObjectProperty(obo:BFO_0000054))
 Declaration(ObjectProperty(obo:BFO_0000055))
+Declaration(ObjectProperty(obo:BFO_0000066))
 Declaration(ObjectProperty(obo:BFO_0000108))
 Declaration(ObjectProperty(obo:BFO_0000117))
 Declaration(ObjectProperty(obo:BFO_0000132))
+Declaration(ObjectProperty(obo:BFO_0000183))
 Declaration(ObjectProperty(obo:BFO_0000199))
 Declaration(ObjectProperty(obo:BFO_0000221))
 Declaration(ObjectProperty(obo:BFO_0000222))
@@ -362,6 +366,15 @@ AnnotationAssertion(skos:example obo:BFO_0000055 "A balding process realizes a d
 ObjectPropertyDomain(obo:BFO_0000055 obo:BFO_0000015)
 ObjectPropertyRange(obo:BFO_0000055 obo:BFO_0000017)
 
+# Object Property: obo:BFO_0000066 (occurs in)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000066 "occurs in"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000066 "b occurs in c =Def b is a process or a process boundary & c is a material entity or site & there exists a spatiotemporal region r & b occupies spatiotemporal region r & for all time t, if b exists at t then c exists at t & there exist spatial regions s and s' where b spatially projects onto s at t & c occupies spatial region s' at t & s is a continuant part of s' at t"@en)
+AnnotationAssertion(skos:example obo:BFO_0000066 "A process of digestion occurs in the interior of an organism; a process of loading artillery rounds into a tank cannon occurs in the interior of the tank"@en)
+InverseObjectProperties(obo:BFO_0000066 obo:BFO_0000183)
+ObjectPropertyDomain(obo:BFO_0000066 ObjectUnionOf(obo:BFO_0000015 obo:BFO_0000035))
+ObjectPropertyRange(obo:BFO_0000066 ObjectUnionOf(obo:BFO_0000029 obo:BFO_0000040))
+
 # Object Property: obo:BFO_0000108 (exists at)
 
 AnnotationAssertion(rdfs:label obo:BFO_0000108 "exists at"@en)
@@ -390,6 +403,14 @@ SubObjectPropertyOf(Annotation(rdfs:comment "\"occurrent part of\" is not a BFO2
 TransitiveObjectProperty(obo:BFO_0000132)
 ObjectPropertyDomain(obo:BFO_0000132 obo:BFO_0000003)
 ObjectPropertyRange(obo:BFO_0000132 obo:BFO_0000003)
+
+# Object Property: obo:BFO_0000183 (environs)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000183 "environs"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000183 "b environs c =Def c occurs in b"@en)
+AnnotationAssertion(skos:example obo:BFO_0000183 "Mouth environs process of mastication; city environs traffic"@en)
+ObjectPropertyDomain(obo:BFO_0000183 ObjectUnionOf(obo:BFO_0000029 obo:BFO_0000040))
+ObjectPropertyRange(obo:BFO_0000183 ObjectUnionOf(obo:BFO_0000015 obo:BFO_0000035))
 
 # Object Property: obo:BFO_0000199 (occupies temporal region)
 
@@ -1041,6 +1062,7 @@ DisjointClasses(obo:COB_0000035 obo:GO_0008150)
 AnnotationAssertion(obo:IAO_0000115 obo:COB_0000082 "A process that is initiated by an agent who intends to carry out a plan to achieve an objective through one or more actions as described in a plan specification."@en)
 AnnotationAssertion(rdfs:label obo:COB_0000082 "planned process"@en)
 SubClassOf(obo:COB_0000082 obo:BFO_0000015)
+DisjointClasses(obo:COB_0000082 <https://w3id.org/pmd/co/PMD_0025009>)
 
 # Class: obo:GO_0008150 (biological_process)
 
@@ -1161,7 +1183,7 @@ EquivalentClasses(obo:IAO_0020010 ObjectIntersectionOf(obo:COB_0000035 ObjectSom
 SubClassOf(obo:IAO_0020010 obo:COB_0000035)
 SubClassOf(obo:IAO_0020010 ObjectSomeValuesFrom(obo:OBI_0000299 obo:IAO_0020000))
 
-# Class: obo:NCBITaxon_9606 (Homo sapiens)
+# Class: obo:NCBITaxon_9606 (homo sapiens)
 
 AnnotationAssertion(rdfs:label obo:NCBITaxon_9606 "Homo sapiens")
 AnnotationAssertion(rdfs:label obo:NCBITaxon_9606 "homo sapiens")
@@ -1352,6 +1374,13 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000521> obo:BFO_0000015)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000522> "mechanical process"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000522> "is a process in which forces, moments, or imposed displacements to objects or object aggregates occur and/or the equivalent (stresses, strains) to materials or portions of matter"@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000522> obo:BFO_0000015)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000524> (assembling process)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000524> "Assemblierungsprozess"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000524> "assembling process"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000524> "An assembling process is a manufacturing process that mounts or demounts components."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000524> <https://w3id.org/pmd/co/PMD_0000833>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0000538> (bulk)
 
@@ -1924,6 +1953,16 @@ AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025003> "inten
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0025003> ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0020023>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0025003> <https://w3id.org/pmd/co/PMD_0020131>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0025003> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0020023>))
+
+# Class: <https://w3id.org/pmd/co/PMD_0025009> (material reacting process)
+
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0025009> "material reacting process has always energy minimization as a driving force."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025009> "material reacting process"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025009> "Material reacting process is a process which occurs in a portion of matter due to some of its disposition or behavioral material property which has realization in some  stimulating process. Both the material reacting process and stimulating process must be occurent parts of a planned process, if the planned process takes place."@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0025009> ObjectIntersectionOf(obo:BFO_0000015 ObjectSomeValuesFrom(obo:BFO_0000066 <https://w3id.org/pmd/co/PMD_0000001>) ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0001028> ObjectIntersectionOf(ObjectUnionOf(obo:BFO_0000016 <https://w3id.org/pmd/co/PMD_0000005>) ObjectSomeValuesFrom(obo:BFO_0000054 <https://w3id.org/pmd/co/PMD_0000950>)))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025009> obo:BFO_0000015)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025009> ObjectSomeValuesFrom(obo:BFO_0000066 <https://w3id.org/pmd/co/PMD_0000001>))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025009> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0001028> ObjectIntersectionOf(ObjectUnionOf(obo:BFO_0000016 <https://w3id.org/pmd/co/PMD_0000005>) ObjectSomeValuesFrom(obo:BFO_0000054 <https://w3id.org/pmd/co/PMD_0000950>))))
 
 # Class: <https://w3id.org/pmd/co/PMD_0040001> (length)
 

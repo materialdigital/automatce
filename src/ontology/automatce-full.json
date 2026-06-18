@@ -5389,7 +5389,14 @@
       }
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000524",
-      "type" : "CLASS"
+      "lbl" : "assembling process",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An assembling process is a manufacturing process that mounts or demounts components."
+        } ]
+      }
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000538",
       "lbl" : "bulk",
@@ -6260,6 +6267,17 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "intensive quality epitomizing the distinct phases in the microscopic structure of a metallic material."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0025009",
+      "lbl" : "material reacting process",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "material reacting process has always energy minimization as a driving force." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "Material reacting process is a process which occurs in a portion of matter due to some of its disposition or behavioral material property which has realization in some  stimulating process. Both the material reacting process and stimulating process must be occurent parts of a planned process, if the planned process takes place."
         } ]
       }
     }, {
@@ -7296,7 +7314,22 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000066",
+      "lbl" : "occurs in",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "b occurs in c =Def b is a process or a process boundary & c is a material entity or site & there exists a spatiotemporal region r & b occupies spatiotemporal region r & for all time t, if b exists at t then c exists at t & there exist spatial regions s and s' where b spatially projects onto s at t & c occupies spatial region s' at t & s is a continuant part of s' at t"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A process of digestion occurs in the interior of an organism; a process of loading artillery rounds into a tank cannon occurs in the interior of the tank"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000082",
+      "lbl" : "located in",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT"
     }, {
@@ -7343,8 +7376,18 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000183",
+      "lbl" : "environs",
       "type" : "PROPERTY",
-      "propertyType" : "OBJECT"
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "b environs c =Def c occurs in b"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Mouth environs process of mastication; city environs traffic"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000196",
       "lbl" : "bearer of",
@@ -11590,6 +11633,14 @@
       "pred" : "https://w3id.org/pmd/co/PMD_0000077",
       "obj" : "https://w3id.org/pmd/co/PMD_0020023"
     }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0025009",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0025009",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000066",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000001"
+    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0040001",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0020132"
@@ -12994,6 +13045,10 @@
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000055"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000066",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000183"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000117",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000132"
@@ -13137,6 +13192,13 @@
     }, {
       "definedClassId" : "https://w3id.org/pmd/co/PMD_0000950",
       "genusIds" : [ "http://purl.obolibrary.org/obo/BFO_0000015" ]
+    }, {
+      "definedClassId" : "https://w3id.org/pmd/co/PMD_0025009",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/BFO_0000015" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000066",
+        "fillerId" : "https://w3id.org/pmd/co/PMD_0000001"
+      } ]
     }, {
       "definedClassId" : "https://w3id.org/pmd/co/PMD_0050118",
       "genusIds" : [ "https://w3id.org/pmd/co/PMD_0000661" ],

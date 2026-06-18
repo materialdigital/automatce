@@ -201,8 +201,27 @@ obo:BFO_0000055 rdf:type owl:ObjectProperty ;
                 skos:example "A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart"@en .
 
 
+###  http://purl.obolibrary.org/obo/BFO_0000066
+obo:BFO_0000066 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:BFO_0000183 ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( obo:BFO_0000015
+                                            obo:BFO_0000035
+                                          )
+                            ] ;
+                rdfs:range [ rdf:type owl:Class ;
+                             owl:unionOf ( obo:BFO_0000029
+                                           obo:BFO_0000040
+                                         )
+                           ] ;
+                rdfs:label "occurs in"@en ;
+                skos:definition "b occurs in c =Def b is a process or a process boundary & c is a material entity or site & there exists a spatiotemporal region r & b occupies spatiotemporal region r & for all time t, if b exists at t then c exists at t & there exist spatial regions s and s' where b spatially projects onto s at t & c occupies spatial region s' at t & s is a continuant part of s' at t"@en ;
+                skos:example "A process of digestion occurs in the interior of an organism; a process of loading artillery rounds into a tank cannon occurs in the interior of the tank"@en .
+
+
 ###  http://purl.obolibrary.org/obo/BFO_0000082
-obo:BFO_0000082 rdf:type owl:ObjectProperty .
+obo:BFO_0000082 rdf:type owl:ObjectProperty ;
+                rdfs:label "located in"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000108
@@ -245,7 +264,20 @@ obo:BFO_0000132 rdf:type owl:ObjectProperty ;
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000183
-obo:BFO_0000183 rdf:type owl:ObjectProperty .
+obo:BFO_0000183 rdf:type owl:ObjectProperty ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( obo:BFO_0000029
+                                            obo:BFO_0000040
+                                          )
+                            ] ;
+                rdfs:range [ rdf:type owl:Class ;
+                             owl:unionOf ( obo:BFO_0000015
+                                           obo:BFO_0000035
+                                         )
+                           ] ;
+                rdfs:label "environs"@en ;
+                skos:definition "b environs c =Def c occurs in b"@en ;
+                skos:example "Mouth environs process of mastication; city environs traffic"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000196
@@ -1287,6 +1319,7 @@ obo:COB_0000035 rdf:type owl:Class ;
 ###  http://purl.obolibrary.org/obo/COB_0000082
 obo:COB_0000082 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000015 ;
+                owl:disjointWith co:PMD_0025009 ;
                 obo:IAO_0000115 "A process that is initiated by an agent who intends to carry out a plan to achieve an objective through one or more actions as described in a plan specification."@en ;
                 rdfs:label "planned process"@en .
 
@@ -4495,7 +4528,7 @@ co:PMD_0000005 rdf:type owl:Class ;
                                  owl:onProperty obo:BFO_0000054 ;
                                  owl:someValuesFrom co:PMD_0000950
                                ] ,
-                               _:genid155 ;
+                               _:genid167 ;
                rdfs:comment """A property is a material trait in terms of the kind and magnitude of response to a specific imposed stimulus. Generally, definitions of properties are made independent of material shape and size.
 (Callister, W.D., Rethwisch, D.G., Materials Science and Engineering, Wiley, 2014)
 
@@ -4507,7 +4540,7 @@ Extensive properties that depend on the object being tested rather than on the p
                rdfs:label "material property"@en ;
                skos:definition "a disposition of a portion of matter that is realized in a compatible process and whose realization is grounded in the portions intensive qualities"@en .
 
-_:genid155 rdf:type owl:Restriction ;
+_:genid167 rdf:type owl:Restriction ;
             owl:onProperty obo:RO_0000052 ;
             owl:someValuesFrom [ owl:intersectionOf ( co:PMD_0000001
                                                       [ rdf:type owl:Restriction ;
@@ -4521,7 +4554,7 @@ _:genid155 rdf:type owl:Restriction ;
 [ rdf:type owl:Axiom ;
    owl:annotatedSource co:PMD_0000005 ;
    owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget _:genid155 ;
+   owl:annotatedTarget _:genid167 ;
    rdfs:comment "Due to the duality of object and portion of matter this axiom can not be an equivalent class axiom."@en
  ] .
 
@@ -4625,7 +4658,10 @@ co:PMD_0000522 rdf:type owl:Class ;
 ###  https://w3id.org/pmd/co/PMD_0000524
 co:PMD_0000524 rdf:type owl:Class ;
                owl:equivalentClass <https://w3id.org/pmd/log/LOG_1000132> ;
-               rdfs:subClassOf co:PMD_0000833 .
+               rdfs:subClassOf co:PMD_0000833 ;
+               rdfs:label "Assemblierungsprozess"@de ,
+                          "assembling process"@en ;
+               skos:definition "An assembling process is a manufacturing process that mounts or demounts components."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000538
@@ -5427,20 +5463,20 @@ co:PMD_0020116 rdf:type owl:Class ;
 ###  https://w3id.org/pmd/co/PMD_0020131
 co:PMD_0020131 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000019 ,
-                               _:genid322 ;
+                               _:genid334 ;
                owl:disjointWith co:PMD_0020148 ;
                rdfs:label "intensive quality"@en ;
                skos:altLabel "Point property"@en ;
                skos:definition "An intensive quality is a quality that inheres in only portion of matter and thus is independent of the bearers (system-) size."@en .
 
-_:genid322 rdf:type owl:Restriction ;
+_:genid334 rdf:type owl:Restriction ;
             owl:onProperty obo:RO_0000080 ;
             owl:someValuesFrom co:PMD_0000001 .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource co:PMD_0020131 ;
    owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget _:genid322 ;
+   owl:annotatedTarget _:genid334 ;
    rdfs:comment "Due to the duality of object and portion of matter this axiom can not be an equivalent class axiom."@en
  ] .
 
@@ -5573,6 +5609,56 @@ co:PMD_0025003 rdf:type owl:Class ;
                rdfs:comment "ferrite, austenite, martensite, etc."@en ;
                rdfs:label "metallic grain structure"@en ;
                skos:definition "intensive quality epitomizing the distinct phases in the microscopic structure of a metallic material."@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0025009
+co:PMD_0025009 rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000015
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:BFO_0000066 ;
+                                                            owl:someValuesFrom co:PMD_0000001
+                                                          ]
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty co:PMD_0001028 ;
+                                                            owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                                                                        owl:unionOf ( obo:BFO_0000016
+                                                                                                                      co:PMD_0000005
+                                                                                                                    )
+                                                                                                      ]
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty obo:BFO_0000054 ;
+                                                                                                        owl:someValuesFrom co:PMD_0000950
+                                                                                                      ]
+                                                                                                    ) ;
+                                                                                 rdf:type owl:Class
+                                                                               ]
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf obo:BFO_0000015 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:BFO_0000066 ;
+                                 owl:someValuesFrom co:PMD_0000001
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty co:PMD_0001028 ;
+                                 owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                                             owl:unionOf ( obo:BFO_0000016
+                                                                                           co:PMD_0000005
+                                                                                         )
+                                                                           ]
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty obo:BFO_0000054 ;
+                                                                             owl:someValuesFrom co:PMD_0000950
+                                                                           ]
+                                                                         ) ;
+                                                      rdf:type owl:Class
+                                                    ]
+                               ] ;
+               rdfs:comment "material reacting process has always energy minimization as a driving force."@en ;
+               rdfs:label "material reacting process"@en ;
+               skos:definition "Material reacting process is a process which occurs in a portion of matter due to some of its disposition or behavioral material property which has realization in some  stimulating process. Both the material reacting process and stimulating process must be occurent parts of a planned process, if the planned process takes place."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0040001
