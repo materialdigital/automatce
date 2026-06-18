@@ -46,6 +46,18 @@ ObjectProperty: obo:RO_0002502
     skos:definition "A relation between an entity and another entity on which it depends."@en
 
 
+ObjectProperty: obo:BFO_0000082
+
+  Annotations:
+    rdfs:label "located in"@en
+
+
+ObjectProperty: obo:BFO_0000183
+
+  Annotations:
+    rdfs:label "environs"@en
+
+
 Class: obo:BFO_0000023
 
 Class: obo:BFO_0000029
