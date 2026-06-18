@@ -16,7 +16,7 @@
 @base <https://w3id.org/pmd/automatce/automatce-base.ttl> .
 
 <https://w3id.org/pmd/automatce/automatce-base.ttl> rdf:type owl:Ontology ;
-                                                     owl:versionIRI <https://w3id.org/pmd/automatce/1.0.0> ;
+                                                     owl:versionIRI <https://w3id.org/pmd/automatce/releases/2026-06-18/automatce-base.ttl> ;
                                                      <http://purl.org/dc/elements/1.1/contributor> <https://orcid.org/0000-0003-0473-0070> ,
                                                                                                    <https://orcid.org/0000-0003-0744-8855> ,
                                                                                                    <https://orcid.org/0009-0003-1503-4422> ,
@@ -29,8 +29,7 @@
                                                      <http://purl.org/dc/elements/1.1/license> <https://w3id.org/pmd/automatce.owl#CC-BY-4.0> ;
                                                      <http://purl.org/dc/elements/1.1/title> "Automotive Circular Economy Ontology" ;
                                                      <http://purl.org/dc/elements/1.1/type> obo:IAO_8000001 ;
-                                                     owl:versionInfo "1.0.0" ,
-                                                                     "2026-05-28" .
+                                                     owl:versionInfo "2026-06-18" .
 
 #################################################################
 #    Annotation properties
@@ -116,8 +115,16 @@ co:PMD_0050117 rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://purl.obolibrary.org/obo/BFO_0000051
+obo:BFO_0000051 rdf:type owl:ObjectProperty .
+
+
 ###  http://purl.obolibrary.org/obo/IAO_0000136
 obo:IAO_0000136 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000086
+obo:RO_0000086 rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0009001
@@ -208,6 +215,69 @@ obo:IAO_0000136 rdf:type owl:ObjectProperty .
                                                    skos:definition "A relation that links a pressure-volume-temperature data point to its specific volume value specification."@en .
 
 
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0009012
+<https://w3id.org/pmd/automatce/AUTOMATCE_0009012> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf obo:BFO_0000051 ;
+                                                   rdfs:domain <https://w3id.org/pmd/automatce/AUTOMATCE_0010358> ;
+                                                   rdfs:range <https://w3id.org/pmd/automatce/AUTOMATCE_0010359> ;
+                                                   rdfs:label "has bom position"@en ;
+                                                   skos:definition "A relation that links a bill of materials to one of its constituent positions."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0009013
+<https://w3id.org/pmd/automatce/AUTOMATCE_0009013> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf obo:IAO_0000136 ;
+                                                   rdfs:domain <https://w3id.org/pmd/automatce/AUTOMATCE_0010359> ;
+                                                   rdfs:range obo:BFO_0000040 ;
+                                                   rdfs:label "position in assembly"@en ;
+                                                   skos:definition "A relation that links a bom position to the parent assembly material entity it is about, i.e. the superordinate side of the bill-of-materials edge."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0009014
+<https://w3id.org/pmd/automatce/AUTOMATCE_0009014> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf obo:IAO_0000136 ;
+                                                   rdfs:domain <https://w3id.org/pmd/automatce/AUTOMATCE_0010359> ;
+                                                   rdfs:range <https://w3id.org/pmd/log/LOG_1000028> ;
+                                                   rdfs:label "position for component"@en ;
+                                                   skos:definition "A relation that links a bom position to the child component material entity it requires, i.e. the subordinate side of the bill-of-materials edge."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0009015
+<https://w3id.org/pmd/automatce/AUTOMATCE_0009015> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf obo:IAO_0000136 ;
+                                                   rdfs:domain <https://w3id.org/pmd/automatce/AUTOMATCE_0010374> ;
+                                                   rdfs:range <https://w3id.org/pmd/log/LOG_1000020> ;
+                                                   rdfs:label "approved supplier"@en ;
+                                                   skos:definition "A relation that links an approved supplier assignment to the supplier organization it authorizes."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0009016
+<https://w3id.org/pmd/automatce/AUTOMATCE_0009016> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf obo:IAO_0000136 ;
+                                                   rdfs:domain <https://w3id.org/pmd/automatce/AUTOMATCE_0010374> ;
+                                                   rdfs:range obo:BFO_0000040 ;
+                                                   rdfs:label "assignment for material"@en ;
+                                                   skos:definition "A relation that links an approved supplier assignment to the material entity it concerns."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0009017
+<https://w3id.org/pmd/automatce/AUTOMATCE_0009017> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf obo:RO_0000086 ;
+                                                   rdfs:domain <https://w3id.org/pmd/automatce/AUTOMATCE_0010369> ;
+                                                   rdfs:range <https://w3id.org/pmd/automatce/AUTOMATCE_0010371> ;
+                                                   rdfs:label "has standard value"@en ;
+                                                   skos:definition "A relation that links a routing operation to one of its standard values."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0009018
+<https://w3id.org/pmd/automatce/AUTOMATCE_0009018> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf obo:IAO_0000136 ;
+                                                   rdfs:domain <https://w3id.org/pmd/automatce/AUTOMATCE_0010359> ;
+                                                   rdfs:range <https://w3id.org/pmd/automatce/AUTOMATCE_0010361> ;
+                                                   rdfs:label "member of alternative group"@en ;
+                                                   skos:definition "A relation that links a bom position to the alternative item group it belongs to."@en .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -242,6 +312,10 @@ obo:BFO_0000029 rdf:type owl:Class .
 
 ###  http://purl.obolibrary.org/obo/BFO_0000031
 obo:BFO_0000031 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000040
+obo:BFO_0000040 rdf:type owl:Class .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000145
@@ -282,6 +356,14 @@ obo:IAO_0020000 rdf:type owl:Class .
 
 ###  http://purl.obolibrary.org/obo/OBI_0000835
 obo:OBI_0000835 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0001930
+obo:OBI_0001930 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0001931
+obo:OBI_0001931 rdf:type owl:Class .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0001933
@@ -2826,6 +2908,149 @@ skos:ConceptScheme rdf:type owl:Class .
                                                    skos:example "0.91 dm3/kg recorded as the specific volume datum of a pVT data point."@en .
 
 
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0010358
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010358> rdf:type owl:Class ;
+                                                   rdfs:subClassOf obo:IAO_0000104 ;
+                                                   rdfs:label "bill of materials"@en ;
+                                                   skos:altLabel "BOM"@en ;
+                                                   skos:definition "A plan specification that prescribes the component material entities and the quantities required to manufacture a given product, as exported from a bill-of-materials explosion."@en ;
+                                                   skos:example "The bill of materials of a belt tensioner assembly listing every required component and its quantity."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0010359
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010359> rdf:type owl:Class ;
+                                                   rdfs:subClassOf obo:IAO_0000030 ;
+                                                   rdfs:label "bom position"@en ;
+                                                   skos:altLabel "BOM item"@en ;
+                                                   skos:definition "An information content entity that represents a single position of a bill of materials, relating a parent assembly to a required child component and carrying the item number, required quantity, and alternative-item handling."@en ;
+                                                   skos:example "BOM position 0010 requiring one bracket per assembled belt tensioner."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0010360
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010360> rdf:type owl:Class ;
+                                                   rdfs:subClassOf obo:IAO_0000030 ;
+                                                   rdfs:label "material master record"@en ;
+                                                   skos:definition "An information content entity that captures the material-master snapshot of a material at a plant, including material type, status, product hierarchy, material group, segment, base quantity, and weights."@en ;
+                                                   skos:example "The plant-specific material master record of a steering component at plant 1001."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0010361
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010361> rdf:type owl:Class ;
+                                                   rdfs:subClassOf obo:IAO_0000030 ;
+                                                   rdfs:label "alternative item group"@en ;
+                                                   skos:definition "An information content entity that groups bill-of-materials positions which are mutually substitutable alternative items, with their usage probabilities, strategy, and ranking order."@en ;
+                                                   skos:example "An alternative item group holding two interchangeable fastener variants ranked by usage probability."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0010362
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010362> rdf:type owl:Class ;
+                                                   rdfs:subClassOf obo:IAO_0020000 ;
+                                                   rdfs:comment "Expected value datatype: xsd:string."@en ;
+                                                   rdfs:label "product hierarchy node"@en ;
+                                                   skos:definition "An identifier that denotes a node of the product hierarchy classification assigned to a material."@en ;
+                                                   skos:example "The product hierarchy code 0846194007 assigned to a belt-tensioner material."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0010363
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010363> rdf:type owl:Class ;
+                                                   rdfs:subClassOf obo:IAO_0020000 ;
+                                                   rdfs:comment "Expected value datatype: xsd:string."@en ;
+                                                   rdfs:label "material group"@en ;
+                                                   skos:definition "An identifier that denotes the material group (commodity class) to which a material belongs."@en ;
+                                                   skos:example "A material group code grouping all metal stamping parts."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0010364
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010364> rdf:type owl:Class ;
+                                                   rdfs:subClassOf obo:IAO_0020000 ;
+                                                   rdfs:comment "Expected value datatype: xsd:string."@en ;
+                                                   rdfs:label "product segment"@en ;
+                                                   skos:definition "An identifier that denotes the functional product segment of a material."@en ;
+                                                   skos:example "The segment 020000 Belt Tensioner assigned to a material."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0010365
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010365> rdf:type owl:Class ;
+                                                   rdfs:subClassOf co:PMD_0020133 ;
+                                                   rdfs:label "gross mass"@en ;
+                                                   skos:definition "The gross mass quality of a material entity, i.e. its mass including packaging as recorded in the material master."@en ;
+                                                   skos:example "The gross mass of 1 kg recorded for a packaged component."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0010366
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010366> rdf:type owl:Class ;
+                                                   rdfs:subClassOf co:PMD_0020133 ;
+                                                   rdfs:label "net mass"@en ;
+                                                   skos:definition "The net mass quality of a material entity, i.e. the mass of the material itself excluding packaging as recorded in the material master."@en ;
+                                                   skos:example "The net mass of 1 kg recorded for an unpackaged component."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0010367
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010367> rdf:type owl:Class ;
+                                                   rdfs:subClassOf obo:OBI_0001930 ;
+                                                   rdfs:label "procurement type specification"@en ;
+                                                   skos:definition "A categorical value specification of the procurement type of a material, distinguishing in-house production from external procurement."@en ;
+                                                   skos:example "A procurement type specification with value E denoting in-house production."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0010368
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010368> rdf:type owl:Class ;
+                                                   rdfs:subClassOf obo:OBI_0001931 ;
+                                                   rdfs:label "unit conversion factor"@en ;
+                                                   skos:definition "A scalar value specification giving the conversion factor between a material's base unit and another unit, such as base unit to kilogram."@en ;
+                                                   skos:example "A unit conversion factor of 1 kg per piece for a component."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0010369
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010369> rdf:type owl:Class ;
+                                                   rdfs:subClassOf co:PMD_0000833 ;
+                                                   rdfs:label "routing operation"@en ;
+                                                   skos:altLabel "production operation"@en ;
+                                                   skos:definition "A manufacturing process step of a production routing, corresponding to one routing operation, that is an occurrent part of the production process chain of a material."@en ;
+                                                   skos:example "Operation 0010 package performed at a packaging work center."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0010370
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010370> rdf:type owl:Class ;
+                                                   rdfs:subClassOf co:PMD_0000602 ;
+                                                   rdfs:label "work center"@en ;
+                                                   skos:definition "A production resource (machine, station, or capacity group) at which a routing operation is performed."@en ;
+                                                   skos:example "An assembly work center that performs the joining operations of a belt tensioner."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0010371
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010371> rdf:type owl:Class ;
+                                                   rdfs:subClassOf obo:BFO_0000019 ;
+                                                   rdfs:label "standard value"@en ;
+                                                   skos:definition "A planned process quantity of a routing operation for a given activity type, such as setup time, machine time, or labour time, whose magnitude is given by a scalar value specification."@en ;
+                                                   skos:example "A machine standard value of 30 seconds for an assembly operation."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0010372
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010372> rdf:type owl:Class ;
+                                                   rdfs:subClassOf obo:OBI_0001930 ;
+                                                   rdfs:label "activity type"@en ;
+                                                   skos:definition "A categorical value specification that classifies a standard value of a routing operation, such as machine, labour, or setup."@en ;
+                                                   skos:example "An activity type classifying a standard value as labour time."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0010373
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010373> rdf:type owl:Class ;
+                                                   rdfs:subClassOf obo:IAO_0000030 ;
+                                                   rdfs:label "routing operation record"@en ;
+                                                   skos:definition "An information content entity that captures the routing/production-plan operation snapshot, including operation number, control key, work center, activity types, and standard values."@en ;
+                                                   skos:example "A routing operation record describing operation 0010 with its control key and standard values."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0010374
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010374> rdf:type owl:Class ;
+                                                   rdfs:subClassOf obo:IAO_0000030 ;
+                                                   rdfs:label "approved supplier assignment"@en ;
+                                                   skos:altLabel "source list entry"@en ;
+                                                   skos:definition "An information content entity that represents an entry of an approved-manufacturer or source list, relating a material at a plant to a supplier approved to supply it, together with the nominal flag and required quantity contribution."@en ;
+                                                   skos:example "An approved supplier assignment authorizing supplier SHS to supply a given component."@en .
+
+
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0030000
 <https://w3id.org/pmd/automatce/AUTOMATCE_0030000> rdf:type owl:Class ;
                                                    rdfs:subClassOf co:PMD_0000967 ;
@@ -2912,6 +3137,10 @@ co:PMD_0000618 rdf:type owl:Class .
 
 ###  https://w3id.org/pmd/co/PMD_0000777
 co:PMD_0000777 rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/PMD_0000833
+co:PMD_0000833 rdf:type owl:Class .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000848
@@ -3030,8 +3259,16 @@ co:PMD_0050004 rdf:type owl:Class .
 <https://w3id.org/pmd/log/LOG_1000014> rdf:type owl:Class .
 
 
+###  https://w3id.org/pmd/log/LOG_1000020
+<https://w3id.org/pmd/log/LOG_1000020> rdf:type owl:Class .
+
+
 ###  https://w3id.org/pmd/log/LOG_1000023
 <https://w3id.org/pmd/log/LOG_1000023> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/log/LOG_1000028
+<https://w3id.org/pmd/log/LOG_1000028> rdf:type owl:Class .
 
 
 ###  https://w3id.org/pmd/log/LOG_1000102

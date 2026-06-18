@@ -15,9 +15,9 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<https://w3id.org/pmd/automatce/imports/logo_import.owl>
-<https://w3id.org/pmd/automatce/releases/2026-05-28/imports/logo_import.owl>
+<https://w3id.org/pmd/automatce/releases/2026-06-18/imports/logo_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/pmd/log/1.0.2>)
-Annotation(owl:versionInfo "2026-05-28")
+Annotation(owl:versionInfo "2026-06-18")
 
 Declaration(Class(obo:BFO_0000002))
 Declaration(Class(obo:BFO_0000004))
@@ -39,10 +39,13 @@ Declaration(Class(obo:IAO_0020000))
 Declaration(Class(obo:OBI_0000260))
 Declaration(Class(obo:OBI_0000571))
 Declaration(Class(<http://www.w3.org/ns/org#FormalOrganization>))
+Declaration(Class(<http://www.w3.org/ns/org#Site>))
 Declaration(Class(foaf:Person))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000008>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000524>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000833>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020138>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0040029>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0040030>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0040129>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_0080000>))
@@ -51,6 +54,7 @@ Declaration(Class(<https://w3id.org/pmd/log/LOG_0080002>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000000>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000001>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000003>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000004>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000005>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000006>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000007>))
@@ -72,6 +76,7 @@ Declaration(Class(<https://w3id.org/pmd/log/LOG_1000026>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000028>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000029>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000030>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000032>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000037>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000038>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000039>))
@@ -94,12 +99,15 @@ Declaration(Class(<https://w3id.org/pmd/log/LOG_1000065>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000070>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000071>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000072>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000077>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000078>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000079>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000080>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000081>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000082>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000084>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000085>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000090>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000091>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000093>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000095>))
@@ -121,14 +129,18 @@ Declaration(Class(<https://w3id.org/pmd/log/LOG_1000126>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000128>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000130>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000131>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000132>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000140>))
 Declaration(Class(<https://w3id.org/pmd/log/LOG_1000143>))
+Declaration(Class(<https://w3id.org/pmd/log/LOG_1000146>))
 Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000054))
 Declaration(ObjectProperty(obo:BFO_0000055))
+Declaration(ObjectProperty(obo:BFO_0000082))
 Declaration(ObjectProperty(obo:BFO_0000108))
 Declaration(ObjectProperty(obo:BFO_0000117))
 Declaration(ObjectProperty(obo:BFO_0000132))
+Declaration(ObjectProperty(obo:BFO_0000183))
 Declaration(ObjectProperty(obo:BFO_0000196))
 Declaration(ObjectProperty(obo:BFO_0000197))
 Declaration(ObjectProperty(obo:BFO_0000199))
@@ -190,6 +202,10 @@ ObjectPropertyRange(<https://w3id.org/pmd/log/LOG_1900003> obo:BFO_0000004)
 
 EquivalentClasses(obo:OBI_0000571 <https://w3id.org/pmd/log/LOG_1000061>)
 
+# Class: <https://w3id.org/pmd/co/PMD_0000524> (<https://w3id.org/pmd/co/PMD_0000524>)
+
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000524> <https://w3id.org/pmd/log/LOG_1000132>)
+
 # Class: <https://w3id.org/pmd/co/PMD_0020138> (<https://w3id.org/pmd/co/PMD_0020138>)
 
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020138> <https://w3id.org/pmd/log/LOG_1000037>)
@@ -231,6 +247,12 @@ SubClassOf(<https://w3id.org/pmd/log/LOG_1000001> <https://w3id.org/pmd/log/LOG_
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000003> "transport equipment role"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000003> "role held by a material artifact when it is planned to be involved in or is involved in carrying out some part of a planned transportation process and that is not consumed in that planned process")
 SubClassOf(<https://w3id.org/pmd/log/LOG_1000003> obo:BFO_0000023)
+
+# Class: <https://w3id.org/pmd/log/LOG_1000004> (purchase order)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000004> "purchase order"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000004> "agreement between a buyer and a vendor (supplier) that that contains a set of commitments on the buyer and the vendeor"@en-us)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000004> <https://w3id.org/pmd/log/LOG_1000000>)
 
 # Class: <https://w3id.org/pmd/log/LOG_1000005> (lot number)
 
@@ -397,6 +419,12 @@ AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000030> "mate
 EquivalentClasses(<https://w3id.org/pmd/log/LOG_1000030> ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:BFO_0000196 <https://w3id.org/pmd/log/LOG_1000106>)))
 SubClassOf(<https://w3id.org/pmd/log/LOG_1000030> obo:BFO_0000040)
 SubClassOf(<https://w3id.org/pmd/log/LOG_1000030> ObjectSomeValuesFrom(obo:BFO_0000196 <https://w3id.org/pmd/log/LOG_1000106>))
+
+# Class: <https://w3id.org/pmd/log/LOG_1000032> (facility)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000032> "facility"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000032> "engineered system that consists of buildings, structures, roads, machines, and equipment desgined to provide certain capabilities"@en-us)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000032> <https://w3id.org/pmd/log/LOG_1000146>)
 
 # Class: <https://w3id.org/pmd/log/LOG_1000037> (lot)
 
@@ -571,6 +599,14 @@ SubClassOf(<https://w3id.org/pmd/log/LOG_1000072> ObjectSomeValuesFrom(obo:BFO_0
 SubClassOf(<https://w3id.org/pmd/log/LOG_1000072> ObjectSomeValuesFrom(obo:BFO_0000197 ObjectIntersectionOf(ObjectUnionOf(foaf:Person <https://w3id.org/pmd/log/LOG_1000047>) ObjectSomeValuesFrom(obo:RO_0000056 <https://w3id.org/pmd/log/LOG_1000128>))))
 SubClassOf(<https://w3id.org/pmd/log/LOG_1000072> ObjectSomeValuesFrom(obo:BFO_0000197 ObjectIntersectionOf(ObjectUnionOf(foaf:Person <https://w3id.org/pmd/log/LOG_1000047>) ObjectSomeValuesFrom(obo:RO_0000056 ObjectIntersectionOf(<https://w3id.org/pmd/log/LOG_1000125> ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(<https://w3id.org/pmd/log/LOG_1000078> ObjectSomeValuesFrom(obo:BFO_0000197 obo:BFO_0000040))))))))
 
+# Class: <https://w3id.org/pmd/log/LOG_1000077> (supply chain node role)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000077> "supply chain node role"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000077> "location role held by a geospatial site when it is the site some supply chain process")
+EquivalentClasses(<https://w3id.org/pmd/log/LOG_1000077> ObjectIntersectionOf(<https://w3id.org/pmd/log/LOG_1000085> ObjectSomeValuesFrom(obo:BFO_0000197 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0040029> ObjectSomeValuesFrom(obo:BFO_0000183 <https://w3id.org/pmd/log/LOG_10001247>)))))
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000077> <https://w3id.org/pmd/log/LOG_1000085>)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000077> ObjectSomeValuesFrom(obo:BFO_0000197 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0040029> ObjectSomeValuesFrom(obo:BFO_0000183 <https://w3id.org/pmd/log/LOG_10001247>))))
+
 # Class: <https://w3id.org/pmd/log/LOG_1000078> (material product role)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000078> "material product role"@en)
@@ -613,6 +649,22 @@ SubClassOf(<https://w3id.org/pmd/log/LOG_1000082> ObjectSomeValuesFrom(obo:BFO_0
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000084> "traceable resource unit role"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000084> "role held by a number of uniquely identified material entities when they participate in some supply chain processes or production processes while some agent observes them and collects information about them for future retrieval"@en-us)
 SubClassOf(<https://w3id.org/pmd/log/LOG_1000084> obo:BFO_0000023)
+
+# Class: <https://w3id.org/pmd/log/LOG_1000085> (location role)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000085> "location role"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000085> "role held by a geospatial site when it is the location of some material entity at some time or the site of some process"@en-us)
+EquivalentClasses(<https://w3id.org/pmd/log/LOG_1000085> ObjectIntersectionOf(obo:BFO_0000023 ObjectSomeValuesFrom(obo:BFO_0000197 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0040029> ObjectUnionOf(ObjectSomeValuesFrom(obo:BFO_0000183 obo:BFO_0000015) ObjectSomeValuesFrom(obo:RO_0001015 obo:BFO_0000040))))))
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000085> obo:BFO_0000023)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000085> ObjectSomeValuesFrom(obo:BFO_0000197 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0040029> ObjectUnionOf(ObjectSomeValuesFrom(obo:BFO_0000183 obo:BFO_0000015) ObjectSomeValuesFrom(obo:RO_0001015 obo:BFO_0000040)))))
+
+# Class: <https://w3id.org/pmd/log/LOG_1000090> (supply chain node)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000090> "supply chain node"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000090> "geospatial location that is the site of some supply chain process")
+EquivalentClasses(<https://w3id.org/pmd/log/LOG_1000090> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0040029> ObjectSomeValuesFrom(obo:BFO_0000196 <https://w3id.org/pmd/log/LOG_1000077>)))
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000090> <https://w3id.org/pmd/co/PMD_0040030>)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000090> ObjectSomeValuesFrom(obo:BFO_0000196 <https://w3id.org/pmd/log/LOG_1000077>))
 
 # Class: <https://w3id.org/pmd/log/LOG_1000091> (business function)
 
@@ -761,6 +813,14 @@ SubClassOf(<https://w3id.org/pmd/log/LOG_1000131> obo:BFO_0000015)
 SubClassOf(<https://w3id.org/pmd/log/LOG_1000131> ObjectIntersectionOf(ObjectSomeValuesFrom(obo:RO_0000057 <https://w3id.org/pmd/log/LOG_1000011>) ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:OBI_0000260 ObjectSomeValuesFrom(obo:RO_0000059 obo:IAO_0000104)))))
 SubClassOf(<https://w3id.org/pmd/log/LOG_1000131> ObjectIntersectionOf(ObjectSomeValuesFrom(obo:RO_0002233 obo:BFO_0000040) ObjectSomeValuesFrom(obo:RO_0002234 ObjectUnionOf(<https://w3id.org/pmd/log/LOG_1000028> <https://w3id.org/pmd/log/LOG_1000029> <https://w3id.org/pmd/log/LOG_1000030>))))
 
+# Class: <https://w3id.org/pmd/log/LOG_1000132> (assembly process)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000132> "assembly process"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000132> "manufacturing process in which a number of material components are physically connected to each other to form an assembly"@en-us)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000132> <https://w3id.org/pmd/co/PMD_0000833>)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000132> <https://w3id.org/pmd/log/LOG_1000131>)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000132> ObjectIntersectionOf(ObjectSomeValuesFrom(obo:RO_0002233 <https://w3id.org/pmd/log/LOG_1000028>) ObjectSomeValuesFrom(obo:RO_0002234 ObjectIntersectionOf(obo:BFO_0000027 ObjectSomeValuesFrom(obo:RO_0002351 ObjectIntersectionOf(<https://w3id.org/pmd/log/LOG_1000028> ObjectSomeValuesFrom(obo:RO_0002352 <https://w3id.org/pmd/log/LOG_1000131>)))))))
+
 # Class: <https://w3id.org/pmd/log/LOG_1000140> (material location change process)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000140> "material location change process"@en)
@@ -773,6 +833,15 @@ SubClassOf(<https://w3id.org/pmd/log/LOG_1000140> ObjectSomeValuesFrom(obo:RO_00
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000143> "transport process"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000143> "material location change process involving the movement of material entities by some piece of transport equipment"@en-us)
 SubClassOf(<https://w3id.org/pmd/log/LOG_1000143> <https://w3id.org/pmd/log/LOG_1000140>)
+
+# Class: <https://w3id.org/pmd/log/LOG_1000146> (physical premises)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/log/LOG_1000146> "physical premises"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/log/LOG_1000146> "object aggregate that has a location at some geospatial site and serves as a physical place of operation for an organization"@en)
+EquivalentClasses(<https://w3id.org/pmd/log/LOG_1000146> ObjectIntersectionOf(obo:BFO_0000027 ObjectSomeValuesFrom(obo:BFO_0000082 <https://w3id.org/pmd/co/PMD_0040029>)))
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000146> obo:BFO_0000027)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000146> <http://www.w3.org/ns/org#Site>)
+SubClassOf(<https://w3id.org/pmd/log/LOG_1000146> ObjectSomeValuesFrom(obo:BFO_0000082 <https://w3id.org/pmd/co/PMD_0040029>))
 
 
 

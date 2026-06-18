@@ -40,9 +40,9 @@
         "val" : "http://purl.obolibrary.org/obo/IAO_8000001"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-05-28"
+        "val" : "2026-06-18"
       } ],
-      "version" : "https://w3id.org/pmd/automatce/releases/2026-05-28/automatce-base.json"
+      "version" : "https://w3id.org/pmd/automatce/releases/2026-06-18/automatce-base.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000001",
@@ -67,6 +67,9 @@
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000031",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000040",
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000145",
@@ -97,6 +100,12 @@
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/OBI_0000835",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0001930",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0001931",
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/OBI_0001933",
@@ -4320,6 +4329,242 @@
         } ]
       }
     }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010358",
+      "lbl" : "bill of materials",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#altLabel",
+          "val" : "BOM"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A plan specification that prescribes the component material entities and the quantities required to manufacture a given product, as exported from a bill-of-materials explosion."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The bill of materials of a belt tensioner assembly listing every required component and its quantity."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010359",
+      "lbl" : "bom position",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#altLabel",
+          "val" : "BOM item"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An information content entity that represents a single position of a bill of materials, relating a parent assembly to a required child component and carrying the item number, required quantity, and alternative-item handling."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "BOM position 0010 requiring one bracket per assembled belt tensioner."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010360",
+      "lbl" : "material master record",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An information content entity that captures the material-master snapshot of a material at a plant, including material type, status, product hierarchy, material group, segment, base quantity, and weights."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The plant-specific material master record of a steering component at plant 1001."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010361",
+      "lbl" : "alternative item group",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An information content entity that groups bill-of-materials positions which are mutually substitutable alternative items, with their usage probabilities, strategy, and ranking order."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "An alternative item group holding two interchangeable fastener variants ranked by usage probability."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010362",
+      "lbl" : "product hierarchy node",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Expected value datatype: xsd:string." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An identifier that denotes a node of the product hierarchy classification assigned to a material."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The product hierarchy code 0846194007 assigned to a belt-tensioner material."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010363",
+      "lbl" : "material group",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Expected value datatype: xsd:string." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An identifier that denotes the material group (commodity class) to which a material belongs."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A material group code grouping all metal stamping parts."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010364",
+      "lbl" : "product segment",
+      "type" : "CLASS",
+      "meta" : {
+        "comments" : [ "Expected value datatype: xsd:string." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An identifier that denotes the functional product segment of a material."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The segment 020000 Belt Tensioner assigned to a material."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010365",
+      "lbl" : "gross mass",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "The gross mass quality of a material entity, i.e. its mass including packaging as recorded in the material master."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The gross mass of 1 kg recorded for a packaged component."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010366",
+      "lbl" : "net mass",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "The net mass quality of a material entity, i.e. the mass of the material itself excluding packaging as recorded in the material master."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "The net mass of 1 kg recorded for an unpackaged component."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010367",
+      "lbl" : "procurement type specification",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A categorical value specification of the procurement type of a material, distinguishing in-house production from external procurement."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A procurement type specification with value E denoting in-house production."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010368",
+      "lbl" : "unit conversion factor",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A scalar value specification giving the conversion factor between a material's base unit and another unit, such as base unit to kilogram."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A unit conversion factor of 1 kg per piece for a component."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010369",
+      "lbl" : "routing operation",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#altLabel",
+          "val" : "production operation"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A manufacturing process step of a production routing, corresponding to one routing operation, that is an occurrent part of the production process chain of a material."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Operation 0010 package performed at a packaging work center."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010370",
+      "lbl" : "work center",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A production resource (machine, station, or capacity group) at which a routing operation is performed."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "An assembly work center that performs the joining operations of a belt tensioner."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010371",
+      "lbl" : "standard value",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A planned process quantity of a routing operation for a given activity type, such as setup time, machine time, or labour time, whose magnitude is given by a scalar value specification."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A machine standard value of 30 seconds for an assembly operation."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010372",
+      "lbl" : "activity type",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A categorical value specification that classifies a standard value of a routing operation, such as machine, labour, or setup."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "An activity type classifying a standard value as labour time."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010373",
+      "lbl" : "routing operation record",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An information content entity that captures the routing/production-plan operation snapshot, including operation number, control key, work center, activity types, and standard values."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "A routing operation record describing operation 0010 with its control key and standard values."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010374",
+      "lbl" : "approved supplier assignment",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#altLabel",
+          "val" : "source list entry"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "An information content entity that represents an entry of an approved-manufacturer or source list, relating a material at a plant to a supplier approved to supply it, together with the nominal flag and required quantity contribution."
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "An approved supplier assignment authorizing supplier SHS to supply a given component."
+        } ]
+      }
+    }, {
       "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030000",
       "lbl" : "melt temperature",
       "type" : "CLASS",
@@ -4428,6 +4673,9 @@
       "id" : "https://w3id.org/pmd/co/PMD_0000777",
       "type" : "CLASS"
     }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000833",
+      "type" : "CLASS"
+    }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000848",
       "type" : "CLASS"
     }, {
@@ -4515,7 +4763,13 @@
       "id" : "https://w3id.org/pmd/log/LOG_1000014",
       "type" : "CLASS"
     }, {
+      "id" : "https://w3id.org/pmd/log/LOG_1000020",
+      "type" : "CLASS"
+    }, {
       "id" : "https://w3id.org/pmd/log/LOG_1000023",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/log/LOG_1000028",
       "type" : "CLASS"
     }, {
       "id" : "https://w3id.org/pmd/log/LOG_1000102",
@@ -4524,7 +4778,15 @@
       "id" : "https://w3id.org/pmd/log/LOG_1000130",
       "type" : "CLASS"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000051",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000136",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000086",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT"
     }, {
@@ -4646,6 +4908,83 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "A relation that links a pressure-volume-temperature data point to its specific volume value specification."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009012",
+      "lbl" : "has bom position",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A relation that links a bill of materials to one of its constituent positions."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009013",
+      "lbl" : "position in assembly",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A relation that links a bom position to the parent assembly material entity it is about, i.e. the superordinate side of the bill-of-materials edge."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009014",
+      "lbl" : "position for component",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A relation that links a bom position to the child component material entity it requires, i.e. the subordinate side of the bill-of-materials edge."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009015",
+      "lbl" : "approved supplier",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A relation that links an approved supplier assignment to the supplier organization it authorizes."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009016",
+      "lbl" : "assignment for material",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A relation that links an approved supplier assignment to the material entity it concerns."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009017",
+      "lbl" : "has standard value",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A relation that links a routing operation to one of its standard values."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009018",
+      "lbl" : "member of alternative group",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "A relation that links a bom position to the alternative item group it belongs to."
         } ]
       }
     }, {
@@ -6951,6 +7290,74 @@
       "pred" : "http://purl.obolibrary.org/obo/IAO_0000136",
       "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010348"
     }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010358",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000104"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010359",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010360",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010361",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010362",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010363",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010364",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010365",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020133"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010366",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020133"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010367",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0001930"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010368",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0001931"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010369",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000833"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010370",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000602"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010371",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010372",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0001930"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010373",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010374",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030000",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000967"
@@ -7650,6 +8057,34 @@
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_1060552",
       "pred" : "type",
       "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009012",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000051"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009013",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000136"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009014",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000136"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009015",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000136"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009016",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000136"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009017",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000086"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009018",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000136"
     } ],
     "domainRangeAxioms" : [ {
       "predicateId" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009001",
@@ -7695,6 +8130,34 @@
       "predicateId" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009011",
       "domainClassIds" : [ "https://w3id.org/pmd/automatce/AUTOMATCE_0010354" ],
       "rangeClassIds" : [ "https://w3id.org/pmd/automatce/AUTOMATCE_0010357" ]
+    }, {
+      "predicateId" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009012",
+      "domainClassIds" : [ "https://w3id.org/pmd/automatce/AUTOMATCE_0010358" ],
+      "rangeClassIds" : [ "https://w3id.org/pmd/automatce/AUTOMATCE_0010359" ]
+    }, {
+      "predicateId" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009013",
+      "domainClassIds" : [ "https://w3id.org/pmd/automatce/AUTOMATCE_0010359" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000040" ]
+    }, {
+      "predicateId" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009014",
+      "domainClassIds" : [ "https://w3id.org/pmd/automatce/AUTOMATCE_0010359" ],
+      "rangeClassIds" : [ "https://w3id.org/pmd/log/LOG_1000028" ]
+    }, {
+      "predicateId" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009015",
+      "domainClassIds" : [ "https://w3id.org/pmd/automatce/AUTOMATCE_0010374" ],
+      "rangeClassIds" : [ "https://w3id.org/pmd/log/LOG_1000020" ]
+    }, {
+      "predicateId" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009016",
+      "domainClassIds" : [ "https://w3id.org/pmd/automatce/AUTOMATCE_0010374" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000040" ]
+    }, {
+      "predicateId" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009017",
+      "domainClassIds" : [ "https://w3id.org/pmd/automatce/AUTOMATCE_0010369" ],
+      "rangeClassIds" : [ "https://w3id.org/pmd/automatce/AUTOMATCE_0010371" ]
+    }, {
+      "predicateId" : "https://w3id.org/pmd/automatce/AUTOMATCE_0009018",
+      "domainClassIds" : [ "https://w3id.org/pmd/automatce/AUTOMATCE_0010359" ],
+      "rangeClassIds" : [ "https://w3id.org/pmd/automatce/AUTOMATCE_0010361" ]
     } ]
   } ]
 }
