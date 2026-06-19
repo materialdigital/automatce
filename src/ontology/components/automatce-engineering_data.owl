@@ -235,8 +235,8 @@ Class: obo:IAO_0000010
 Class: obo:IAO_0000030
 Class: obo:OBI_0001933
 Class: obo:OBI_0001930
-Class: obo:BFO_0000019
-Class: pmd:PMD_0000602
+Class: obo:OBI_0001931
+Class: obo:BFO_0000027
 Class: pmd:PMD_0000833
 Class: pmd:PMD_0000933
 Class: pmd:PMD_0001044
@@ -489,8 +489,8 @@ Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010369>
   Annotations:
     rdfs:label "routing operation"@en,
     skos:altLabel "production operation"@en,
-    skos:definition "A manufacturing process step of a production routing, corresponding to one routing operation, that is an occurrent part of the production process chain of a material."@en,
-    skos:example "Operation 0010 package performed at a packaging work center."@en
+    skos:definition "A manufacturing process that constitutes one step of a production routing and is performed at a work center."@en,
+    skos:example "Operation 0010, the packaging step of a belt tensioner routing."@en
 
   SubClassOf:
     pmd:PMD_0000833
@@ -502,11 +502,11 @@ Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010370>
 
   Annotations:
     rdfs:label "work center"@en,
-    skos:definition "A production resource (machine, station, or capacity group) at which a routing operation is performed."@en,
-    skos:example "An assembly work center that performs the joining operations of a belt tensioner."@en
+    skos:definition "An object aggregate of machines, equipment, or workers that provides production capacity and at which routing operations are performed."@en,
+    skos:example "An assembly work center comprising the machines and operators that join a belt tensioner."@en
 
   SubClassOf:
-    pmd:PMD_0000602
+    obo:BFO_0000027
 
 
 # Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010371> (standard value)
@@ -515,11 +515,11 @@ Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010371>
 
   Annotations:
     rdfs:label "standard value"@en,
-    skos:definition "A planned process quantity of a routing operation for a given activity type, such as setup time, machine time, or labour time, whose magnitude is given by a scalar value specification."@en,
-    skos:example "A machine standard value of 30 seconds for an assembly operation."@en
+    skos:definition "A scalar value specification that states a planned standard quantity of a routing operation for a given activity type, such as a setup, machine, or labour time."@en,
+    skos:example "A planned machine time of thirty seconds for an assembly operation."@en
 
   SubClassOf:
-    obo:BFO_0000019
+    obo:OBI_0001931
 
 
 # Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010372> (activity type)
@@ -528,8 +528,8 @@ Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010372>
 
   Annotations:
     rdfs:label "activity type"@en,
-    skos:definition "A categorical value specification that classifies a standard value of a routing operation, such as machine, labour, or setup."@en,
-    skos:example "An activity type classifying a standard value as labour time."@en
+    skos:definition "A categorical value specification that classifies a standard value of a routing operation by the kind of activity it quantifies, such as machine, labour, or setup."@en,
+    skos:example "An activity type that classifies a standard value as labour time."@en
 
   SubClassOf:
     obo:OBI_0001930
@@ -541,8 +541,8 @@ Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010373>
 
   Annotations:
     rdfs:label "routing operation record"@en,
-    skos:definition "An information content entity that captures the routing/production-plan operation snapshot, including operation number, control key, work center, activity types, and standard values."@en,
-    skos:example "A routing operation record describing operation 0010 with its control key and standard values."@en
+    skos:definition "An information content entity that is about a routing operation and records its operation number, control key, and work center."@en,
+    skos:example "The routing record of operation 0010 with its control key and standard values."@en
 
   SubClassOf:
     obo:IAO_0000030

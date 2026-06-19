@@ -46,18 +46,6 @@ ObjectProperty: obo:RO_0002502
     skos:definition "A relation between an entity and another entity on which it depends."@en
 
 
-ObjectProperty: obo:BFO_0000082
-
-  Annotations:
-    rdfs:label "located in"@en
-
-
-ObjectProperty: obo:BFO_0000183
-
-  Annotations:
-    rdfs:label "environs"@en
-
-
 Class: obo:BFO_0000023
 
 Class: obo:BFO_0000029
@@ -93,17 +81,6 @@ Class: pmd:PMD_0000852
   SubClassOf:
     Annotations: rdfs:comment "Bridge axiom retained for asserted hierarchy display in release artifacts."@en
     pmd:PMD_0000000
-
-
-Class: pmd:PMD_0040030
-
-  Annotations:
-    rdfs:comment "Bridge axiom for the PMD class stub referenced by the LOG import."@en,
-    rdfs:label "geospatial location"@en,
-    skos:definition "A site whose location is specified by geospatial, address, or administrative location information."@en
-
-  SubClassOf:
-    obo:BFO_0000029
 
 
 Class: pmd:PMD_0040129
