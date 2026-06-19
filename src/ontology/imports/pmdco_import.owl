@@ -15,9 +15,9 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<https://w3id.org/pmd/automatce/imports/pmdco_import.owl>
-<https://w3id.org/pmd/automatce/releases/2026-06-18/imports/pmdco_import.owl>
+<https://w3id.org/pmd/automatce/releases/2026-06-19/imports/pmdco_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/pmd/co/3.0.0>)
-Annotation(owl:versionInfo "2026-06-18")
+Annotation(owl:versionInfo "2026-06-19")
 
 Declaration(Class(obo:BFO_0000001))
 Declaration(Class(obo:BFO_0000002))
