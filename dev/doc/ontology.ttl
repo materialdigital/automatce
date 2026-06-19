@@ -7,7 +7,7 @@
 @base <https://w3id.org/pmd/automatce/automatce-full.owl#> .
 
 <https://w3id.org/pmd/automatce/automatce-full.owl> rdf:type owl:Ontology ;
-                                                     owl:versionIRI <https://w3id.org/pmd/automatce/releases/2026-06-18/automatce-full.owl> ;
+                                                     owl:versionIRI <https://w3id.org/pmd/automatce/releases/2026-06-19/automatce-full.owl> ;
                                                      <http://purl.org/dc/elements/1.1/contributor> <https://orcid.org/0000-0003-0473-0070> ,
                                                                                                    <https://orcid.org/0000-0003-0744-8855> ,
                                                                                                    <https://orcid.org/0009-0003-1503-4422> ,
@@ -19,7 +19,7 @@
                                                      <http://purl.org/dc/elements/1.1/description> "Application ontology for automotive circular-economy product, material, sustainability, usage, dismantling, engineering and transactional data aligned to PMDCore and BFO 2020." ;
                                                      <http://purl.org/dc/elements/1.1/license> <https://w3id.org/pmd/automatce.owl#CC-BY-4.0> ;
                                                      <http://purl.org/dc/elements/1.1/title> "Automotive Circular Economy Ontology" ;
-                                                     owl:versionInfo "2026-06-18" .
+                                                     owl:versionInfo "2026-06-19" .
 
 #################################################################
 #    Annotation properties
@@ -192,7 +192,6 @@ rdfs:Literal rdf:type rdfs:Datatype .
 
 ###  http://purl.obolibrary.org/obo/BFO_0000066
 <http://purl.obolibrary.org/obo/BFO_0000066> rdf:type owl:ObjectProperty ;
-                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000183> ;
                                              rdfs:domain [ rdf:type owl:Class ;
                                                            owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
                                                                          <http://purl.obolibrary.org/obo/BFO_0000035>
@@ -206,11 +205,6 @@ rdfs:Literal rdf:type rdfs:Datatype .
                                              rdfs:label "occurs in"@en ;
                                              <http://www.w3.org/2004/02/skos/core#definition> "b occurs in c =Def b is a process or a process boundary & c is a material entity or site & there exists a spatiotemporal region r & b occupies spatiotemporal region r & for all time t, if b exists at t then c exists at t & there exist spatial regions s and s' where b spatially projects onto s at t & c occupies spatial region s' at t & s is a continuant part of s' at t"@en ;
                                              <http://www.w3.org/2004/02/skos/core#example> "A process of digestion occurs in the interior of an organism; a process of loading artillery rounds into a tank cannon occurs in the interior of the tank"@en .
-
-
-###  http://purl.obolibrary.org/obo/BFO_0000082
-<http://purl.obolibrary.org/obo/BFO_0000082> rdf:type owl:ObjectProperty ;
-                                             rdfs:label "located in"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000108
@@ -250,23 +244,6 @@ rdfs:Literal rdf:type rdfs:Datatype .
    owl:annotatedTarget <http://purl.obolibrary.org/obo/BFO_0000050> ;
    rdfs:comment "\"occurrent part of\" is not a BFO2020 temporalized relation. It just restricts the domain and range to \"occurrent\". That's why is should be OK to make it sub property of RO \"part of\""
  ] .
-
-
-###  http://purl.obolibrary.org/obo/BFO_0000183
-<http://purl.obolibrary.org/obo/BFO_0000183> rdf:type owl:ObjectProperty ;
-                                             rdfs:domain [ rdf:type owl:Class ;
-                                                           owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000029>
-                                                                         <http://purl.obolibrary.org/obo/BFO_0000040>
-                                                                       )
-                                                         ] ;
-                                             rdfs:range [ rdf:type owl:Class ;
-                                                          owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
-                                                                        <http://purl.obolibrary.org/obo/BFO_0000035>
-                                                                      )
-                                                        ] ;
-                                             rdfs:label "environs"@en ;
-                                             <http://www.w3.org/2004/02/skos/core#definition> "b environs c =Def c occurs in b"@en ;
-                                             <http://www.w3.org/2004/02/skos/core#example> "Mouth environs process of mastication; city environs traffic"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000196
@@ -787,69 +764,6 @@ rdfs:Literal rdf:type rdfs:Datatype .
                                                    rdfs:range <https://w3id.org/pmd/automatce/AUTOMATCE_0010357> ;
                                                    rdfs:label "has pressure-volume-temperature specific volume datum"@en ;
                                                    <http://www.w3.org/2004/02/skos/core#definition> "A relation that links a pressure-volume-temperature data point to its specific volume value specification."@en .
-
-
-###  https://w3id.org/pmd/automatce/AUTOMATCE_0009012
-<https://w3id.org/pmd/automatce/AUTOMATCE_0009012> rdf:type owl:ObjectProperty ;
-                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ;
-                                                   rdfs:domain <https://w3id.org/pmd/automatce/AUTOMATCE_0010358> ;
-                                                   rdfs:range <https://w3id.org/pmd/automatce/AUTOMATCE_0010359> ;
-                                                   rdfs:label "has bom position"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "A relation that links a bill of materials to one of its constituent positions."@en .
-
-
-###  https://w3id.org/pmd/automatce/AUTOMATCE_0009013
-<https://w3id.org/pmd/automatce/AUTOMATCE_0009013> rdf:type owl:ObjectProperty ;
-                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                                   rdfs:domain <https://w3id.org/pmd/automatce/AUTOMATCE_0010359> ;
-                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000040> ;
-                                                   rdfs:label "position in assembly"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "A relation that links a bom position to the parent assembly material entity it is about, i.e. the superordinate side of the bill-of-materials edge."@en .
-
-
-###  https://w3id.org/pmd/automatce/AUTOMATCE_0009014
-<https://w3id.org/pmd/automatce/AUTOMATCE_0009014> rdf:type owl:ObjectProperty ;
-                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                                   rdfs:domain <https://w3id.org/pmd/automatce/AUTOMATCE_0010359> ;
-                                                   rdfs:range <https://w3id.org/pmd/log/LOG_1000028> ;
-                                                   rdfs:label "position for component"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "A relation that links a bom position to the child component material entity it requires, i.e. the subordinate side of the bill-of-materials edge."@en .
-
-
-###  https://w3id.org/pmd/automatce/AUTOMATCE_0009015
-<https://w3id.org/pmd/automatce/AUTOMATCE_0009015> rdf:type owl:ObjectProperty ;
-                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                                   rdfs:domain <https://w3id.org/pmd/automatce/AUTOMATCE_0010374> ;
-                                                   rdfs:range <https://w3id.org/pmd/log/LOG_1000020> ;
-                                                   rdfs:label "approved supplier"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "A relation that links an approved supplier assignment to the supplier organization it authorizes."@en .
-
-
-###  https://w3id.org/pmd/automatce/AUTOMATCE_0009016
-<https://w3id.org/pmd/automatce/AUTOMATCE_0009016> rdf:type owl:ObjectProperty ;
-                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                                   rdfs:domain <https://w3id.org/pmd/automatce/AUTOMATCE_0010374> ;
-                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000040> ;
-                                                   rdfs:label "assignment for material"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "A relation that links an approved supplier assignment to the material entity it concerns."@en .
-
-
-###  https://w3id.org/pmd/automatce/AUTOMATCE_0009017
-<https://w3id.org/pmd/automatce/AUTOMATCE_0009017> rdf:type owl:ObjectProperty ;
-                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0000086> ;
-                                                   rdfs:domain <https://w3id.org/pmd/automatce/AUTOMATCE_0010369> ;
-                                                   rdfs:range <https://w3id.org/pmd/automatce/AUTOMATCE_0010371> ;
-                                                   rdfs:label "has standard value"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "A relation that links a routing operation to one of its standard values."@en .
-
-
-###  https://w3id.org/pmd/automatce/AUTOMATCE_0009018
-<https://w3id.org/pmd/automatce/AUTOMATCE_0009018> rdf:type owl:ObjectProperty ;
-                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                                   rdfs:domain <https://w3id.org/pmd/automatce/AUTOMATCE_0010359> ;
-                                                   rdfs:range <https://w3id.org/pmd/automatce/AUTOMATCE_0010361> ;
-                                                   rdfs:label "member of alternative group"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "A relation that links a bom position to the alternative item group it belongs to."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000004
@@ -1700,10 +1614,6 @@ Request that IAO either clarify these or change definitions not to use them"""@e
 <http://www.w3.org/ns/org#FormalOrganization> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000245> ;
                                               rdfs:label "formal organization"@en .
-
-
-###  http://www.w3.org/ns/org#Site
-<http://www.w3.org/ns/org#Site> rdf:type owl:Class .
 
 
 ###  http://xmlns.com/foaf/0.1/Person
@@ -4247,8 +4157,8 @@ Request that IAO either clarify these or change definitions not to use them"""@e
                                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> ;
                                                    rdfs:label "bill of materials"@en ;
                                                    <http://www.w3.org/2004/02/skos/core#altLabel> "BOM"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "A plan specification that prescribes the component material entities and the quantities required to manufacture a given product, as exported from a bill-of-materials explosion."@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#example> "The bill of materials of a belt tensioner assembly listing every required component and its quantity."@en .
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A plan specification that prescribes the material components and the quantities required to manufacture a product."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "The bill of materials of a belt tensioner, listing each required component and its quantity."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010359
@@ -4256,24 +4166,24 @@ Request that IAO either clarify these or change definitions not to use them"""@e
                                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
                                                    rdfs:label "bom position"@en ;
                                                    <http://www.w3.org/2004/02/skos/core#altLabel> "BOM item"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that represents a single position of a bill of materials, relating a parent assembly to a required child component and carrying the item number, required quantity, and alternative-item handling."@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#example> "BOM position 0010 requiring one bracket per assembled belt tensioner."@en .
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that is about a required component of an assembly and states the quantity and item number of that requirement."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "Position 0010 of a belt tensioner bill of materials, requiring one bracket."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010360
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010360> rdf:type owl:Class ;
                                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
                                                    rdfs:label "material master record"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that captures the material-master snapshot of a material at a plant, including material type, status, product hierarchy, material group, segment, base quantity, and weights."@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#example> "The plant-specific material master record of a steering component at plant 1001."@en .
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that is about a material at a plant and records its type, status, classification, base quantity, and weights."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "The plant 1001 master record of a steering component."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010361
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010361> rdf:type owl:Class ;
                                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
                                                    rdfs:label "alternative item group"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that groups bill-of-materials positions which are mutually substitutable alternative items, with their usage probabilities, strategy, and ranking order."@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#example> "An alternative item group holding two interchangeable fastener variants ranked by usage probability."@en .
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that groups the bill of materials positions which may substitute for one another to satisfy a single component requirement."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "A group holding two interchangeable fasteners ranked by usage probability."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010362
@@ -4281,8 +4191,8 @@ Request that IAO either clarify these or change definitions not to use them"""@e
                                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020000> ;
                                                    rdfs:comment "Expected value datatype: xsd:string."@en ;
                                                    rdfs:label "product hierarchy node"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "An identifier that denotes a node of the product hierarchy classification assigned to a material."@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#example> "The product hierarchy code 0846194007 assigned to a belt-tensioner material."@en .
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An identifier that denotes the product hierarchy class to which a material is assigned."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "The product hierarchy code 0846194007 of a belt tensioner."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010363
@@ -4290,8 +4200,8 @@ Request that IAO either clarify these or change definitions not to use them"""@e
                                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020000> ;
                                                    rdfs:comment "Expected value datatype: xsd:string."@en ;
                                                    rdfs:label "material group"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "An identifier that denotes the material group (commodity class) to which a material belongs."@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#example> "A material group code grouping all metal stamping parts."@en .
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An identifier that denotes the material group, or commodity class, to which a material belongs."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "A material group code grouping metal stamping parts."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010364
@@ -4300,39 +4210,39 @@ Request that IAO either clarify these or change definitions not to use them"""@e
                                                    rdfs:comment "Expected value datatype: xsd:string."@en ;
                                                    rdfs:label "product segment"@en ;
                                                    <http://www.w3.org/2004/02/skos/core#definition> "An identifier that denotes the functional product segment of a material."@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#example> "The segment 020000 Belt Tensioner assigned to a material."@en .
+                                                   <http://www.w3.org/2004/02/skos/core#example> "The segment 020000 Belt Tensioner of a material."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010365
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010365> rdf:type owl:Class ;
                                                    rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020133> ;
                                                    rdfs:label "gross mass"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "The gross mass quality of a material entity, i.e. its mass including packaging as recorded in the material master."@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#example> "The gross mass of 1 kg recorded for a packaged component."@en .
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A mass of a material entity that includes the mass of its packaging."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "The gross mass of one packaged component."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010366
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010366> rdf:type owl:Class ;
                                                    rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020133> ;
                                                    rdfs:label "net mass"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "The net mass quality of a material entity, i.e. the mass of the material itself excluding packaging as recorded in the material master."@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#example> "The net mass of 1 kg recorded for an unpackaged component."@en .
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A mass of a material entity that excludes the mass of its packaging."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "The net mass of one unpackaged component."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010367
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010367> rdf:type owl:Class ;
                                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0001930> ;
                                                    rdfs:label "procurement type specification"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "A categorical value specification of the procurement type of a material, distinguishing in-house production from external procurement."@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#example> "A procurement type specification with value E denoting in-house production."@en .
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A categorical value specification that states whether a material is produced in-house or procured externally."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "A procurement type whose value E denotes in-house production."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010368
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010368> rdf:type owl:Class ;
                                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0001931> ;
                                                    rdfs:label "unit conversion factor"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "A scalar value specification giving the conversion factor between a material's base unit and another unit, such as base unit to kilogram."@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#example> "A unit conversion factor of 1 kg per piece for a component."@en .
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A scalar value specification that states the factor for converting a quantity of a material from its base unit to another unit."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "A factor of one kilogram per piece for a component."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010369
@@ -4340,40 +4250,40 @@ Request that IAO either clarify these or change definitions not to use them"""@e
                                                    rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000833> ;
                                                    rdfs:label "routing operation"@en ;
                                                    <http://www.w3.org/2004/02/skos/core#altLabel> "production operation"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "A manufacturing process step of a production routing, corresponding to one routing operation, that is an occurrent part of the production process chain of a material."@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#example> "Operation 0010 package performed at a packaging work center."@en .
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A manufacturing process that constitutes one step of a production routing and is performed at a work center."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "Operation 0010, the packaging step of a belt tensioner routing."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010370
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010370> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000027> ;
                                                    rdfs:label "work center"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "A production resource (machine, station, or capacity group) at which a routing operation is performed."@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#example> "An assembly work center that performs the joining operations of a belt tensioner."@en .
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An object aggregate of machines, equipment, or workers that provides production capacity and at which routing operations are performed."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "An assembly work center comprising the machines and operators that join a belt tensioner."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010371
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010371> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0001931> ;
                                                    rdfs:label "standard value"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "A planned process quantity of a routing operation for a given activity type, such as setup time, machine time, or labour time, whose magnitude is given by a scalar value specification."@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#example> "A machine standard value of 30 seconds for an assembly operation."@en .
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A scalar value specification that states a planned standard quantity of a routing operation for a given activity type, such as a setup, machine, or labour time."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "A planned machine time of thirty seconds for an assembly operation."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010372
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010372> rdf:type owl:Class ;
                                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0001930> ;
                                                    rdfs:label "activity type"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "A categorical value specification that classifies a standard value of a routing operation, such as machine, labour, or setup."@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#example> "An activity type classifying a standard value as labour time."@en .
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A categorical value specification that classifies a standard value of a routing operation by the kind of activity it quantifies, such as machine, labour, or setup."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "An activity type that classifies a standard value as labour time."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010373
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010373> rdf:type owl:Class ;
                                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
                                                    rdfs:label "routing operation record"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that captures the routing/production-plan operation snapshot, including operation number, control key, work center, activity types, and standard values."@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#example> "A routing operation record describing operation 0010 with its control key and standard values."@en .
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that is about a routing operation and records its operation number, control key, and work center."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "The routing record of operation 0010 with its control key and standard values."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010374
@@ -4381,8 +4291,8 @@ Request that IAO either clarify these or change definitions not to use them"""@e
                                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
                                                    rdfs:label "approved supplier assignment"@en ;
                                                    <http://www.w3.org/2004/02/skos/core#altLabel> "source list entry"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that represents an entry of an approved-manufacturer or source list, relating a material at a plant to a supplier approved to supply it, together with the nominal flag and required quantity contribution."@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#example> "An approved supplier assignment authorizing supplier SHS to supply a given component."@en .
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that is about a material and a supplier and records that the supplier is approved to provide that material."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "A source list entry recording that supplier SHS is approved to provide a component."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0030000
@@ -4517,7 +4427,7 @@ granularity. At these coarser levels, the individual molecules cannot be differe
                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000054> ;
                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000950>
                                                       ] ,
-                                                      _:genid167 ;
+                                                      _:genid161 ;
                                       rdfs:comment """A property is a material trait in terms of the kind and magnitude of response to a specific imposed stimulus. Generally, definitions of properties are made independent of material shape and size.
 (Callister, W.D., Rethwisch, D.G., Materials Science and Engineering, Wiley, 2014)
 
@@ -4529,7 +4439,7 @@ Extensive properties that depend on the object being tested rather than on the p
                                       rdfs:label "material property"@en ;
                                       <http://www.w3.org/2004/02/skos/core#definition> "a disposition of a portion of matter that is realized in a compatible process and whose realization is grounded in the portions intensive qualities"@en .
 
-_:genid167 rdf:type owl:Restriction ;
+_:genid161 rdf:type owl:Restriction ;
             owl:onProperty <http://purl.obolibrary.org/obo/RO_0000052> ;
             owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0000001>
                                                       [ rdf:type owl:Restriction ;
@@ -4543,7 +4453,7 @@ _:genid167 rdf:type owl:Restriction ;
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <https://w3id.org/pmd/co/PMD_0000005> ;
    owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget _:genid167 ;
+   owl:annotatedTarget _:genid161 ;
    rdfs:comment "Due to the duality of object and portion of matter this axiom can not be an equivalent class axiom."@en
  ] .
 
@@ -5452,20 +5362,20 @@ The molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 202
 ###  https://w3id.org/pmd/co/PMD_0020131
 <https://w3id.org/pmd/co/PMD_0020131> rdf:type owl:Class ;
                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ,
-                                                      _:genid334 ;
+                                                      _:genid328 ;
                                       owl:disjointWith <https://w3id.org/pmd/co/PMD_0020148> ;
                                       rdfs:label "intensive quality"@en ;
                                       <http://www.w3.org/2004/02/skos/core#altLabel> "Point property"@en ;
                                       <http://www.w3.org/2004/02/skos/core#definition> "An intensive quality is a quality that inheres in only portion of matter and thus is independent of the bearers (system-) size."@en .
 
-_:genid334 rdf:type owl:Restriction ;
+_:genid328 rdf:type owl:Restriction ;
             owl:onProperty <http://purl.obolibrary.org/obo/RO_0000080> ;
             owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000001> .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <https://w3id.org/pmd/co/PMD_0020131> ;
    owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget _:genid334 ;
+   owl:annotatedTarget _:genid328 ;
    rdfs:comment "Due to the duality of object and portion of matter this axiom can not be an equivalent class axiom."@en
  ] .
 
@@ -5657,18 +5567,6 @@ _:genid334 rdf:type owl:Restriction ;
                                       rdfs:label "length"@en ;
                                       <http://www.w3.org/2004/02/skos/core#altLabel> "dimension"@en ;
                                       <http://www.w3.org/2004/02/skos/core#definition> "Length is a one dimensional size."@en .
-
-
-###  https://w3id.org/pmd/co/PMD_0040029
-<https://w3id.org/pmd/co/PMD_0040029> rdf:type owl:Class .
-
-
-###  https://w3id.org/pmd/co/PMD_0040030
-<https://w3id.org/pmd/co/PMD_0040030> rdf:type owl:Class ;
-                                      rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000029> ;
-                                      rdfs:comment "Bridge axiom for the PMD class stub referenced by the LOG import."@en ;
-                                      rdfs:label "geospatial location"@en ;
-                                      <http://www.w3.org/2004/02/skos/core#definition> "A site whose location is specified by geospatial, address, or administrative location information."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0040129
@@ -5991,22 +5889,6 @@ _:genid334 rdf:type owl:Restriction ;
 
 ###  https://w3id.org/pmd/log/LOG_1000009
 <https://w3id.org/pmd/log/LOG_1000009> rdf:type owl:Class ;
-                                       owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/log/LOG_1000008>
-                                                                                  [ rdf:type owl:Class ;
-                                                                                    owl:unionOf ( <https://w3id.org/pmd/co/PMD_0040030>
-                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                    owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000219> ;
-                                                                                                    owl:someValuesFrom <http://purl.obolibrary.org/obo/OBI_0000245>
-                                                                                                  ]
-                                                                                                )
-                                                                                  ]
-                                                                                  [ rdf:type owl:Restriction ;
-                                                                                    owl:onProperty <https://w3id.org/pmd/co/PMD_0000004> ;
-                                                                                    owl:hasValue <https://w3id.org/pmd/co/PMD_0040128>
-                                                                                  ]
-                                                                                ) ;
-                                                             rdf:type owl:Class
-                                                           ] ;
                                        rdfs:subClassOf <https://w3id.org/pmd/log/LOG_1000008> ;
                                        rdfs:label "global location number"@en ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "identifer that uniquely identifies a business organization or a geospatial location and complies with GS1 GLN coding scheme"@en-us .
@@ -6331,13 +6213,6 @@ _:genid334 rdf:type owl:Restriction ;
                                                        ] ;
                                        rdfs:label "material resource"@en ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "material entity which has the material resource role"@en-us .
-
-
-###  https://w3id.org/pmd/log/LOG_1000032
-<https://w3id.org/pmd/log/LOG_1000032> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/log/LOG_1000146> ;
-                                       rdfs:label "facility"@en ;
-                                       <http://www.w3.org/2004/02/skos/core#definition> "engineered system that consists of buildings, structures, roads, machines, and equipment desgined to provide certain capabilities"@en-us .
 
 
 ###  https://w3id.org/pmd/log/LOG_1000038
@@ -7014,33 +6889,7 @@ _:genid334 rdf:type owl:Restriction ;
 
 ###  https://w3id.org/pmd/log/LOG_1000077
 <https://w3id.org/pmd/log/LOG_1000077> rdf:type owl:Class ;
-                                       owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/log/LOG_1000085>
-                                                                                  [ rdf:type owl:Restriction ;
-                                                                                    owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000197> ;
-                                                                                    owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0040029>
-                                                                                                                              [ rdf:type owl:Restriction ;
-                                                                                                                                owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000183> ;
-                                                                                                                                owl:someValuesFrom <https://w3id.org/pmd/log/LOG_10001247>
-                                                                                                                              ]
-                                                                                                                            ) ;
-                                                                                                         rdf:type owl:Class
-                                                                                                       ]
-                                                                                  ]
-                                                                                ) ;
-                                                             rdf:type owl:Class
-                                                           ] ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/log/LOG_1000085> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000197> ;
-                                                         owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0040029>
-                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                     owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000183> ;
-                                                                                                     owl:someValuesFrom <https://w3id.org/pmd/log/LOG_10001247>
-                                                                                                   ]
-                                                                                                 ) ;
-                                                                              rdf:type owl:Class
-                                                                            ]
-                                                       ] ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/log/LOG_1000085> ;
                                        rdfs:label "supply chain node role"@en ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "location role held by a geospatial site when it is the site some supply chain process" .
 
@@ -7186,69 +7035,9 @@ _:genid334 rdf:type owl:Restriction ;
 
 ###  https://w3id.org/pmd/log/LOG_1000085
 <https://w3id.org/pmd/log/LOG_1000085> rdf:type owl:Class ;
-                                       owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000023>
-                                                                                  [ rdf:type owl:Restriction ;
-                                                                                    owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000197> ;
-                                                                                    owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0040029>
-                                                                                                                              [ rdf:type owl:Class ;
-                                                                                                                                owl:unionOf ( [ rdf:type owl:Restriction ;
-                                                                                                                                                owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000183> ;
-                                                                                                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
-                                                                                                                                              ]
-                                                                                                                                              [ rdf:type owl:Restriction ;
-                                                                                                                                                owl:onProperty <http://purl.obolibrary.org/obo/RO_0001015> ;
-                                                                                                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000040>
-                                                                                                                                              ]
-                                                                                                                                            )
-                                                                                                                              ]
-                                                                                                                            ) ;
-                                                                                                         rdf:type owl:Class
-                                                                                                       ]
-                                                                                  ]
-                                                                                ) ;
-                                                             rdf:type owl:Class
-                                                           ] ;
-                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000197> ;
-                                                         owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0040029>
-                                                                                                   [ rdf:type owl:Class ;
-                                                                                                     owl:unionOf ( [ rdf:type owl:Restriction ;
-                                                                                                                     owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000183> ;
-                                                                                                                     owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
-                                                                                                                   ]
-                                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                                     owl:onProperty <http://purl.obolibrary.org/obo/RO_0001015> ;
-                                                                                                                     owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000040>
-                                                                                                                   ]
-                                                                                                                 )
-                                                                                                   ]
-                                                                                                 ) ;
-                                                                              rdf:type owl:Class
-                                                                            ]
-                                                       ] ;
+                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
                                        rdfs:label "location role"@en ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "role held by a geospatial site when it is the location of some material entity at some time or the site of some process"@en-us .
-
-
-###  https://w3id.org/pmd/log/LOG_1000090
-<https://w3id.org/pmd/log/LOG_1000090> rdf:type owl:Class ;
-                                       owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0040029>
-                                                                                  [ rdf:type owl:Restriction ;
-                                                                                    owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000196> ;
-                                                                                    owl:someValuesFrom <https://w3id.org/pmd/log/LOG_1000077>
-                                                                                  ]
-                                                                                ) ;
-                                                             rdf:type owl:Class
-                                                           ] ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0040029> ,
-                                                       <https://w3id.org/pmd/co/PMD_0040030> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000196> ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/log/LOG_1000077>
-                                                       ] ;
-                                       rdfs:label "supply chain node"@en ;
-                                       <http://www.w3.org/2004/02/skos/core#definition> "geospatial location that is the site of some supply chain process" .
 
 
 ###  https://w3id.org/pmd/log/LOG_1000091
@@ -7701,26 +7490,6 @@ _:genid334 rdf:type owl:Restriction ;
                                        rdfs:subClassOf <https://w3id.org/pmd/log/LOG_1000140> ;
                                        rdfs:label "transport process"@en ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "material location change process involving the movement of material entities by some piece of transport equipment"@en-us .
-
-
-###  https://w3id.org/pmd/log/LOG_1000146
-<https://w3id.org/pmd/log/LOG_1000146> rdf:type owl:Class ;
-                                       owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000027>
-                                                                                  [ rdf:type owl:Restriction ;
-                                                                                    owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000082> ;
-                                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0040029>
-                                                                                  ]
-                                                                                ) ;
-                                                             rdf:type owl:Class
-                                                           ] ;
-                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000027> ,
-                                                       <http://www.w3.org/ns/org#Site> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000082> ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0040029>
-                                                       ] ;
-                                       rdfs:label "physical premises"@en ;
-                                       <http://www.w3.org/2004/02/skos/core#definition> "object aggregate that has a location at some geospatial site and serves as a physical place of operation for an organization"@en .
 
 
 #################################################################
