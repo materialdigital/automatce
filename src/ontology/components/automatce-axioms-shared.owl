@@ -25,18 +25,9 @@ AnnotationProperty: rdfs:label
 AnnotationProperty: skos:definition
 
 Class: obo:BFO_0000001
-Class: obo:BFO_0000040
 Class: obo:IAO_0020000
 Class: pmd:PMD_0025001
 Class: log:LOG_1000023
-Class: log:LOG_1000020
-Class: log:LOG_1000028
-Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010358>
-Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010359>
-Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010361>
-Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010369>
-Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010371>
-Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010374>
 Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010143>
 Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010210>
 Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010246>
@@ -47,10 +38,6 @@ Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010354>
 Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010355>
 Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010356>
 Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010357>
-
-ObjectProperty: obo:BFO_0000051
-ObjectProperty: obo:IAO_0000136
-ObjectProperty: obo:RO_0000086
 
 ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009001>
 
@@ -193,134 +180,3 @@ ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009011>
 
   Range:
     <https://w3id.org/pmd/automatce/AUTOMATCE_0010357>
-
-
-# ============================================================================
-# EDCar BOM mapping additions (object properties)
-# ============================================================================
-
-# ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009012> (has bom position)
-
-ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009012>
-
-  Annotations:
-    rdfs:label "has bom position"@en,
-    skos:definition "A relation that links a bill of materials to one of its constituent positions."@en
-
-  Domain:
-    <https://w3id.org/pmd/automatce/AUTOMATCE_0010358>
-
-  Range:
-    <https://w3id.org/pmd/automatce/AUTOMATCE_0010359>
-
-  SubPropertyOf:
-    obo:BFO_0000051
-
-
-# ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009013> (position in assembly)
-
-ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009013>
-
-  Annotations:
-    rdfs:label "position in assembly"@en,
-    skos:definition "A relation that links a bom position to the parent assembly material entity it is about, i.e. the superordinate side of the bill-of-materials edge."@en
-
-  Domain:
-    <https://w3id.org/pmd/automatce/AUTOMATCE_0010359>
-
-  Range:
-    obo:BFO_0000040
-
-  SubPropertyOf:
-    obo:IAO_0000136
-
-
-# ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009014> (position for component)
-
-ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009014>
-
-  Annotations:
-    rdfs:label "position for component"@en,
-    skos:definition "A relation that links a bom position to the child component material entity it requires, i.e. the subordinate side of the bill-of-materials edge."@en
-
-  Domain:
-    <https://w3id.org/pmd/automatce/AUTOMATCE_0010359>
-
-  Range:
-    log:LOG_1000028
-
-  SubPropertyOf:
-    obo:IAO_0000136
-
-
-# ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009015> (approved supplier)
-
-ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009015>
-
-  Annotations:
-    rdfs:label "approved supplier"@en,
-    skos:definition "A relation that links an approved supplier assignment to the supplier organization it authorizes."@en
-
-  Domain:
-    <https://w3id.org/pmd/automatce/AUTOMATCE_0010374>
-
-  Range:
-    log:LOG_1000020
-
-  SubPropertyOf:
-    obo:IAO_0000136
-
-
-# ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009016> (assignment for material)
-
-ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009016>
-
-  Annotations:
-    rdfs:label "assignment for material"@en,
-    skos:definition "A relation that links an approved supplier assignment to the material entity it concerns."@en
-
-  Domain:
-    <https://w3id.org/pmd/automatce/AUTOMATCE_0010374>
-
-  Range:
-    obo:BFO_0000040
-
-  SubPropertyOf:
-    obo:IAO_0000136
-
-
-# ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009017> (has standard value)
-
-ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009017>
-
-  Annotations:
-    rdfs:label "has standard value"@en,
-    skos:definition "A relation that links a routing operation to one of its standard values."@en
-
-  Domain:
-    <https://w3id.org/pmd/automatce/AUTOMATCE_0010369>
-
-  Range:
-    <https://w3id.org/pmd/automatce/AUTOMATCE_0010371>
-
-  SubPropertyOf:
-    obo:RO_0000086
-
-
-# ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009018> (member of alternative group)
-
-ObjectProperty: <https://w3id.org/pmd/automatce/AUTOMATCE_0009018>
-
-  Annotations:
-    rdfs:label "member of alternative group"@en,
-    skos:definition "A relation that links a bom position to the alternative item group it belongs to."@en
-
-  Domain:
-    <https://w3id.org/pmd/automatce/AUTOMATCE_0010359>
-
-  Range:
-    <https://w3id.org/pmd/automatce/AUTOMATCE_0010361>
-
-  SubPropertyOf:
-    obo:IAO_0000136
-

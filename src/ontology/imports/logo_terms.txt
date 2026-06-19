@@ -27,6 +27,3 @@ https://w3id.org/pmd/log/LOG_1000029 #material product
 https://w3id.org/pmd/log/LOG_1000063 #supplier role
 https://w3id.org/pmd/log/LOG_1000105 #material component role
 https://w3id.org/pmd/log/LOG_1000123 #product production process
-https://w3id.org/pmd/log/LOG_1000132 #assembly process
-https://w3id.org/pmd/log/LOG_1000032 #facility
-https://w3id.org/pmd/log/LOG_1000004 #purchase order

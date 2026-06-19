@@ -488,8 +488,8 @@ Class: <https://w3id.org/pmd/automatce/AUTOMATCE_0010374>
   Annotations:
     rdfs:label "approved supplier assignment"@en,
     skos:altLabel "source list entry"@en,
-    skos:definition "An information content entity that represents an entry of an approved-manufacturer or source list, relating a material at a plant to a supplier approved to supply it, together with the nominal flag and required quantity contribution."@en,
-    skos:example "An approved supplier assignment authorizing supplier SHS to supply a given component."@en
+    skos:definition "An information content entity that is about a material and a supplier and records that the supplier is approved to provide that material."@en,
+    skos:example "A source list entry recording that supplier SHS is approved to provide a component."@en
 
   SubClassOf:
     obo:IAO_0000030
