@@ -16,7 +16,7 @@
      xmlns:void="http://rdfs.org/ns/void#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/automatce/automatce-base.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/automatce/releases/2026-06-19/automatce-base.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/automatce/releases/2026-11-02/automatce-base.owl"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <dc:contributor rdf:resource="https://orcid.org/0000-0003-0473-0070"/>
         <dc:contributor rdf:resource="https://orcid.org/0000-0003-0744-8855"/>
@@ -29,7 +29,7 @@
         <dc:description>Application ontology for automotive circular-economy product, material, sustainability, usage, dismantling, engineering and transactional data aligned to PMDCore and BFO 2020.</dc:description>
         <dc:license rdf:resource="https://w3id.org/pmd/automatce.owl#CC-BY-4.0"/>
         <dc:title>Automotive Circular Economy Ontology</dc:title>
-        <owl:versionInfo>2026-06-19</owl:versionInfo>
+        <owl:versionInfo>2026-11-02</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -293,6 +293,12 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000017"/>
     
 
 
@@ -895,7 +901,7 @@
     <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010020 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010020">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
         <rdfs:label xml:lang="en">product footprint</rdfs:label>
         <skos:definition xml:lang="en">An information content entity that records an environmental footprint of a product over a stated scope.</skos:definition>
         <skos:example xml:lang="en">A product footprint report for an alternator covering cradle-to-gate carbon emissions and recycled material content.</skos:example>
@@ -918,7 +924,6 @@
     <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010022 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010022">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001933"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010020"/>
         <rdfs:comment xml:lang="en">Expected value datatype: xsd:float; expected unit: kg CO2e.</rdfs:comment>
         <rdfs:label xml:lang="en">product carbon footprint</rdfs:label>
@@ -1034,11 +1039,11 @@
     <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010033 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010033">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010022"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0020000"/>
         <rdfs:comment xml:lang="en">Expected value datatype: xsd:float; expected unit: kg CO2e.</rdfs:comment>
-        <rdfs:label xml:lang="en">recycling carbon footprint</rdfs:label>
+        <rdfs:label xml:lang="en">recycling carbon footprint estimate</rdfs:label>
         <skos:altLabel xml:lang="en">footprint recycling</skos:altLabel>
-        <skos:definition xml:lang="en">A product carbon footprint that specifies greenhouse gas emissions for a recycling scenario.</skos:definition>
+        <skos:definition xml:lang="en">A product carbon footprint estimate that specifies greenhouse gas emissions for a recycling scenario.</skos:definition>
         <skos:example xml:lang="en">12 kg CO2e attributed to recycling one dismantled bumper cover.</skos:example>
     </owl:Class>
     
@@ -1047,11 +1052,11 @@
     <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010034 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010034">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010022"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0020000"/>
         <rdfs:comment xml:lang="en">Expected value datatype: xsd:float; expected unit: kg CO2e.</rdfs:comment>
-        <rdfs:label xml:lang="en">remanufacturing carbon footprint</rdfs:label>
+        <rdfs:label xml:lang="en">remanufacturing carbon footprint estimate</rdfs:label>
         <skos:altLabel xml:lang="en">footprint remanufacturing</skos:altLabel>
-        <skos:definition xml:lang="en">A product carbon footprint that specifies greenhouse gas emissions for a remanufacturing scenario.</skos:definition>
+        <skos:definition xml:lang="en">A product carbon footprint estimate that specifies greenhouse gas emissions for a remanufacturing scenario.</skos:definition>
         <skos:example xml:lang="en">7.5 kg CO2e attributed to inspecting, repairing, and remanufacturing one alternator.</skos:example>
     </owl:Class>
     
@@ -1060,11 +1065,11 @@
     <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010035 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010035">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010022"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0020000"/>
         <rdfs:comment xml:lang="en">Expected value datatype: xsd:float; expected unit: kg CO2e.</rdfs:comment>
-        <rdfs:label xml:lang="en">reuse carbon footprint</rdfs:label>
+        <rdfs:label xml:lang="en">reuse carbon footprint estimate</rdfs:label>
         <skos:altLabel xml:lang="en">footprint reuse</skos:altLabel>
-        <skos:definition xml:lang="en">A product carbon footprint that specifies greenhouse gas emissions for a reuse scenario.</skos:definition>
+        <skos:definition xml:lang="en">An estimated product carbon footprint value that specifies greenhouse gas emissions for a reuse scenario.</skos:definition>
         <skos:example xml:lang="en">2.1 kg CO2e attributed to checking and reusing one component.</skos:example>
     </owl:Class>
     
@@ -1073,11 +1078,11 @@
     <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010036 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010036">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010022"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0020000"/>
         <rdfs:comment xml:lang="en">Expected value datatype: xsd:float; expected unit: kg CO2e.</rdfs:comment>
-        <rdfs:label xml:lang="en">new production carbon footprint</rdfs:label>
+        <rdfs:label xml:lang="en">new production carbon footprint estimate</rdfs:label>
         <skos:altLabel xml:lang="en">footprint new production</skos:altLabel>
-        <skos:definition xml:lang="en">A product carbon footprint that specifies greenhouse gas emissions for a new production scenario.</skos:definition>
+        <skos:definition xml:lang="en">A product carbon footprint estimate that specifies greenhouse gas emissions for a new production scenario.</skos:definition>
         <skos:example xml:lang="en">24 kg CO2e attributed to manufacturing one replacement component from primary material.</skos:example>
     </owl:Class>
     
@@ -1120,7 +1125,7 @@
     <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010052 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010052">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010060"/>
         <rdfs:label xml:lang="en">non-destructive dismantlability</rdfs:label>
         <skos:definition xml:lang="en">A disposition of a product or component to be dismantled without destroying the product, component, or material portions that are intended for later use.</skos:definition>
         <skos:example xml:lang="en">A clipped interior trim part that can be removed intact for reuse.</skos:example>
@@ -2079,7 +2084,7 @@
     <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010145 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010145">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/automatce/AUTOMATCE_0010022"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001933"/>
         <rdfs:comment xml:lang="en">Expected value datatype: xsd:float; expected unit: kg CO2e.</rdfs:comment>
         <rdfs:label xml:lang="en">selected r-strategy carbon footprint</rdfs:label>
         <skos:altLabel xml:lang="en">actual footprint of chosen r-strategy</skos:altLabel>
@@ -3998,6 +4003,46 @@
     
 
 
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0020000 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0020000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001933"/>
+        <rdfs:label xml:lang="en">estimated carbon footprint value</rdfs:label>
+        <skos:definition xml:lang="en">estimated carbon footprint value represents a CO2 footprint of a process which is a candiate for the R-strategy. Based on values of different process, an R-strategy decision is met.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0020001 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0020001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:label xml:lang="en">R-strategy decision dataset</rdfs:label>
+        <skos:definition xml:lang="en">R-strategy decision dataset is a data item which has estimated carbon footprint values as its members</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0020002 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0020002">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000583"/>
+        <rdfs:label xml:lang="en">estimation for R-strategy</rdfs:label>
+        <skos:definition xml:lang="en">estimation for R-strategy is a computing process which outputs estimated values of CO2 footprint for potential reuse, recycle, and remanufacturing processes.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0020003 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0020003">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000583"/>
+        <rdfs:label xml:lang="en">decision for R-stategy</rdfs:label>
+        <skos:definition xml:lang="en">decision for R-stategy is a copmuting process in which the decision on whether the product will the recycled, reused, or remanufactured is made based on the estimated values of CO2 for every possible process, material dismantablity, and other parameters.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0030000 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0030000">
@@ -4099,6 +4144,12 @@
     <!-- https://w3id.org/pmd/co/PMD_0000577 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000577"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000583 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000583"/>
     
 
 

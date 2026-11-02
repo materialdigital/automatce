@@ -16,7 +16,7 @@
 @base <https://w3id.org/pmd/automatce/automatce-base.ttl> .
 
 <https://w3id.org/pmd/automatce/automatce-base.ttl> rdf:type owl:Ontology ;
-                                                     owl:versionIRI <https://w3id.org/pmd/automatce/releases/2026-06-19/automatce-base.ttl> ;
+                                                     owl:versionIRI <https://w3id.org/pmd/automatce/releases/2026-11-02/automatce-base.ttl> ;
                                                      <http://purl.org/dc/elements/1.1/contributor> <https://orcid.org/0000-0003-0473-0070> ,
                                                                                                    <https://orcid.org/0000-0003-0744-8855> ,
                                                                                                    <https://orcid.org/0009-0003-1503-4422> ,
@@ -29,7 +29,7 @@
                                                      <http://purl.org/dc/elements/1.1/license> <https://w3id.org/pmd/automatce.owl#CC-BY-4.0> ;
                                                      <http://purl.org/dc/elements/1.1/title> "Automotive Circular Economy Ontology" ;
                                                      <http://purl.org/dc/elements/1.1/type> obo:IAO_8000001 ;
-                                                     owl:versionInfo "2026-06-19" .
+                                                     owl:versionInfo "2026-11-02" .
 
 #################################################################
 #    Annotation properties
@@ -221,6 +221,10 @@ obo:BFO_0000015 rdf:type owl:Class .
 
 ###  http://purl.obolibrary.org/obo/BFO_0000016
 obo:BFO_0000016 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000017
+obo:BFO_0000017 rdf:type owl:Class .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000019
@@ -668,7 +672,7 @@ skos:ConceptScheme rdf:type owl:Class .
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010020
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010020> rdf:type owl:Class ;
-                                                   rdfs:subClassOf obo:IAO_0000030 ;
+                                                   rdfs:subClassOf obo:BFO_0000017 ;
                                                    rdfs:label "product footprint"@en ;
                                                    skos:definition "An information content entity that records an environmental footprint of a product over a stated scope."@en ;
                                                    skos:example "A product footprint report for an alternator covering cradle-to-gate carbon emissions and recycled material content."@en .
@@ -685,8 +689,7 @@ skos:ConceptScheme rdf:type owl:Class .
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010022
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010022> rdf:type owl:Class ;
-                                                   rdfs:subClassOf obo:OBI_0001933 ,
-                                                                   <https://w3id.org/pmd/automatce/AUTOMATCE_0010020> ;
+                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010020> ;
                                                    rdfs:comment "Expected value datatype: xsd:float; expected unit: kg CO2e."@en ;
                                                    rdfs:label "product carbon footprint"@en ;
                                                    skos:altLabel "carbon footprint"@en ,
@@ -771,41 +774,41 @@ skos:ConceptScheme rdf:type owl:Class .
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010033
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010033> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010022> ;
+                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0020000> ;
                                                    rdfs:comment "Expected value datatype: xsd:float; expected unit: kg CO2e."@en ;
-                                                   rdfs:label "recycling carbon footprint"@en ;
+                                                   rdfs:label "recycling carbon footprint estimate"@en ;
                                                    skos:altLabel "footprint recycling"@en ;
-                                                   skos:definition "A product carbon footprint that specifies greenhouse gas emissions for a recycling scenario."@en ;
+                                                   skos:definition "A product carbon footprint estimate that specifies greenhouse gas emissions for a recycling scenario."@en ;
                                                    skos:example "12 kg CO2e attributed to recycling one dismantled bumper cover."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010034
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010034> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010022> ;
+                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0020000> ;
                                                    rdfs:comment "Expected value datatype: xsd:float; expected unit: kg CO2e."@en ;
-                                                   rdfs:label "remanufacturing carbon footprint"@en ;
+                                                   rdfs:label "remanufacturing carbon footprint estimate"@en ;
                                                    skos:altLabel "footprint remanufacturing"@en ;
-                                                   skos:definition "A product carbon footprint that specifies greenhouse gas emissions for a remanufacturing scenario."@en ;
+                                                   skos:definition "A product carbon footprint estimate that specifies greenhouse gas emissions for a remanufacturing scenario."@en ;
                                                    skos:example "7.5 kg CO2e attributed to inspecting, repairing, and remanufacturing one alternator."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010035
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010035> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010022> ;
+                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0020000> ;
                                                    rdfs:comment "Expected value datatype: xsd:float; expected unit: kg CO2e."@en ;
-                                                   rdfs:label "reuse carbon footprint"@en ;
+                                                   rdfs:label "reuse carbon footprint estimate"@en ;
                                                    skos:altLabel "footprint reuse"@en ;
-                                                   skos:definition "A product carbon footprint that specifies greenhouse gas emissions for a reuse scenario."@en ;
+                                                   skos:definition "An estimated product carbon footprint value that specifies greenhouse gas emissions for a reuse scenario."@en ;
                                                    skos:example "2.1 kg CO2e attributed to checking and reusing one component."@en .
 
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010036
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010036> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010022> ;
+                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0020000> ;
                                                    rdfs:comment "Expected value datatype: xsd:float; expected unit: kg CO2e."@en ;
-                                                   rdfs:label "new production carbon footprint"@en ;
+                                                   rdfs:label "new production carbon footprint estimate"@en ;
                                                    skos:altLabel "footprint new production"@en ;
-                                                   skos:definition "A product carbon footprint that specifies greenhouse gas emissions for a new production scenario."@en ;
+                                                   skos:definition "A product carbon footprint estimate that specifies greenhouse gas emissions for a new production scenario."@en ;
                                                    skos:example "24 kg CO2e attributed to manufacturing one replacement component from primary material."@en .
 
 
@@ -836,7 +839,7 @@ skos:ConceptScheme rdf:type owl:Class .
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010052
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010052> rdf:type owl:Class ;
-                                                   rdfs:subClassOf obo:BFO_0000016 ;
+                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010060> ;
                                                    rdfs:label "non-destructive dismantlability"@en ;
                                                    skos:definition "A disposition of a product or component to be dismantled without destroying the product, component, or material portions that are intended for later use."@en ;
                                                    skos:example "A clipped interior trim part that can be removed intact for reuse."@en .
@@ -1552,7 +1555,7 @@ skos:ConceptScheme rdf:type owl:Class .
 
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0010145
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010145> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/pmd/automatce/AUTOMATCE_0010022> ;
+                                                   rdfs:subClassOf obo:OBI_0001933 ;
                                                    rdfs:comment "Expected value datatype: xsd:float; expected unit: kg CO2e."@en ;
                                                    rdfs:label "selected r-strategy carbon footprint"@en ;
                                                    skos:altLabel "actual footprint of chosen r-strategy"@en ;
@@ -2980,6 +2983,34 @@ skos:ConceptScheme rdf:type owl:Class .
                                                    skos:example "A source list entry recording that supplier SHS is approved to provide a component."@en .
 
 
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0020000
+<https://w3id.org/pmd/automatce/AUTOMATCE_0020000> rdf:type owl:Class ;
+                                                   rdfs:subClassOf obo:OBI_0001933 ;
+                                                   rdfs:label "estimated carbon footprint value"@en ;
+                                                   skos:definition "estimated carbon footprint value represents a CO2 footprint of a process which is a candiate for the R-strategy. Based on values of different process, an R-strategy decision is met."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0020001
+<https://w3id.org/pmd/automatce/AUTOMATCE_0020001> rdf:type owl:Class ;
+                                                   rdfs:subClassOf obo:IAO_0000027 ;
+                                                   rdfs:label "R-strategy decision dataset"@en ;
+                                                   skos:definition "R-strategy decision dataset is a data item which has estimated carbon footprint values as its members"@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0020002
+<https://w3id.org/pmd/automatce/AUTOMATCE_0020002> rdf:type owl:Class ;
+                                                   rdfs:subClassOf co:PMD_0000583 ;
+                                                   rdfs:label "estimation for R-strategy"@en ;
+                                                   skos:definition "estimation for R-strategy is a computing process which outputs estimated values of CO2 footprint for potential reuse, recycle, and remanufacturing processes."@en .
+
+
+###  https://w3id.org/pmd/automatce/AUTOMATCE_0020003
+<https://w3id.org/pmd/automatce/AUTOMATCE_0020003> rdf:type owl:Class ;
+                                                   rdfs:subClassOf co:PMD_0000583 ;
+                                                   rdfs:label "decision for R-stategy"@en ;
+                                                   skos:definition "decision for R-stategy is a copmuting process in which the decision on whether the product will the recycled, reused, or remanufactured is made based on the estimated values of CO2 for every possible process, material dismantablity, and other parameters."@en .
+
+
 ###  https://w3id.org/pmd/automatce/AUTOMATCE_0030000
 <https://w3id.org/pmd/automatce/AUTOMATCE_0030000> rdf:type owl:Class ;
                                                    rdfs:subClassOf co:PMD_0000967 ;
@@ -3054,6 +3085,10 @@ co:PMD_0000008 rdf:type owl:Class .
 
 ###  https://w3id.org/pmd/co/PMD_0000577
 co:PMD_0000577 rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/PMD_0000583
+co:PMD_0000583 rdf:type owl:Class .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000602

@@ -40,9 +40,9 @@
         "val" : "http://purl.obolibrary.org/obo/IAO_8000001"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-06-19"
+        "val" : "2026-11-02"
       } ],
-      "version" : "https://w3id.org/pmd/automatce/releases/2026-06-19/automatce-base.json"
+      "version" : "https://w3id.org/pmd/automatce/releases/2026-11-02/automatce-base.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000001",
@@ -52,6 +52,9 @@
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000016",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000017",
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000019",
@@ -847,7 +850,7 @@
       }
     }, {
       "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010033",
-      "lbl" : "recycling carbon footprint",
+      "lbl" : "recycling carbon footprint estimate",
       "type" : "CLASS",
       "meta" : {
         "comments" : [ "Expected value datatype: xsd:float; expected unit: kg CO2e." ],
@@ -856,7 +859,7 @@
           "val" : "footprint recycling"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A product carbon footprint that specifies greenhouse gas emissions for a recycling scenario."
+          "val" : "A product carbon footprint estimate that specifies greenhouse gas emissions for a recycling scenario."
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#example",
           "val" : "12 kg CO2e attributed to recycling one dismantled bumper cover."
@@ -864,7 +867,7 @@
       }
     }, {
       "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010034",
-      "lbl" : "remanufacturing carbon footprint",
+      "lbl" : "remanufacturing carbon footprint estimate",
       "type" : "CLASS",
       "meta" : {
         "comments" : [ "Expected value datatype: xsd:float; expected unit: kg CO2e." ],
@@ -873,7 +876,7 @@
           "val" : "footprint remanufacturing"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A product carbon footprint that specifies greenhouse gas emissions for a remanufacturing scenario."
+          "val" : "A product carbon footprint estimate that specifies greenhouse gas emissions for a remanufacturing scenario."
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#example",
           "val" : "7.5 kg CO2e attributed to inspecting, repairing, and remanufacturing one alternator."
@@ -881,7 +884,7 @@
       }
     }, {
       "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010035",
-      "lbl" : "reuse carbon footprint",
+      "lbl" : "reuse carbon footprint estimate",
       "type" : "CLASS",
       "meta" : {
         "comments" : [ "Expected value datatype: xsd:float; expected unit: kg CO2e." ],
@@ -890,7 +893,7 @@
           "val" : "footprint reuse"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A product carbon footprint that specifies greenhouse gas emissions for a reuse scenario."
+          "val" : "An estimated product carbon footprint value that specifies greenhouse gas emissions for a reuse scenario."
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#example",
           "val" : "2.1 kg CO2e attributed to checking and reusing one component."
@@ -898,7 +901,7 @@
       }
     }, {
       "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010036",
-      "lbl" : "new production carbon footprint",
+      "lbl" : "new production carbon footprint estimate",
       "type" : "CLASS",
       "meta" : {
         "comments" : [ "Expected value datatype: xsd:float; expected unit: kg CO2e." ],
@@ -907,7 +910,7 @@
           "val" : "footprint new production"
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A product carbon footprint that specifies greenhouse gas emissions for a new production scenario."
+          "val" : "A product carbon footprint estimate that specifies greenhouse gas emissions for a new production scenario."
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#example",
           "val" : "24 kg CO2e attributed to manufacturing one replacement component from primary material."
@@ -4565,6 +4568,46 @@
         } ]
       }
     }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0020000",
+      "lbl" : "estimated carbon footprint value",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "estimated carbon footprint value represents a CO2 footprint of a process which is a candiate for the R-strategy. Based on values of different process, an R-strategy decision is met."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0020001",
+      "lbl" : "R-strategy decision dataset",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "R-strategy decision dataset is a data item which has estimated carbon footprint values as its members"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0020002",
+      "lbl" : "estimation for R-strategy",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "estimation for R-strategy is a computing process which outputs estimated values of CO2 footprint for potential reuse, recycle, and remanufacturing processes."
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0020003",
+      "lbl" : "decision for R-stategy",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "decision for R-stategy is a copmuting process in which the decision on whether the product will the recycled, reused, or remanufactured is made based on the estimated values of CO2 for every possible process, material dismantablity, and other parameters."
+        } ]
+      }
+    }, {
       "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030000",
       "lbl" : "melt temperature",
       "type" : "CLASS",
@@ -4662,6 +4705,9 @@
       "type" : "CLASS"
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000577",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000583",
       "type" : "CLASS"
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000602",
@@ -6205,15 +6251,11 @@
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010020",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010021",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000145"
-    }, {
-      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0001933"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022",
       "pred" : "is_a",
@@ -6257,19 +6299,19 @@
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010033",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022"
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0020000"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010034",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022"
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0020000"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010035",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022"
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0020000"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010036",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022"
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0020000"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010040",
       "pred" : "is_a",
@@ -6285,7 +6327,7 @@
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010052",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000016"
+      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010060"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010053",
       "pred" : "is_a",
@@ -6609,7 +6651,7 @@
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010145",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010022"
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0001933"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010146",
       "pred" : "is_a",
@@ -7266,6 +7308,22 @@
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010374",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0020000",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0001933"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0020001",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000027"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0020002",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000583"
+    }, {
+      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0020003",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000583"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0030000",
       "pred" : "is_a",

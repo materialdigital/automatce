@@ -41,6 +41,7 @@ Annotation(dcterms:description "Application ontology for automotive circular-eco
 Annotation(dcterms:license <https://w3id.org/pmd/automatce.owl#CC-BY-4.0>)
 Annotation(dcterms:title "Automotive Circular Economy Ontology")
 
+Declaration(Class(:AUTOMATCE_0020001))
 Declaration(AnnotationProperty(dcterms:contributor))
 Declaration(AnnotationProperty(dcterms:creator))
 Declaration(AnnotationProperty(dcterms:description))
@@ -69,6 +70,7 @@ AnnotationAssertion(rdfs:label dcterms:license "license")
 # Annotation Property: dcterms:title (title)
 
 AnnotationAssertion(rdfs:label dcterms:title "title")
+
 
 
 
