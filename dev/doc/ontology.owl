@@ -14,7 +14,7 @@
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/pmd/automatce/automatce-full.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/automatce/releases/2026-11-02/automatce-full.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/automatce/releases/2026-11-27/automatce-full.owl"/>
         <dc:contributor rdf:resource="https://orcid.org/0000-0003-0473-0070"/>
         <dc:contributor rdf:resource="https://orcid.org/0000-0003-0744-8855"/>
         <dc:contributor rdf:resource="https://orcid.org/0009-0003-1503-4422"/>
@@ -26,7 +26,7 @@
         <dc:description>Application ontology for automotive circular-economy product, material, sustainability, usage, dismantling, engineering and transactional data aligned to PMDCore and BFO 2020.</dc:description>
         <dc:license rdf:resource="https://w3id.org/pmd/automatce.owl#CC-BY-4.0"/>
         <dc:title>Automotive Circular Economy Ontology</dc:title>
-        <owl:versionInfo>2026-11-02</owl:versionInfo>
+        <owl:versionInfo>2026-11-27</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -7874,6 +7874,52 @@ Specific rates, e.g., tensile rate, cooling rate, etc. should be added as  subcl
     
 
 
+    <!-- https://w3id.org/pmd/co/PMD_0000121 -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000121">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000577"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000000"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020001"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000888"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000845"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">polymer matrix composite</rdfs:label>
+        <skos:definition xml:lang="en">composite consisting of a polymer matrix and one or more reinforcement materials</skos:definition>
+        <co:PMD_0050117>PMC</co:PMD_0050117>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/co/PMD_0000503 -->
 
 
@@ -12088,7 +12134,7 @@ A statement that two ratios/fractions are equal (an equation), e.g. 2/3=4/6</rdf
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020274"/>
-        <rdfs:subClassOf rdf:nodeID="genid904"/>
+        <rdfs:subClassOf rdf:nodeID="genid917"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000009"/>
@@ -12119,7 +12165,7 @@ A statement that two ratios/fractions are equal (an equation), e.g. 2/3=4/6</rdf
         <skos:definition xml:lang="en">a process which has a thermodyanamic system as participant where entropy remains constant, ΔS=0</skos:definition>
         <skos:example xml:lang="en">perfectly elastic spring-mass oscillator, adiabatic expansion or compression of an ideal gas</skos:example>
     </owl:Class>
-    <owl:Restriction rdf:nodeID="genid904">
+    <owl:Restriction rdf:nodeID="genid917">
         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
         <owl:someValuesFrom>
             <owl:Class>
@@ -12136,7 +12182,7 @@ A statement that two ratios/fractions are equal (an equation), e.g. 2/3=4/6</rdf
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://w3id.org/pmd/co/PMD_0020275"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid904"/>
+        <owl:annotatedTarget rdf:nodeID="genid917"/>
         <rdfs:comment xml:lang="en">Could add a SWRL rule that the difference in entropy between the TQCs is zero</rdfs:comment>
     </owl:Axiom>
     
@@ -12147,12 +12193,12 @@ A statement that two ratios/fractions are equal (an equation), e.g. 2/3=4/6</rdf
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020276">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020274"/>
-        <rdfs:subClassOf rdf:nodeID="genid919"/>
+        <rdfs:subClassOf rdf:nodeID="genid932"/>
         <rdfs:label xml:lang="en">dissipative process</rdfs:label>
         <skos:definition xml:lang="en">a process which has a thermodyanamic system as participant where entropy increases, ΔS&gt;0</skos:definition>
         <skos:example xml:lang="en">plastic deformation of a metal, frictional sliding, Joule expansion</skos:example>
     </owl:Class>
-    <owl:Restriction rdf:nodeID="genid919">
+    <owl:Restriction rdf:nodeID="genid932">
         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
         <owl:someValuesFrom>
             <owl:Class>
@@ -12169,7 +12215,7 @@ A statement that two ratios/fractions are equal (an equation), e.g. 2/3=4/6</rdf
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://w3id.org/pmd/co/PMD_0020276"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid919"/>
+        <owl:annotatedTarget rdf:nodeID="genid932"/>
         <rdfs:comment xml:lang="en">Could add a SWRL rule that the difference in entropy between the TQCs is larger than zero</rdfs:comment>
     </owl:Axiom>
     
@@ -14266,8 +14312,8 @@ where k_B​ is the Boltzmann constant and W is the number of microstates.</rdfs
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0080108">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020311"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0023004"/>
-        <rdfs:subClassOf rdf:nodeID="genid1371"/>
-        <rdfs:subClassOf rdf:nodeID="genid1377"/>
+        <rdfs:subClassOf rdf:nodeID="genid1384"/>
+        <rdfs:subClassOf rdf:nodeID="genid1390"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
@@ -14279,7 +14325,7 @@ where k_B​ is the Boltzmann constant and W is the number of microstates.</rdfs
         <skos:definition xml:lang="en">Stress is the internal force per unit area a material experiences under external load, commonly described in tensile, compressive, or shear forms</skos:definition>
         <skos:example xml:lang="en">A cross-section of a loaded steel column bears a compressive stress of 150 MPa</skos:example>
     </owl:Class>
-    <owl:Class rdf:nodeID="genid1371">
+    <owl:Class rdf:nodeID="genid1384">
         <owl:intersectionOf rdf:parseType="Collection">
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
@@ -14291,7 +14337,7 @@ where k_B​ is the Boltzmann constant and W is the number of microstates.</rdfs
             </owl:Restriction>
         </owl:intersectionOf>
     </owl:Class>
-    <owl:Class rdf:nodeID="genid1377">
+    <owl:Class rdf:nodeID="genid1390">
         <owl:intersectionOf rdf:parseType="Collection">
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
@@ -14306,13 +14352,13 @@ where k_B​ is the Boltzmann constant and W is the number of microstates.</rdfs
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://w3id.org/pmd/co/PMD_0080108"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid1371"/>
+        <owl:annotatedTarget rdf:nodeID="genid1384"/>
         <rdfs:comment xml:lang="en">Mechanical view on stress</rdfs:comment>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://w3id.org/pmd/co/PMD_0080108"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid1377"/>
+        <owl:annotatedTarget rdf:nodeID="genid1390"/>
         <rdfs:comment xml:lang="en">Thermodynamic view on stress</rdfs:comment>
     </owl:Axiom>
     
@@ -14323,12 +14369,12 @@ where k_B​ is the Boltzmann constant and W is the number of microstates.</rdfs
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0080116">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <rdfs:subClassOf rdf:nodeID="genid1384"/>
+        <rdfs:subClassOf rdf:nodeID="genid1397"/>
         <rdfs:comment xml:lang="en">Every potential in physics is the same mathematical object — a partial derivative of energy with respect to its conjugate extensive quantity. The differences are only in which extensive quality you&apos;re considering.</rdfs:comment>
         <rdfs:label xml:lang="en">potential</rdfs:label>
         <skos:definition xml:lang="en">a partial derivative of energy with respect to its conjugate extensive quantity</skos:definition>
     </owl:Class>
-    <owl:Class rdf:nodeID="genid1384">
+    <owl:Class rdf:nodeID="genid1397">
         <owl:intersectionOf rdf:parseType="Collection">
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
@@ -14343,11 +14389,23 @@ where k_B​ is the Boltzmann constant and W is the number of microstates.</rdfs
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://w3id.org/pmd/co/PMD_0080116"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid1384"/>
+        <owl:annotatedTarget rdf:nodeID="genid1397"/>
         <rdfs:comment xml:lang="en">In field theories (e.g., gravity, electrostatics), the potential becomes a field ϕ(r⃗), and the force is recovered via:
 F=−∇ϕ(r⃗)F
 This is the spatial analogue: instead of asking &quot;how does energy change per unit carrier added?&quot;, you ask &quot;how does energy change per unit carrier moved in space?&quot;</rdfs:comment>
     </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0090008 -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0090008">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000121"/>
+        <rdfs:label xml:lang="en">glass fiber reinforced polymer</rdfs:label>
+        <skos:altLabel>GFRP/GRP</skos:altLabel>
+        <skos:definition xml:lang="en">polymer matrix composite, consisting of a polymer matrix reinforced with glass fibers</skos:definition>
+    </owl:Class>
     
 
 
