@@ -3449,7 +3449,7 @@ More formally, the value of a physical quantity Q with respect to a unit (U) is 
     <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0000011 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0000011">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000577"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0090008"/>
         <rdfs:comment xml:lang="en">The addition of 25% glass fiber significantly increases stiffness and tensile strength compared to neat PA66.</rdfs:comment>
         <rdfs:label xml:lang="en">polyamide 66 glass fiber 25 percent</rdfs:label>
         <skos:altLabel xml:lang="en">PA66-GF25</skos:altLabel>
@@ -3748,19 +3748,6 @@ More formally, the value of a physical quantity Q with respect to a unit (U) is 
         <rdfs:label xml:lang="en">matrix</rdfs:label>
         <skos:definition xml:lang="en">An engineered material that forms the continuous phase of a composite material and binds or embeds reinforcement, filler, or dispersed material constituents.</skos:definition>
         <skos:example xml:lang="en">The PA66 phase in a PA66-GF25 composite.</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010003 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010003">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000005"/>
-        <rdfs:comment xml:lang="en">Expected value datatype: xsd:float; expected unit: %.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Values are normally reported for specified test conditions, such as ISO 62 or a specified conditioning atmosphere.</rdfs:comment>
-        <rdfs:label xml:lang="en">water absorption</rdfs:label>
-        <skos:definition xml:lang="en">A disposition of a material to take up water from a liquid water or humid environment under specified exposure conditions.</skos:definition>
-        <skos:example xml:lang="en">The percentage mass increase of a polyamide specimen after immersion in water.</skos:example>
     </owl:Class>
     
 
@@ -4721,7 +4708,7 @@ More formally, the value of a physical quantity Q with respect to a unit (U) is 
     <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010112 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010112">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000952"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0080108"/>
         <rdfs:label xml:lang="en">quasistatic stress normal</rdfs:label>
         <skos:altLabel xml:lang="en">normal parameter quasi static stress</skos:altLabel>
         <skos:definition xml:lang="en">A strength-related material or simulation output quality that represents stress normal to a reference direction under quasistatic loading.</skos:definition>
@@ -4733,7 +4720,7 @@ More formally, the value of a physical quantity Q with respect to a unit (U) is 
     <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010113 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010113">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000952"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0080108"/>
         <rdfs:label xml:lang="en">quasistatic stress parallel</rdfs:label>
         <skos:altLabel xml:lang="en">parallel parameter quasi static stress</skos:altLabel>
         <skos:definition xml:lang="en">A strength-related material or simulation output quality that represents stress parallel to a reference direction under quasistatic loading.</skos:definition>
@@ -6542,17 +6529,6 @@ More formally, the value of a physical quantity Q with respect to a unit (U) is 
         <rdfs:label xml:lang="en">thermophysical property</rdfs:label>
         <skos:definition xml:lang="en">A material property that characterizes a material&apos;s physical response to thermal conditions.</skos:definition>
         <skos:example xml:lang="en">Glass transition temperature or coefficient of linear thermal expansion.</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/automatce/AUTOMATCE_0010345 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/automatce/AUTOMATCE_0010345">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000005"/>
-        <rdfs:label xml:lang="en">physical property</rdfs:label>
-        <skos:definition xml:lang="en">A material property that characterizes a material&apos;s physical state or behavior independently of a specific chemical reaction.</skos:definition>
-        <skos:example xml:lang="en">Density, viscosity, and specific volume recorded for a polymer material.</skos:example>
     </owl:Class>
     
 
@@ -13522,6 +13498,19 @@ where k_B​ is the Boltzmann constant and W is the number of microstates.</rdfs
 F=−∇ϕ(r⃗)F
 This is the spatial analogue: instead of asking &quot;how does energy change per unit carrier added?&quot;, you ask &quot;how does energy change per unit carrier moved in space?&quot;</rdfs:comment>
     </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0080204 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0080204">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020353"/>
+        <rdfs:label xml:lang="de">Wasseraufnahme</rdfs:label>
+        <rdfs:label xml:lang="en">water absorption</rdfs:label>
+        <skos:definition xml:lang="de">Wasseraufnahme ist eine physische Fähigkeit eines Materials, Wasser aufzunehmen, quantifiziert als Massenzunahme einer Probe im Verhältnis zur anfänglichen Trockenmasse</skos:definition>
+        <skos:definition xml:lang="en">Water absorption is a physical capability of a material to take up water, quantified as the increase in mass of a specimen relative to its initial dry mass</skos:definition>
+        <skos:example xml:lang="en">Water absorption of a nylon 6 specimen immersed for 24 hours expressed as 2.5% of its dry mass, measured according to ISO 62.</skos:example>
+    </owl:Class>
     
 
 

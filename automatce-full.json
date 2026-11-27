@@ -1653,20 +1653,6 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010003",
-      "lbl" : "water absorption",
-      "type" : "CLASS",
-      "meta" : {
-        "comments" : [ "Expected value datatype: xsd:float; expected unit: %.", "Values are normally reported for specified test conditions, such as ISO 62 or a specified conditioning atmosphere." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A disposition of a material to take up water from a liquid water or humid environment under specified exposure conditions."
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#example",
-          "val" : "The percentage mass increase of a polyamide specimen after immersion in water."
-        } ]
-      }
-    }, {
       "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010004",
       "lbl" : "materials information",
       "type" : "CLASS",
@@ -5175,19 +5161,6 @@
         }, {
           "pred" : "http://www.w3.org/2004/02/skos/core#example",
           "val" : "Glass transition temperature or coefficient of linear thermal expansion."
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010345",
-      "lbl" : "physical property",
-      "type" : "CLASS",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A material property that characterizes a material's physical state or behavior independently of a specific chemical reaction."
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#example",
-          "val" : "Density, viscosity, and specific volume recorded for a polymer material."
         } ]
       }
     }, {
@@ -8821,6 +8794,22 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "a partial derivative of energy with respect to its conjugate extensive quantity"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0080204",
+      "lbl" : "water absorption",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "Wasseraufnahme ist eine physische Fähigkeit eines Materials, Wasser aufzunehmen, quantifiziert als Massenzunahme einer Probe im Verhältnis zur anfänglichen Trockenmasse"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "Water absorption is a physical capability of a material to take up water, quantified as the increase in mass of a specimen relative to its initial dry mass"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#example",
+          "val" : "Water absorption of a nylon 6 specimen immersed for 24 hours expressed as 2.5% of its dry mass, measured according to ISO 62."
         } ]
       }
     }, {
@@ -13194,7 +13183,7 @@
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000011",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/co/PMD_0000577"
+      "obj" : "https://w3id.org/pmd/co/PMD_0090008"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000012",
       "pred" : "is_a",
@@ -13287,10 +13276,6 @@
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010002",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000002"
-    }, {
-      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010003",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/co/PMD_0000005"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010004",
       "pred" : "is_a",
@@ -13614,11 +13599,11 @@
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010112",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/co/PMD_0000952"
+      "obj" : "https://w3id.org/pmd/co/PMD_0080108"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010113",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/co/PMD_0000952"
+      "obj" : "https://w3id.org/pmd/co/PMD_0080108"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010114",
       "pred" : "is_a",
@@ -14235,10 +14220,6 @@
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010344",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000981"
-    }, {
-      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010345",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/co/PMD_0000005"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010346",
       "pred" : "is_a",
@@ -15619,6 +15600,10 @@
       "sub" : "https://w3id.org/pmd/co/PMD_0080116",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0080204",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0020353"
     }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0090008",
       "pred" : "is_a",

@@ -600,20 +600,6 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010003",
-      "lbl" : "water absorption",
-      "type" : "CLASS",
-      "meta" : {
-        "comments" : [ "Expected value datatype: xsd:float; expected unit: %.", "Values are normally reported for specified test conditions, such as ISO 62 or a specified conditioning atmosphere." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A disposition of a material to take up water from a liquid water or humid environment under specified exposure conditions."
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#example",
-          "val" : "The percentage mass increase of a polyamide specimen after immersion in water."
-        } ]
-      }
-    }, {
       "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010004",
       "lbl" : "materials information",
       "type" : "CLASS",
@@ -4125,19 +4111,6 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010345",
-      "lbl" : "physical property",
-      "type" : "CLASS",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
-          "val" : "A material property that characterizes a material's physical state or behavior independently of a specific chemical reaction."
-        }, {
-          "pred" : "http://www.w3.org/2004/02/skos/core#example",
-          "val" : "Density, viscosity, and specific volume recorded for a polymer material."
-        } ]
-      }
-    }, {
       "id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010346",
       "lbl" : "pressure-volume-temperature data",
       "type" : "CLASS",
@@ -4704,9 +4677,6 @@
       "id" : "https://w3id.org/pmd/co/PMD_0000008",
       "type" : "CLASS"
     }, {
-      "id" : "https://w3id.org/pmd/co/PMD_0000577",
-      "type" : "CLASS"
-    }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000583",
       "type" : "CLASS"
     }, {
@@ -4792,6 +4762,12 @@
       "type" : "CLASS"
     }, {
       "id" : "https://w3id.org/pmd/co/PMD_0050004",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0080108",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0090008",
       "type" : "CLASS"
     }, {
       "id" : "https://w3id.org/pmd/log/LOG_0080001",
@@ -6135,7 +6111,7 @@
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000011",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/co/PMD_0000577"
+      "obj" : "https://w3id.org/pmd/co/PMD_0090008"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0000012",
       "pred" : "is_a",
@@ -6228,10 +6204,6 @@
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010002",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000002"
-    }, {
-      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010003",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/co/PMD_0000005"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010004",
       "pred" : "is_a",
@@ -6555,11 +6527,11 @@
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010112",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/co/PMD_0000952"
+      "obj" : "https://w3id.org/pmd/co/PMD_0080108"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010113",
       "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/co/PMD_0000952"
+      "obj" : "https://w3id.org/pmd/co/PMD_0080108"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010114",
       "pred" : "is_a",
@@ -7176,10 +7148,6 @@
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010344",
       "pred" : "is_a",
       "obj" : "https://w3id.org/pmd/co/PMD_0000981"
-    }, {
-      "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010345",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/pmd/co/PMD_0000005"
     }, {
       "sub" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010346",
       "pred" : "is_a",

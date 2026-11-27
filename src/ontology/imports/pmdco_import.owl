@@ -431,6 +431,7 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0080050>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0080101>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0080108>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0080116>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0080204>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0090008>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0090012>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0090013>))
@@ -2018,7 +2019,7 @@ EquivalentClasses(obo:IAO_0020010 ObjectIntersectionOf(obo:COB_0000035 ObjectSom
 SubClassOf(obo:IAO_0020010 obo:COB_0000035)
 SubClassOf(obo:IAO_0020010 ObjectSomeValuesFrom(obo:OBI_0000299 obo:IAO_0020000))
 
-# Class: obo:NCBITaxon_9606 (homo sapiens)
+# Class: obo:NCBITaxon_9606 (Homo sapiens)
 
 AnnotationAssertion(rdfs:label obo:NCBITaxon_9606 "Homo sapiens")
 AnnotationAssertion(rdfs:label obo:NCBITaxon_9606 "homo sapiens")
@@ -2807,7 +2808,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020005> "porosity"@
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020005> "itensive quality embodiying the fraction of the materials (enclosing) spatial region occupied by pores."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020005> <https://w3id.org/pmd/co/PMD_0020353>)
 
-# Class: <https://w3id.org/pmd/co/PMD_0020022> (Korrosion)
+# Class: <https://w3id.org/pmd/co/PMD_0020022> (corrosion)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0020022> "Corrosion is typically of interest when the change of the material affects the objects ability to fulfill its function."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020022> "Korrosion"@de)
@@ -4320,6 +4321,15 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0080116> obo:BFO_0000019)
 SubClassOf(Annotation(rdfs:comment "In field theories (e.g., gravity, electrostatics), the potential becomes a field ϕ(r⃗), and the force is recovered via:
 F=−∇ϕ(r⃗)F
 This is the spatial analogue: instead of asking \"how does energy change per unit carrier added?\", you ask \"how does energy change per unit carrier moved in space?\""@en) <https://w3id.org/pmd/co/PMD_0080116> ObjectIntersectionOf(ObjectSomeValuesFrom(obo:RO_0002328 <https://w3id.org/pmd/co/PMD_0020142>) ObjectSomeValuesFrom(obo:RO_0002328 <https://w3id.org/pmd/co/PMD_0020319>)))
+
+# Class: <https://w3id.org/pmd/co/PMD_0080204> (Wasseraufnahme)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0080204> "Wasseraufnahme"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0080204> "water absorption"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0080204> "Wasseraufnahme ist eine physische Fähigkeit eines Materials, Wasser aufzunehmen, quantifiziert als Massenzunahme einer Probe im Verhältnis zur anfänglichen Trockenmasse"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0080204> "Water absorption is a physical capability of a material to take up water, quantified as the increase in mass of a specimen relative to its initial dry mass"@en)
+AnnotationAssertion(skos:example <https://w3id.org/pmd/co/PMD_0080204> "Water absorption of a nylon 6 specimen immersed for 24 hours expressed as 2.5% of its dry mass, measured according to ISO 62."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0080204> <https://w3id.org/pmd/co/PMD_0020353>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0090008> (glass fiber reinforced polymer)
 
