@@ -37,9 +37,9 @@
         "val" : "Automotive Circular Economy Ontology"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-11-02"
+        "val" : "2026-11-27"
       } ],
-      "version" : "https://w3id.org/pmd/automatce/releases/2026-11-02/automatce-full.json"
+      "version" : "https://w3id.org/pmd/automatce/releases/2026-11-27/automatce-full.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000001",
@@ -5839,6 +5839,19 @@
         } ]
       }
     }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0000121",
+      "lbl" : "polymer matrix composite",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "composite consisting of a polymer matrix and one or more reinforcement materials"
+        }, {
+          "pred" : "https://w3id.org/pmd/co/PMD_0050117",
+          "val" : "PMC"
+        } ]
+      }
+    }, {
       "id" : "https://w3id.org/pmd/co/PMD_0000503",
       "lbl" : "OBSOLETE ASTM grainsize",
       "type" : "CLASS",
@@ -8808,6 +8821,19 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2004/02/skos/core#definition",
           "val" : "a partial derivative of energy with respect to its conjugate extensive quantity"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/pmd/co/PMD_0090008",
+      "lbl" : "glass fiber reinforced polymer",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2004/02/skos/core#altLabel",
+          "val" : "GFRP/GRP"
+        }, {
+          "pred" : "http://www.w3.org/2004/02/skos/core#definition",
+          "val" : "polymer matrix composite, consisting of a polymer matrix reinforced with glass fibers"
         } ]
       }
     }, {
@@ -14436,6 +14462,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
     }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0000121",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000577"
+    }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0000519",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
@@ -15589,6 +15619,10 @@
       "sub" : "https://w3id.org/pmd/co/PMD_0080116",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
+      "sub" : "https://w3id.org/pmd/co/PMD_0090008",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/pmd/co/PMD_0000121"
     }, {
       "sub" : "https://w3id.org/pmd/co/PMD_0090012",
       "pred" : "is_a",

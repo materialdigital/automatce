@@ -15,9 +15,9 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<https://w3id.org/pmd/automatce/imports/pmdco_import.owl>
-<https://w3id.org/pmd/automatce/releases/2026-11-02/imports/pmdco_import.owl>
+<https://w3id.org/pmd/automatce/releases/2026-11-27/imports/pmdco_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/pmd/co/3.1.2>)
-Annotation(owl:versionInfo "2026-11-02")
+Annotation(owl:versionInfo "2026-11-27")
 
 Declaration(Class(obo:BFO_0000001))
 Declaration(Class(obo:BFO_0000002))
@@ -178,6 +178,7 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0000008>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000068>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000075>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000110>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000121>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000503>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000512>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000519>))
@@ -430,6 +431,7 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0080050>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0080101>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0080108>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0080116>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0090008>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0090012>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0090013>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0090014>))
@@ -1141,7 +1143,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025006> "process at
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025006> "A relation between a process attribute and a process, which \"bears\" the attribute."@en)
 AnnotationAssertion(skos:example <https://w3id.org/pmd/co/PMD_0025006> "Tensile rate is a process attribute of tensile test"@en)
 
-# Object Property: <https://w3id.org/pmd/co/PMD_0025013> (changes quality)
+# Object Property: <https://w3id.org/pmd/co/PMD_0025013> (verändert die Qualität)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025013> "changes quality"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025013> "verändert die Qualität"@de)
@@ -1934,7 +1936,7 @@ interpreted by or directly executed by a processing unit."@en)
 AnnotationAssertion(rdfs:label obo:IAO_0000010 "software"@en)
 SubClassOf(obo:IAO_0000010 obo:IAO_0000104)
 
-# Class: obo:IAO_0000027 (data item)
+# Class: obo:IAO_0000027 (data entity)
 
 AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000027 "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en)
 AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000027 "An information content entity that is intended to be one or more truthful statement(s) about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en)
@@ -2016,7 +2018,7 @@ EquivalentClasses(obo:IAO_0020010 ObjectIntersectionOf(obo:COB_0000035 ObjectSom
 SubClassOf(obo:IAO_0020010 obo:COB_0000035)
 SubClassOf(obo:IAO_0020010 ObjectSomeValuesFrom(obo:OBI_0000299 obo:IAO_0020000))
 
-# Class: obo:NCBITaxon_9606 (Homo sapiens)
+# Class: obo:NCBITaxon_9606 (homo sapiens)
 
 AnnotationAssertion(rdfs:label obo:NCBITaxon_9606 "Homo sapiens")
 AnnotationAssertion(rdfs:label obo:NCBITaxon_9606 "homo sapiens")
@@ -2240,6 +2242,14 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000075> <https://w3id.org/pmd/co/PMD_00
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000110> "geological process"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000110> "A natural process that operates within the Earth system to transform, transport, or deform Earth materials, thereby changing Earth structures and landforms"@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000110> obo:BFO_0000015)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000121> (polymer matrix composite)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000121> "polymer matrix composite"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000121> "composite consisting of a polymer matrix and one or more reinforcement materials"@en)
+AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0050117> <https://w3id.org/pmd/co/PMD_0000121> "PMC")
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000121> <https://w3id.org/pmd/co/PMD_0000577>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000121> ObjectIntersectionOf(ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000000> ObjectSomeValuesFrom(obo:RO_0000087 <https://w3id.org/pmd/co/PMD_0020001>))) ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000888> ObjectSomeValuesFrom(obo:RO_0000087 <https://w3id.org/pmd/co/PMD_0000845>)))))
 
 # Class: <https://w3id.org/pmd/co/PMD_0000503> (OBSOLETE ASTM grainsize)
 
@@ -2797,7 +2807,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020005> "porosity"@
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020005> "itensive quality embodiying the fraction of the materials (enclosing) spatial region occupied by pores."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020005> <https://w3id.org/pmd/co/PMD_0020353>)
 
-# Class: <https://w3id.org/pmd/co/PMD_0020022> (corrosion)
+# Class: <https://w3id.org/pmd/co/PMD_0020022> (Korrosion)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0020022> "Corrosion is typically of interest when the change of the material affects the objects ability to fulfill its function."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020022> "Korrosion"@de)
@@ -4310,6 +4320,13 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0080116> obo:BFO_0000019)
 SubClassOf(Annotation(rdfs:comment "In field theories (e.g., gravity, electrostatics), the potential becomes a field ϕ(r⃗), and the force is recovered via:
 F=−∇ϕ(r⃗)F
 This is the spatial analogue: instead of asking \"how does energy change per unit carrier added?\", you ask \"how does energy change per unit carrier moved in space?\""@en) <https://w3id.org/pmd/co/PMD_0080116> ObjectIntersectionOf(ObjectSomeValuesFrom(obo:RO_0002328 <https://w3id.org/pmd/co/PMD_0020142>) ObjectSomeValuesFrom(obo:RO_0002328 <https://w3id.org/pmd/co/PMD_0020319>)))
+
+# Class: <https://w3id.org/pmd/co/PMD_0090008> (glass fiber reinforced polymer)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0090008> "glass fiber reinforced polymer"@en)
+AnnotationAssertion(skos:altLabel <https://w3id.org/pmd/co/PMD_0090008> "GFRP/GRP")
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0090008> "polymer matrix composite, consisting of a polymer matrix reinforced with glass fibers"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0090008> <https://w3id.org/pmd/co/PMD_0000121>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0090012> (biological material)
 
