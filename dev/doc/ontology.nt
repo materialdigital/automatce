@@ -2296,7 +2296,7 @@ _:genid152 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/pmd/automatce/AUTOMATCE_0000011
 <https://w3id.org/pmd/automatce/AUTOMATCE_0000011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/pmd/automatce/AUTOMATCE_0000011> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/PMD_0000577> .
+<https://w3id.org/pmd/automatce/AUTOMATCE_0000011> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/PMD_0090008> .
 <https://w3id.org/pmd/automatce/AUTOMATCE_0000011> <http://www.w3.org/2000/01/rdf-schema#comment> "The addition of 25% glass fiber significantly increases stiffness and tensile strength compared to neat PA66."@en .
 <https://w3id.org/pmd/automatce/AUTOMATCE_0000011> <http://www.w3.org/2000/01/rdf-schema#label> "polyamide 66 glass fiber 25 percent"@en .
 <https://w3id.org/pmd/automatce/AUTOMATCE_0000011> <http://www.w3.org/2004/02/skos/core#altLabel> "PA66-GF25"@en .
@@ -2503,15 +2503,6 @@ _:genid152 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010002> <http://www.w3.org/2000/01/rdf-schema#label> "matrix"@en .
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010002> <http://www.w3.org/2004/02/skos/core#definition> "An engineered material that forms the continuous phase of a composite material and binds or embeds reinforcement, filler, or dispersed material constituents."@en .
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010002> <http://www.w3.org/2004/02/skos/core#example> "The PA66 phase in a PA66-GF25 composite."@en .
-# 
-# https://w3id.org/pmd/automatce/AUTOMATCE_0010003
-<https://w3id.org/pmd/automatce/AUTOMATCE_0010003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/pmd/automatce/AUTOMATCE_0010003> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/PMD_0000005> .
-<https://w3id.org/pmd/automatce/AUTOMATCE_0010003> <http://www.w3.org/2000/01/rdf-schema#comment> "Expected value datatype: xsd:float; expected unit: %."@en .
-<https://w3id.org/pmd/automatce/AUTOMATCE_0010003> <http://www.w3.org/2000/01/rdf-schema#comment> "Values are normally reported for specified test conditions, such as ISO 62 or a specified conditioning atmosphere."@en .
-<https://w3id.org/pmd/automatce/AUTOMATCE_0010003> <http://www.w3.org/2000/01/rdf-schema#label> "water absorption"@en .
-<https://w3id.org/pmd/automatce/AUTOMATCE_0010003> <http://www.w3.org/2004/02/skos/core#definition> "A disposition of a material to take up water from a liquid water or humid environment under specified exposure conditions."@en .
-<https://w3id.org/pmd/automatce/AUTOMATCE_0010003> <http://www.w3.org/2004/02/skos/core#example> "The percentage mass increase of a polyamide specimen after immersion in water."@en .
 # 
 # https://w3id.org/pmd/automatce/AUTOMATCE_0010004
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -3148,7 +3139,7 @@ _:genid152 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/pmd/automatce/AUTOMATCE_0010112
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010112> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/pmd/automatce/AUTOMATCE_0010112> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/PMD_0000952> .
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010112> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/PMD_0080108> .
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010112> <http://www.w3.org/2000/01/rdf-schema#label> "quasistatic stress normal"@en .
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010112> <http://www.w3.org/2004/02/skos/core#altLabel> "normal parameter quasi static stress"@en .
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010112> <http://www.w3.org/2004/02/skos/core#definition> "A strength-related material or simulation output quality that represents stress normal to a reference direction under quasistatic loading."@en .
@@ -3156,7 +3147,7 @@ _:genid152 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/pmd/automatce/AUTOMATCE_0010113
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010113> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/pmd/automatce/AUTOMATCE_0010113> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/PMD_0000952> .
+<https://w3id.org/pmd/automatce/AUTOMATCE_0010113> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/PMD_0080108> .
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010113> <http://www.w3.org/2000/01/rdf-schema#label> "quasistatic stress parallel"@en .
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010113> <http://www.w3.org/2004/02/skos/core#altLabel> "parallel parameter quasi static stress"@en .
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010113> <http://www.w3.org/2004/02/skos/core#definition> "A strength-related material or simulation output quality that represents stress parallel to a reference direction under quasistatic loading."@en .
@@ -4349,13 +4340,6 @@ _:genid152 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010344> <http://www.w3.org/2000/01/rdf-schema#label> "thermophysical property"@en .
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010344> <http://www.w3.org/2004/02/skos/core#definition> "A material property that characterizes a material's physical response to thermal conditions."@en .
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010344> <http://www.w3.org/2004/02/skos/core#example> "Glass transition temperature or coefficient of linear thermal expansion."@en .
-# 
-# https://w3id.org/pmd/automatce/AUTOMATCE_0010345
-<https://w3id.org/pmd/automatce/AUTOMATCE_0010345> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/pmd/automatce/AUTOMATCE_0010345> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/PMD_0000005> .
-<https://w3id.org/pmd/automatce/AUTOMATCE_0010345> <http://www.w3.org/2000/01/rdf-schema#label> "physical property"@en .
-<https://w3id.org/pmd/automatce/AUTOMATCE_0010345> <http://www.w3.org/2004/02/skos/core#definition> "A material property that characterizes a material's physical state or behavior independently of a specific chemical reaction."@en .
-<https://w3id.org/pmd/automatce/AUTOMATCE_0010345> <http://www.w3.org/2004/02/skos/core#example> "Density, viscosity, and specific volume recorded for a polymer material."@en .
 # 
 # https://w3id.org/pmd/automatce/AUTOMATCE_0010346
 <https://w3id.org/pmd/automatce/AUTOMATCE_0010346> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -10299,6 +10283,15 @@ _:genid1402 <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/pm
 _:genid1402 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> .
 _:genid1402 <http://www.w3.org/2002/07/owl#annotatedTarget> _:genid1397 .
 _:genid1402 <http://www.w3.org/2000/01/rdf-schema#comment> "In field theories (e.g., gravity, electrostatics), the potential becomes a field ϕ(r⃗), and the force is recovered via:\nF=−∇ϕ(r⃗)F\nThis is the spatial analogue: instead of asking \"how does energy change per unit carrier added?\", you ask \"how does energy change per unit carrier moved in space?\""@en .
+# 
+# https://w3id.org/pmd/co/PMD_0080204
+<https://w3id.org/pmd/co/PMD_0080204> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/pmd/co/PMD_0080204> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/PMD_0020353> .
+<https://w3id.org/pmd/co/PMD_0080204> <http://www.w3.org/2000/01/rdf-schema#label> "Wasseraufnahme"@de .
+<https://w3id.org/pmd/co/PMD_0080204> <http://www.w3.org/2000/01/rdf-schema#label> "water absorption"@en .
+<https://w3id.org/pmd/co/PMD_0080204> <http://www.w3.org/2004/02/skos/core#definition> "Wasseraufnahme ist eine physische Fähigkeit eines Materials, Wasser aufzunehmen, quantifiziert als Massenzunahme einer Probe im Verhältnis zur anfänglichen Trockenmasse"@de .
+<https://w3id.org/pmd/co/PMD_0080204> <http://www.w3.org/2004/02/skos/core#definition> "Water absorption is a physical capability of a material to take up water, quantified as the increase in mass of a specimen relative to its initial dry mass"@en .
+<https://w3id.org/pmd/co/PMD_0080204> <http://www.w3.org/2004/02/skos/core#example> "Water absorption of a nylon 6 specimen immersed for 24 hours expressed as 2.5% of its dry mass, measured according to ISO 62."@en .
 # 
 # https://w3id.org/pmd/co/PMD_0090008
 <https://w3id.org/pmd/co/PMD_0090008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

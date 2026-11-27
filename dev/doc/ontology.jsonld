@@ -14428,7 +14428,7 @@
     "@value" : "polyamide 66 glass fiber 25 percent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/pmd/co/PMD_0000577"
+    "@id" : "https://w3id.org/pmd/co/PMD_0090008"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -15186,31 +15186,6 @@
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "The PA66 phase in a PA66-GF25 composite."
-  } ]
-}, {
-  "@id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010003",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Expected value datatype: xsd:float; expected unit: %."
-  }, {
-    "@language" : "en",
-    "@value" : "Values are normally reported for specified test conditions, such as ISO 62 or a specified conditioning atmosphere."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "water absorption"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/pmd/co/PMD_0000005"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A disposition of a material to take up water from a liquid water or humid environment under specified exposure conditions."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#example" : [ {
-    "@language" : "en",
-    "@value" : "The percentage mass increase of a polyamide specimen after immersion in water."
   } ]
 }, {
   "@id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010004",
@@ -16939,7 +16914,7 @@
     "@value" : "quasistatic stress normal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/pmd/co/PMD_0000952"
+    "@id" : "https://w3id.org/pmd/co/PMD_0080108"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -16961,7 +16936,7 @@
     "@value" : "quasistatic stress parallel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/pmd/co/PMD_0000952"
+    "@id" : "https://w3id.org/pmd/co/PMD_0080108"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -20179,24 +20154,6 @@
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "Glass transition temperature or coefficient of linear thermal expansion."
-  } ]
-}, {
-  "@id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010345",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "physical property"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/pmd/co/PMD_0000005"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A material property that characterizes a material's physical state or behavior independently of a specific chemical reaction."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#example" : [ {
-    "@language" : "en",
-    "@value" : "Density, viscosity, and specific volume recorded for a polymer material."
   } ]
 }, {
   "@id" : "https://w3id.org/pmd/automatce/AUTOMATCE_0010346",
@@ -29079,6 +29036,30 @@
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "a partial derivative of energy with respect to its conjugate extensive quantity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/co/PMD_0080204",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Wasseraufnahme"
+  }, {
+    "@language" : "en",
+    "@value" : "water absorption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/PMD_0020353"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Wasseraufnahme ist eine physische Fähigkeit eines Materials, Wasser aufzunehmen, quantifiziert als Massenzunahme einer Probe im Verhältnis zur anfänglichen Trockenmasse"
+  }, {
+    "@language" : "en",
+    "@value" : "Water absorption is a physical capability of a material to take up water, quantified as the increase in mass of a specimen relative to its initial dry mass"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Water absorption of a nylon 6 specimen immersed for 24 hours expressed as 2.5% of its dry mass, measured according to ISO 62."
   } ]
 }, {
   "@id" : "https://w3id.org/pmd/co/PMD_0090008",
