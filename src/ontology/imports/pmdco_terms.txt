@@ -24,7 +24,7 @@ https://w3id.org/pmd/co/PMD_0000882 #phase boundary
 https://w3id.org/pmd/co/PMD_0000777 #heat capacity
 https://w3id.org/pmd/co/PMD_0000852 #metal
 https://w3id.org/pmd/co/PMD_0000949 #stiffness
-https://w3id.org/pmd/co/PMD_0000577 #composite material
+https://w3id.org/pmd/co/PMD_0090008 #glass fiber reinforced polymer
 https://w3id.org/pmd/co/PMD_0000008 #process attribute
 https://w3id.org/pmd/co/PMD_0000075 #mold
 https://w3id.org/pmd/co/PMD_0000618 #elastic modulus
